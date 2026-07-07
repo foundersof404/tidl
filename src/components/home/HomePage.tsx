@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import Lenis from 'lenis';
 import './home.css';
 
 const ANSWERS: Record<string, string> = {
@@ -148,6 +149,75 @@ export default function HomePage() {
   const [penVisible, setPenVisible] = useState(false);
   const [statsVisible, setStatsVisible] = useState(false);
   const [counters, setCounters] = useState({ c0: 0, c1: 0, c2: 0, c3: 0 });
+
+  // Initialize Webflow animations
+  useEffect(() => {
+    // Declare Webflow type
+    interface WebflowWindow extends Window {
+      Webflow?: {
+        destroy: () => void;
+        ready: () => void;
+        require: (module: string) => any;
+      };
+    }
+
+    const win = window as WebflowWindow;
+    let initialized = false;
+    
+    // Reinitialize Webflow after hydration has fully settled.
+    const initWebflow = () => {
+      if (win.Webflow && !initialized) {
+        try {
+          win.Webflow.destroy();
+          win.Webflow.ready();
+          win.Webflow.require('ix2').init();
+          console.log('Webflow reinitialized successfully');
+          initialized = true;
+        } catch (error) {
+          console.error('Webflow initialization error:', error);
+        }
+      } else if (!win.Webflow) {
+        console.warn('Webflow not loaded yet...');
+      }
+    };
+
+    // Delay init to avoid mutating DOM during React hydration.
+    const scheduleInit = () => setTimeout(initWebflow, 1200);
+    const fallbackTimer = setTimeout(initWebflow, 3000);
+    if (document.readyState === 'complete') scheduleInit();
+    else window.addEventListener('load', scheduleInit, { once: true });
+
+    return () => {
+      clearTimeout(fallbackTimer);
+      window.removeEventListener('load', scheduleInit);
+    };
+  }, []);
+
+  // Initialize Lenis smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   const [askInput, setAskInput] = useState('');
   const [askFocused, setAskFocused] = useState(false);
@@ -404,12 +474,12 @@ export default function HomePage() {
   return (
     <div className="body">
       {/* ===== Announcement Bar ===== */}
-      <div className="tdl-bar" id="tdlBar">
+      <div className="tdl-bar" id="tdlBar" style={{ display: 'block', visibility: 'visible', opacity: 1 }}>
         <div className="tdl-bar-inner">
           <span className="tdl-msg">TIDL is now a telehealth platform. Care that delivers results.</span>
           <a className="tdl-link" href="#">
             Learn more
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="24" height="24">
               <path d="M5 12h14M13 6l6 6-6 6"/>
             </svg>
           </a>
@@ -595,19 +665,53 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
 
           {/* ===== Hero Section ===== */}
           <section className="hero-01 container-full">
             <div className="container-fluid for-hero01">
               <div className="hero-content-01">
                 <div className="hero-content-inside-01">
-                  <h1 className="hero-title-01 display">Lose the weight. Keep it off. Feel like you again.</h1>
+                  <h1 
+                    data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f21140"
+                    className="hero-title-01 display"
+                    style={{ 
+                      display: 'block',
+                      visibility: 'visible',
+                      opacity: 1,
+                      position: 'relative',
+                      zIndex: 10
+                    }}
+                    suppressHydrationWarning
+                  >
+                    Lose the weight. Keep it off. Feel like you again.
+                  </h1>
                   <div className="hero-inside-textsinside">
-                    <div className="service-hero-body-text p2-regular">
+                    <div 
+                      data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f21143"
+                      className="service-hero-body-text p2-regular"
+                      style={{ 
+                        display: 'block',
+                        visibility: 'visible',
+                        opacity: 1,
+                        position: 'relative',
+                        zIndex: 10
+                      }}
+                      suppressHydrationWarning
+                    >
                       Doctor-prescribed GLP-1, TRT, and peptide treatments. Online in 5 minutes, delivered to your door.
                     </div>
-                    <div className="service-hero-btns-01">
+                    <div 
+                      data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f21145"
+                      className="service-hero-btns-01"
+                      style={{ 
+                        display: 'block',
+                        visibility: 'visible',
+                        opacity: 1,
+                        position: 'relative',
+                        zIndex: 10
+                      }}
+                      suppressHydrationWarning
+                    >
                       <a href="#" className="button-01 button-03 w-inline-block">
                         <div className="button-outside-01">
                           <div className="button-inside">
@@ -625,9 +729,9 @@ export default function HomePage() {
 
           <img
             className="service-v1-bg"
+            data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f21148"
             src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a.png"
             alt="service bg"
-            style={{ filter: 'blur(5px)', opacity: 0.8, transform: 'scale3d(1.2, 1.2, 1)' }}
             sizes="(max-width: 3024px) 100vw, 3024px"
             loading="lazy"
             srcSet="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a-p-500.png 500w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a-p-800.png 800w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a-p-1080.png 1080w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a-p-1600.png 1600w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a.png 3024w"
@@ -646,10 +750,18 @@ export default function HomePage() {
         <section className="services container-full">
           <div className="container-fluid">
             <div className="services-content">
-              <h2 className="services-title-02 heading-01">Pick your goal.</h2>
+              <h2 
+                data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f2114c"
+                className="services-title-02 heading-01"
+              >
+                Pick your goal.
+              </h2>
               <div className="service-list">
                 {/* Weight Loss */}
-                <div className="service-item">
+                <div 
+                  data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f2114f"
+                  className="service-item"
+                >
                   <div className="services-item-thumb _02">
                     <img
                       src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a948975e49a6ca9c6b6e5_hf_20260705_172618_ea8e3be2-4637-4096-83cc-5ec995f07e09.png"
@@ -685,7 +797,10 @@ export default function HomePage() {
                 </div>
 
                 {/* Testosterone */}
-                <div className="service-item">
+                <div 
+                  data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f21164"
+                  className="service-item"
+                >
                   <div className="services-item-thumb _02">
                     <img
                       src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a95a92a6dee9e17ed919e_hf_20260705_173015_06ec6b8c-b985-4bab-80b1-41afe144db92.png"
@@ -721,7 +836,11 @@ export default function HomePage() {
                 </div>
 
                 {/* Longevity */}
-                <div className="service-item">
+                <div 
+                  id="w-node-_3072fecc-9b21-d07c-8a0f-122ed0f21179-9ec3f5ff"
+                  data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f21179"
+                  className="service-item"
+                >
                   <div className="services-item-thumb _02">
                     <img
                       src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4bd7ba829cdf371074ee74_hf_20260706_160923_8f107d2e-39e5-41c3-8290-18fd580d714a.png"
@@ -990,7 +1109,6 @@ export default function HomePage() {
             className="families-bg"
             src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4bdcc786041c1c67e4f84a_hf_20260706_164258_2d8f8b0b-75a0-491a-bc5b-ce98730f9f41.png"
             alt="families bg"
-            style={{ filter: 'blur(5px)', opacity: 0.8, transform: 'scale3d(1.2, 1.2, 1)' }}
             sizes="(max-width: 1728px) 100vw, 1728px"
             loading="lazy"
           />
@@ -1207,10 +1325,19 @@ export default function HomePage() {
 
         {/* ===== Blog Section ===== */}
         <section className="feature-blog-02 container-full">
-          <div className="feature-blog-content-02">
+          <div 
+            data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f211ae"
+            className="feature-blog-content-02"
+          >
             <h2 className="feature-blog-title-02 heading-01">The Tidl Journal</h2>
-            <div className="feature-blog-list-wrap-02">
-              <div className="feature-blog-list-02">
+            <div 
+              data-w-id="732914ee-333f-b961-45d6-fc996df4a5d9"
+              className="feature-blog-list-wrap-02"
+            >
+              <div 
+                data-w-id="35af91e4-9c61-6ba2-1c96-b79c2f600fea"
+                className="feature-blog-list-02"
+              >
                 {[
                   {
                     href: '#',
@@ -1290,7 +1417,7 @@ export default function HomePage() {
                           aria-label="Play Video"
                         >
                           <div className="video_play-button-icon w-embed">
-                            <svg width="auto" height="100%" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M19.8937 10.064L3.39375 0.309337C2.05313 -0.48285 0 0.2859 0 2.24527V21.75C0 23.5078 1.90781 24.5672 3.39375 23.6859L19.8937 13.9359C21.3656 13.0687 21.3703 10.9312 19.8937 10.064Z" fill="currentColor"/>
                             </svg>
                           </div>
@@ -1308,7 +1435,12 @@ export default function HomePage() {
         <section className="stories-03 container-full">
           <div className="container-fluid for-works">
             <div className="stories-content-03">
-              <h2 className="stories-title-03 heading-01">Stories from our patients</h2>
+              <h2 
+                data-w-id="f251300e-1d20-13ab-99a7-486265690269"
+                className="stories-title-03 heading-01"
+              >
+                Stories from our patients
+              </h2>
               <div className="stories-slider-react">
                 <div
                   className="stories-slides-track"
@@ -1411,9 +1543,18 @@ export default function HomePage() {
         <section className="cta container-full">
           <div className="container-fluid">
             <div className="cta-content">
-              <h2 className="cta-title heading-01">Ready to feel like yourself again?</h2>
+              <h2 
+                data-w-id="d64b06d4-2215-b165-06a4-ce64c10d68ed"
+                className="cta-title heading-01"
+              >
+                Ready to feel like yourself again?
+              </h2>
               <p className="cta-text p2-regular">Take the five-minute quiz. A licensed provider reviews everything. Your treatment ships to your door.</p>
-              <a href="#" className="button-01 button-03 w-inline-block">
+              <a 
+                data-w-id="d64b06d4-2215-b165-06a4-ce64c10d68ef"
+                href="#" 
+                className="button-01 button-03 w-inline-block"
+              >
                 <div className="button-outside-01">
                   <div className="button-inside">
                     <div className="button-text-01">Get started</div>
@@ -1425,8 +1566,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ===== Footer ===== */}
-        <footer className="footer">
+        </div>
+      </div>
+
+      {/* ===== Footer ===== */}
+      <footer className="footer">
           <div className="container-fluid">
             <div className="footer-content">
               <div className="footer-brand">
@@ -1443,21 +1587,42 @@ export default function HomePage() {
               <div className="footer-links">
                 <div className="footer-col">
                   <div className="footer-col-title">Treatments</div>
-                  <a href="#" className="footer-link">Weight Loss</a>
-                  <a href="#" className="footer-link">Testosterone</a>
-                  <a href="#" className="footer-link">Longevity</a>
-                  <a href="#" className="footer-link">Peptide Therapy</a>
+                  {[
+                    { href: '#', label: 'Weight Loss' },
+                    { href: '#', label: 'Testosterone' },
+                    { href: '#', label: 'Longevity' },
+                    { href: '#', label: 'Peptide Therapy' },
+                  ].map(({ href, label }) => (
+                    <div key={label} className="footer-link-wrap">
+                      <a href={href} className="footer-link">{label}</a>
+                      <div className="footer-link-line"></div>
+                    </div>
+                  ))}
                 </div>
                 <div className="footer-col">
                   <div className="footer-col-title">Company</div>
-                  <a href="/about-01" className="footer-link">About</a>
-                  <a href="/blogs" className="footer-link">Journal</a>
-                  <a href="/doctors" className="footer-link">Doctors</a>
+                  {[
+                    { href: '/about-01', label: 'About' },
+                    { href: '/blogs', label: 'Journal' },
+                    { href: '/doctors', label: 'Doctors' },
+                  ].map(({ href, label }) => (
+                    <div key={label} className="footer-link-wrap">
+                      <a href={href} className="footer-link">{label}</a>
+                      <div className="footer-link-line"></div>
+                    </div>
+                  ))}
                 </div>
                 <div className="footer-col">
                   <div className="footer-col-title">Legal</div>
-                  <a href="/terms" className="footer-link">Terms</a>
-                  <a href="/privacy" className="footer-link">Privacy</a>
+                  {[
+                    { href: '/terms', label: 'Terms' },
+                    { href: '/privacy', label: 'Privacy' },
+                  ].map(({ href, label }) => (
+                    <div key={label} className="footer-link-wrap">
+                      <a href={href} className="footer-link">{label}</a>
+                      <div className="footer-link-line"></div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -1466,7 +1631,6 @@ export default function HomePage() {
             </div>
           </div>
         </footer>
-      </div>
     </div>
   );
 }
