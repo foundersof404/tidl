@@ -1,0 +1,96 @@
+/* A3 — cohesive gold-direction imagery treatment */
+
+.site-image-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.site-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(243, 195, 0, 0.08) 0%,
+    transparent 42%,
+    rgba(23, 19, 16, 0.04) 100%
+  );
+}
+
+.site-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.patient-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgb(255, 217, 46) 0%, rgb(243, 195, 0) 48%, rgb(190, 152, 0) 100%);
+  color: #171310;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.patient-avatar--sm {
+  width: 56px;
+  height: 56px;
+  font-size: 15px;
+}
+
+.patient-avatar--card {
+  width: 100%;
+  min-height: 100%;
+  border-radius: 0;
+  font-size: 28px;
+}
+
+.patient-avatar--featured {
+  width: 100%;
+  min-height: 280px;
+  border-radius: 0;
+  font-size: clamp(3rem, 8vw, 4.5rem);
+}
+
+.testimonial-context-photo {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.testimonial-context-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(243, 195, 0, 0.12), transparent 38%),
+    linear-gradient(0deg, rgba(11, 10, 8, 0.42), transparent 55%);
+}
+
+.testimonial-context-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: inherit;
+}
+
+.families-card-img,
+.circle-info-img,
+.families-bg {
+  filter: saturate(0.94) contrast(1.03);
+}
+
+.journey-content .circle-info-img {
+  object-position: center 28%;
+}

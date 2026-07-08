@@ -56,8 +56,7 @@
   margin: 0;
   font-size: clamp(2rem, 4.2vw, 3.25rem);
   line-height: 1.05;
-  letter-spacing: -0.03em;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--hiw-ink);
 }
 

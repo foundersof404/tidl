@@ -111,8 +111,8 @@
 .pdp-section-title {
   font-size: clamp(1.85rem, 3.8vw, 2.75rem);
   line-height: 1.08;
-  letter-spacing: -0.03em;
   margin: 0 0 14px;
+  font-weight: 800;
 }
 
 .pdp-section-title--light {
@@ -278,8 +278,6 @@
 .pdp-hero-title {
   font-size: clamp(2.6rem, 6.2vw, 4.75rem);
   line-height: 1.02;
-  letter-spacing: -0.04em;
-  font-weight: 600;
   margin: 0 0 18px;
   max-width: 12ch;
 }

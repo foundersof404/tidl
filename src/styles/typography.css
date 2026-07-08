@@ -1,0 +1,95 @@
+/*
+ * TIDL typography system (A2)
+ * Body: Helvetica Neue stack (regular/medium)
+ * Display: Barlow Condensed (bold, athletic headline voice)
+ */
+
+:root {
+  --font-body: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Condensed", "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-weight-body: 400;
+  --font-weight-body-medium: 500;
+  --font-weight-heading: 700;
+  --font-weight-display: 800;
+  --font-weight-wordmark: 800;
+  --letter-spacing-wordmark: 0.02em;
+  --letter-spacing-display: -0.02em;
+}
+
+/* Body copy — Helvetica, regular */
+.p1-regular,
+.p2-regular,
+.paragraph-2,
+.paragraph-01,
+.service-hero-body-text,
+.journey-text,
+.families-card-text,
+.ask-sub,
+.footer-left-text,
+.footer-subscriber-text,
+.tdlp5-fsub,
+.tdlp5-ssub,
+.hiw-support,
+.hiw-step-body,
+.hiw-info-desc,
+.hiw-strip-desc,
+.pdp-hero-sub,
+.pdp-note,
+.pdp-price-sub,
+.pdp-hero-stat span {
+  font-family: var(--font-body) !important;
+  font-weight: var(--font-weight-body);
+}
+
+/* Display headings — pronounced athletic voice */
+.display,
+.heading-01,
+.heading-02,
+.heading-03,
+.heading-05,
+.hero-title-01,
+.services-title-02,
+.stories-title-03,
+.journey-title,
+.families-title,
+.families-card-title,
+.families-card-text-02,
+.families-card-text-03,
+.ask-h,
+.tdlp5-h2,
+.services-closing-headline,
+.hiw-title,
+.hiw-step-headline,
+.hiw-info-title,
+.hiw-strip-title,
+.footer-left-title,
+.title-small,
+.pdp-hero-title,
+.pdp-section-title,
+.pdp-price {
+  font-family: var(--font-display) !important;
+  font-weight: var(--font-weight-heading);
+  letter-spacing: var(--letter-spacing-display);
+  text-transform: none;
+}
+
+.display,
+.hero-title-01.display,
+.heading-01,
+.hiw-title,
+.pdp-hero-title {
+  font-weight: var(--font-weight-display);
+  letter-spacing: -0.03em;
+}
+
+.heading-02,
+.heading-03 {
+  font-weight: var(--font-weight-heading);
+}
+
+.tidl-wordmark {
+  font-family: var(--font-display) !important;
+  font-weight: var(--font-weight-wordmark);
+  letter-spacing: var(--letter-spacing-wordmark);
+  text-transform: uppercase;
+}

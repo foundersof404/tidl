@@ -5,6 +5,7 @@ import { getProductBySlug } from "@/lib/products";
 import { formatCurrency } from "@/lib/pricing";
 import { lockPageScroll, unlockPageScroll } from "@/lib/age-gate";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { TidlWordmark } from "@/components/brand/TidlWordmark";
 import { PenShowcaseSection } from "./PenShowcaseSection";
 import { PdpHeroSection } from "./PdpHeroSection";
 import { PdpVerticalTimeline } from "./PdpVerticalTimeline";
@@ -14,7 +15,6 @@ import { PdpCtaBand } from "./PdpCtaBand";
 import { PdpFaqSection } from "./PdpFaqSection";
 import { PdpOutcomeSection } from "./PdpOutcomeSection";
 import { PdpIncludedSection } from "./PdpIncludedSection";
-import { LOGO_SRC } from "./data/glp1-pdp-data";
 import { PdpButton, Reveal } from "./pdp-ui";
 import "../home/home.css";
 import "./pdp.css";
@@ -92,8 +92,8 @@ export default function Glp1PdpPage() {
           <div id="navbar" className="navbar-wrap">
             <div className="navbar">
               <div className="nabvar-info">
-                <Link to="/" className="nav-logo _02 w-inline-block">
-                  <img src={LOGO_SRC} alt="TIDL Health" loading="lazy" className="nav-logo-img" />
+                <Link to="/" className="nav-logo _02 w-inline-block" aria-label="TIDL home">
+                  <TidlWordmark variant="light" />
                 </Link>
                 <div className="navbar-info-left">
                   {navLinks.map(({ href, label }) => (
@@ -109,8 +109,8 @@ export default function Glp1PdpPage() {
               </div>
 
               <div className="navbar-middle">
-                <Link to="/" className="nav-logo w-inline-block">
-                  <img src={LOGO_SRC} alt="TIDL Health" loading="lazy" className="nav-logo-img dark" />
+                <Link to="/" className="nav-logo w-inline-block" aria-label="TIDL home">
+                  <TidlWordmark variant="light" />
                 </Link>
               </div>
 
@@ -167,8 +167,8 @@ export default function Glp1PdpPage() {
 
               <div className={`menu-wrap _02${mobileNavOpen ? " open" : ""}`}>
                 <div className="menu-inside-info">
-                  <Link to="/" className="nav-logo _03 w-inline-block" onClick={() => setMobileNavOpen(false)}>
-                    <img src={LOGO_SRC} alt="TIDL Health" loading="lazy" className="nav-logo-img" />
+                  <Link to="/" className="nav-logo _03 w-inline-block" onClick={() => setMobileNavOpen(false)} aria-label="TIDL home">
+                    <TidlWordmark variant="dark" />
                   </Link>
                   <button type="button" className="nav-toggle-btn-wrap" aria-label="Close menu" onClick={() => setMobileNavOpen(false)}>
                     <div className="nav-toogle-btn close w-embed">

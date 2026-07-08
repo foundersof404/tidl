@@ -1,15 +1,9 @@
-const CDN = "https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9";
+import { SITE_IMAGES } from "@/lib/site-assets";
+import { TESTIMONIALS } from "@/lib/testimonials";
 
-export const PEN_IMAGE = `${CDN}/6a4ae82cb673463b10de0cad_hf_20260705_223658_ef5718c4-2d19-4e28-9a03-7f8e1555a580%20(1).png`;
+export const PEN_IMAGE = SITE_IMAGES.pen;
 
-export const LOGO_SRC = `${CDN}/6a49afeae23ed952c91c2170_ChatGPTImageJul4202603_07_16AM.png`;
-
-export const HERO_IMAGES = {
-  lifestyle: `${CDN}/6a4a948975e49a6ca9c6b6e5_hf_20260705_172618_ea8e3be2-4637-4096-83cc-5ec995f07e09.png`,
-  packaging: `${CDN}/6a4bbd9950fd69347716fcab_hf_20260706_142630_ecfd4adf-10ef-4ea0-804d-21e9849d1aa8.png`,
-  care: `${CDN}/6a4aec42b6e5359eece02ec0_hf_20260705_222419_e9eea2f4-16e9-4829-bc36-184ebd9190fc%20(1).png`,
-  cta: `${CDN}/6a4aadd9bef554b822fc1e2e_hf_20260705_190921_9cf62bf3-9feb-43b9-a0c0-ff9a0694d429.png`,
-} as const;
+export const HERO_IMAGES = SITE_IMAGES.pdp;
 
 export const HERO_STATS = [
   { value: "5 min", label: "Online intake" },
@@ -59,35 +53,7 @@ export const SAFETY_PILLARS = [
   },
 ] as const;
 
-export const REVIEWS = [
-  {
-    img: `${CDN}/6a49bb8eb221c183c37eeabe_ChatGPT%20Image%20Jul%205%2C%202026%2C%2005_02_33%20AM.png`,
-    quote:
-      "I'd been putting this off for years because I thought it would be complicated. It wasn't. The intake took five minutes, a doctor reviewed everything, and my treatment showed up a few days later. Down 18 pounds and finally feeling like myself again.",
-    name: "Sarah M.",
-    condition: "Weight Loss",
-    result: "−18 lbs",
-    featured: true,
-  },
-  {
-    img: `${CDN}/6a49bb8eb673463b10a94dc9_ChatGPT%20Image%20Jul%205%2C%202026%2C%2005_02_37%20AM.png`,
-    quote:
-      "What sold me was how discreet and simple it was. No waiting rooms, no awkward conversations. The care team actually answers when I message them.",
-    name: "James R.",
-    condition: "GLP-1 Care",
-    result: "3 months in",
-    featured: false,
-  },
-  {
-    img: `${CDN}/6a49bb883052977cb14adc96_ChatGPT%20Image%20Jul%205%2C%202026%2C%2005_03_39%20AM.png`,
-    quote:
-      "I was skeptical about doing this online, but everything felt legitimate from the start. Real doctors, a real pharmacy, clear instructions with the pen.",
-    name: "Daniel K.",
-    condition: "Metabolic Health",
-    result: "Verified patient",
-    featured: false,
-  },
-] as const;
+export const REVIEWS = TESTIMONIALS;
 
 export const REVIEW_STATS = [
   { value: "4.9", label: "Average rating" },

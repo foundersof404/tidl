@@ -1,6 +1,8 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "./styles/typography.css";
+@import "./styles/imagery.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -31,7 +33,7 @@
   --color-gold-deep: var(--gold-deep);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
-  --font-sans: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -159,11 +161,12 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-body);
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Webflow shared tokens — override gold/orange secondary palette */
+  /* Webflow shared tokens — gold palette overrides (no orange) */
   :root,
   body {
     --secondary: rgb(243, 195, 0);
@@ -172,6 +175,19 @@
     --secondary-20: rgba(243, 195, 0, 0.2);
     --secondary-28: rgba(243, 195, 0, 0.28);
     --secondary-40: rgba(243, 195, 0, 0.4);
+    --brand-accent: rgb(243, 195, 0);
+    --brand-accent-rgb: 243, 195, 0;
+    --brand-accent-bright: rgb(255, 217, 46);
+    --brand-accent-deep: rgb(190, 152, 0);
+  }
+
+  .w-nav-link.w--current,
+  .button-03,
+  .btn-text-outside-03,
+  .service-item-thumb-text,
+  .tdlp5-kick,
+  .stories-card-rating {
+    --secondary: rgb(243, 195, 0);
   }
 }
 

@@ -1,4 +1,5 @@
 import { REVIEWS, REVIEW_STATS } from "./data/glp1-pdp-data";
+import { PatientAvatar, TestimonialContextPhoto } from "@/components/brand/PatientAvatar";
 import { Reveal } from "./pdp-ui";
 
 export function PdpReviewsSection() {
@@ -32,7 +33,10 @@ export function PdpReviewsSection() {
             <Reveal className="pdp-review-featured-wrap">
               <article className="pdp-review-featured">
                 <div className="pdp-review-featured-photo">
-                  <img src={featured.img} alt={`${featured.name} testimonial`} loading="lazy" />
+                  <TestimonialContextPhoto
+                    src={featured.contextImage}
+                    alt={`${featured.condition} care context`}
+                  />
                   <div className="pdp-review-featured-badge">{featured.result}</div>
                 </div>
                 <div className="pdp-review-featured-body">
@@ -53,7 +57,7 @@ export function PdpReviewsSection() {
                 <Reveal key={story.name} delay={0.08 + index * 0.08}>
                   <article className="pdp-review-card">
                     <div className="pdp-review-card-photo">
-                      <img src={story.img} alt={`${story.name} testimonial`} loading="lazy" />
+                      <PatientAvatar name={story.name} size="card" />
                     </div>
                     <div className="pdp-review-card-body">
                       <div className="pdp-review-stars" aria-label="Rated 5 out of 5">

@@ -1,18 +1,7 @@
 import { useState, type FormEvent, type MouseEvent } from "react";
 import { Link } from "@tanstack/react-router";
-
-const FOOTER_LOGO =
-  "https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484ef1564367dbc7bbbbaf_ChatGPTImageJul4202603_07_16AM.png";
-const FOOTER_BTM_IMG =
-  "https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a48596ac890892ac42d3e95_ChatGPTImageJul4202603_52_14AM.png";
-const CDN = "https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9";
-
-const SOCIAL_LINKS = [
-  { href: "https://www.facebook.com/", icon: `${CDN}/6a484775bf274d9b9ec3f798_social%20icon%20(19).svg`, label: "Facebook" },
-  { href: "https://x.com/", icon: `${CDN}/6a484775bf274d9b9ec3f799_social%20icon%20(20).svg`, label: "X" },
-  { href: "https://www.linkedin.com/", icon: `${CDN}/6a484775bf274d9b9ec3f79a_social%20icon%20(21).svg`, label: "LinkedIn" },
-  { href: "https://www.instagram.com/", icon: `${CDN}/6a484775bf274d9b9ec3f797_social%20icon%20(18).svg`, label: "Instagram" },
-] as const;
+import { TidlWordmark } from "@/components/brand/TidlWordmark";
+import { SITE_IMAGES, SOCIAL_ICONS } from "@/lib/site-assets";
 
 const TREATMENT_LINKS = [
   { to: "/products/glp-1-weight-loss" as const, label: "Weight Loss" },
@@ -33,6 +22,13 @@ const COMPANY_LINKS = [
 const CAREER_LINKS = [
   { href: "#", label: "For Professionals" },
   { href: "#", label: "For Providers" },
+] as const;
+
+const SOCIAL_LINKS = [
+  { href: "https://www.facebook.com/", icon: SOCIAL_ICONS.facebook, label: "Facebook" },
+  { href: "https://x.com/", icon: SOCIAL_ICONS.x, label: "X" },
+  { href: "https://www.linkedin.com/", icon: SOCIAL_ICONS.linkedin, label: "LinkedIn" },
+  { href: "https://www.instagram.com/", icon: SOCIAL_ICONS.instagram, label: "Instagram" },
 ] as const;
 
 function FooterLink({ href, label }: { href: string; label: string }) {
@@ -77,10 +73,10 @@ export function SiteFooter({ onGetStarted }: SiteFooterProps) {
             <div className="footer-wrap">
               <div className="footer-left">
                 <div className="footer-left-head">
-                  <div className="footer-left-title heading-03">Care that meets you where you are</div>
+                  <div className="footer-left-title heading-03">Medical-grade care. Built to perform.</div>
                   <div className="footer-left-text p2-regular">
-                    Doctor-prescribed treatments for weight loss, hormones, and longevity, delivered discreetly to your
-                    door.
+                    Doctor-prescribed GLP-1, TRT, and peptide treatments for weight, hormones, and recovery, delivered
+                    discreetly to your door.
                   </div>
                   <div className="footer-left-btns">
                     <a
@@ -149,8 +145,8 @@ export function SiteFooter({ onGetStarted }: SiteFooterProps) {
 
                 <div className="footer-subscriber-box">
                   <div className="footer-subscriber-head">
-                    <Link to="/" className="footer-logo-link w-inline-block">
-                      <img src={FOOTER_LOGO} loading="lazy" sizes="(max-width: 2160px) 100vw, 2160px" alt="Footer logo" className="footer-logo" />
+                    <Link to="/" className="footer-logo-link w-inline-block" aria-label="TIDL home">
+                      <TidlWordmark variant="dark" size="footer" />
                     </Link>
                     <div className="footer-subscriber-text p1-regular">
                       Health insights, treatment updates, and offers, straight to your inbox.
@@ -199,7 +195,7 @@ export function SiteFooter({ onGetStarted }: SiteFooterProps) {
       </section>
 
       <img
-        src={FOOTER_BTM_IMG}
+        src={SITE_IMAGES.footer.decorative}
         loading="lazy"
         sizes="(max-width: 3149px) 100vw, 3149px"
         alt=""

@@ -7,6 +7,10 @@ import { CtaSection } from './cta/CtaSection';
 import { ServicesClosing } from './ServicesClosing';
 import { HowItWorksSection } from './how-it-works/HowItWorksSection';
 import { SiteFooter } from '@/components/layout/SiteFooter';
+import { TidlWordmark } from '@/components/brand/TidlWordmark';
+import { PatientAvatar } from '@/components/brand/PatientAvatar';
+import { SITE_IMAGES } from '@/lib/site-assets';
+import { TESTIMONIALS } from '@/lib/testimonials';
 
 const ANSWERS: Record<string, string> = {
   "What is the TIDL Pen?":
@@ -107,30 +111,6 @@ const TICKER_ITEMS = [
   { t: "Peptide therapy" },
   { t: "NAD+ therapy" },
   { t: "Recovery" },
-];
-
-const STORIES = [
-  {
-    img: "https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49bb8eb221c183c37eeabe_ChatGPT%20Image%20Jul%205%2C%202026%2C%2005_02_33%20AM.png",
-    imgClass: "stories-item-thumb-img",
-    quote: "I'd been putting this off for years because I thought it would be complicated. It wasn't. The quiz took five minutes, a doctor reviewed everything, and my treatment showed up a few days later. Down 18 pounds and finally feeling like myself again.",
-    name: "Sarah M.",
-    role: "Verified Patient",
-  },
-  {
-    img: "https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49bb8eb673463b10a94dc9_ChatGPT%20Image%20Jul%205%2C%202026%2C%2005_02_37%20AM.png",
-    imgClass: "stories-item-thumb-img _02",
-    quote: "What sold me was how discreet and simple it was. No waiting rooms, no awkward conversations. The care team actually answers when I message them, and reordering takes one tap. Genuinely the easiest health decision I've made.",
-    name: "James R.",
-    role: "Verified Patient",
-  },
-  {
-    img: "https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49bb883052977cb14adc96_ChatGPT%20Image%20Jul%205%2C%202026%2C%2005_03_39%20AM.png",
-    imgClass: "stories-item-thumb-img",
-    quote: "I was skeptical about doing this online, but everything felt legitimate from the start. Real doctors, a real pharmacy, clear instructions with the pen. Three months in and the results speak for themselves.",
-    name: "Daniel K.",
-    role: "Verified Patient",
-  },
 ];
 
 function ArrowRight() {
@@ -234,6 +214,7 @@ export default function HomePage() {
   const tickerTrackRef = useRef<HTMLDivElement>(null);
   const ansTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const ansTyperRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const askInputRef = useRef<HTMLInputElement>(null);
 
   // Placeholder typewriter for Ask TIDL
   useEffect(() => {
@@ -418,6 +399,11 @@ export default function HomePage() {
     }, 900);
   }, []);
 
+  const openAskTidl = useCallback(() => {
+    document.getElementById('askTidl')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    window.setTimeout(() => askInputRef.current?.focus(), 450);
+  }, []);
+
   const handleFaqToggle = (id: number) => {
     setFaqOpen((prev) => (prev === id ? null : id));
   };
@@ -494,15 +480,8 @@ export default function HomePage() {
             <div id="navbar" className="navbar-wrap">
               <div className="navbar">
                 <div className="nabvar-info">
-                  <a href="/" className="nav-logo _02 w-inline-block">
-                    <img
-                      sizes="(max-width: 512px) 100vw, 512px"
-                      srcSet="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49afeae23ed952c91c2170_ChatGPTImageJul4202603_07_16AM-p-500.png 500w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49afeae23ed952c91c2170_ChatGPTImageJul4202603_07_16AM.png 512w"
-                      alt="website logo"
-                      src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49afeae23ed952c91c2170_ChatGPTImageJul4202603_07_16AM.png"
-                      loading="lazy"
-                      className="nav-logo-img"
-                    />
+                  <a href="/" className="nav-logo _02 w-inline-block" aria-label="TIDL home">
+                    <TidlWordmark variant="light" />
                   </a>
                   <div className="navbar-info-left">
                     <div className="nav-dropdown _01 w-dropdown">
@@ -537,15 +516,8 @@ export default function HomePage() {
                 </div>
 
                 <div className="navbar-middle">
-                  <a href="/" className="nav-logo w-inline-block">
-                    <img
-                      sizes="(max-width: 512px) 100vw, 512px"
-                      srcSet="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49afeae23ed952c91c2170_ChatGPTImageJul4202603_07_16AM-p-500.png 500w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49afeae23ed952c91c2170_ChatGPTImageJul4202603_07_16AM.png 512w"
-                      alt="website logo"
-                      src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49afeae23ed952c91c2170_ChatGPTImageJul4202603_07_16AM.png"
-                      loading="lazy"
-                      className="nav-logo-img dark"
-                    />
+                  <a href="/" className="nav-logo w-inline-block" aria-label="TIDL home">
+                    <TidlWordmark variant="light" />
                   </a>
                 </div>
 
@@ -569,14 +541,19 @@ export default function HomePage() {
                       <div className="button-line-02 light"></div>
                     </a>
                   </div>
-                  <div className="search-icon-wrap light">
+                  <button
+                    type="button"
+                    className="search-icon-wrap light"
+                    aria-label="Ask TIDL"
+                    onClick={openAskTidl}
+                  >
                     <div className="search-ico w-embed">
                       <svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         <path d="M15.7469 15.7469L12.4844 12.4844" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </div>
-                  </div>
+                  </button>
                 </div>
 
                 <button
@@ -594,8 +571,8 @@ export default function HomePage() {
                 {/* Mobile menu */}
                 <div className={`menu-wrap _02${mobileNavOpen ? ' open' : ''}`}>
                   <div className="menu-inside-info">
-                    <a href="#" className="nav-logo _03 w-inline-block">
-                      <img loading="lazy" src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a49b15533f1b764070d43f4_images.png" alt="website logo" className="nav-logo-img"/>
+                    <a href="/" className="nav-logo _03 w-inline-block" aria-label="TIDL home">
+                      <TidlWordmark variant="dark" />
                     </a>
                     <button className="nav-toggle-btn-wrap" onClick={() => setMobileNavOpen(false)} aria-label="Close menu">
                       <div className="nav-toogle-btn close w-embed">
@@ -729,17 +706,17 @@ export default function HomePage() {
           <img
             className="service-v1-bg"
             data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f21148"
-            src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a.png"
+            src={SITE_IMAGES.hero.main}
             alt="service bg"
             sizes="(max-width: 3024px) 100vw, 3024px"
             loading="lazy"
-            srcSet="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a-p-500.png 500w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a-p-800.png 800w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a-p-1080.png 1080w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a-p-1600.png 1600w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a44f83052977cb1646003_hf_20260705_114532_eed1607f-baf0-4f2d-9b83-39b75e08344a.png 3024w"
+            srcSet={SITE_IMAGES.hero.srcSet}
           />
           <img
-            src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f7ba_overlay%20(2).png"
+            src={SITE_IMAGES.hero.overlay}
             loading="lazy"
             sizes="(max-width: 1439px) 100vw, 1440px"
-            srcSet="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f7ba_overlay%2520(2)-p-500.png 500w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f7ba_overlay%2520(2)-p-1080.png 1080w, https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f7ba_overlay%20(2).png 1440w"
+            srcSet={SITE_IMAGES.hero.overlaySrcSet}
             alt=""
             className="service-v1-overlay"
           />
@@ -763,7 +740,7 @@ export default function HomePage() {
                 >
                   <div className="services-item-thumb _02">
                     <img
-                      src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a948975e49a6ca9c6b6e5_hf_20260705_172618_ea8e3be2-4637-4096-83cc-5ec995f07e09.png"
+                      src={SITE_IMAGES.services.weightLoss}
                       loading="lazy"
                       sizes="(max-width: 1728px) 100vw, 1728px"
                       alt="service ico"
@@ -802,7 +779,7 @@ export default function HomePage() {
                 >
                   <div className="services-item-thumb _02">
                     <img
-                      src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4a95a92a6dee9e17ed919e_hf_20260705_173015_06ec6b8c-b985-4bab-80b1-41afe144db92.png"
+                      src={SITE_IMAGES.services.testosterone}
                       loading="lazy"
                       sizes="(max-width: 1728px) 100vw, 1728px"
                       alt="service img"
@@ -842,7 +819,7 @@ export default function HomePage() {
                 >
                   <div className="services-item-thumb _02">
                     <img
-                      src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4bd7ba829cdf371074ee74_hf_20260706_160923_8f107d2e-39e5-41c3-8290-18fd580d714a.png"
+                      src={SITE_IMAGES.services.longevity}
                       loading="lazy"
                       sizes="(max-width: 1728px) 100vw, 1728px"
                       alt="service img"
@@ -910,7 +887,7 @@ export default function HomePage() {
                 <div className="tdlp5-levit">
                   <img
                     className="tdlp5-img"
-                    src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4ae82cb673463b10de0cad_hf_20260705_223658_ef5718c4-2d19-4e28-9a03-7f8e1555a580%20(1).png"
+                    src={SITE_IMAGES.pen}
                     alt="The TIDL Pen"
                   />
                   <button
@@ -974,21 +951,12 @@ export default function HomePage() {
         <section className="stories-03 container-full" id="stories">
           <div className="container-fluid for-works">
             <div className="stories-content-03">
-              <h2 className="stories-title-03 heading-01">Stories from our patients</h2>
+              <h2 className="stories-title-03 heading-01">Real patients. Measurable results.</h2>
               <div className="stories-grid">
-                {[
-                  { ...STORIES[0], condition: 'Weight Loss' },
-                  { ...STORIES[1], condition: 'GLP-1 Care' },
-                  { ...STORIES[2], condition: 'Metabolic Health' },
-                ].map((story) => (
+                {TESTIMONIALS.map((story) => (
                   <article className="stories-card" key={story.name}>
                     <div className="stories-card-head">
-                      <img
-                        src={story.img}
-                        loading="lazy"
-                        alt={`${story.name} testimonial`}
-                        className="stories-card-avatar"
-                      />
+                      <PatientAvatar name={story.name} size="sm" />
                       <div className="stories-card-meta">
                         <div className="stories-card-name">{story.name}</div>
                         <div className="stories-card-condition">{story.condition}</div>
@@ -1012,13 +980,13 @@ export default function HomePage() {
               <div className="journey-content">
                 <div className="circle-img-outer">
                   <div className="circle-img-wrap">
-                    <img src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f79b_Circle.svg" loading="lazy" alt="Circle" className="circle-img"/>
+                    <img src={SITE_IMAGES.journey.circle} loading="lazy" alt="" className="circle-img"/>
                   </div>
                 </div>
                 <div className="circle-info-outer">
                   <div className="circle-info-img-wrap">
                     <img
-                      src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f79d_shaped.png"
+                      src={SITE_IMAGES.journey.center}
                       loading="lazy"
                       sizes="(max-width: 3840px) 100vw, 3840px"
                       alt=""
@@ -1027,9 +995,9 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="journey-content-inside">
-                  <h2 className="journey-title heading-01">The best care<br/>by the best in medicine</h2>
+                  <h2 className="journey-title heading-01">Medicine built<br/>for performance</h2>
                   <div className="journey-text p2-regular">
-                    Meet the team of leading specialists with decades of combined experience across key specialties.
+                    Board-certified providers across weight, hormones, and recovery. Clinical rigor with an athletic standard of results.
                   </div>
                   <div className="journey-bnts">
                     <a href="#" onClick={openQuiz} className="button-01 button-03 w-inline-block">
@@ -1135,7 +1103,7 @@ export default function HomePage() {
                     </a>
                   </div>
                   <img
-                    src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f7bb_shadow%20(17).png"
+                    src={SITE_IMAGES.families.cardShadow}
                     loading="lazy"
                     sizes="(max-width: 522px) 100vw, 522px"
                     alt=""
@@ -1144,11 +1112,11 @@ export default function HomePage() {
                 </div>
                 <div className="families-card-another">
                   <div className="families-card _02">
-                    <div className="families-card-text-02 heading-03">From licensed pharmacies to your door</div>
+                    <div className="families-card-text-02 heading-03">From licensed pharmacy to your door. No clinic visits.</div>
                   </div>
                   <div className="families-card _03">
                     <img src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f6e0_barchirt.svg" loading="lazy" alt="" className="families-card-bar-03"/>
-                    <div className="families-card-text-03 heading-05">Real change, tracked over time</div>
+                    <div className="families-card-text-03 heading-05">Progress you can measure, week after week</div>
                   </div>
                 </div>
               </div>
@@ -1156,7 +1124,7 @@ export default function HomePage() {
           </div>
           <img
             className="families-bg"
-            src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a4bdcc786041c1c67e4f84a_hf_20260706_164258_2d8f8b0b-75a0-491a-bc5b-ce98730f9f41.png"
+            src={SITE_IMAGES.families.bg}
             alt="families bg"
             sizes="(max-width: 1728px) 100vw, 1728px"
             loading="lazy"
@@ -1170,12 +1138,13 @@ export default function HomePage() {
         <div className="ask-tidl" id="askTidl">
           <h2 className="ask-h">Ask TIDL anything</h2>
           <p className="ask-sub">
-            Instant answers about treatments, from our clinical knowledge base.<br/>
+            Instant answers about treatments and performance goals, from our clinical knowledge base.<br/>
             A licensed doctor handles anything medical.
           </p>
 
           <div className={`ask-field${askFocused ? ' focus' : ''}`} id="askBar">
             <input
+              ref={askInputRef}
               className="ask-in"
               id="askIn"
               type="text"
