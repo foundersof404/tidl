@@ -64,9 +64,25 @@ export function isPrxConfigured(): boolean {
   );
 }
 
-/** Encounter type slug for POST /telehealth/intake/unified (e.g. weight-management). */
-export function getPrxEncounterTypeSlug(): string {
-  return readEnv("PRX_ENCOUNTER_TYPE_SLUG") ?? "weight-management";
+const ENCOUNTER_TYPE_ENV_KEYS: Record<string, string> = {
+  "glp-1-weight-loss": "PRX_GLP1_ENCOUNTER_TYPE_SLUG",
+};
+
+const DEFAULT_ENCOUNTER_TYPE_SLUGS: Record<string, string> = {
+  "glp-1-weight-loss": "glp-1-screening",
+};
+
+/** Encounter type slug for POST /telehealth/intake/unified. */
+export function getPrxEncounterTypeSlug(productSlug?: string): string {
+  if (productSlug) {
+    const envKey = ENCOUNTER_TYPE_ENV_KEYS[productSlug] ?? "PRX_ENCOUNTER_TYPE_SLUG";
+    const fromEnv = readEnv(envKey);
+    if (fromEnv) return fromEnv;
+    const mapped = DEFAULT_ENCOUNTER_TYPE_SLUGS[productSlug];
+    if (mapped) return mapped;
+  }
+
+  return readEnv("PRX_ENCOUNTER_TYPE_SLUG") ?? "glp-1-screening";
 }
 
 const PRODUCT_TYPE_SLUG_ENV_KEYS: Record<string, string> = {

@@ -39,7 +39,7 @@ export const Route = createFileRoute("/api/prx/checkout")({
           const intakePayload = mapCheckoutToUnifiedIntakePayload(body, {
             idempotencyKey,
             sandbox: isPrxSandbox(),
-            encounterTypeSlug: getPrxEncounterTypeSlug(),
+            encounterTypeSlug: getPrxEncounterTypeSlug(body.product.slug),
             productTypeSlug: getPrxProductTypeSlug(body.product.slug),
           });
 
@@ -50,7 +50,18 @@ export const Route = createFileRoute("/api/prx/checkout")({
             });
           } catch (error) {
             if (error instanceof PrxApiError) {
-              return jsonError("Failed to submit unified intake to PrescribeRx", error.status, error.body);
+              const prxMessage =
+                typeof error.body === "object" &&
+                error.body != null &&
+                "message" in error.body &&
+                typeof (error.body as { message: unknown }).message === "string"
+                  ? (error.body as { message: string }).message
+                  : undefined;
+              return jsonError(
+                prxMessage ?? "Failed to submit unified intake to PrescribeRx",
+                error.status,
+                error.body,
+              );
             }
             throw error;
           }

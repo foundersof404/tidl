@@ -4,7 +4,16 @@ type ApiFailure = { ok: false; error: string; details?: unknown };
 async function parseApiResponse<T>(response: Response): Promise<T> {
   const payload = (await response.json()) as ApiSuccess<T> | ApiFailure;
   if (!response.ok || !payload.ok) {
-    const message = !payload.ok ? payload.error : `Request failed (${response.status})`;
+    const details =
+      !payload.ok && payload.details && typeof payload.details === "object"
+        ? (payload.details as { message?: unknown }).message
+        : undefined;
+    const message =
+      !payload.ok
+        ? typeof details === "string" && details.length > 0
+          ? details
+          : payload.error
+        : `Request failed (${response.status})`;
     throw new Error(message);
   }
   return payload.data;
