@@ -2136,34 +2136,62 @@
     grid-template-columns: 1fr;
   }
 
+  /* keep desktop alternating timeline on mobile — restore all centred-rail styles */
+  .pdp-section--timeline {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .pdp-vtimeline-wrap {
+    padding: 0 8px;
+  }
+
   .pdp-vtimeline-rail {
-    left: 20px;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .pdp-vtimeline-step {
-    min-height: 64px;
-    padding-left: 48px;
-  }
-
-  .pdp-vtimeline-marker {
-    left: 20px;
-    top: 50%;
-    margin-left: 0;
-    margin-top: -20px;
-  }
-
-  .pdp-vtimeline-step--left .pdp-vtimeline-body,
-  .pdp-vtimeline-step--right .pdp-vtimeline-body {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    text-align: left;
+    min-height: 80px;
     padding-left: 0;
   }
 
-  .pdp-vtimeline-step--left .pdp-vtimeline-meta,
+  .pdp-vtimeline-marker {
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+
+  .pdp-vtimeline-body {
+    width: min(calc(50% - 24px), 300px);
+  }
+
+  .pdp-vtimeline-step--left .pdp-vtimeline-body {
+    margin-right: calc(50% + 22px);
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .pdp-vtimeline-step--right .pdp-vtimeline-body {
+    margin-left: calc(50% + 22px);
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .pdp-vtimeline-step--left .pdp-vtimeline-meta {
+    flex-direction: row-reverse;
+  }
+
   .pdp-vtimeline-step--right .pdp-vtimeline-meta {
     flex-direction: row;
+  }
+
+  .pdp-vtimeline-meta h3 {
+    font-size: 0.88rem;
+  }
+
+  .pdp-vtimeline-body p {
+    font-size: 0.8rem;
   }
 }
