@@ -16,6 +16,16 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AccountIndexRouteImport } from './routes/account/index'
 import { Route as ProductsGlp1WeightLossRouteImport } from './routes/products/glp-1-weight-loss'
 import { Route as CategorySlugRouteImport } from './routes/category/$slug'
+import { Route as ApiWebhooksPrescribeRxRouteImport } from './routes/api/webhooks/prescribe-rx'
+import { Route as ApiPrxProductsRouteImport } from './routes/api/prx/products'
+import { Route as ApiPrxPatientsRouteImport } from './routes/api/prx/patients'
+import { Route as ApiPrxOrdersRouteImport } from './routes/api/prx/orders'
+import { Route as ApiPrxMeRouteImport } from './routes/api/prx/me'
+import { Route as ApiPrxIntakeRouteImport } from './routes/api/prx/intake'
+import { Route as ApiPrxHealthRouteImport } from './routes/api/prx/health'
+import { Route as ApiPrxCheckoutRouteImport } from './routes/api/prx/checkout'
+import { Route as ApiPrxCatalogRouteImport } from './routes/api/prx/catalog'
+import { Route as ApiPrxOrdersOrderIdRouteImport } from './routes/api/prx/orders.$orderId'
 
 const QuizRoute = QuizRouteImport.update({
   id: '/quiz',
@@ -52,6 +62,56 @@ const CategorySlugRoute = CategorySlugRouteImport.update({
   path: '/category/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiWebhooksPrescribeRxRoute = ApiWebhooksPrescribeRxRouteImport.update({
+  id: '/api/webhooks/prescribe-rx',
+  path: '/api/webhooks/prescribe-rx',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxProductsRoute = ApiPrxProductsRouteImport.update({
+  id: '/api/prx/products',
+  path: '/api/prx/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxPatientsRoute = ApiPrxPatientsRouteImport.update({
+  id: '/api/prx/patients',
+  path: '/api/prx/patients',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxOrdersRoute = ApiPrxOrdersRouteImport.update({
+  id: '/api/prx/orders',
+  path: '/api/prx/orders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxMeRoute = ApiPrxMeRouteImport.update({
+  id: '/api/prx/me',
+  path: '/api/prx/me',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxIntakeRoute = ApiPrxIntakeRouteImport.update({
+  id: '/api/prx/intake',
+  path: '/api/prx/intake',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxHealthRoute = ApiPrxHealthRouteImport.update({
+  id: '/api/prx/health',
+  path: '/api/prx/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxCheckoutRoute = ApiPrxCheckoutRouteImport.update({
+  id: '/api/prx/checkout',
+  path: '/api/prx/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxCatalogRoute = ApiPrxCatalogRouteImport.update({
+  id: '/api/prx/catalog',
+  path: '/api/prx/catalog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPrxOrdersOrderIdRoute = ApiPrxOrdersOrderIdRouteImport.update({
+  id: '/$orderId',
+  path: '/$orderId',
+  getParentRoute: () => ApiPrxOrdersRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +121,16 @@ export interface FileRoutesByFullPath {
   '/category/$slug': typeof CategorySlugRoute
   '/products/glp-1-weight-loss': typeof ProductsGlp1WeightLossRoute
   '/account/': typeof AccountIndexRoute
+  '/api/prx/catalog': typeof ApiPrxCatalogRoute
+  '/api/prx/checkout': typeof ApiPrxCheckoutRoute
+  '/api/prx/health': typeof ApiPrxHealthRoute
+  '/api/prx/intake': typeof ApiPrxIntakeRoute
+  '/api/prx/me': typeof ApiPrxMeRoute
+  '/api/prx/orders': typeof ApiPrxOrdersRouteWithChildren
+  '/api/prx/patients': typeof ApiPrxPatientsRoute
+  '/api/prx/products': typeof ApiPrxProductsRoute
+  '/api/webhooks/prescribe-rx': typeof ApiWebhooksPrescribeRxRoute
+  '/api/prx/orders/$orderId': typeof ApiPrxOrdersOrderIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +140,16 @@ export interface FileRoutesByTo {
   '/category/$slug': typeof CategorySlugRoute
   '/products/glp-1-weight-loss': typeof ProductsGlp1WeightLossRoute
   '/account': typeof AccountIndexRoute
+  '/api/prx/catalog': typeof ApiPrxCatalogRoute
+  '/api/prx/checkout': typeof ApiPrxCheckoutRoute
+  '/api/prx/health': typeof ApiPrxHealthRoute
+  '/api/prx/intake': typeof ApiPrxIntakeRoute
+  '/api/prx/me': typeof ApiPrxMeRoute
+  '/api/prx/orders': typeof ApiPrxOrdersRouteWithChildren
+  '/api/prx/patients': typeof ApiPrxPatientsRoute
+  '/api/prx/products': typeof ApiPrxProductsRoute
+  '/api/webhooks/prescribe-rx': typeof ApiWebhooksPrescribeRxRoute
+  '/api/prx/orders/$orderId': typeof ApiPrxOrdersOrderIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +160,16 @@ export interface FileRoutesById {
   '/category/$slug': typeof CategorySlugRoute
   '/products/glp-1-weight-loss': typeof ProductsGlp1WeightLossRoute
   '/account/': typeof AccountIndexRoute
+  '/api/prx/catalog': typeof ApiPrxCatalogRoute
+  '/api/prx/checkout': typeof ApiPrxCheckoutRoute
+  '/api/prx/health': typeof ApiPrxHealthRoute
+  '/api/prx/intake': typeof ApiPrxIntakeRoute
+  '/api/prx/me': typeof ApiPrxMeRoute
+  '/api/prx/orders': typeof ApiPrxOrdersRouteWithChildren
+  '/api/prx/patients': typeof ApiPrxPatientsRoute
+  '/api/prx/products': typeof ApiPrxProductsRoute
+  '/api/webhooks/prescribe-rx': typeof ApiWebhooksPrescribeRxRoute
+  '/api/prx/orders/$orderId': typeof ApiPrxOrdersOrderIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +181,16 @@ export interface FileRouteTypes {
     | '/category/$slug'
     | '/products/glp-1-weight-loss'
     | '/account/'
+    | '/api/prx/catalog'
+    | '/api/prx/checkout'
+    | '/api/prx/health'
+    | '/api/prx/intake'
+    | '/api/prx/me'
+    | '/api/prx/orders'
+    | '/api/prx/patients'
+    | '/api/prx/products'
+    | '/api/webhooks/prescribe-rx'
+    | '/api/prx/orders/$orderId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +200,16 @@ export interface FileRouteTypes {
     | '/category/$slug'
     | '/products/glp-1-weight-loss'
     | '/account'
+    | '/api/prx/catalog'
+    | '/api/prx/checkout'
+    | '/api/prx/health'
+    | '/api/prx/intake'
+    | '/api/prx/me'
+    | '/api/prx/orders'
+    | '/api/prx/patients'
+    | '/api/prx/products'
+    | '/api/webhooks/prescribe-rx'
+    | '/api/prx/orders/$orderId'
   id:
     | '__root__'
     | '/'
@@ -109,6 +219,16 @@ export interface FileRouteTypes {
     | '/category/$slug'
     | '/products/glp-1-weight-loss'
     | '/account/'
+    | '/api/prx/catalog'
+    | '/api/prx/checkout'
+    | '/api/prx/health'
+    | '/api/prx/intake'
+    | '/api/prx/me'
+    | '/api/prx/orders'
+    | '/api/prx/patients'
+    | '/api/prx/products'
+    | '/api/webhooks/prescribe-rx'
+    | '/api/prx/orders/$orderId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +239,15 @@ export interface RootRouteChildren {
   CategorySlugRoute: typeof CategorySlugRoute
   ProductsGlp1WeightLossRoute: typeof ProductsGlp1WeightLossRoute
   AccountIndexRoute: typeof AccountIndexRoute
+  ApiPrxCatalogRoute: typeof ApiPrxCatalogRoute
+  ApiPrxCheckoutRoute: typeof ApiPrxCheckoutRoute
+  ApiPrxHealthRoute: typeof ApiPrxHealthRoute
+  ApiPrxIntakeRoute: typeof ApiPrxIntakeRoute
+  ApiPrxMeRoute: typeof ApiPrxMeRoute
+  ApiPrxOrdersRoute: typeof ApiPrxOrdersRouteWithChildren
+  ApiPrxPatientsRoute: typeof ApiPrxPatientsRoute
+  ApiPrxProductsRoute: typeof ApiPrxProductsRoute
+  ApiWebhooksPrescribeRxRoute: typeof ApiWebhooksPrescribeRxRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -172,8 +301,90 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategorySlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/webhooks/prescribe-rx': {
+      id: '/api/webhooks/prescribe-rx'
+      path: '/api/webhooks/prescribe-rx'
+      fullPath: '/api/webhooks/prescribe-rx'
+      preLoaderRoute: typeof ApiWebhooksPrescribeRxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/products': {
+      id: '/api/prx/products'
+      path: '/api/prx/products'
+      fullPath: '/api/prx/products'
+      preLoaderRoute: typeof ApiPrxProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/patients': {
+      id: '/api/prx/patients'
+      path: '/api/prx/patients'
+      fullPath: '/api/prx/patients'
+      preLoaderRoute: typeof ApiPrxPatientsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/orders': {
+      id: '/api/prx/orders'
+      path: '/api/prx/orders'
+      fullPath: '/api/prx/orders'
+      preLoaderRoute: typeof ApiPrxOrdersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/me': {
+      id: '/api/prx/me'
+      path: '/api/prx/me'
+      fullPath: '/api/prx/me'
+      preLoaderRoute: typeof ApiPrxMeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/intake': {
+      id: '/api/prx/intake'
+      path: '/api/prx/intake'
+      fullPath: '/api/prx/intake'
+      preLoaderRoute: typeof ApiPrxIntakeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/health': {
+      id: '/api/prx/health'
+      path: '/api/prx/health'
+      fullPath: '/api/prx/health'
+      preLoaderRoute: typeof ApiPrxHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/checkout': {
+      id: '/api/prx/checkout'
+      path: '/api/prx/checkout'
+      fullPath: '/api/prx/checkout'
+      preLoaderRoute: typeof ApiPrxCheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/catalog': {
+      id: '/api/prx/catalog'
+      path: '/api/prx/catalog'
+      fullPath: '/api/prx/catalog'
+      preLoaderRoute: typeof ApiPrxCatalogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/prx/orders/$orderId': {
+      id: '/api/prx/orders/$orderId'
+      path: '/$orderId'
+      fullPath: '/api/prx/orders/$orderId'
+      preLoaderRoute: typeof ApiPrxOrdersOrderIdRouteImport
+      parentRoute: typeof ApiPrxOrdersRoute
+    }
   }
 }
+
+interface ApiPrxOrdersRouteChildren {
+  ApiPrxOrdersOrderIdRoute: typeof ApiPrxOrdersOrderIdRoute
+}
+
+const ApiPrxOrdersRouteChildren: ApiPrxOrdersRouteChildren = {
+  ApiPrxOrdersOrderIdRoute: ApiPrxOrdersOrderIdRoute,
+}
+
+const ApiPrxOrdersRouteWithChildren = ApiPrxOrdersRoute._addFileChildren(
+  ApiPrxOrdersRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -183,6 +394,15 @@ const rootRouteChildren: RootRouteChildren = {
   CategorySlugRoute: CategorySlugRoute,
   ProductsGlp1WeightLossRoute: ProductsGlp1WeightLossRoute,
   AccountIndexRoute: AccountIndexRoute,
+  ApiPrxCatalogRoute: ApiPrxCatalogRoute,
+  ApiPrxCheckoutRoute: ApiPrxCheckoutRoute,
+  ApiPrxHealthRoute: ApiPrxHealthRoute,
+  ApiPrxIntakeRoute: ApiPrxIntakeRoute,
+  ApiPrxMeRoute: ApiPrxMeRoute,
+  ApiPrxOrdersRoute: ApiPrxOrdersRouteWithChildren,
+  ApiPrxPatientsRoute: ApiPrxPatientsRoute,
+  ApiPrxProductsRoute: ApiPrxProductsRoute,
+  ApiWebhooksPrescribeRxRoute: ApiWebhooksPrescribeRxRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

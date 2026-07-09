@@ -8,8 +8,12 @@ import { nitro } from "nitro/vite";
 export default defineConfig(({ command, mode }) => {
   const envDefine: Record<string, string> = {};
   const loadedEnv = loadEnv(mode, process.cwd(), "VITE_");
+  const loadedPrxEnv = loadEnv(mode, process.cwd(), "PRX_");
   for (const [key, value] of Object.entries(loadedEnv)) {
     envDefine[`import.meta.env.${key}`] = JSON.stringify(value);
+  }
+  for (const [key, value] of Object.entries(loadedPrxEnv)) {
+    if (process.env[key] == null) process.env[key] = value;
   }
 
   const plugins: PluginOption[] = [

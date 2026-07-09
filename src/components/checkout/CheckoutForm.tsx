@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "@tanstack/react-router";
@@ -11,6 +12,7 @@ import { createOrder } from "@/lib/order-storage";
 import { clearQuizState, readQuizState } from "@/lib/quiz-storage";
 import { calculateOrderPricing } from "@/lib/pricing";
 import { getRecommendedTreatment } from "@/lib/products";
+import { submitPrxCheckout } from "@/lib/prescribe-rx/browse-api";
 import { useAuth } from "@/providers/auth-provider";
 import "./checkout.css";
 
@@ -59,6 +61,7 @@ export function CheckoutForm() {
   const { user, setUser } = useAuth();
   const stored = readQuizState();
   const quizData = stored?.data;
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -77,6 +80,7 @@ export function CheckoutForm() {
 
   const onSubmit = handleSubmit(async (values) => {
     if (!quizData) return;
+    setSubmitError(null);
 
     const product = getRecommendedTreatment(quizData.goal, quizData.productSlug);
     const pricing = calculateOrderPricing(product);
@@ -92,6 +96,30 @@ export function CheckoutForm() {
       });
       setUser(registered);
       userId = registered.id;
+    }
+
+    try {
+      await submitPrxCheckout(
+        {
+          quiz: quizData,
+          checkout: values,
+          product: {
+            slug: product.slug,
+            name: product.name,
+            monthlyPrice: product.monthlyPrice,
+            dosage: product.dosage,
+            goal: product.goal,
+          },
+        },
+        crypto.randomUUID(),
+      );
+    } catch (error) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Could not submit your order to PrescribeRx. Please try again.";
+      setSubmitError(message);
+      return;
     }
 
     const order = createOrder({
@@ -286,6 +314,7 @@ export function CheckoutForm() {
       {errors.termsAccepted ? (
         <p className="checkout-error">{errors.termsAccepted.message}</p>
       ) : null}
+      {submitError ? <p className="checkout-error">{submitError}</p> : null}
 
       <button type="submit" disabled={isSubmitting} className="checkout-submit">
         {isSubmitting ? "Processing..." : "Complete order"}

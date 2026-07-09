@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { validateQuizStep } from "@/lib/quiz-schema";
+import { savePrxIntake } from "@/lib/prescribe-rx/browse-api";
 import {
   clearQuizState,
   readQuizState,
@@ -57,6 +58,20 @@ export function useQuiz(options: UseQuizOptions = {}) {
   useEffect(() => {
     if (!hydrated) return;
     writeQuizState({ currentStep, data });
+  }, [currentStep, data, hydrated]);
+
+  const intakeSyncRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    if (!hydrated) return;
+    if (intakeSyncRef.current) clearTimeout(intakeSyncRef.current);
+    intakeSyncRef.current = setTimeout(() => {
+      void savePrxIntake(data, currentStep).catch(() => {
+        // Keep local quiz progress even if PRX intake sync is unavailable.
+      });
+    }, 600);
+    return () => {
+      if (intakeSyncRef.current) clearTimeout(intakeSyncRef.current);
+    };
   }, [currentStep, data, hydrated]);
 
   const progress = useMemo(

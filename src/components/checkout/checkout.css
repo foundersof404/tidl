@@ -401,6 +401,31 @@
   font-size: 12px;
   font-weight: 700;
   flex-shrink: 0;
+  color: var(--checkout-subtle);
+}
+
+.checkout-next-step.is-active .checkout-next-step-num {
+  background: var(--checkout-ink);
+  border-color: var(--checkout-ink);
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(23, 19, 16, 0.06);
+}
+
+.checkout-next-step.is-done .checkout-next-step-num {
+  background: var(--checkout-ink);
+  border-color: var(--checkout-ink);
+  color: #fff;
+}
+
+.checkout-next-step.is-pending .checkout-next-step-copy strong {
+  color: var(--checkout-subtle);
+  font-weight: 500;
+}
+
+.checkout-next-step.is-active .checkout-next-step-copy strong,
+.checkout-next-step.is-done .checkout-next-step-copy strong {
+  color: var(--checkout-ink);
+  font-weight: 600;
 }
 
 .checkout-next-step-copy strong {
