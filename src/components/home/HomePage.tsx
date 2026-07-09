@@ -142,8 +142,6 @@ export default function HomePage() {
   }, [mobileNavOpen]);
 
   const [penVisible, setPenVisible] = useState(false);
-  const [statsVisible, setStatsVisible] = useState(false);
-  const [counters, setCounters] = useState({ c0: 0, c1: 0, c2: 0, c3: 0 });
 
   // Initialize Webflow animations
   useEffect(() => {
@@ -199,7 +197,6 @@ export default function HomePage() {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
   const penGridRef = useRef<HTMLDivElement>(null);
-  const penStatsRef = useRef<HTMLDivElement>(null);
   const penStageRef = useRef<HTMLDivElement>(null);
   const penFloatRef = useRef<HTMLDivElement>(null);
   const ansTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -238,15 +235,13 @@ export default function HomePage() {
   // TIDL Pen IntersectionObserver
   useEffect(() => {
     const gridEl = penGridRef.current;
-    const statsEl = penStatsRef.current;
-    if (!gridEl || !statsEl) return;
+    if (!gridEl) return;
 
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          if (entry.target === gridEl) setPenVisible(true);
-          if (entry.target === statsEl) setStatsVisible(true);
+          setPenVisible(true);
           io.unobserve(entry.target);
         });
       },
@@ -254,33 +249,8 @@ export default function HomePage() {
     );
 
     io.observe(gridEl);
-    io.observe(statsEl);
     return () => io.disconnect();
   }, []);
-
-  // Counter animation
-  useEffect(() => {
-    if (!statsVisible) return;
-    const targets = [100, 0, 5, 1];
-    const dur = 1100;
-    const t0 = performance.now();
-    let rafId: number;
-
-    function step(now: number) {
-      const k = Math.min(1, (now - t0) / dur);
-      const ease = 1 - Math.pow(1 - k, 3);
-      setCounters({
-        c0: Math.round(targets[0] * ease),
-        c1: 0,
-        c2: Math.round(targets[2] * ease),
-        c3: Math.round(targets[3] * ease),
-      });
-      if (k < 1) rafId = requestAnimationFrame(step);
-    }
-
-    rafId = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(rafId);
-  }, [statsVisible]);
 
   // Parallax scroll for pen float
   useEffect(() => {
@@ -520,29 +490,6 @@ export default function HomePage() {
                 <div className="tdlp5-flab">Cold-chain shipped</div>
                 <div className="tdlp5-fsub">Temperature-safe, discreet packaging to your door.</div>
               </div>
-            </div>
-          </div>
-
-          <div className={`tdlp5-stats${statsVisible ? ' tdlp5-on' : ''}`} id="tdlp5Stats" ref={penStatsRef}>
-            <div className="tdlp5-stat">
-              <div className="tdlp5-snum"><span>{counters.c0}</span><em>%</em></div>
-              <div className="tdlp5-stag">Doctor reviewed</div>
-              <div className="tdlp5-ssub">Every intake read and prescribed by a licensed provider.</div>
-            </div>
-            <div className="tdlp5-stat">
-              <div className="tdlp5-snum"><span>{counters.c1}</span></div>
-              <div className="tdlp5-stag">Vials or syringes</div>
-              <div className="tdlp5-ssub">The pen replaces the kit. No mixing, nothing to assemble.</div>
-            </div>
-            <div className="tdlp5-stat">
-              <div className="tdlp5-snum"><span>{counters.c2}</span><em>min</em></div>
-              <div className="tdlp5-stag">Quiz to intake</div>
-              <div className="tdlp5-ssub">One short quiz doubles as your full medical intake.</div>
-            </div>
-            <div className="tdlp5-stat">
-              <div className="tdlp5-snum"><span>{counters.c3}</span><em>click</em></div>
-              <div className="tdlp5-stag">That's the routine</div>
-              <div className="tdlp5-ssub">Pre-dosed and ready. Click, done, back to your day.</div>
             </div>
           </div>
 
