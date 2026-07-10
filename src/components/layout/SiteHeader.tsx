@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "@tanstack/react-router";
 import { TidlWordmark } from "@/components/brand/TidlWordmark";
 import type { SiteHeaderTheme } from "@/hooks/useSiteHeaderState";
@@ -19,6 +20,7 @@ type SiteHeaderProps = {
   onCloseMenu: () => void;
   menuItems?: SiteNavLink[];
   onSearchClick?: () => void;
+  showAuthLink?: boolean;
 };
 
 function MenuIcon() {
@@ -26,6 +28,20 @@ function MenuIcon() {
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M4 7h16M4 12h16M4 17h16"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function AccountIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="8" r="3.25" stroke="currentColor" strokeWidth="1.75" />
+      <path
+        d="M5.5 19.25c.9-3.1 3.2-4.75 6.5-4.75s5.6 1.65 6.5 4.75"
         stroke="currentColor"
         strokeWidth="1.75"
         strokeLinecap="round"
@@ -109,6 +125,7 @@ export function SiteHeader({
   onCloseMenu,
   menuItems,
   onSearchClick,
+  showAuthLink = true,
 }: SiteHeaderProps) {
   const headerRef = useRef<HTMLElement>(null);
   const [spacerHeight, setSpacerHeight] = useState(0);
@@ -141,13 +158,56 @@ export function SiteHeader({
     transparent && "is-transparent",
     pinned && "is-pinned",
     pinned && "is-scrolled",
+    menuOpen && "is-menu-open",
     `is-${theme}`,
   ]
     .filter(Boolean)
     .join(" ");
 
+  const menuOverlay =
+    typeof document !== "undefined"
+      ? createPortal(
+          <>
+            <button
+              type="button"
+              className={`site-header-backdrop${menuOpen ? " is-open" : ""}`}
+              aria-label="Close menu"
+              aria-hidden={!menuOpen}
+              tabIndex={menuOpen ? 0 : -1}
+              onClick={onCloseMenu}
+            />
+            <aside
+              className={`site-header-drawer${menuOpen ? " is-open" : ""}`}
+              aria-hidden={!menuOpen}
+              inert={!menuOpen ? true : undefined}
+            >
+              <div className="site-header-drawer-head">
+                <span className="site-header-drawer-title">Menu</span>
+                <button
+                  type="button"
+                  className="site-header-drawer-close"
+                  aria-label="Close menu"
+                  onClick={onCloseMenu}
+                >
+                  <CloseIcon />
+                </button>
+              </div>
+
+              <p className="site-header-drawer-kicker">Explore</p>
+
+              <nav className="site-header-drawer-nav" aria-label="Page sections">
+                {drawerItems.map((link) => (
+                  <DrawerLink key={link.label} link={link} onClose={onCloseMenu} />
+                ))}
+              </nav>
+            </aside>
+          </>,
+          document.body,
+        )
+      : null;
+
   return (
-    <div className="site-header-wrap">
+    <div className={`site-header-wrap${menuOpen ? " is-menu-open" : ""}`}>
       <header className={headerClass} id="navbar" ref={headerRef}>
         <div className="site-header-bar">
           <Link to="/" className="site-header-brand" aria-label="TIDL home">
@@ -166,6 +226,11 @@ export function SiteHeader({
                 <SearchIcon />
               </button>
             ) : null}
+            {showAuthLink ? (
+              <Link to="/auth" className="site-header-auth-btn" aria-label="Sign in or create account">
+                <AccountIcon />
+              </Link>
+            ) : null}
             <button
               type="button"
               className="site-header-menu-btn"
@@ -177,36 +242,9 @@ export function SiteHeader({
             </button>
           </div>
         </div>
-
-        <button
-          type="button"
-          className={`site-header-backdrop${menuOpen ? " is-open" : ""}`}
-          aria-label="Close menu"
-          onClick={onCloseMenu}
-        />
-
-        <aside className={`site-header-drawer${menuOpen ? " is-open" : ""}`} aria-hidden={!menuOpen}>
-          <div className="site-header-drawer-head">
-            <span className="site-header-drawer-title">Menu</span>
-            <button
-              type="button"
-              className="site-header-drawer-close"
-              aria-label="Close menu"
-              onClick={onCloseMenu}
-            >
-              <CloseIcon />
-            </button>
-          </div>
-
-          <p className="site-header-drawer-kicker">Explore</p>
-
-          <nav className="site-header-drawer-nav" aria-label="Page sections">
-            {drawerItems.map((link) => (
-              <DrawerLink key={link.label} link={link} onClose={onCloseMenu} />
-            ))}
-          </nav>
-        </aside>
       </header>
+
+      {menuOverlay}
 
       {pinned && <div className="site-header-spacer" style={{ height: spacerHeight }} aria-hidden="true" />}
     </div>
