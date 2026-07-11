@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-/** Shared Apple-style smooth scroll used across marketing pages. */
+gsap.registerPlugin(ScrollTrigger);
+
+/** Shared Apple-style smooth scroll used across marketing pages. Synced with GSAP ScrollTrigger. */
 export function useLenisScroll() {
   useEffect(() => {
     const lenis = new Lenis({
@@ -11,21 +15,21 @@ export function useLenisScroll() {
       gestureOrientation: "vertical",
       smoothWheel: true,
       wheelMultiplier: 1,
-      smoothTouch: false,
       touchMultiplier: 2,
       infinite: false,
     });
 
-    let frameId = 0;
-    function raf(time: number) {
-      lenis.raf(time);
-      frameId = requestAnimationFrame(raf);
-    }
+    lenis.on("scroll", ScrollTrigger.update);
 
-    frameId = requestAnimationFrame(raf);
+    const onTick = (time: number) => {
+      lenis.raf(time * 1000);
+    };
+
+    gsap.ticker.add(onTick);
+    gsap.ticker.lagSmoothing(0);
 
     return () => {
-      cancelAnimationFrame(frameId);
+      gsap.ticker.remove(onTick);
       lenis.destroy();
     };
   }, []);

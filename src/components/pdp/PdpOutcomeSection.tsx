@@ -48,10 +48,8 @@ export function PdpOutcomeSection() {
   const { outcomePhrases } = usePdpData();
   const headRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const noteRef = useRef<HTMLParagraphElement>(null);
   const headInView = useInView(headRef, { once: true, amount: 0.55 });
   const titleInView = useInView(titleRef, { once: true, amount: 0.65 });
-  const noteInView = useInView(noteRef, { once: true, amount: 0.7 });
   const reduceMotion = useReducedMotion();
   const titleWords = "Who this is for".split(" ");
 
@@ -81,15 +79,6 @@ export function PdpOutcomeSection() {
               </motion.span>
             ))}
           </h2>
-          <motion.p
-            className="pdp-outcome-full-lead"
-            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-            animate={headInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.22, ease: settle }}
-          >
-            Adults seeking doctor-guided weight loss who want a simple, pre-dosed routine without mixing or
-            measuring.
-          </motion.p>
         </div>
 
         <div className="pdp-outcome-full-list">
@@ -97,16 +86,6 @@ export function PdpOutcomeSection() {
             <OutcomePhrase key={phrase} phrase={phrase} index={index} />
           ))}
         </div>
-
-        <motion.p
-          ref={noteRef}
-          className="pdp-outcome-full-note"
-          initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-          animate={noteInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.55, ease: settle }}
-        >
-          Individual results vary. Your provider sets your dose based on your health history and progress.
-        </motion.p>
       </div>
     </section>
   );

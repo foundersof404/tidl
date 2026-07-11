@@ -42,6 +42,16 @@ export type ReviewStat = {
   label: string;
 };
 
+export type IncludedItem = {
+  id: string;
+  num: string;
+  title: string;
+  detail: string;
+  callsign: string;
+  shortLabel: string;
+  accent?: boolean;
+};
+
 export type PenShowcaseFeature = {
   num: string;
   label: string;
@@ -78,6 +88,7 @@ export type PdpPageContent = {
   penShowcase?: PenShowcaseContent;
   outcomePhrases: readonly string[];
   includedPhrases: readonly string[];
+  includedItems: readonly IncludedItem[];
   safetyPillars: readonly SafetyPillar[];
   verticalTimeline: readonly TimelineStep[];
   faqItems: readonly FaqItem[];
