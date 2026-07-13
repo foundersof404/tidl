@@ -1,0 +1,1 @@
+{"nodes": [{"id": "clone_index", "label": "Tidl Health Home", "file_type": "code", "source_file": "clone\\index.html", "source_location": null}], "edges": [{"source": "clone_index", "target": "public_tidl_logo", "relation": "references", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "clone\\index.html"}], "hyperedges": []}

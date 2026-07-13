@@ -1,0 +1,1 @@
+{"nodes": [], "edges": [], "hyperedges": [{"id": "ask_tidl_feature", "label": "Ask TIDL AI Section", "nodes": ["src_components_home_asktidlsection_asktidlsection", "src_lib_ask_tidl_content_ask_tidl_section"], "relation": "form", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "ASK_TIDL_HANDOFF.md"}]}
