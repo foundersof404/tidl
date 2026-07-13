@@ -1,5 +1,4 @@
 import { usePdpData } from "./PdpDataProvider";
-import { TestimonialContextPhoto } from "@/components/brand/PatientAvatar";
 import { Reveal } from "./pdp-ui";
 
 function isOutcomeMetric(result: string) {
@@ -42,8 +41,6 @@ export function PdpReviewsSection() {
     <section className="pdp-section pdp-section--reviews" id="reviews" data-pdp-header-theme="dark">
       <div className="pdp-section-shell pdp-section-shell--dark">
         <div className="pdp-section-inner">
-
-          {/* Header */}
           <Reveal>
             <span className="pdp-kicker pdp-kicker--light">Patient stories</span>
             <h2 className="pdp-section-title pdp-section-title--light">
@@ -54,7 +51,6 @@ export function PdpReviewsSection() {
             </p>
           </Reveal>
 
-          {/* Stats row */}
           <div className="pdp-rv2-stats">
             {reviewStats.map((stat, index) => (
               <Reveal key={stat.label} delay={index * 0.06}>
@@ -66,25 +62,28 @@ export function PdpReviewsSection() {
             ))}
           </div>
 
-          {/* Featured card — hero layout */}
           <Reveal className="pdp-rv2-featured-wrap">
             <article className="pdp-rv2-featured">
               <div className="pdp-rv2-featured-media">
-                <TestimonialContextPhoto
-                  src={featured.contextImage}
-                  alt={`${featured.condition} care context`}
-                />
+                <div className="pdp-rv2-profile">
+                  <img
+                    src={featured.portraitImage}
+                    alt=""
+                    className="pdp-rv2-profile-img"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="pdp-rv2-featured-badge">{featured.result}</div>
               </div>
               <div className="pdp-rv2-featured-body">
                 <StarRow />
-                <blockquote className="pdp-rv2-featured-quote">
-                  {featured.quote}
-                </blockquote>
+                <blockquote className="pdp-rv2-featured-quote">{featured.quote}</blockquote>
                 <footer className="pdp-rv2-featured-footer">
                   <div className="pdp-rv2-featured-author">
                     <strong>{featured.name}</strong>
-                    <span>{featured.condition} · Verified Patient</span>
+                    <span>
+                      {featured.condition} · Verified Patient
+                    </span>
                   </div>
                   <div className="pdp-rv2-verified">
                     <VerifiedIcon />
@@ -95,13 +94,22 @@ export function PdpReviewsSection() {
             </article>
           </Reveal>
 
-          {/* Others — horizontal scroll on mobile, grid on desktop */}
           <div className="pdp-rv2-grid">
             {others.map((story, index) => (
               <Reveal key={story.name} delay={0.08 + index * 0.08} className="pdp-rv2-card-reveal">
                 <article className="pdp-rv2-card">
                   <div className="pdp-rv2-card-top">
-                    <StarRow />
+                    <div className="pdp-rv2-card-identity">
+                      <div className="pdp-rv2-profile pdp-rv2-profile--sm">
+                        <img
+                          src={story.portraitImage}
+                          alt=""
+                          className="pdp-rv2-profile-img"
+                          loading="lazy"
+                        />
+                      </div>
+                      <StarRow />
+                    </div>
                     {isOutcomeMetric(story.result) ? (
                       <span className="pdp-rv2-outcome-badge">{story.result}</span>
                     ) : (
@@ -112,7 +120,7 @@ export function PdpReviewsSection() {
                   <footer className="pdp-rv2-card-footer">
                     <div className="pdp-rv2-verified">
                       <VerifiedIcon />
-                      Verified patient
+                      {story.name}
                     </div>
                     <span className="pdp-rv2-card-cond">{story.condition}</span>
                   </footer>

@@ -47,9 +47,7 @@ export const SERVICE_CARDS: ServiceCardContent[] = [
       "Doctor in your state prescribes when appropriate",
       "Shipped from a US pharmacy in plain packaging",
     ],
-    comingSoon: true,
-    comingSoonNote: "TRT and Longevity are next. Weight loss is live now.",
-    waitlistHref: "#cta",
+    exploreLabel: "Explore TRT",
     explorePath: CATEGORY_PATHS.testosterone,
   },
   {
@@ -63,9 +61,7 @@ export const SERVICE_CARDS: ServiceCardContent[] = [
       "Pen or prescription format based on your plan",
       "Message your care team anytime",
     ],
-    comingSoon: true,
-    comingSoonNote: "TRT and Longevity are next. Weight loss is live now.",
-    waitlistHref: "#cta",
+    exploreLabel: "Explore longevity",
     explorePath: CATEGORY_PATHS.longevity,
   },
 ];

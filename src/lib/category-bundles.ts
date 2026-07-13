@@ -43,14 +43,14 @@ export const CATEGORY_BUNDLES: Record<CategorySlug, CategoryBundle> = {
   },
   testosterone: {
     categorySlug: "testosterone",
-    badge: "Coming soon",
+    badge: "Available now",
     title: "TRT Care Bundle",
     lead:
-      "Lab-guided testosterone therapy with provider review, personalized dosing, and discreet US pharmacy delivery — launching next.",
+      "Lab-guided testosterone therapy with provider review, personalized dosing, and discreet US pharmacy delivery.",
     image: SITE_IMAGES.services.testosterone,
     productSlug: null,
     monthlyPrice: null,
-    priceNote: "Join the waitlist via intake — we match you when TRT goes live",
+    priceNote: "Pricing confirmed after provider review of your labs and intake",
     includes: [
       { label: "Symptom + lab review", detail: "Provider-led protocol design" },
       { label: "Personalized Rx", detail: "Dose matched to your levels" },
@@ -59,18 +59,17 @@ export const CATEGORY_BUNDLES: Record<CategorySlug, CategoryBundle> = {
     ],
     ctaLabel: "Start intake for TRT",
     secondaryLabel: "How TRT works",
-    comingSoon: true,
   },
   longevity: {
     categorySlug: "longevity",
-    badge: "Coming soon",
+    badge: "Available now",
     title: "Longevity Protocol Bundle",
     lead:
-      "Physician-supervised peptide and metabolic care for recovery, sleep, and long-term performance — prepared with the same medical standards as GLP-1.",
+      "Physician-supervised peptide and metabolic care for recovery, sleep, and long-term performance — with the same medical standards as GLP-1.",
     image: SITE_IMAGES.services.longevity,
     productSlug: null,
     monthlyPrice: null,
-    priceNote: "Start intake now to be matched when protocols launch",
+    priceNote: "Pricing confirmed after provider review of your goals and intake",
     includes: [
       { label: "Goal-based intake", detail: "Recovery, sleep, metabolic focus" },
       { label: "Provider protocol", detail: "Prescribed only when appropriate" },
@@ -79,7 +78,6 @@ export const CATEGORY_BUNDLES: Record<CategorySlug, CategoryBundle> = {
     ],
     ctaLabel: "Start longevity intake",
     secondaryLabel: "Learn the approach",
-    comingSoon: true,
   },
   "metabolic-health": {
     categorySlug: "metabolic-health",

@@ -48,8 +48,10 @@ export function CategoryBundleSection({ bundle, onStartIntake }: CategoryBundleS
                   From {formatCurrency(bundle.monthlyPrice)}
                   <span>/month</span>
                 </p>
-              ) : (
+              ) : bundle.comingSoon ? (
                 <p className="cat-bundle-price cat-bundle-price--soon">Launching soon</p>
+              ) : (
+                <p className="cat-bundle-price">Personalized pricing</p>
               )}
               <p className="cat-bundle-price-note">{bundle.priceNote}</p>
             </div>

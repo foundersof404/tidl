@@ -210,9 +210,12 @@ export function SiteHeader({
     <div className={`site-header-wrap${menuOpen ? " is-menu-open" : ""}`}>
       <header className={headerClass} id="navbar" ref={headerRef}>
         <div className="site-header-bar">
-          <Link to="/" className="site-header-brand" aria-label="TIDL home">
+          <Link to="/" className="site-header-brand site-header-brand--mark" aria-label="TIDL home">
             <img src="/tidl_logo.png" alt="" className="site-header-logo-mark" loading="eager" />
-            <TidlWordmark variant="dark" className="site-header-wordmark" />
+          </Link>
+
+          <Link to="/" className="site-header-center-brand" aria-label="TIDL home">
+            <TidlWordmark variant="light" className="site-header-wordmark" />
           </Link>
 
           <div className="site-header-actions">
