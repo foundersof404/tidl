@@ -33,6 +33,8 @@ export type LiveProduct = {
   productTypeId: string | null;
   /** Transparent local peptide PNG derived from the sandbox catalog image. */
   image: string;
+  /** Original pharmacy catalog photo from PrescribeRx (preferred when present). */
+  catalogImageUrl: string | null;
   beforeImage: string;
   afterImage: string;
   /** Parsed label facts from the sandbox product name. */
@@ -131,7 +133,8 @@ function toLive(
 ): LiveProduct {
   const match = matchProduct(products, keywords);
   const local = getPeptideImageMap()[slug];
-  const image = local?.image ?? resolvePeptideOnlyImage(slug);
+  const catalogImageUrl = match?.imageUrl ?? null;
+  const image = catalogImageUrl ?? local?.image ?? resolvePeptideOnlyImage(slug);
   const baseBox = getPeptideHandBox(slug);
   const handBox = {
     ...baseBox,
@@ -154,6 +157,7 @@ function toLive(
     productClassId: match?.productClassId ?? null,
     productTypeId: match?.productTypeId ?? null,
     image,
+    catalogImageUrl,
     beforeImage: `/peptides/ba/${slug}-before.png`,
     afterImage: `/peptides/ba/${slug}-after.png`,
     handBox,

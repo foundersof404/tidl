@@ -65,11 +65,23 @@ function JourneyLottieDial() {
       container,
       renderer: "svg",
       loop: true,
-      autoplay: true,
+      autoplay: false,
       path: JOURNEY_LOTTIE_URL,
     });
 
-    return () => animation.destroy();
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) animation.play();
+        else animation.pause();
+      },
+      { threshold: 0.12, rootMargin: "80px 0px" },
+    );
+
+    io.observe(container);
+    return () => {
+      io.disconnect();
+      animation.destroy();
+    };
   }, []);
 
   return <div className="lottie-animation-2" ref={containerRef} aria-hidden="true" />;
@@ -90,12 +102,14 @@ export function JourneySection({ onGetStarted }: JourneySectionProps) {
     let y = -unit;
     const speed = 0.35;
     let center: HTMLElement | null = null;
-    let rafId: number;
+    let rafId = 0;
+    let running = false;
 
     function frame() {
+      if (!running) return;
       y -= speed;
       if (y <= -unit * 2) y += unit;
-      track.style.transform = `translateY(${y}px)`;
+      track.style.transform = `translate3d(0, ${y}px, 0)`;
 
       const mid = el.clientHeight / 2;
       let best = Infinity;
@@ -122,8 +136,30 @@ export function JourneySection({ onGetStarted }: JourneySectionProps) {
       rafId = requestAnimationFrame(frame);
     }
 
-    rafId = requestAnimationFrame(frame);
-    return () => cancelAnimationFrame(rafId);
+    const start = () => {
+      if (running) return;
+      running = true;
+      rafId = requestAnimationFrame(frame);
+    };
+
+    const stop = () => {
+      running = false;
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) start();
+        else stop();
+      },
+      { threshold: 0.08, rootMargin: "120px 0px" },
+    );
+
+    io.observe(el);
+    return () => {
+      io.disconnect();
+      stop();
+    };
   }, []);
 
   return (

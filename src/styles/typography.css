@@ -41,7 +41,9 @@
 .pdp-hero-sub,
 .pdp-note,
 .pdp-price-sub,
-.pdp-hero-stat span {
+.pdp-hero-stat span,
+.svc-cab-brief-summary,
+.svc-cab-product-form {
   font-family: var(--font-body) !important;
   font-weight: var(--font-weight-body);
 }
@@ -54,6 +56,9 @@
 .heading-05,
 .hero-title-01,
 .services-title-02,
+.svc-cab-brief-title,
+.svc-cab-title,
+.svc-cab-product-name,
 .stories-title-03,
 .tst-title,
 .cta-headline,
@@ -97,7 +102,8 @@
   font-weight: var(--font-weight-heading);
 }
 
-.tidl-wordmark {
+.tidl-wordmark,
+.svc-cab-rail-label {
   font-family: var(--font-display) !important;
   font-weight: var(--font-weight-wordmark);
   letter-spacing: var(--letter-spacing-wordmark);

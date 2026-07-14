@@ -115,6 +115,7 @@ export default function HomePage() {
     { to: '/products/glp-1-weight-loss', label: 'GLP-1 Program' },
   ];
 
+
   const { featured: homeFeatured } = useHomeSandbox();
   const liveGlpPrice = homeFeatured.find((p) => p.slug === 'glp-1-weight-loss')?.live.price;
   const heroSubhead =
@@ -205,27 +206,55 @@ export default function HomePage() {
     return () => io.disconnect();
   }, []);
 
-  // Parallax scroll for pen float
+  // Parallax scroll for pen float — only while the pen block is on screen
   useEffect(() => {
     const float = penFloatRef.current;
     const stage = penStageRef.current;
     if (!float || !stage) return;
 
     let ticking = false;
+    let listening = false;
+
     const handleScroll = () => {
+      if (!listening) return;
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
         const r = stage.getBoundingClientRect();
         const vh = window.innerHeight || 1;
         const p = Math.max(-1, Math.min(1, (r.top + r.height / 2 - vh / 2) / (vh / 2)));
-        float.style.transform = `translateY(${p * -18}px)`;
+        float.style.transform = `translate3d(0, ${p * -18}px, 0)`;
         ticking = false;
       });
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    const start = () => {
+      if (listening) return;
+      listening = true;
+      handleScroll();
+      window.addEventListener("scroll", handleScroll, { passive: true });
+    };
+
+    const stop = () => {
+      if (!listening) return;
+      listening = false;
+      window.removeEventListener("scroll", handleScroll);
+      float.style.transform = "";
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) start();
+        else stop();
+      },
+      { threshold: 0, rootMargin: "100px 0px" },
+    );
+
+    io.observe(stage);
+    return () => {
+      io.disconnect();
+      stop();
+    };
   }, []);
 
   useEffect(() => {

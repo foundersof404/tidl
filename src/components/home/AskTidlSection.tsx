@@ -128,8 +128,10 @@ function AskTidlBot({ reduce }: { reduce: boolean }) {
           />
           <circle cx="26" cy="46" r="3.6" fill={`url(#${g("core")})`} filter={`url(#${g("soft")})`} />
 
-          <rect x="8" y="39" width="7" height="14" rx="3.5" fill={`url(#${g("arm")})`} />
-          <g className="ask-bot-arm">
+          <g className="ask-bot-arm ask-bot-arm--left">
+            <rect x="8" y="39" width="7" height="14" rx="3.5" fill={`url(#${g("arm")})`} />
+          </g>
+          <g className="ask-bot-arm ask-bot-arm--right">
             <rect x="37" y="39" width="7" height="14" rx="3.5" fill={`url(#${g("arm")})`} />
           </g>
         </g>

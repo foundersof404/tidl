@@ -19,8 +19,8 @@ function KickerReveal({ active }: { active: boolean }) {
         <motion.span
           key={`${char}-${i}`}
           className="services-closing-kicker-char"
-          initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
-          animate={active ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+          initial={{ opacity: 0, y: 10 }}
+          animate={active ? { opacity: 1, y: 0 } : {}}
           transition={{
             duration: 0.45,
             delay: 0.08 + i * 0.028,
@@ -41,8 +41,8 @@ function HeadlineReveal({ active, loopMotion }: { active: boolean; loopMotion: b
         <motion.span
           key={phrase.text}
           className={phrase.highlight ? "services-closing-highlight" : "services-closing-phrase"}
-          initial={{ opacity: 0, y: 22, filter: "blur(10px)", rotateX: 18 }}
-          animate={active ? { opacity: 1, y: 0, filter: "blur(0px)", rotateX: 0 } : {}}
+          initial={{ opacity: 0, y: 22 }}
+          animate={active ? { opacity: 1, y: 0 } : {}}
           transition={{
             duration: 0.62,
             delay: 0.42 + i * 0.16,

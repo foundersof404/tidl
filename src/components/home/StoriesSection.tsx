@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { HOME_STORIES, type Testimonial } from "@/lib/testimonials";
 import { STORIES_SECTION, TESTIMONIAL_NOTES } from "@/lib/stories-content";
 
@@ -10,13 +10,13 @@ function buildMarqueeRows(items: Testimonial[]) {
     {
       items,
       direction: "left" as const,
-      speed: 48,
+      speed: 56,
       label: "Patient reviews row one",
     },
     {
       items: [...items].reverse(),
       direction: "right" as const,
-      speed: 54,
+      speed: 64,
       label: "Patient reviews row two",
     },
   ];
@@ -42,16 +42,13 @@ function StarRating() {
 function SectionTitle({ title }: { title: string }) {
   const ref = useRef<HTMLHeadingElement>(null);
   const [active, setActive] = useState(false);
-  const [loopMotion, setLoopMotion] = useState(true);
-  const chars = title.split("");
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) {
-      setLoopMotion(false);
       setActive(true);
       return;
     }
@@ -68,49 +65,25 @@ function SectionTitle({ title }: { title: string }) {
 
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [reduceMotion]);
 
   return (
-    <h2 ref={ref} className="tst-title-reveal heading-01" aria-label={title}>
-      <span className="tst-title-reveal-inner">
-        {chars.map((char, i) => (
-          <motion.span
-            key={`${char}-${i}`}
-            className="tst-title-char"
-            initial={{ opacity: 0, y: 18, filter: "blur(8px)" }}
-            animate={active ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-            transition={{
-              duration: 0.55,
-              delay: 0.12 + i * 0.045,
-              ease: settle,
-            }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-        ))}
-      </span>
+    <h2 ref={ref} className="tst-title-reveal heading-01">
+      <motion.span
+        className="tst-title-reveal-inner"
+        initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+        animate={active ? { opacity: 1, y: 0 } : undefined}
+        transition={{ duration: 0.55, ease: settle }}
+      >
+        {title}
+      </motion.span>
       <motion.span
         className="tst-title-rule"
         aria-hidden="true"
-        initial={{ scaleX: 0, opacity: 0 }}
-        animate={active ? { scaleX: 1, opacity: 1 } : {}}
-        transition={{ duration: 0.75, delay: 0.55, ease: settle }}
-      >
-        {loopMotion ? (
-          <motion.span
-            className="tst-title-rule-beam"
-            initial={{ left: "-40%" }}
-            animate={active ? { left: ["-40%", "110%"] } : {}}
-            transition={{
-              duration: 1.8,
-              delay: 1.1,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatDelay: 2.4,
-            }}
-          />
-        ) : null}
-      </motion.span>
+        initial={reduceMotion ? false : { scaleX: 0, opacity: 0 }}
+        animate={active ? { scaleX: 1, opacity: 1 } : undefined}
+        transition={{ duration: 0.7, delay: 0.2, ease: settle }}
+      />
     </h2>
   );
 }
@@ -120,12 +93,12 @@ function AnimatedNote() {
   const [active, setActive] = useState(false);
   const [loopMotion, setLoopMotion] = useState(true);
   const [index, setIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) {
       setLoopMotion(false);
       setActive(true);
@@ -144,7 +117,7 @@ function AnimatedNote() {
 
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [reduceMotion]);
 
   useEffect(() => {
     if (!active || !loopMotion) return;
@@ -158,38 +131,17 @@ function AnimatedNote() {
 
   return (
     <div ref={ref} className="tst-note" aria-live="polite">
-      <motion.span
-        className="tst-note-rule"
-        aria-hidden="true"
-        initial={{ scaleX: 0, opacity: 0 }}
-        animate={active ? { scaleX: 1, opacity: 1 } : {}}
-        transition={{ duration: 0.7, delay: 0.15, ease: settle }}
-      >
-        {loopMotion ? (
-          <motion.span
-            className="tst-note-rule-beam"
-            initial={{ left: "-45%" }}
-            animate={active ? { left: ["-45%", "115%"] } : {}}
-            transition={{
-              duration: 2,
-              delay: 0.9,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatDelay: 2.2,
-            }}
-          />
-        ) : null}
-      </motion.span>
+      <span className="tst-note-rule" aria-hidden="true" />
 
       <div className="tst-note-copy">
         <AnimatePresence mode="wait">
           <motion.p
             key={TESTIMONIAL_NOTES[index]}
             className="tst-note-text p2-regular"
-            initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            exit={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-            transition={{ duration: 0.45, ease: settle }}
+            initial={reduceMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduceMotion ? undefined : { opacity: 0, y: -6 }}
+            transition={{ duration: 0.35, ease: settle }}
           >
             {TESTIMONIAL_NOTES[index]}
           </motion.p>
@@ -202,18 +154,18 @@ function AnimatedNote() {
 function ReviewCard({ story }: { story: Testimonial }) {
   return (
     <article className="tst-marquee-card">
-      <span className="tst-marquee-card-ring" aria-hidden="true" />
-      <span className="tst-marquee-card-ring tst-marquee-card-ring--trace" aria-hidden="true" />
-
       {story.portraitImage ? (
         <div className="tst-marquee-media" aria-hidden="true">
           <img
             src={story.portraitImage}
             alt=""
-            className={`tst-marquee-portrait tst-marquee-portrait--hero${
+            className={`tst-marquee-portrait${
               story.figure === "man" ? " tst-marquee-portrait--man" : ""
             }`}
             loading="lazy"
+            decoding="async"
+            width={44}
+            height={44}
           />
         </div>
       ) : null}
@@ -257,7 +209,7 @@ function MarqueeRow({
   speed: number;
   label: string;
 }) {
-  const loop = buildLoopItems(items);
+  const loop = useMemo(() => buildLoopItems(items), [items]);
 
   return (
     <div
@@ -284,6 +236,20 @@ export function StoriesSection({
   title?: string;
 } = {}) {
   const rows = useMemo(() => buildMarqueeRows(items), [items]);
+  const shellRef = useRef<HTMLDivElement>(null);
+  const [marqueeActive, setMarqueeActive] = useState(false);
+
+  useEffect(() => {
+    const el = shellRef.current;
+    if (!el) return;
+
+    const io = new IntersectionObserver(
+      ([entry]) => setMarqueeActive(Boolean(entry?.isIntersecting)),
+      { rootMargin: "80px 0px", threshold: 0.01 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   return (
     <section className="tst-sec" id={id} data-site-header-theme="light">
@@ -293,7 +259,10 @@ export function StoriesSection({
         </header>
       </div>
 
-      <div className="tst-marquee-shell">
+      <div
+        ref={shellRef}
+        className={`tst-marquee-shell${marqueeActive ? " is-active" : ""}`}
+      >
         <div className="tst-marquee">
           {rows.map((row) => (
             <MarqueeRow
