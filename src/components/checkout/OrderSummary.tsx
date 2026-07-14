@@ -1,6 +1,7 @@
 import {
   calculateOrderPricing,
   CHECKOUT_DEMO_ZERO,
+  CHECKOUT_SANDBOX,
   formatCurrency,
   getCatalogListPrice,
 } from "@/lib/pricing";
@@ -71,6 +72,12 @@ export function OrderSummary({ quizData }: { quizData: QuizFormData }) {
             {formatCurrency(listPrice)}/mo. Payment is recorded in PrescribeRx sandbox as a $0
             reference capture (no real charge).
           </p>
+        ) : CHECKOUT_SANDBOX ? (
+          <p className="checkout-demo-banner" role="status">
+            Sandbox checkout — priced at the catalog list price{" "}
+            <strong>{formatCurrency(listPrice)}/mo</strong>. Payment is recorded in PrescribeRx as a{" "}
+            <code>reference_captured</code> external sale (no real charge).
+          </p>
         ) : null}
 
         <div className="checkout-product-card" style={{ marginTop: 16 }}>
@@ -130,7 +137,9 @@ export function OrderSummary({ quizData }: { quizData: QuizFormData }) {
         <p className="checkout-summary-note" style={{ marginTop: 14 }}>
           {CHECKOUT_DEMO_ZERO
             ? "PrescribeRx payment record: mode reference_captured · amount $0 · is_sandbox. Test card OK: 4111 1111 1111 1111, any future expiry, any CVC."
-            : "A licensed physician reviews every assessment. Treatment is prescribed only when medically appropriate."}
+            : CHECKOUT_SANDBOX
+              ? `PrescribeRx payment record: mode reference_captured · amount ${formatCurrency(pricing.total)} · is_sandbox. Test card OK: 4111 1111 1111 1111, any future expiry, any CVC.`
+              : "A licensed physician reviews every assessment. Treatment is prescribed only when medically appropriate."}
         </p>
       </div>
 

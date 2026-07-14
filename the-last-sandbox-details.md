@@ -117,18 +117,18 @@ Shown on TIDL confirmation so we can match Admin → Encounters / Patients.
 
 ---
 
-## 7. Payment (demo)
+## 7. Payment (sandbox)
 
 | Topic | Detail |
 |-------|--------|
 | Sales-org API | **Cannot** use `mode: authorize` (PRX-as-merchant / Embed only) |
 | What we use | `mode: reference_captured`, gateway `stripe` or `hsa_fsa` |
-| Demo amount | **`$0`** via `CHECKOUT_DEMO_ZERO = true` in `src/lib/pricing.ts` |
-| Transaction id | `demo-zero-{idempotencyKey}` when demo zero is on |
+| Amount recorded | **Curated order total** (treatment + consult + shipping + tax) — verified accepted by the sandbox (`status: captured`, "External sale recorded") |
+| Two flags | `CHECKOUT_DEMO_ZERO` (=`false`, charge curated price) and `CHECKOUT_SANDBOX` (=`true`, keep test-card prefill + "no real charge" copy) in `src/lib/pricing.ts` |
 | PDP / category prices | Stay **marketing** list prices (`$199–$349` range) |
 | Sandbox catalog prices | Often **~$10 placeholders** — shown as annotated “sandbox price”, not the offer |
-| Test card UI | Prefill `4111 1111 1111 1111` / `12/30` / `123` for demos |
-| Flip live charges | Set `CHECKOUT_DEMO_ZERO` to `false` |
+| Test card UI | Prefill `4111 1111 1111 1111` / `12/30` / `123` while `CHECKOUT_SANDBOX` is true |
+| Zero-out again | Set `CHECKOUT_DEMO_ZERO` to `true`; go fully live by setting `CHECKOUT_SANDBOX` to `false` |
 
 ---
 

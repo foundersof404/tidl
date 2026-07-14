@@ -47,6 +47,17 @@ const AUTO_ADVANCE = new Set<number>([
   FIELD_TYPE.RADIO_STYLED,
 ]);
 
+/** Sentinel meaning "patient reported none" for allergy/medication/condition
+ * search fields. Filtered out before submission so it never becomes an entry. */
+const NONE_TOKEN = "__none__";
+
+/** "I have none" affordance label per search field type. */
+const SEARCH_NONE_LABEL: Record<number, string> = {
+  [FIELD_TYPE.ALLERGY_SEARCH]: "No known allergies",
+  [FIELD_TYPE.MEDICATION_SEARCH]: "I'm not taking any medications",
+  [FIELD_TYPE.CONDITION_SEARCH]: "No medical conditions",
+};
+
 type AnswerValue =
   | string
   | number
@@ -107,6 +118,104 @@ function stepIsComplete(step: PrxSchemaStep, answers: Answers): boolean {
   return step.fields
     .filter((f) => isFieldVisible(f, answers))
     .every((f) => fieldIsComplete(f, answers));
+}
+
+/**
+ * Allergy / medication / condition search (PRX field types 30–32). These are
+ * always optional in the sandbox, so we offer a clear "None" toggle plus a
+ * tag-style entry — nobody has to type "no" to move on. The `maps_to` chart
+ * field (allergies/medications/conditions) still comes straight from the schema.
+ */
+function SearchTagsField({
+  field,
+  value,
+  onChange,
+  showHelp,
+}: {
+  field: PrxSchemaField;
+  value: AnswerValue | undefined;
+  onChange: (value: AnswerValue | undefined) => void;
+  showHelp: boolean;
+}) {
+  const [draft, setDraft] = useState("");
+  const raw = Array.isArray(value) ? value : [];
+  const noneSelected = raw.includes(NONE_TOKEN);
+  const entries = raw.filter((v) => v !== NONE_TOKEN);
+  const noneLabel = SEARCH_NONE_LABEL[field.field_type] ?? "None";
+
+  const commit = (text: string) => {
+    const parts = text
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+    if (parts.length === 0) return;
+    onChange(Array.from(new Set([...entries, ...parts])));
+    setDraft("");
+  };
+
+  const removeEntry = (entry: string) => {
+    const next = entries.filter((e) => e !== entry);
+    onChange(next.length > 0 ? next : undefined);
+  };
+
+  const toggleNone = () => {
+    setDraft("");
+    onChange(noneSelected ? undefined : [NONE_TOKEN]);
+  };
+
+  return (
+    <div className="mb-5">
+      {showHelp && field.help_text ? (
+        <span className="mb-2 block text-xs text-[var(--quiz-muted)]">{field.help_text}</span>
+      ) : null}
+
+      <button
+        type="button"
+        className={`dq-none-toggle${noneSelected ? " is-selected" : ""}`}
+        onClick={toggleNone}
+        aria-pressed={noneSelected}
+      >
+        <span className="dq-none-check" aria-hidden="true" />
+        {noneLabel}
+      </button>
+
+      {!noneSelected ? (
+        <div className="dq-tagfield">
+          {entries.length > 0 ? (
+            <div className="dq-tags">
+              {entries.map((entry) => (
+                <span key={entry} className="dq-tag">
+                  {entry}
+                  <button
+                    type="button"
+                    onClick={() => removeEntry(entry)}
+                    aria-label={`Remove ${entry}`}
+                  >
+                    ×
+                  </button>
+                </span>
+              ))}
+            </div>
+          ) : null}
+          <input
+            className="tidl-input"
+            placeholder={field.placeholder ?? "Type one and press Enter"}
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === ",") {
+                e.preventDefault();
+                commit(draft);
+              } else if (e.key === "Backspace" && draft === "" && entries.length > 0) {
+                removeEntry(entries[entries.length - 1]);
+              }
+            }}
+            onBlur={() => commit(draft)}
+          />
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 function FieldRenderer({
@@ -359,25 +468,15 @@ function FieldRenderer({
     case FIELD_TYPE.MEDICATION_SEARCH:
     case FIELD_TYPE.CONDITION_SEARCH:
       return (
-        <label className="mb-5 block">
+        <div>
           {label}
-          <span className="mb-2 block text-xs text-[var(--quiz-muted)]">
-            {field.help_text ?? "Separate multiple entries with commas."}
-          </span>
-          <input
-            className="tidl-input"
-            placeholder="Type and separate with commas"
-            value={Array.isArray(value) ? value.join(", ") : ""}
-            onChange={(e) =>
-              onChange(
-                e.target.value
-                  .split(",")
-                  .map((s) => s.trim())
-                  .filter(Boolean),
-              )
-            }
+          <SearchTagsField
+            field={field}
+            value={value}
+            onChange={onChange}
+            showHelp={!hideLabel}
           />
-        </label>
+        </div>
       );
 
     case FIELD_TYPE.EMAIL:

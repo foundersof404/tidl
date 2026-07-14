@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import { fetchPrxEncounterTypes } from "@/lib/prescribe-rx/browse-api";
 import type { PrxEncounterTypeSummary } from "@/lib/prescribe-rx/encounter-schema";
-import { useLiveCatalog, type LiveProduct } from "@/lib/prescribe-rx/use-live-catalog";
+import {
+  resolveDisplayMonthlyPrice,
+  useLiveCatalog,
+  type LiveProduct,
+} from "@/lib/prescribe-rx/use-live-catalog";
 import { getPeptideDef } from "@/lib/peptides";
+import { getProductBySlug } from "@/lib/products";
 import { PRODUCT_SLUGS, type ProductSlug } from "@/types/quiz";
 
 /** All marketed products on the homepage sandbox strip (11 — not the full catalog). */
@@ -50,6 +55,8 @@ export type HomeFeaturedPeptide = {
   hook: string;
   outcomes: readonly string[];
   goalLabel: string;
+  /** Curated marketing price ($199–$349); sandbox $10 placeholders stay in facts only. */
+  displayPrice: number;
 };
 
 export type HomeSandboxData = {
@@ -126,13 +133,16 @@ export function useHomeSandbox(): HomeSandboxData {
         live.handBox.strength,
         live.handBox.productClass,
       ] as const);
+    const product = getProductBySlug(slug);
+    const marketingPrice = product?.monthlyPrice ?? 0;
     return [
       {
         slug,
         live,
         hook,
         outcomes: [...outcomes].slice(0, 3),
-        goalLabel: goalLabel(def?.goal ?? "longevity"),
+        goalLabel: goalLabel(def?.goal ?? product?.goal ?? "longevity"),
+        displayPrice: resolveDisplayMonthlyPrice(marketingPrice, live.price),
       },
     ];
   });

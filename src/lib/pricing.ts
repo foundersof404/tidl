@@ -6,13 +6,18 @@ const SHIPPING_FEE = 15;
 const TAX_RATE = 0.08;
 
 /**
- * Demo checkout: charge $0 (fees + tax) so we can place test orders into the
- * PrescribeRx sandbox without real money. PDP / category pages still show
- * catalog list prices — only checkout totals are zeroed.
- *
- * Flip to false when going live with real payment amounts.
+ * When true, checkout totals (and the PrescribeRx payment amount) are zeroed.
+ * We now record the real curated price instead, so this stays false.
  */
-export const CHECKOUT_DEMO_ZERO = true;
+export const CHECKOUT_DEMO_ZERO = false;
+
+/**
+ * Sandbox mode: keep the PrescribeRx test-card prefill and "no real charge"
+ * messaging on. Payments still post as `reference_captured` (external sale),
+ * so no card is actually charged even though we record the real curated price.
+ * Set to false for production with a live payment gateway.
+ */
+export const CHECKOUT_SANDBOX = true;
 
 export function calculateOrderPricing(product: Product): OrderPricing {
   if (CHECKOUT_DEMO_ZERO) {

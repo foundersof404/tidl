@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CHECKOUT_DEMO_ZERO } from "@/lib/pricing";
+import { CHECKOUT_SANDBOX } from "@/lib/pricing";
 
 export const checkoutFormSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -32,8 +32,8 @@ export const checkoutDefaultValues: CheckoutFormValues = {
   zip: "",
   phone: "",
   paymentMethod: "card",
-  cardNumber: CHECKOUT_DEMO_ZERO ? "4111111111111111" : "",
-  cardExpiry: CHECKOUT_DEMO_ZERO ? "12/30" : "",
-  cardCvc: CHECKOUT_DEMO_ZERO ? "123" : "",
+  cardNumber: CHECKOUT_SANDBOX ? "4111111111111111" : "",
+  cardExpiry: CHECKOUT_SANDBOX ? "12/30" : "",
+  cardCvc: CHECKOUT_SANDBOX ? "123" : "",
   termsAccepted: false as unknown as true,
 };

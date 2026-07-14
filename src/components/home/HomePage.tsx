@@ -8,6 +8,7 @@ import './home.css';
 import { CtaSection } from './cta/CtaSection';
 import { ServicesSection } from './ServicesSection';
 import { BrowseDirectorySection } from './BrowseDirectorySection';
+import { SandboxPeptidesSection } from './SandboxPeptidesSection';
 import { StoriesSection } from './StoriesSection';
 import { JourneySection } from './JourneySection';
 import { AskTidlSection, type AskTidlSectionHandle } from './AskTidlSection';
@@ -108,6 +109,7 @@ export default function HomePage() {
     { href: '#services', label: 'Treatments' },
     { href: '#tdlp5', label: 'The Pen' },
     { href: '#browse', label: 'Categories' },
+    { href: '#sandbox-peptides', label: 'Peptides' },
     { href: '#journey', label: 'About' },
     { href: '#stories', label: 'Reviews' },
     { href: '#askTidl', label: 'Ask TIDL' },
@@ -520,6 +522,8 @@ export default function HomePage() {
         ) : null}
 
         <BrowseDirectorySection />
+
+        <SandboxPeptidesSection />
 
         <JourneySection onGetStarted={openQuiz} />
 

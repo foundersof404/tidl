@@ -1,7 +1,7 @@
 import type { CheckoutFormData } from "@/types/order";
 import type { QuizFormData } from "@/types/quiz";
 import type { Product } from "@/lib/products";
-import { CHECKOUT_DEMO_ZERO } from "@/lib/pricing";
+import { calculateOrderPricing, CHECKOUT_DEMO_ZERO } from "@/lib/pricing";
 
 export type PrxCheckoutBody = {
   quiz: QuizFormData;
@@ -120,9 +120,13 @@ function mapQuizToIntakeAnswers(quiz: QuizFormData, goal: Product["goal"] | null
 }
 
 function mapCheckoutToPaymentPayload(body: PrxCheckoutBody, transactionId: string) {
-  // Sales-org API tokens cannot use mode "authorize" (PRX-as-merchant / embed only).
-  // Record a sandbox payment against PrescribeRx: $0 for demo checkout, catalog price later.
-  const amount = CHECKOUT_DEMO_ZERO ? 0 : body.product.monthlyPrice;
+  // Sales-org API tokens cannot use mode "authorize" (PRX-as-merchant / embed only),
+  // so we record an external sale via reference_captured. Amount is the full curated
+  // order total the customer sees (treatment + consult + shipping + tax); $0 only if
+  // demo-zero is toggled back on.
+  const amount = CHECKOUT_DEMO_ZERO
+    ? 0
+    : calculateOrderPricing(body.product as Product).total;
 
   return {
     mode: "reference_captured" as const,

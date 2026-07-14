@@ -151,5 +151,14 @@
   "149": "CategoryPenProgram.tsx",
   "150": "input-otp.tsx",
   "151": "accordion.tsx",
-  "152": "badge.tsx"
+  "152": "badge.tsx",
+  "153": "FileRoutesByPath",
+  "154": "DynamicQuiz.tsx",
+  "155": "data.ts",
+  "156": "categories.ts",
+  "157": "schema-intake.ts",
+  "158": "router.tsx",
+  "159": "auth.tsx",
+  "160": "quiz-sandbox.tsx",
+  "161": "@radix-ui/react-collapsible"
 }
