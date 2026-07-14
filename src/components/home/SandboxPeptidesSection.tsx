@@ -65,27 +65,26 @@ export function SandboxPeptidesSection() {
 
         {/* Featured peptides */}
         <div className="hsb-grid">
-          {featured.map(({ slug, live, hook, outcomes, goalLabel }) => {
+          {featured.map(({ slug, live, hook, outcomes, goalLabel, displayPrice }) => {
             const price = money(live.price);
             return (
               <article key={slug} className="hsb-card">
                 <div className="hsb-card-media">
-                  <img src={live.image} alt="" loading="lazy" className="hsb-card-vial" />
-                  <div className="hsb-ba" aria-hidden="true">
-                    <figure>
-                      <img src={live.beforeImage} alt="" loading="lazy" />
-                      <figcaption>Week 0</figcaption>
-                    </figure>
-                    <figure>
-                      <img src={live.afterImage} alt="" loading="lazy" />
-                      <figcaption>Week 12</figcaption>
-                    </figure>
-                  </div>
+                  <img
+                    src={live.image}
+                    alt={live.name}
+                    loading="lazy"
+                    className="hsb-card-vial"
+                  />
                 </div>
 
                 <div className="hsb-card-copy">
                   <span className="hsb-card-goal">{goalLabel}</span>
                   <h3 className="hsb-card-name">{live.name}</h3>
+                  <p className="hsb-card-price">
+                    From {formatCurrency(displayPrice)}
+                    <span>/mo</span>
+                  </p>
                   <p className="hsb-card-hook">{hook}</p>
                   <p className="hsb-card-desc">
                     {live.shortDescription?.trim() || live.handBox.clinicalLabel}

@@ -10,7 +10,12 @@ import {
 import { registerFromQuiz } from "@/lib/auth-storage";
 import { createOrder } from "@/lib/order-storage";
 import { clearQuizState, readQuizState } from "@/lib/quiz-storage";
-import { calculateOrderPricing, CHECKOUT_DEMO_ZERO, formatCurrency } from "@/lib/pricing";
+import {
+  calculateOrderPricing,
+  CHECKOUT_DEMO_ZERO,
+  CHECKOUT_SANDBOX,
+  formatCurrency,
+} from "@/lib/pricing";
 import { getRecommendedTreatment } from "@/lib/products";
 import { submitPrxCheckout } from "@/lib/prescribe-rx/browse-api";
 import { PEPTIDE_PRX_SLUGS } from "@/lib/peptides";
@@ -132,6 +137,7 @@ export function CheckoutForm() {
   });
 
   const paymentMethod = watch("paymentMethod");
+  const dueToday = selectedProduct ? calculateOrderPricing(selectedProduct).total : 0;
 
   const onSubmit = handleSubmit(async (values) => {
     if (!quizData) return;
@@ -272,7 +278,9 @@ export function CheckoutForm() {
               <p className="checkout-card-sub">
                 {CHECKOUT_DEMO_ZERO
                   ? "PrescribeRx sandbox · $0 reference capture (no real charge)"
-                  : "All transactions are securely encrypted"}
+                  : CHECKOUT_SANDBOX
+                    ? "PrescribeRx sandbox · reference capture (no real charge)"
+                    : "All transactions are securely encrypted"}
               </p>
             </div>
           </div>
@@ -284,6 +292,12 @@ export function CheckoutForm() {
             <code>reference_captured</code> for $0. Enter the sandbox test card below (or any valid
             format) — nothing is charged.
           </p>
+        ) : CHECKOUT_SANDBOX ? (
+          <p className="checkout-demo-banner" role="status">
+            Sandbox: payment is recorded with PrescribeRx as a{" "}
+            <code>reference_captured</code> external sale at the catalog list price. The prefilled
+            sandbox test card is used — nothing is actually charged.
+          </p>
         ) : null}
 
         <div className="checkout-pay-options">
@@ -292,7 +306,7 @@ export function CheckoutForm() {
             <div>
               <span className="checkout-pay-option-label">Credit or debit card</span>
               <span className="checkout-pay-option-hint">
-                {CHECKOUT_DEMO_ZERO ? "Sandbox test card OK" : "Visa, Mastercard, Amex"}
+                {CHECKOUT_SANDBOX ? "Sandbox test card OK" : "Visa, Mastercard, Amex"}
               </span>
             </div>
           </label>
@@ -313,7 +327,7 @@ export function CheckoutForm() {
                   className="checkout-input"
                   autoComplete="cc-number"
                   inputMode="numeric"
-                  placeholder={CHECKOUT_DEMO_ZERO ? "4111 1111 1111 1111" : "1234 5678 9012 3456"}
+                  placeholder={CHECKOUT_SANDBOX ? "4111 1111 1111 1111" : "1234 5678 9012 3456"}
                   {...register("cardNumber")}
                 />
                 <span className="checkout-card-brands" aria-hidden="true">
@@ -329,7 +343,7 @@ export function CheckoutForm() {
                 <input
                   className="checkout-input"
                   autoComplete="cc-exp"
-                  placeholder={CHECKOUT_DEMO_ZERO ? "12/30" : "MM/YY"}
+                  placeholder={CHECKOUT_SANDBOX ? "12/30" : "MM/YY"}
                   {...register("cardExpiry")}
                 />
               </Field>
@@ -338,7 +352,7 @@ export function CheckoutForm() {
                   className="checkout-input"
                   autoComplete="cc-csc"
                   inputMode="numeric"
-                  placeholder={CHECKOUT_DEMO_ZERO ? "123" : "123"}
+                  placeholder="123"
                   {...register("cardCvc")}
                 />
               </Field>
@@ -348,7 +362,9 @@ export function CheckoutForm() {
           <p className="checkout-card-sub" style={{ margin: 0 }}>
             {CHECKOUT_DEMO_ZERO
               ? "HSA/FSA selection still records a $0 PrescribeRx sandbox payment for this demo."
-              : "Use your HSA or FSA card details at checkout. Eligibility may vary by plan administrator."}
+              : CHECKOUT_SANDBOX
+                ? "HSA/FSA selection records a PrescribeRx sandbox reference capture — no real charge."
+                : "Use your HSA or FSA card details at checkout. Eligibility may vary by plan administrator."}
           </p>
         )}
       </section>
@@ -456,14 +472,16 @@ export function CheckoutForm() {
           ? "Processing..."
           : CHECKOUT_DEMO_ZERO
             ? `Complete demo order · ${formatCurrency(0)}`
-            : "Complete order"}
+            : `Complete order · ${formatCurrency(dueToday)}`}
       </button>
 
       <p className="checkout-secure">
         <LockSmallIcon />
         {CHECKOUT_DEMO_ZERO
           ? "Demo · PrescribeRx sandbox payment recorded · no real charge"
-          : "Your information is securely encrypted"}
+          : CHECKOUT_SANDBOX
+            ? "Sandbox · PrescribeRx reference capture recorded · no real charge"
+            : "Your information is securely encrypted"}
       </p>
     </form>
   );

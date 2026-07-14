@@ -50,9 +50,9 @@
     "semantic_hash": "55744e62994596a21d860f645d5db260"
   },
   "src/components/category/CategoryBundle.tsx": {
-    "mtime": 1783692252.5123835,
-    "ast_hash": "c8cb5a450ce0fb22b07c7c591d79fc02",
-    "semantic_hash": "c8cb5a450ce0fb22b07c7c591d79fc02"
+    "mtime": 1783989430.5352306,
+    "ast_hash": "a984212910a0b1a407d2d1b8a6770787",
+    "semantic_hash": ""
   },
   "src/components/category/CategoryHero.tsx": {
     "mtime": 1783692252.5163672,
@@ -60,8 +60,8 @@
     "semantic_hash": "c4b688e3f64efe27d41ab0baea4cf17e"
   },
   "src/components/category/CategoryPage.tsx": {
-    "mtime": 1783988741.346355,
-    "ast_hash": "0e8b569477937ebab4fa10d54982ed90",
+    "mtime": 1783989431.4769547,
+    "ast_hash": "45b95fbc94aea0963396b4fda308509c",
     "semantic_hash": ""
   },
   "src/components/category/CategoryPenProgram.tsx": {
@@ -70,7 +70,7 @@
     "semantic_hash": "4a737e9755ded91bb3b1a1d6fb797fba"
   },
   "src/components/category/CategoryProductCard.tsx": {
-    "mtime": 1783988920.8045971,
+    "mtime": 1783989431.47997,
     "ast_hash": "9b263ae07e24a52694697031ae09a41c",
     "semantic_hash": ""
   },
@@ -80,8 +80,8 @@
     "semantic_hash": "a969be5cc0ed7a8d306a5644fad22523"
   },
   "src/components/checkout/CheckoutForm.tsx": {
-    "mtime": 1783988329.6195476,
-    "ast_hash": "e21e7e7d8d9c0a60b785805bee6932b2",
+    "mtime": 1783989431.4873335,
+    "ast_hash": "ab804d2e431f00d70ccf7c8ca05d8108",
     "semantic_hash": ""
   },
   "src/components/checkout/CheckoutLayout.tsx": {
@@ -90,7 +90,7 @@
     "semantic_hash": "f2dfbdc93cf4e2001533b112e6f45dcc"
   },
   "src/components/checkout/OrderSummary.tsx": {
-    "mtime": 1783988785.3377411,
+    "mtime": 1783989431.4903486,
     "ast_hash": "139cc00221fc5ea5e56562af898a5e02",
     "semantic_hash": ""
   },
@@ -105,8 +105,8 @@
     "semantic_hash": "d8bf738dc30f956383bcdda347c88828"
   },
   "src/components/home/HomePage.tsx": {
-    "mtime": 1783989198.1289222,
-    "ast_hash": "e21cbe5d3e2876c2a483b5ca987b0e2c",
+    "mtime": 1783991439.1055155,
+    "ast_hash": "57d8f9766108185184da4dd15a9394b1",
     "semantic_hash": ""
   },
   "src/components/home/JourneySection.tsx": {
@@ -125,9 +125,9 @@
     "semantic_hash": "83ba29da31d8b22a44a8563567fe3e4d"
   },
   "src/components/home/StoriesSection.tsx": {
-    "mtime": 1783692252.564005,
-    "ast_hash": "0011441ca9cbd7f1132251e78ddaaa6e",
-    "semantic_hash": "0011441ca9cbd7f1132251e78ddaaa6e"
+    "mtime": 1783991134.5570183,
+    "ast_hash": "5536c1be703e7d86d5a0fbf875c569bd",
+    "semantic_hash": ""
   },
   "src/components/home/cta/ContourField.tsx": {
     "mtime": 1783517339.1029139,
@@ -170,14 +170,14 @@
     "semantic_hash": "7754b541da0ebf1d863847c680a31670"
   },
   "src/components/layout/SiteFooter.tsx": {
-    "mtime": 1783988817.5865178,
+    "mtime": 1783989431.5114186,
     "ast_hash": "0510ebc0ecfe1e273ca19062f026481f",
     "semantic_hash": ""
   },
   "src/components/layout/SiteHeader.tsx": {
-    "mtime": 1783791512.4445968,
-    "ast_hash": "8fc4c0d8fa51d6e163b50658f5cd1f57",
-    "semantic_hash": "8fc4c0d8fa51d6e163b50658f5cd1f57"
+    "mtime": 1783989430.5747137,
+    "ast_hash": "03053eabc5a6b7e01fe98ef652379877",
+    "semantic_hash": ""
   },
   "src/components/layout/site-nav.ts": {
     "mtime": 1783559092.4454513,
@@ -215,8 +215,8 @@
     "semantic_hash": "5a7b8b2da38c88235eb2e67060af72b1"
   },
   "src/components/pdp/PdpHeroSection.tsx": {
-    "mtime": 1783986715.186071,
-    "ast_hash": "ef97c314d64770a3118669121d85b300",
+    "mtime": 1783989431.5144205,
+    "ast_hash": "5838affa908f57b98f7673ea34aa916c",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpIncludedSection.tsx": {
@@ -230,8 +230,8 @@
     "semantic_hash": "34e3c9a8cc3e6f426a0b0d12fb34c203"
   },
   "src/components/pdp/PdpReviewsSection.tsx": {
-    "mtime": 1783986813.4286523,
-    "ast_hash": "608c4fddd52cfc9e8d3ad3626d2c8575",
+    "mtime": 1783989481.921916,
+    "ast_hash": "fc793055ac0dd3afdf8509d4d6844827",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpSafetySection.tsx": {
@@ -250,13 +250,13 @@
     "semantic_hash": "798d5d7461f57cb98c9ba141fb5a9b91"
   },
   "src/components/pdp/ProductPdpPage.tsx": {
-    "mtime": 1783988777.2313654,
-    "ast_hash": "afb546b0634033363f918e9483f4d507",
+    "mtime": 1783989431.5239286,
+    "ast_hash": "ddf51babace9cb97a7b6ed64234942a9",
     "semantic_hash": ""
   },
   "src/components/pdp/data/glp1-pdp-content.ts": {
-    "mtime": 1783987590.4606943,
-    "ast_hash": "7e013cfc106a2dcaa184fb9171f0bf5b",
+    "mtime": 1783989431.52789,
+    "ast_hash": "4fe7916b8fe6e25147606f8d873e209c",
     "semantic_hash": ""
   },
   "src/components/pdp/data/glp1-pdp-data.ts": {
@@ -265,8 +265,8 @@
     "semantic_hash": "6c4ce7d46c864e87835262ebfe45be58"
   },
   "src/components/pdp/data/pdp-data-registry.ts": {
-    "mtime": 1783984403.9797902,
-    "ast_hash": "69e77b5c2736b193cd0e5ccd48131713",
+    "mtime": 1783989431.5304246,
+    "ast_hash": "89a405b015d6984b7223ba82eef52d6a",
     "semantic_hash": ""
   },
   "src/components/pdp/data/pen-showcase-content.ts": {
@@ -275,8 +275,8 @@
     "semantic_hash": "d6c31227b5cf3b3252dade05609a00a8"
   },
   "src/components/pdp/data/types.ts": {
-    "mtime": 1783984404.0099802,
-    "ast_hash": "69af331692633790822c020aab443439",
+    "mtime": 1783989431.5334353,
+    "ast_hash": "cd2aa0f9ff7dfa4d0708f0b76f90efb8",
     "semantic_hash": ""
   },
   "src/components/pdp/pdp-ui.tsx": {
@@ -570,14 +570,14 @@
     "semantic_hash": "bbc9cfe4a6f3eea596fad3d9d4ba18d1"
   },
   "src/lib/categories.ts": {
-    "mtime": 1783984404.2689943,
-    "ast_hash": "70293858b244d233c8be1e2c99e9659a",
+    "mtime": 1783989431.542328,
+    "ast_hash": "ca7201725cdab38d0c16cb4189535981",
     "semantic_hash": ""
   },
   "src/lib/category-bundles.ts": {
-    "mtime": 1783692252.6047304,
-    "ast_hash": "6d0286d8291a01de55663e503e4d542f",
-    "semantic_hash": "6d0286d8291a01de55663e503e4d542f"
+    "mtime": 1783989430.6110306,
+    "ast_hash": "56c079bcb3f7655e850a87abaf562047",
+    "semantic_hash": ""
   },
   "src/lib/category-recommendations.ts": {
     "mtime": 1783692252.6077335,
@@ -590,7 +590,7 @@
     "semantic_hash": "9a7614794835363f7c70978f45677733"
   },
   "src/lib/checkout-schema.ts": {
-    "mtime": 1783988341.259831,
+    "mtime": 1783989431.5443394,
     "ast_hash": "7b960408785ddedd1a460319f7bf6d76",
     "semantic_hash": ""
   },
@@ -605,7 +605,7 @@
     "semantic_hash": "8da0ddd7569bac2676b9a5c8edff8a36"
   },
   "src/lib/homepage-content.ts": {
-    "mtime": 1783986731.0925496,
+    "mtime": 1783989431.5473952,
     "ast_hash": "3e27dbd4974420d0d83d7badffad4fc5",
     "semantic_hash": ""
   },
@@ -615,8 +615,8 @@
     "semantic_hash": "b2c682d9fb2c4e278a62b2ad67451c61"
   },
   "src/lib/prescribe-rx/browse-api.ts": {
-    "mtime": 1783988702.338037,
-    "ast_hash": "02475b4e0e921e4ce4af6baab4f33f7f",
+    "mtime": 1783989431.5551841,
+    "ast_hash": "99ac4eb927353e4e63f5cd37a947960d",
     "semantic_hash": ""
   },
   "src/lib/prescribe-rx/client.ts": {
@@ -635,8 +635,8 @@
     "semantic_hash": "98fb29070d509abb4efa73ac7928834f"
   },
   "src/lib/prescribe-rx/env.ts": {
-    "mtime": 1783984404.7976584,
-    "ast_hash": "0a2ff3c018b8466bac73a98847bd0a07",
+    "mtime": 1783989431.5587215,
+    "ast_hash": "eaee1ebc3835d46ce6fb224806dad59d",
     "semantic_hash": ""
   },
   "src/lib/prescribe-rx/index.ts": {
@@ -650,18 +650,18 @@
     "semantic_hash": "c47392ae8c814515eb43751aeb08d355"
   },
   "src/lib/pricing.ts": {
-    "mtime": 1783988275.024759,
-    "ast_hash": "13f55681efc505b18a5acc8421c4400e",
+    "mtime": 1783989431.5674756,
+    "ast_hash": "61c1bc5a981643c1f66f82ce9f5235c3",
     "semantic_hash": ""
   },
   "src/lib/product-catalog.ts": {
-    "mtime": 1783984404.1959777,
-    "ast_hash": "1e57461b5045a045ab7c12fc89b22a27",
+    "mtime": 1783989431.5689917,
+    "ast_hash": "9bc7e4aed2a49cad73d2ced714512d51",
     "semantic_hash": ""
   },
   "src/lib/products.ts": {
-    "mtime": 1783984404.4710593,
-    "ast_hash": "9ed97469318ccce8288f72373e5fe98f",
+    "mtime": 1783989431.5717728,
+    "ast_hash": "29c99dc10ee62ea38ef2ab1399637f68",
     "semantic_hash": ""
   },
   "src/lib/quiz-storage.ts": {
@@ -670,9 +670,9 @@
     "semantic_hash": "89ffcbf980d4926d32582f7f9df80e23"
   },
   "src/lib/services-content.ts": {
-    "mtime": 1783984354.9260929,
-    "ast_hash": "e5194ccaf25027511c0ee1c85948f4d1",
-    "semantic_hash": "e5194ccaf25027511c0ee1c85948f4d1"
+    "mtime": 1783989430.635735,
+    "ast_hash": "d2c10e1e2499c9d897630a2bdb780b28",
+    "semantic_hash": ""
   },
   "src/lib/site-assets.ts": {
     "mtime": 1783692252.6265638,
@@ -680,13 +680,13 @@
     "semantic_hash": "e2c8344f39d5e5aef142b7f98d68bc82"
   },
   "src/lib/stories-content.ts": {
-    "mtime": 1783692252.6295428,
-    "ast_hash": "f83f6e9ffe98f700d348fd36a7471706",
-    "semantic_hash": "f83f6e9ffe98f700d348fd36a7471706"
+    "mtime": 1783990698.1751149,
+    "ast_hash": "34e7f88a942319c76573c57d929ec44b",
+    "semantic_hash": ""
   },
   "src/lib/testimonials.ts": {
-    "mtime": 1783987776.319118,
-    "ast_hash": "a39c9998099a10ef40c6ee2b544ca695",
+    "mtime": 1783991181.7432477,
+    "ast_hash": "adf45ee468a3b34692db90650f5f18c6",
     "semantic_hash": ""
   },
   "src/lib/trust-content.ts": {
@@ -710,7 +710,7 @@
     "semantic_hash": "b0078dc6b45d65250abe0f0822c90bef"
   },
   "src/routeTree.gen.ts": {
-    "mtime": 1783988813.8073642,
+    "mtime": 1783989436.9174712,
     "ast_hash": "8b3b7aa97c5aaca62665d84df360aebd",
     "semantic_hash": ""
   },
@@ -830,8 +830,8 @@
     "semantic_hash": "b4b856e6bc79245bb42e47fd6262c960"
   },
   "src/routes/confirmation.tsx": {
-    "mtime": 1783988817.629518,
-    "ast_hash": "6ad4c997a4f71526770ba8ec143cc435",
+    "mtime": 1783989431.5814228,
+    "ast_hash": "ebf1e8c78aad23a0e9959a09bf93be23",
     "semantic_hash": ""
   },
   "src/routes/index.tsx": {
@@ -860,8 +860,8 @@
     "semantic_hash": "f1b1a14e151de2a1aa328e4b742b0c07"
   },
   "src/server/prx/mappers.ts": {
-    "mtime": 1783988286.3172314,
-    "ast_hash": "9070fe61c8b3db393a86ee2fa57cdbc6",
+    "mtime": 1783989431.5886106,
+    "ast_hash": "7d679c163fd51280a7345884f69ea78c",
     "semantic_hash": ""
   },
   "src/server/prx/respond.ts": {
@@ -900,8 +900,8 @@
     "semantic_hash": "248c53ab5161b6be8fc438b340e761f4"
   },
   "src/types/quiz.ts": {
-    "mtime": 1783984404.5286326,
-    "ast_hash": "1708371de9e4391d81518fbbbc36fbfb",
+    "mtime": 1783989431.5916214,
+    "ast_hash": "7dc3752762061a38335fd95558a5feba",
     "semantic_hash": ""
   },
   "src/vite-env.d.ts": {
@@ -910,8 +910,8 @@
     "semantic_hash": "76312ed699a3aa6d543f3e9befb8d106"
   },
   "tsconfig.json": {
-    "mtime": 1783985988.2460735,
-    "ast_hash": "a834a53d972acacdbc7b89a645c2cc8f",
+    "mtime": 1783989431.5957296,
+    "ast_hash": "e9905064abe5abcd21413a284f522fd1",
     "semantic_hash": ""
   },
   "vite.config.ts": {
@@ -1010,8 +1010,8 @@
     "semantic_hash": ""
   },
   "message-to-thomas.md": {
-    "mtime": 1783984054.1726606,
-    "ast_hash": "7f02bc9fe23436da0235792df5a0e3c4",
+    "mtime": 1783989430.9742222,
+    "ast_hash": "6cadf6a9077a9c6eac5dc7ceb87f14e8",
     "semantic_hash": ""
   },
   "sandbox-full-connection.md": {
@@ -1025,8 +1025,8 @@
     "semantic_hash": ""
   },
   "sandbox-one.md": {
-    "mtime": 1783984404.9875004,
-    "ast_hash": "7baff90531fa315834260f985e9aaede",
+    "mtime": 1783989431.4657521,
+    "ast_hash": "3a9c1d83cdcb7f6bc2b4bb6779366a14",
     "semantic_hash": ""
   },
   "sandbox-tested.md": {
@@ -1200,432 +1200,432 @@
     "semantic_hash": ""
   },
   "scripts/prepare_peptide_images.py": {
-    "mtime": 1783986026.7380514,
+    "mtime": 1783989431.4697762,
     "ast_hash": "0690d5c4390567bf8d9e4fb2ec1d9ed1",
     "semantic_hash": ""
   },
   "scripts/prx-catalog-images.json": {
-    "mtime": 1783984799.71137,
+    "mtime": 1783989431.472268,
     "ast_hash": "7da8e4e02c960ce391c5564c4d68791f",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpTransformationSection.tsx": {
-    "mtime": 1783984405.3269124,
-    "ast_hash": "7f76f7eacf1e100e12c40661b3ce52a8",
+    "mtime": 1783989431.519934,
+    "ast_hash": "4ce10380819a1f089142844f42255ac2",
     "semantic_hash": ""
   },
   "src/lib/pdp-marketing.ts": {
-    "mtime": 1783987570.366401,
-    "ast_hash": "834a12cf289ceb1277a99d4a7cf991ae",
+    "mtime": 1783989431.5484042,
+    "ast_hash": "7c0fd62db3e7f0451cda19d1603b9f21",
     "semantic_hash": ""
   },
   "src/lib/peptide-image-map.json": {
-    "mtime": 1783986033.7255118,
+    "mtime": 1783989431.5504172,
     "ast_hash": "9b1af186b5ef047785b0b320cafe9179",
     "semantic_hash": ""
   },
   "src/lib/peptide-images.ts": {
-    "mtime": 1783986774.6233416,
+    "mtime": 1783989431.5514166,
     "ast_hash": "0a0513838bdac608fb7ad6979847dfc9",
     "semantic_hash": ""
   },
   "src/lib/peptides.ts": {
-    "mtime": 1783987581.443962,
+    "mtime": 1783989431.5524168,
     "ast_hash": "219cfe778e25f8ccb4517a0136339e07",
     "semantic_hash": ""
   },
   "src/lib/prescribe-rx/use-live-catalog.ts": {
-    "mtime": 1783988702.4135091,
-    "ast_hash": "4e4e165bd510b477876fa1fc8874f050",
+    "mtime": 1783989431.5625622,
+    "ast_hash": "be1b75132b5a6ec617497e300a5ae0f3",
     "semantic_hash": ""
   },
   "src/routes/products/$slug.tsx": {
-    "mtime": 1783984405.1460319,
-    "ast_hash": "5707bb27b098549616b6af3102631758",
+    "mtime": 1783989431.5837016,
+    "ast_hash": "1bd9f39b31418d93898d1157da1fa1fa",
     "semantic_hash": ""
   },
   "public/peptides/bpc-157.png": {
-    "mtime": 1783986033.6865108,
+    "mtime": 1783989431.0515308,
     "ast_hash": "3d6a351b5806635a9870ec7105e077fe",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019b9783-d3fe-730a-8278-b131e3ad6b57.png": {
-    "mtime": 1783985449.673156,
+    "mtime": 1783989431.056531,
     "ast_hash": "157144c03a9707237dc1f87600c0a84b",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bb9b5-0f71-7154-8eca-e43f614b6f97.png": {
-    "mtime": 1783985780.8811867,
+    "mtime": 1783989431.0600533,
     "ast_hash": "d93f86838f90c3665636f55be407007f",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bc32e-c4d5-7230-b879-a706dc054db1.png": {
-    "mtime": 1783985639.6973972,
+    "mtime": 1783989431.0631454,
     "ast_hash": "bb94e4e1cf4bf0faf0743806e71788e4",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bc338-dfbc-731a-9f8a-c4ad3b05a2b4.png": {
-    "mtime": 1783985793.699446,
+    "mtime": 1783989431.0651467,
     "ast_hash": "1e7258ccddd6bde7d866bd30921bd2ad",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bc346-1b8f-71a0-a07c-9f8bce3ddcc9.png": {
-    "mtime": 1783985801.3151412,
+    "mtime": 1783989431.0676692,
     "ast_hash": "88d0784e0449641b937a1693f3fcff77",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bc34d-e6e7-7132-84c1-1b2caf61da8e.png": {
-    "mtime": 1783985807.4826267,
+    "mtime": 1783989431.071496,
     "ast_hash": "7cc7bb1df06ddc2fba3374a7eedc256f",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bc38a-4e18-739b-93e9-a32f8c2f8fdd.png": {
-    "mtime": 1783985631.242202,
+    "mtime": 1783989431.075398,
     "ast_hash": "09be091c802573cf193d1d48c0900d83",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bc3b4-af90-7289-885e-231d4c322b14.png": {
-    "mtime": 1783985659.1320882,
+    "mtime": 1783989431.077705,
     "ast_hash": "76cde7b5df53c6ac3795f082deaa0977",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bdbeb-1c06-7305-b832-336db78c105b.png": {
-    "mtime": 1783985422.174319,
+    "mtime": 1783989431.0807116,
     "ast_hash": "b47959ad42bbd89011389407d93d69f1",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e581-7264-9525-296929cc2c30.png": {
-    "mtime": 1783985205.8970969,
+    "mtime": 1783989431.0827115,
     "ast_hash": "41e4cc43331d1712b25b2232af37a1d5",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e588-718a-8328-d772f63cb741.png": {
-    "mtime": 1783985218.2191389,
+    "mtime": 1783989431.0857122,
     "ast_hash": "744a1e4fe6d0ecf6d8216a16b7b5fb48",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e58f-72e0-be3c-3af65b406741.png": {
-    "mtime": 1783985200.53259,
+    "mtime": 1783989431.0882294,
     "ast_hash": "880ac4056bb5f3077a790163945f083d",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e5d9-70a3-9ea2-d334aeca9f25.png": {
-    "mtime": 1783985277.8748312,
+    "mtime": 1783989431.0915272,
     "ast_hash": "77edeff3d82dc58fd791950c915da196",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e5e0-70cd-8c2d-2c3e9bf11bbc.png": {
-    "mtime": 1783985270.3696396,
+    "mtime": 1783989431.0949268,
     "ast_hash": "a5e95ec1cbb303eb10d74d649ab0b2ea",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e5e7-73ce-b7f4-ad1b19d7e1b5.png": {
-    "mtime": 1783985290.246269,
+    "mtime": 1783989431.0995326,
     "ast_hash": "39640574431a632826a0c42abcd6d324",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e5ee-7307-9b6f-08e888c445dd.png": {
-    "mtime": 1783985285.4380932,
+    "mtime": 1783989431.10173,
     "ast_hash": "2c12c80d6595a5a22a93300427d1466a",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e6ad-70ee-9c94-de9a96565c1b.png": {
-    "mtime": 1783985493.996655,
+    "mtime": 1783989431.1037312,
     "ast_hash": "8d1f1409cc4203849e4f9973ec67e42c",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e71a-7225-98fe-8f28b4cbcd77.png": {
-    "mtime": 1783985134.297454,
+    "mtime": 1783989431.1072369,
     "ast_hash": "ee4e7276d0d06b0ac4266ec9ca0d1e4a",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bde3e-e796-7234-b44e-0adbcd81270f.png": {
-    "mtime": 1783985496.3378987,
+    "mtime": 1783989431.1102526,
     "ast_hash": "e1c869a9082fdbf0e1abf80693299d87",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bdf22-9ff5-70f8-8fb5-6e5e70c626f2.png": {
-    "mtime": 1783985483.1915267,
+    "mtime": 1783989431.1122527,
     "ast_hash": "33d258ac73def2bda700ff141bd5161e",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019bdf2d-fce9-71ac-b7e5-b4064879b40d.png": {
-    "mtime": 1783985490.8245778,
+    "mtime": 1783989431.114252,
     "ast_hash": "422640e7d30d8f09e1d77a138e5088a3",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c7c81-6985-7090-857c-94607d506692.png": {
-    "mtime": 1783985606.0631776,
+    "mtime": 1783989431.118767,
     "ast_hash": "8f23aa827f9f8dd1d66d7ced3fbdec39",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c7c87-5aed-7115-9a7e-448ca8064a4b.png": {
-    "mtime": 1783985560.1548674,
+    "mtime": 1783989431.12229,
     "ast_hash": "bc3c5f7f6f383ba708491eaa74353130",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c7c9f-7a96-73d4-bb41-8920853b48d6.png": {
-    "mtime": 1783985575.6228993,
+    "mtime": 1783989431.1259356,
     "ast_hash": "09f3160db3ea15e49b74979812d42259",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c7cb4-049f-73ec-b278-42ca6c54159c.png": {
-    "mtime": 1783985743.5970702,
+    "mtime": 1783989431.1284518,
     "ast_hash": "2c7d6f712ae420be438478e435d842bb",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c7d0d-81a0-725c-b477-ed4ac0e96640.png": {
-    "mtime": 1783985684.5099938,
+    "mtime": 1783989431.1324592,
     "ast_hash": "08a66a227b6df76dcf02403949885215",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c8815-5510-71ea-9d6e-dc6029aa4218.png": {
-    "mtime": 1783985155.3314855,
+    "mtime": 1783989431.1370122,
     "ast_hash": "3d6a351b5806635a9870ec7105e077fe",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c8819-35be-73f4-b5c2-c7e9c82a0f27.png": {
-    "mtime": 1783985761.9725022,
+    "mtime": 1783989431.1411684,
     "ast_hash": "b9e404522e913432eeb72a9930eda943",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c882b-1bec-724c-baa3-6cff65c53c6b.png": {
-    "mtime": 1783985168.2158368,
+    "mtime": 1783989431.1441677,
     "ast_hash": "16361460d1983b1774966ee88227aa45",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c882f-1f93-727d-ad98-2c503329f3db.png": {
-    "mtime": 1783985479.8251066,
+    "mtime": 1783989431.1515257,
     "ast_hash": "e204f2606fba9beeb3f199eaf3b5a609",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c8831-5636-728c-b15f-6936811a3631.png": {
-    "mtime": 1783985505.2916522,
+    "mtime": 1783989431.1590488,
     "ast_hash": "2385edc3805e033f59de01fa42b56244",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c8834-50f5-72d3-a037-95dbb7adf082.png": {
-    "mtime": 1783985468.2591748,
+    "mtime": 1783989431.1640491,
     "ast_hash": "a5ff64d410ae501ac1ac6c62087df52a",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c883b-1dd0-72a1-8ad8-7b4e2bd3d8ae.png": {
-    "mtime": 1783985183.0130048,
+    "mtime": 1783989431.167567,
     "ast_hash": "b7bd207d4c409ebca2bc70b07002aa7b",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019c883d-6fd6-70e0-b415-144212c2cbe8.png": {
-    "mtime": 1783985263.4180074,
+    "mtime": 1783989431.1717532,
     "ast_hash": "466839020562fe5743da926d98e442d0",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cadd9-8152-72ba-a4e4-a1114a8f77a8.png": {
-    "mtime": 1783985731.436227,
+    "mtime": 1783989431.1757526,
     "ast_hash": "6d870ac94dc35659c44007d4b6fc016c",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019caddf-318b-715c-9bae-efb57963d332.png": {
-    "mtime": 1783985817.582363,
+    "mtime": 1783989431.1792753,
     "ast_hash": "dde92e26b8944704128998c0c56ab254",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cade3-6192-71fe-a49a-1f0bc8ddffe2.png": {
-    "mtime": 1783985718.0638638,
+    "mtime": 1783989431.1823463,
     "ast_hash": "c50c1ea3c7cde84a9c017c9015b2392a",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cade5-fefa-7238-9c94-df68a64152d7.png": {
-    "mtime": 1783985618.94129,
+    "mtime": 1783989431.185339,
     "ast_hash": "ef2ef505dbaad0e00d6ab9bd7d549c78",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cade7-db49-7279-8f30-7af9f2dd93ad.png": {
-    "mtime": 1783985653.5767953,
+    "mtime": 1783989431.1902575,
     "ast_hash": "1b2e9e7cdc953014fbca69a27193a067",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cadea-3836-70a6-8325-470804544e4e.png": {
-    "mtime": 1783985702.8102832,
+    "mtime": 1783989431.1946537,
     "ast_hash": "cf9d91c7fbaed29106f444cb096dea3a",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cadec-6cf5-72ba-8faf-487b07eb5788.png": {
-    "mtime": 1783985243.6019652,
+    "mtime": 1783989431.1999805,
     "ast_hash": "b902413558eef026c5c9b61feb31fc6b",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cadef-a3fa-707b-b17f-df1ba069768b.png": {
-    "mtime": 1783985445.8776095,
+    "mtime": 1783989431.204136,
     "ast_hash": "6631b2c6ea674a7122bc1530a23a8bc0",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cadf5-ac12-72f7-9d7c-971ec5475714.png": {
-    "mtime": 1783985301.9936433,
+    "mtime": 1783989431.2107716,
     "ast_hash": "62f2b46cb27780d3db16a1bc2525ff1e",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cadf7-b938-70aa-bf68-cfd894b7fbb4.png": {
-    "mtime": 1783985434.0702138,
+    "mtime": 1783989431.215021,
     "ast_hash": "7d3c0be8d42cada1223a417576ed5d07",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63b3-7179-8263-d2e3acfdb93b.png": {
-    "mtime": 1783985414.902971,
+    "mtime": 1783989431.2175338,
     "ast_hash": "89299e7cb291ac9a95bc16df33f22a31",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63ba-7378-ad06-d44f29bdb6c5.png": {
-    "mtime": 1783985326.592745,
+    "mtime": 1783989431.220852,
     "ast_hash": "c32c2687e9dec3b6e05e454ffa59a334",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63c0-726e-bffc-9b2e8d8a06fc.png": {
-    "mtime": 1783985843.2358184,
+    "mtime": 1783989431.224812,
     "ast_hash": "0900166b5122499986bea4ade783f728",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63c5-71fa-8817-f207f4a3b7f2.png": {
-    "mtime": 1783985356.670985,
+    "mtime": 1783989431.2311902,
     "ast_hash": "9f7709ba9f224f3bc1b35854b16056c1",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63cb-7187-9a7a-e38dc7300800.png": {
-    "mtime": 1783985383.3151696,
+    "mtime": 1783989431.2346482,
     "ast_hash": "9f7709ba9f224f3bc1b35854b16056c1",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63d0-7141-b33a-8aacab2ac4c5.png": {
-    "mtime": 1783985752.1995523,
+    "mtime": 1783989431.2371564,
     "ast_hash": "8a133d531707cf13df91b6d2ccdb2e5b",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63d6-707d-a995-2c24617e2137.png": {
-    "mtime": 1783985769.3762305,
+    "mtime": 1783989431.2395995,
     "ast_hash": "dab9b145002589bc8bf9e416e14fdf65",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63dc-703c-973a-c50f5d9e5df0.png": {
-    "mtime": 1783985688.1210115,
+    "mtime": 1783989431.2416089,
     "ast_hash": "22889d1faf911aa53ffcc3ed358bc4c3",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63e1-71dc-a377-6c44c80827e0.png": {
-    "mtime": 1783985189.0862572,
+    "mtime": 1783989431.2426102,
     "ast_hash": "85cd8a74f7f31ffe484652e7d27efb47",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63e7-71b3-b0d9-5e2de9492941.png": {
-    "mtime": 1783985158.1606922,
+    "mtime": 1783989431.2449343,
     "ast_hash": "a406d7c1d61a2d6f9a77db7f81e83f55",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63ef-7111-8cf1-ba9b6df38bee.png": {
-    "mtime": 1783985721.1067617,
+    "mtime": 1783989431.24778,
     "ast_hash": "d0d54d03c40d767714c5a2e3d0894211",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63f5-70d1-857d-666d2b320850.png": {
-    "mtime": 1783985171.146457,
+    "mtime": 1783989431.2504652,
     "ast_hash": "e7f7d871fef539907c621a9f2a769fb0",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-63fa-73ef-bbea-dba35ab51a17.png": {
-    "mtime": 1783985485.8712945,
+    "mtime": 1783989431.2518156,
     "ast_hash": "722befc26aaa83c7bb14617d085edbd7",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-6406-7271-b16d-02f6bead3d28.png": {
-    "mtime": 1783985497.9102645,
+    "mtime": 1783989431.254447,
     "ast_hash": "554e2a67c58452fec0742cdd11eaac4e",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-640b-702a-8e87-3f36d587b002.png": {
-    "mtime": 1783985471.017269,
+    "mtime": 1783989431.2554576,
     "ast_hash": "9f65b44354cc31791045a4bec0ce593a",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-6411-707a-83aa-90cbb4c254f3.png": {
-    "mtime": 1783985472.777266,
+    "mtime": 1783989431.2579768,
     "ast_hash": "8a8ae47a923c373c612f5a85a1639b90",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-6417-7139-b80b-29ef982f5bc4.png": {
-    "mtime": 1783985248.717777,
+    "mtime": 1783989431.2602055,
     "ast_hash": "c268b40847297821066b105d2fd22310",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-641c-7238-8d17-304f5158646e.png": {
-    "mtime": 1783985265.8537953,
+    "mtime": 1783989431.261217,
     "ast_hash": "f6749ddcffae8f0b51dc1fe8c57ad60a",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-6422-72d9-a66f-355a3171ddfc.png": {
-    "mtime": 1783985306.1282587,
+    "mtime": 1783989431.2640407,
     "ast_hash": "80dda936ca752bc674e714202fe2cea3",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019cdb9d-6427-72f7-8bc9-2ac55b626679.png": {
-    "mtime": 1783985447.2257557,
+    "mtime": 1783989431.2655122,
     "ast_hash": "80dda936ca752bc674e714202fe2cea3",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019da805-a61c-71f8-bd4b-48bd7ed31448.png": {
-    "mtime": 1783985625.5536473,
+    "mtime": 1783989431.2802973,
     "ast_hash": "abdcda3d7f7bd2ba826f2f4addb91d96",
     "semantic_hash": ""
   },
   "public/peptides/catalog/019f48e5-0a5c-717b-b648-24298cc9c3c3.png": {
-    "mtime": 1783985547.9290285,
+    "mtime": 1783989431.2959392,
     "ast_hash": "fff03ec94fca81e5c46a991cd736fd5e",
     "semantic_hash": ""
   },
   "public/peptides/cjc-1295-ipamorelin.png": {
-    "mtime": 1783986033.7005115,
+    "mtime": 1783989431.3641388,
     "ast_hash": "b902413558eef026c5c9b61feb31fc6b",
     "semantic_hash": ""
   },
   "public/peptides/ghk-cu.png": {
-    "mtime": 1783986033.716542,
+    "mtime": 1783989431.3681605,
     "ast_hash": "466839020562fe5743da926d98e442d0",
     "semantic_hash": ""
   },
   "public/peptides/glp-1-weight-loss.png": {
-    "mtime": 1783986033.6752963,
+    "mtime": 1783989431.391103,
     "ast_hash": "1e7258ccddd6bde7d866bd30921bd2ad",
     "semantic_hash": ""
   },
   "public/peptides/mots-c.png": {
-    "mtime": 1783986033.7085185,
+    "mtime": 1783989431.3966622,
     "ast_hash": "a5ff64d410ae501ac1ac6c62087df52a",
     "semantic_hash": ""
   },
   "public/peptides/nad-plus.png": {
-    "mtime": 1783986033.713515,
+    "mtime": 1783989431.3996332,
     "ast_hash": "e204f2606fba9beeb3f199eaf3b5a609",
     "semantic_hash": ""
   },
   "public/peptides/retatrutide.png": {
-    "mtime": 1783986033.6803043,
+    "mtime": 1783989431.403766,
     "ast_hash": "bc3c5f7f6f383ba708491eaa74353130",
     "semantic_hash": ""
   },
   "public/peptides/sermorelin.png": {
-    "mtime": 1783986033.7215114,
+    "mtime": 1783989431.4227636,
     "ast_hash": "76cde7b5df53c6ac3795f082deaa0977",
     "semantic_hash": ""
   },
   "public/peptides/tb-500.png": {
-    "mtime": 1783986033.6915443,
+    "mtime": 1783989431.426777,
     "ast_hash": "c50c1ea3c7cde84a9c017c9015b2392a",
     "semantic_hash": ""
   },
   "public/peptides/tesamorelin.png": {
-    "mtime": 1783986033.7055166,
+    "mtime": 1783989431.4297912,
     "ast_hash": "6d870ac94dc35659c44007d4b6fc016c",
     "semantic_hash": ""
   },
   "public/peptides/wolverine.png": {
-    "mtime": 1783986033.696516,
+    "mtime": 1783989431.4570208,
     "ast_hash": "dde92e26b8944704128998c0c56ab254",
     "semantic_hash": ""
   },
@@ -1635,157 +1635,157 @@
     "semantic_hash": ""
   },
   "scripts/make_peptide_before_after.py": {
-    "mtime": 1783987514.801566,
+    "mtime": 1783989431.4687686,
     "ast_hash": "8f129da94d444bcacff7fd4454512f68",
     "semantic_hash": ""
   },
   "src/components/home/SandboxPeptidesSection.tsx": {
-    "mtime": 1783988726.209316,
+    "mtime": 1783989431.4991498,
     "ast_hash": "08ceca2802f538a7d16e7947d04fac61",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpSandboxFactsSection.tsx": {
-    "mtime": 1783988785.1334348,
+    "mtime": 1783989431.517934,
     "ast_hash": "183311b7798419ea6378c83fcbf6e195",
     "semantic_hash": ""
   },
   "src/lib/prescribe-rx/merge-sandbox-pdp.ts": {
-    "mtime": 1783987630.4236917,
+    "mtime": 1783989431.560112,
     "ast_hash": "92f8e44c865fade89c4294cb76db1e4b",
     "semantic_hash": ""
   },
   "src/lib/prescribe-rx/use-home-sandbox.ts": {
-    "mtime": 1783988713.3255682,
+    "mtime": 1783989431.56155,
     "ast_hash": "638d9ca56767fd3cbb992c84f1fd90a0",
     "semantic_hash": ""
   },
   "public/peptides/ba/bpc-157-after.png": {
-    "mtime": 1783987525.383445,
+    "mtime": 1783989430.9787207,
     "ast_hash": "ceb52860c72c5a071513d1f59eff4714",
     "semantic_hash": ""
   },
   "public/peptides/ba/bpc-157-before.png": {
-    "mtime": 1783987524.8680246,
+    "mtime": 1783989430.981292,
     "ast_hash": "1c1ed4016c30a45ca2273f16177e3fd6",
     "semantic_hash": ""
   },
   "public/peptides/ba/cjc-1295-ipamorelin-after.png": {
-    "mtime": 1783987527.901003,
+    "mtime": 1783989430.9852931,
     "ast_hash": "03edea91a0762ed405b15eefdd6fe486",
     "semantic_hash": ""
   },
   "public/peptides/ba/cjc-1295-ipamorelin-before.png": {
-    "mtime": 1783987527.58554,
+    "mtime": 1783989430.9888027,
     "ast_hash": "176461974305176f3c48d9dae4e865cf",
     "semantic_hash": ""
   },
   "public/peptides/ba/ghk-cu-after.png": {
-    "mtime": 1783987531.8306105,
+    "mtime": 1783989430.9918098,
     "ast_hash": "81d660383359153cda818a2b6077a8a3",
     "semantic_hash": ""
   },
   "public/peptides/ba/ghk-cu-before.png": {
-    "mtime": 1783987531.4227693,
+    "mtime": 1783989430.9958093,
     "ast_hash": "f037570ee95700841a2fe3e7e90641c9",
     "semantic_hash": ""
   },
   "public/peptides/ba/glp-1-weight-loss-after.png": {
-    "mtime": 1783987523.1296165,
+    "mtime": 1783989430.998328,
     "ast_hash": "39dd057f65420cb5cf1658773a7db7a9",
     "semantic_hash": ""
   },
   "public/peptides/ba/glp-1-weight-loss-before.png": {
-    "mtime": 1783987522.8766086,
+    "mtime": 1783989431.0016606,
     "ast_hash": "794bb5d24f03a897b530ad1f4f57299a",
     "semantic_hash": ""
   },
   "public/peptides/ba/mots-c-after.png": {
-    "mtime": 1783987529.7481866,
+    "mtime": 1783989431.0046647,
     "ast_hash": "2f515578a2ce1ac5fe3fb60ea38ba5b4",
     "semantic_hash": ""
   },
   "public/peptides/ba/mots-c-before.png": {
-    "mtime": 1783987529.2855918,
+    "mtime": 1783989431.0091875,
     "ast_hash": "b757edf113d2329a4037dbeb403f2e31",
     "semantic_hash": ""
   },
   "public/peptides/ba/nad-plus-after.png": {
-    "mtime": 1783987530.8530526,
+    "mtime": 1783989431.013186,
     "ast_hash": "3be75799a9c54cb254049c251c1e1dc8",
     "semantic_hash": ""
   },
   "public/peptides/ba/nad-plus-before.png": {
-    "mtime": 1783987530.4044197,
+    "mtime": 1783989431.0167582,
     "ast_hash": "2d330dbae58924fb8392596981c75803",
     "semantic_hash": ""
   },
   "public/peptides/ba/retatrutide-after.png": {
-    "mtime": 1783987524.1543622,
+    "mtime": 1783989431.019982,
     "ast_hash": "8478026d2e11fcb233256714716dd1b1",
     "semantic_hash": ""
   },
   "public/peptides/ba/retatrutide-before.png": {
-    "mtime": 1783987523.6942444,
+    "mtime": 1783989431.022499,
     "ast_hash": "fb450e781b77748b39d591734822bb16",
     "semantic_hash": ""
   },
   "public/peptides/ba/sermorelin-after.png": {
-    "mtime": 1783987532.5408416,
+    "mtime": 1783989431.0259516,
     "ast_hash": "7d602ae4ccf6ab32a13062fb8658f4df",
     "semantic_hash": ""
   },
   "public/peptides/ba/sermorelin-before.png": {
-    "mtime": 1783987532.2527125,
+    "mtime": 1783989431.0285318,
     "ast_hash": "3f00d06fcb22a24b44ff60df38e7f9cf",
     "semantic_hash": ""
   },
   "public/peptides/ba/tb-500-after.png": {
-    "mtime": 1783987526.2299762,
+    "mtime": 1783989431.031697,
     "ast_hash": "f58edb07c3c86d1a5b3481de1147ef64",
     "semantic_hash": ""
   },
   "public/peptides/ba/tb-500-before.png": {
-    "mtime": 1783987525.916718,
+    "mtime": 1783989431.034709,
     "ast_hash": "1ed0f639dd040a35657e570a4f74b75d",
     "semantic_hash": ""
   },
   "public/peptides/ba/tesamorelin-after.png": {
-    "mtime": 1783987528.6714,
+    "mtime": 1783989431.0377226,
     "ast_hash": "fa8a9bdf37ea2004a6b0396d73fba7f4",
     "semantic_hash": ""
   },
   "public/peptides/ba/tesamorelin-before.png": {
-    "mtime": 1783987528.3475406,
+    "mtime": 1783989431.041004,
     "ast_hash": "d71c151a6f180583361a1cf8461ea5ac",
     "semantic_hash": ""
   },
   "public/peptides/ba/wolverine-after.png": {
-    "mtime": 1783987527.1215973,
+    "mtime": 1783989431.0443895,
     "ast_hash": "80e1af72872673c0f63f1b780e84f84f",
     "semantic_hash": ""
   },
   "public/peptides/ba/wolverine-before.png": {
-    "mtime": 1783987526.7880373,
+    "mtime": 1783989431.0475607,
     "ast_hash": "b1947591366853f8d85a825dd6b94c41",
     "semantic_hash": ""
   },
   "src/routes/privacy.tsx": {
-    "mtime": 1783988841.8190105,
+    "mtime": 1783989431.5824358,
     "ast_hash": "75dd2a20e2d3e3a475f8eeae6cce515a",
     "semantic_hash": ""
   },
   "src/routes/terms.tsx": {
-    "mtime": 1783988841.8205714,
+    "mtime": 1783989431.5847137,
     "ast_hash": "43bee152d36d08a94df917a65beda35f",
     "semantic_hash": ""
   },
   "src/components/home/BrowseDirectorySection.tsx": {
-    "mtime": 1783989131.8910522,
+    "mtime": 1783989431.4944367,
     "ast_hash": "49bf8f7770c698b8021d01f7bc8e115c",
     "semantic_hash": ""
   },
   "the-last-sandbox-details.md": {
-    "mtime": 1783989238.927411,
+    "mtime": 1783989431.5926213,
     "ast_hash": "fdcfd1c5ede724b64399ab7656badb2b",
     "semantic_hash": ""
   }

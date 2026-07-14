@@ -334,3 +334,105 @@
   line-height: 1.5;
   color: #e9e4da;
 }
+
+/* Allergy / medication / condition search — "None" toggle + tag entry */
+.dq-none-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 11px 16px 11px 13px;
+  border: 1px solid var(--quiz-border);
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--quiz-ink);
+  cursor: pointer;
+  transition:
+    border-color 0.16s ease,
+    background-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.dq-none-toggle:hover {
+  border-color: rgba(23, 19, 16, 0.24);
+}
+
+.dq-none-check {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  border: 1.5px solid var(--quiz-border);
+  position: relative;
+  transition:
+    border-color 0.16s ease,
+    background-color 0.16s ease;
+}
+
+.dq-none-toggle.is-selected {
+  border-color: var(--quiz-gold);
+  background: rgba(243, 195, 0, 0.14);
+}
+
+.dq-none-toggle.is-selected .dq-none-check {
+  border-color: var(--quiz-gold-deep);
+  background: var(--quiz-gold-deep);
+}
+
+.dq-none-toggle.is-selected .dq-none-check::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1.5px;
+  width: 5px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.dq-tagfield {
+  display: block;
+}
+
+.dq-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.dq-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px 7px 13px;
+  border-radius: 999px;
+  background: var(--quiz-cream-alt, rgba(23, 19, 16, 0.05));
+  border: 1px solid var(--quiz-border);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--quiz-ink);
+}
+
+.dq-tag button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(23, 19, 16, 0.08);
+  color: var(--quiz-ink);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.14s ease;
+}
+
+.dq-tag button:hover {
+  background: rgba(23, 19, 16, 0.16);
+}

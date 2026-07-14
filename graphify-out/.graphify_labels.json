@@ -131,7 +131,6 @@
   "129": "Vite Configuration File",
   "130": "index.tsx",
   "131": "Last Edit — Sandbox Integration",
-  "132": "AskTidlSection.tsx",
   "133": "clsx",
   "134": "ASK_TIDL_HANDOFF.md",
   "135": "Sandbox Meeting — What I'll Say (my script)",
@@ -144,7 +143,6 @@
   "142": "PrescribeRx Client",
   "143": "verifyWebhook",
   "144": "HOME_FEATURED_SLUGS",
-  "145": "pdp-data-registry.ts",
   "146": "AskTidlSection.tsx",
   "147": "peptide-images.ts",
   "148": "drawer.tsx",
@@ -155,12 +153,10 @@
   "153": "FileRoutesByPath",
   "154": "DynamicQuiz.tsx",
   "155": "data.ts",
-  "156": "site-assets.ts",
+  "156": "categories.ts",
   "157": "schema-intake.ts",
   "158": "router.tsx",
   "159": "auth.tsx",
   "160": "quiz-sandbox.tsx",
-  "161": "@radix-ui/react-collapsible",
-  "162": "index.tsx",
-  "163": "Route"
+  "161": "@radix-ui/react-collapsible"
 }

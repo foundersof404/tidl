@@ -7,13 +7,18 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
+/** Sentinel the quiz uses for "patient reported none" — never a real entry. */
+const NONE_TOKEN = "__none__";
+
 function toStringArray(value: unknown): string[] {
-  if (Array.isArray(value)) return value.map((v) => String(v)).filter(Boolean);
+  if (Array.isArray(value)) {
+    return value.map((v) => String(v)).filter((v) => v && v !== NONE_TOKEN);
+  }
   if (typeof value === "string") {
     return value
       .split(",")
       .map((s) => s.trim())
-      .filter(Boolean);
+      .filter((v) => v && v !== NONE_TOKEN);
   }
   return [];
 }
@@ -98,15 +103,21 @@ export function buildIntakeFromSchema(
         break;
       case "bmi":
         break;
-      case "allergies":
-        medicalHistory.allergies = toStringArray(value);
+      case "allergies": {
+        const arr = toStringArray(value);
+        if (arr.length > 0) medicalHistory.allergies = arr;
         break;
-      case "medications":
-        medicalHistory.medications = toStringArray(value);
+      }
+      case "medications": {
+        const arr = toStringArray(value);
+        if (arr.length > 0) medicalHistory.medications = arr;
         break;
-      case "conditions":
-        medicalHistory.conditions = toStringArray(value);
+      }
+      case "conditions": {
+        const arr = toStringArray(value);
+        if (arr.length > 0) medicalHistory.conditions = arr;
         break;
+      }
       default:
         // Tier-3 encounter-specific question — send raw, keyed by slug.
         tier3[slug] = value;
