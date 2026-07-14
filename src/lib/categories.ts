@@ -557,6 +557,37 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
         duration: "Always on",
       },
     ],
+    penSpotlight: {
+      kicker: "The TIDL Pen",
+      title: "Metabolic protocols, pre-dosed.",
+      titleEmphasis: "Just click.",
+      lead:
+        "When your provider selects a pen-eligible metabolic protocol, your dose is pharmacy-set before delivery — no vials, no kitchen-table mixing.",
+      image: SITE_IMAGES.pen,
+      features: [
+        {
+          num: "01",
+          title: "Dose locked at the pharmacy",
+          body: "Your provider writes the Rx. A licensed US pharmacy prepares the pen to match.",
+        },
+        {
+          num: "02",
+          title: "Precision slider + scale",
+          body: "Clear markings from 0.1 to 1.0 ml. The mechanism matches your prescription.",
+        },
+        {
+          num: "03",
+          title: "Simple weekly routine",
+          body: "Pre-filled cartridge. One consistent click — built for metabolic adherence.",
+        },
+        {
+          num: "04",
+          title: "Cold-chain, discreet delivery",
+          body: "Temperature-safe packaging in a plain outer box to your door.",
+        },
+      ],
+      trustNote: "Prescription required. Your provider chooses pen or vial based on your protocol.",
+    },
     faqItems: [
       {
         id: 1,
@@ -654,6 +685,37 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
         duration: "Ongoing",
       },
     ],
+    penSpotlight: {
+      kicker: "The TIDL Pen",
+      title: "Performance protocols, pharmacy-set.",
+      titleEmphasis: "Just click.",
+      lead:
+        "Select performance peptide protocols ship in the TIDL Pen when medically appropriate — dose set before delivery, built for training schedules.",
+      image: SITE_IMAGES.pen,
+      features: [
+        {
+          num: "01",
+          title: "Physician-set dose",
+          body: "Your provider determines strength. The pen is prepared to match at the pharmacy.",
+        },
+        {
+          num: "02",
+          title: "Graduated dose scale",
+          body: "Clear markings from 0.1 to 1.0 ml — no guesswork between sessions.",
+        },
+        {
+          num: "03",
+          title: "Travel-ready format",
+          body: "Compact pen design fits real life, including training blocks and travel.",
+        },
+        {
+          num: "04",
+          title: "Discreet US pharmacy ship",
+          body: "Plain packaging from licensed pharmacies with cold-chain when required.",
+        },
+      ],
+      trustNote: "Prescription required. Not every performance protocol uses the pen — your provider chooses the format.",
+    },
     faqItems: [
       {
         id: 1,
@@ -751,6 +813,37 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
         duration: "Always on",
       },
     ],
+    penSpotlight: {
+      kicker: "The TIDL Pen",
+      title: "Recovery doses, ready to click.",
+      titleEmphasis: "Just click.",
+      lead:
+        "When your recovery protocol ships in the TIDL Pen, your dose is set at the pharmacy — one consistent click between training blocks.",
+      image: SITE_IMAGES.pen,
+      features: [
+        {
+          num: "01",
+          title: "Pharmacy-set strength",
+          body: "Your provider writes the Rx. The pen is prepared to match before it ships.",
+        },
+        {
+          num: "02",
+          title: "Precision dose scale",
+          body: "Graduated markings from 0.1 to 1.0 ml — built for repeatable recovery routines.",
+        },
+        {
+          num: "03",
+          title: "No reconstitution",
+          body: "Pre-filled cartridge. Skip vials and mixing when your plan uses the pen format.",
+        },
+        {
+          num: "04",
+          title: "Discreet cold-chain ship",
+          body: "Plain outer packaging with temperature-safe delivery when your protocol requires it.",
+        },
+      ],
+      trustNote: "Prescription required. Your provider selects pen or vial based on your recovery protocol.",
+    },
     faqItems: [
       {
         id: 1,

@@ -21,8 +21,10 @@ import {
 } from "@/lib/prescribe-rx/use-home-sandbox";
 import type { GoalId, ProductSlug } from "@/types/quiz";
 import { CategoryAmbient } from "./CategoryAmbient";
+import { CategoryFaqSection } from "./CategoryFaqSection";
 import { CategoryFormularySection } from "./CategoryFormularySection";
 import { CategoryHero } from "./CategoryHero";
+import { CategoryHowSection } from "./CategoryHowSection";
 import { CategoryPenSection } from "./CategoryPenSection";
 import { CategoryWhySection } from "./CategoryWhySection";
 import { catReveal, catStagger } from "./category-motion";
@@ -34,78 +36,6 @@ type CategoryPageProps = {
 };
 
 const CATEGORY_GOALS: Record<CategorySlug, GoalId> = CATEGORY_GOAL_MAP;
-
-function CategoryFaq({
-  items,
-}: {
-  items: readonly { id: number; q: string; a: string }[];
-}) {
-  const reduce = useReducedMotion();
-  const reveal = reduce ? { hidden: { opacity: 1, y: 0 }, show: { opacity: 1, y: 0 } } : catReveal;
-
-  return (
-    <motion.div
-      className="cat-faq-list"
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-10%" }}
-      variants={catStagger}
-    >
-      {items.map((item) => (
-        <motion.details className="cat-faq-item" key={item.id} variants={reveal}>
-          <summary className="cat-faq-q">{item.q}</summary>
-          <p className="cat-faq-a">{item.a}</p>
-        </motion.details>
-      ))}
-    </motion.div>
-  );
-}
-
-function SectionHead({
-  kicker,
-  title,
-  light,
-  center,
-  lead,
-}: {
-  kicker: string;
-  title: string;
-  light?: boolean;
-  center?: boolean;
-  lead?: string;
-}) {
-  const reduce = useReducedMotion();
-  const reveal = reduce ? { hidden: { opacity: 1, y: 0 }, show: { opacity: 1, y: 0 } } : catReveal;
-
-  return (
-    <motion.header
-      className={`cat-section-head${center ? " cat-section-head--center" : ""}`}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      variants={catStagger}
-    >
-      <motion.p className={`cat-kicker${light ? " cat-kicker--light" : ""}`} variants={reveal}>
-        <span className="cat-kicker-dot" aria-hidden="true" />
-        {kicker}
-      </motion.p>
-      <motion.h2
-        className={`cat-section-title${light ? " cat-section-title--light" : ""}`}
-        variants={reveal}
-      >
-        {title}
-      </motion.h2>
-      {lead ? (
-        <motion.p
-          className={`cat-section-lead${light ? " cat-section-lead--light" : ""}`}
-          variants={reveal}
-        >
-          {lead}
-        </motion.p>
-      ) : null}
-    </motion.header>
-  );
-}
 
 export function CategoryPage({ slug }: CategoryPageProps) {
   const category = getCategory(slug);
@@ -214,38 +144,12 @@ export function CategoryPage({ slug }: CategoryPageProps) {
             />
           ) : null}
 
-          {/* 3. Short path to purchase */}
-          <section className="cat-how cat-how--compact" id="cat-how" data-site-header-theme="light">
-            <div className="cat-how-inner">
-              <SectionHead
-                kicker="How it works"
-                title="Intake today. Treatment at your door."
-                lead="Four clear steps. Licensed provider review. No waiting rooms."
-              />
-              <motion.ol
-                className="cat-how-rail"
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, margin: "0px 0px -8% 0px", amount: 0.05 }}
-                variants={catStagger}
-              >
-                {howSteps.map((step) => (
-                  <motion.li className="cat-how-row" key={step.step} variants={reveal}>
-                    <span className="cat-how-row-num" aria-hidden="true">
-                      {step.step}
-                    </span>
-                    <div className="cat-how-row-copy">
-                      <div className="cat-how-row-top">
-                        <h3 className="cat-how-row-title">{step.label}</h3>
-                        <span className="cat-how-row-duration">{step.duration}</span>
-                      </div>
-                      <p className="cat-how-row-body">{step.detail}</p>
-                    </div>
-                  </motion.li>
-                ))}
-              </motion.ol>
-            </div>
-          </section>
+          {/* 3. Path to purchase — premium pathway */}
+          <CategoryHowSection
+            category={category}
+            steps={howSteps}
+            onStartIntake={() => openQuiz()()}
+          />
 
           {/* 4. Trust — cinematic clinical proof theater */}
           <CategoryWhySection
@@ -257,13 +161,12 @@ export function CategoryPage({ slug }: CategoryPageProps) {
             onStartIntake={() => openQuiz()()}
           />
 
-          {/* 5. FAQ — only what unblocks purchase */}
-          <section className="cat-faq" id="cat-faq" data-site-header-theme="light">
-            <div className="cat-faq-inner">
-              <SectionHead kicker="Before you start" title="Quick answers" />
-              <CategoryFaq items={faqItems} />
-            </div>
-          </section>
+          {/* 5. FAQ — home-style accordion */}
+          <CategoryFaqSection
+            category={category}
+            items={faqItems}
+            onStartIntake={() => openQuiz()()}
+          />
 
           <section className="cat-cta-band" data-site-header-theme="light">
             <motion.div

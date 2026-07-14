@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { CategoryDefinition, CategorySlug } from "@/lib/categories";
 import { GLP1_PEN_SHOWCASE } from "@/components/pdp/data/pen-showcase-content";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type CategoryPenSectionProps = {
   category: CategoryDefinition;
@@ -14,6 +18,7 @@ export function CategoryPenSection({ category, slug, onStartIntake }: CategoryPe
   const [penVisible, setPenVisible] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const penGridRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (!spotlight) return;
@@ -42,6 +47,42 @@ export function CategoryPenSection({ category, slug, onStartIntake }: CategoryPe
   }, [spotlight]);
 
   useEffect(() => {
+    const root = sectionRef.current;
+    if (!spotlight || !root) return;
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+
+    const pick = (sel: string) =>
+      gsap.utils.toArray<HTMLElement>(root.querySelectorAll(sel)).filter(Boolean);
+
+    const ctx = gsap.context(() => {
+      const head = pick(".tdlp5-head > *");
+      const feats = pick(".tdlp5-feat");
+      const stats = pick(".tdlp5-stat");
+      const actions = pick(".cat-penx-actions, .cat-penx-note");
+
+      gsap.set([...head, ...feats, ...stats, ...actions], { opacity: 0, y: 32 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: root,
+          start: "top 72%",
+          once: true,
+        },
+        defaults: { ease: "power3.out" },
+      });
+
+      tl.to(head, { opacity: 1, y: 0, duration: 0.55, stagger: 0.08 })
+        .to(feats, { opacity: 1, y: 0, duration: 0.5, stagger: 0.06 }, "-=0.25")
+        .to(stats, { opacity: 1, y: 0, duration: 0.45, stagger: 0.07 }, "-=0.15")
+        .to(actions, { opacity: 1, y: 0, duration: 0.4, stagger: 0.06 }, "-=0.2");
+    }, root);
+
+    return () => ctx.revert();
+  }, [spotlight]);
+
+  useEffect(() => {
     if (!isVideoOpen) return;
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setIsVideoOpen(false);
@@ -61,7 +102,13 @@ export function CategoryPenSection({ category, slug, onStartIntake }: CategoryPe
 
   return (
     <>
-      <section className="tdlp5-sec cat-penx" id="cat-pen" data-site-header-theme="dark" aria-label="The TIDL Pen">
+      <section
+        ref={sectionRef}
+        className="tdlp5-sec cat-penx"
+        id="cat-pen"
+        data-site-header-theme="dark"
+        aria-label="The TIDL Pen"
+      >
         <div className="tdlp5-head">
           <div className="tdlp5-kick">{spotlight.kicker}</div>
           <h2 className="tdlp5-h2">
