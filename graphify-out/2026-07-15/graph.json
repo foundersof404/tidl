@@ -1159,7 +1159,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "package_dependencies_class_variance_authority",
-      "community": 22,
+      "community": 24,
       "norm_label": "class-variance-authority"
     },
     {
@@ -1169,7 +1169,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "class_variance_authority",
-      "community": 22,
+      "community": 24,
       "norm_label": "class-variance-authority"
     },
     {
@@ -1199,7 +1199,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "package_dependencies_cmdk",
-      "community": 24,
+      "community": 247,
       "norm_label": "cmdk"
     },
     {
@@ -1209,7 +1209,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "cmdk",
-      "community": 24,
+      "community": 247,
       "norm_label": "cmdk"
     },
     {
@@ -2339,7 +2339,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_auth_authbrandpanel",
-      "community": 208,
+      "community": 89,
       "norm_label": "authbrandpanel.tsx"
     },
     {
@@ -2349,7 +2349,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_auth_authbrandpanel_authmode",
-      "community": 208,
+      "community": 89,
       "norm_label": "authmode"
     },
     {
@@ -2359,7 +2359,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_auth_authbrandpanel_authbrandpanelprops",
-      "community": 208,
+      "community": 89,
       "norm_label": "authbrandpanelprops"
     },
     {
@@ -2369,7 +2369,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_auth_authbrandpanel_authbrandpanel",
-      "community": 208,
+      "community": 89,
       "norm_label": "authbrandpanel()"
     },
     {
@@ -2589,7 +2589,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categoryambient",
-      "community": 149,
+      "community": 53,
       "norm_label": "categoryambient.tsx"
     },
     {
@@ -2599,7 +2599,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categoryambient_categoryambient",
-      "community": 149,
+      "community": 53,
       "norm_label": "categoryambient()"
     },
     {
@@ -2631,6 +2631,46 @@
       "id": "src_components_category_categorybundle_categorybundlesection",
       "community": 6,
       "norm_label": "categorybundlesection()"
+    },
+    {
+      "label": "CategoryFaqSection.tsx",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_category_categoryfaqsection",
+      "community": 147,
+      "norm_label": "categoryfaqsection.tsx"
+    },
+    {
+      "label": "CategoryFaqSectionProps",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "src_components_category_categoryfaqsection_categoryfaqsectionprops",
+      "community": 147,
+      "norm_label": "categoryfaqsectionprops"
+    },
+    {
+      "label": "FaqIcon()",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_components_category_categoryfaqsection_faqicon",
+      "community": 147,
+      "norm_label": "faqicon()"
+    },
+    {
+      "label": "CategoryFaqSection()",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "src_components_category_categoryfaqsection_categoryfaqsection",
+      "community": 147,
+      "norm_label": "categoryfaqsection()"
     },
     {
       "label": "CategoryFormularySection.tsx",
@@ -2729,8 +2769,78 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_components_category_categoryhero_categoryhero",
-      "community": 6,
+      "community": 53,
       "norm_label": "categoryhero()"
+    },
+    {
+      "label": "CategoryHowSection.tsx",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_category_categoryhowsection",
+      "community": 132,
+      "norm_label": "categoryhowsection.tsx"
+    },
+    {
+      "label": "CategoryHowSectionProps",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_components_category_categoryhowsection_categoryhowsectionprops",
+      "community": 132,
+      "norm_label": "categoryhowsectionprops"
+    },
+    {
+      "label": "PathCopy",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "src_components_category_categoryhowsection_pathcopy",
+      "community": 132,
+      "norm_label": "pathcopy"
+    },
+    {
+      "label": "PATH_COPY",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "src_components_category_categoryhowsection_path_copy",
+      "community": 132,
+      "norm_label": "path_copy"
+    },
+    {
+      "label": "titleEase",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "src_components_category_categoryhowsection_titleease",
+      "community": 132,
+      "norm_label": "titleease"
+    },
+    {
+      "label": "chipEase",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "src_components_category_categoryhowsection_chipease",
+      "community": 132,
+      "norm_label": "chipease"
+    },
+    {
+      "label": "CategoryHowSection()",
+      "file_type": "code",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "src_components_category_categoryhowsection_categoryhowsection",
+      "community": 132,
+      "norm_label": "categoryhowsection()"
     },
     {
       "label": "CategoryPage.tsx",
@@ -2739,47 +2849,27 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categorypage",
-      "community": 149,
+      "community": 53,
       "norm_label": "categorypage.tsx"
     },
     {
       "label": "CategoryPageProps",
       "file_type": "code",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L31",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "src_components_category_categorypage_categorypageprops",
-      "community": 149,
+      "community": 53,
       "norm_label": "categorypageprops"
-    },
-    {
-      "label": "CategoryFaq()",
-      "file_type": "code",
-      "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "src_components_category_categorypage_categoryfaq",
-      "community": 149,
-      "norm_label": "categoryfaq()"
-    },
-    {
-      "label": "SectionHead()",
-      "file_type": "code",
-      "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L63",
-      "_origin": "ast",
-      "id": "src_components_category_categorypage_sectionhead",
-      "community": 149,
-      "norm_label": "sectionhead()"
     },
     {
       "label": "CategoryPage()",
       "file_type": "code",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L109",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "src_components_category_categorypage_categorypage",
-      "community": 149,
+      "community": 53,
       "norm_label": "categorypage()"
     },
     {
@@ -2789,7 +2879,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram",
-      "community": 62,
+      "community": 149,
       "norm_label": "categorypenprogram.tsx"
     },
     {
@@ -2799,7 +2889,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram_categorypenprogramprops",
-      "community": 62,
+      "community": 149,
       "norm_label": "categorypenprogramprops"
     },
     {
@@ -2809,7 +2899,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram_curvedpath",
-      "community": 62,
+      "community": 149,
       "norm_label": "curvedpath()"
     },
     {
@@ -2819,7 +2909,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram_pathsequal",
-      "community": 62,
+      "community": 149,
       "norm_label": "pathsequal()"
     },
     {
@@ -2829,7 +2919,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram_categorypenprogram",
-      "community": 62,
+      "community": 149,
       "norm_label": "categorypenprogram()"
     },
     {
@@ -2839,27 +2929,27 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categorypensection",
-      "community": 147,
+      "community": 35,
       "norm_label": "categorypensection.tsx"
     },
     {
       "label": "CategoryPenSectionProps",
       "file_type": "code",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L6",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_category_categorypensection_categorypensectionprops",
-      "community": 147,
+      "community": 35,
       "norm_label": "categorypensectionprops"
     },
     {
       "label": "CategoryPenSection()",
       "file_type": "code",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L12",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "src_components_category_categorypensection_categorypensection",
-      "community": 147,
+      "community": 35,
       "norm_label": "categorypensection()"
     },
     {
@@ -3169,7 +3259,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_checkout_ordersummary",
-      "community": 15,
+      "community": 57,
       "norm_label": "ordersummary.tsx"
     },
     {
@@ -3179,7 +3269,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_checkout_ordersummary_shieldicon",
-      "community": 15,
+      "community": 57,
       "norm_label": "shieldicon()"
     },
     {
@@ -3189,7 +3279,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_components_checkout_ordersummary_truckicon",
-      "community": 15,
+      "community": 57,
       "norm_label": "truckicon()"
     },
     {
@@ -3199,7 +3289,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "src_components_checkout_ordersummary_lockicon",
-      "community": 15,
+      "community": 57,
       "norm_label": "lockicon()"
     },
     {
@@ -3209,7 +3299,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "src_components_checkout_ordersummary_ordersummary",
-      "community": 15,
+      "community": 57,
       "norm_label": "ordersummary()"
     },
     {
@@ -3219,7 +3309,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_checkout_statustimeline",
-      "community": 3,
+      "community": 87,
       "norm_label": "statustimeline.tsx"
     },
     {
@@ -3229,7 +3319,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_checkout_statustimeline_status_order",
-      "community": 3,
+      "community": 87,
       "norm_label": "status_order"
     },
     {
@@ -3239,7 +3329,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_checkout_statustimeline_statustimeline",
-      "community": 3,
+      "community": 87,
       "norm_label": "statustimeline()"
     },
     {
@@ -3319,7 +3409,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_home_homepage",
-      "community": 132,
+      "community": 0,
       "norm_label": "homepage.tsx"
     },
     {
@@ -3329,7 +3419,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_components_home_homepage_faqitem",
-      "community": 132,
+      "community": 0,
       "norm_label": "faqitem"
     },
     {
@@ -3339,7 +3429,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_components_home_homepage_faq_data",
-      "community": 132,
+      "community": 0,
       "norm_label": "faq_data"
     },
     {
@@ -3349,7 +3439,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "src_components_home_homepage_faqicon",
-      "community": 132,
+      "community": 0,
       "norm_label": "faqicon()"
     },
     {
@@ -3359,7 +3449,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "src_components_home_homepage_homepage",
-      "community": 132,
+      "community": 0,
       "norm_label": "homepage()"
     },
     {
@@ -4449,7 +4539,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_pdp_glp1pdppage",
-      "community": 132,
+      "community": 15,
       "norm_label": "glp1pdppage.tsx"
     },
     {
@@ -4509,7 +4599,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_pdp_pdpctaband",
-      "community": 132,
+      "community": 15,
       "norm_label": "pdpctaband.tsx"
     },
     {
@@ -4519,7 +4609,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_components_pdp_pdpctaband_pdpctabandprops",
-      "community": 132,
+      "community": 15,
       "norm_label": "pdpctabandprops"
     },
     {
@@ -4529,7 +4619,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_pdp_pdpctaband_pdpctaband",
-      "community": 132,
+      "community": 15,
       "norm_label": "pdpctaband()"
     },
     {
@@ -4633,10 +4723,30 @@
       "norm_label": "product_order"
     },
     {
+      "label": "LEFT_MESSAGES",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpHeroSection.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpherosection_left_messages",
+      "community": 30,
+      "norm_label": "left_messages"
+    },
+    {
+      "label": "RIGHT_MESSAGES",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpHeroSection.tsx",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpherosection_right_messages",
+      "community": 30,
+      "norm_label": "right_messages"
+    },
+    {
       "label": "productNeighbors()",
       "file_type": "code",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L15",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "src_components_pdp_pdpherosection_productneighbors",
       "community": 30,
@@ -4646,7 +4756,7 @@
       "label": "StarRow()",
       "file_type": "code",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L24",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "src_components_pdp_pdpherosection_starrow",
       "community": 30,
@@ -4656,7 +4766,7 @@
       "label": "PdpHeroSectionProps",
       "file_type": "code",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L37",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "src_components_pdp_pdpherosection_pdpherosectionprops",
       "community": 30,
@@ -4666,10 +4776,10 @@
       "label": "PdpHeroSection()",
       "file_type": "code",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L46",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "src_components_pdp_pdpherosection_pdpherosection",
-      "community": 30,
+      "community": 15,
       "norm_label": "pdpherosection()"
     },
     {
@@ -4989,7 +5099,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage",
-      "community": 132,
+      "community": 15,
       "norm_label": "productpdppage.tsx"
     },
     {
@@ -4999,7 +5109,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage_productpdppageprops",
-      "community": 132,
+      "community": 15,
       "norm_label": "productpdppageprops"
     },
     {
@@ -5009,7 +5119,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage_productpdppageinner",
-      "community": 132,
+      "community": 15,
       "norm_label": "productpdppageinner()"
     },
     {
@@ -5019,7 +5129,7 @@
       "source_location": "L207",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage_productpdppage",
-      "community": 132,
+      "community": 15,
       "norm_label": "productpdppage()"
     },
     {
@@ -5029,7 +5139,7 @@
       "source_location": "L211",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage_glp1pdppage",
-      "community": 132,
+      "community": 15,
       "norm_label": "glp1pdppage()"
     },
     {
@@ -5149,7 +5259,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_pdp_data_pdp_data_registry_withcatalogassets",
-      "community": 27,
+      "community": 30,
       "norm_label": "withcatalogassets()"
     },
     {
@@ -5159,7 +5269,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_components_pdp_data_pdp_data_registry_getpdpcontent",
-      "community": 27,
+      "community": 15,
       "norm_label": "getpdpcontent()"
     },
     {
@@ -5179,7 +5289,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_pdp_data_pen_showcase_content",
-      "community": 84,
+      "community": 35,
       "norm_label": "pen-showcase-content.ts"
     },
     {
@@ -5189,7 +5299,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_components_pdp_data_pen_showcase_content_glp1_pen_showcase",
-      "community": 84,
+      "community": 35,
       "norm_label": "glp1_pen_showcase"
     },
     {
@@ -5289,7 +5399,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_components_pdp_data_types_penshowcasecontent",
-      "community": 84,
+      "community": 35,
       "norm_label": "penshowcasecontent"
     },
     {
@@ -8309,7 +8419,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_use_is_mounted",
-      "community": 57,
+      "community": 87,
       "norm_label": "use-is-mounted.ts"
     },
     {
@@ -8319,7 +8429,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_hooks_use_is_mounted_useismounted",
-      "community": 57,
+      "community": 87,
       "norm_label": "useismounted()"
     },
     {
@@ -8369,7 +8479,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_use_prx_encounter_status",
-      "community": 87,
+      "community": 3,
       "norm_label": "use-prx-encounter-status.ts"
     },
     {
@@ -8379,7 +8489,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_hooks_use_prx_encounter_status_state",
-      "community": 87,
+      "community": 3,
       "norm_label": "state"
     },
     {
@@ -8649,7 +8759,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_lib_categories_category_slugs",
-      "community": 34,
+      "community": 6,
       "norm_label": "category_slugs"
     },
     {
@@ -8679,7 +8789,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_lib_categories_categorytimelinestep",
-      "community": 62,
+      "community": 132,
       "norm_label": "categorytimelinestep"
     },
     {
@@ -8719,24 +8829,24 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_lib_categories_categories",
-      "community": 34,
+      "community": 6,
       "norm_label": "categories"
     },
     {
       "label": "getCategory()",
       "file_type": "code",
       "source_file": "src/lib/categories.ts",
-      "source_location": "L780",
+      "source_location": "L873",
       "_origin": "ast",
       "id": "src_lib_categories_getcategory",
-      "community": 149,
+      "community": 53,
       "norm_label": "getcategory()"
     },
     {
       "label": "isCategorySlug()",
       "file_type": "code",
       "source_file": "src/lib/categories.ts",
-      "source_location": "L784",
+      "source_location": "L877",
       "_origin": "ast",
       "id": "src_lib_categories_iscategoryslug",
       "community": 150,
@@ -8749,7 +8859,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_category_bundles",
-      "community": 6,
+      "community": 188,
       "norm_label": "category-bundles.ts"
     },
     {
@@ -8759,7 +8869,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_lib_category_bundles_categorybundleitem",
-      "community": 6,
+      "community": 188,
       "norm_label": "categorybundleitem"
     },
     {
@@ -8769,7 +8879,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_lib_category_bundles_categorybundle",
-      "community": 6,
+      "community": 188,
       "norm_label": "categorybundle"
     },
     {
@@ -8779,7 +8889,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_lib_category_bundles_category_bundles",
-      "community": 6,
+      "community": 188,
       "norm_label": "category_bundles"
     },
     {
@@ -8789,7 +8899,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "src_lib_category_bundles_getcategorybundle",
-      "community": 6,
+      "community": 188,
       "norm_label": "getcategorybundle()"
     },
     {
@@ -8799,7 +8909,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_category_recommendations",
-      "community": 35,
+      "community": 79,
       "norm_label": "category-recommendations.ts"
     },
     {
@@ -8809,7 +8919,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_categoryrecommendation",
-      "community": 35,
+      "community": 79,
       "norm_label": "categoryrecommendation"
     },
     {
@@ -8819,7 +8929,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_category_goals",
-      "community": 35,
+      "community": 79,
       "norm_label": "category_goals"
     },
     {
@@ -8829,7 +8939,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_findanswer",
-      "community": 35,
+      "community": 79,
       "norm_label": "findanswer()"
     },
     {
@@ -8839,7 +8949,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_resolveaction",
-      "community": 35,
+      "community": 79,
       "norm_label": "resolveaction()"
     },
     {
@@ -8849,7 +8959,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_getcategoryrecommendation",
-      "community": 35,
+      "community": 79,
       "norm_label": "getcategoryrecommendation()"
     },
     {
@@ -9289,7 +9399,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_lib_peptides_peptide_defs",
-      "community": 53,
+      "community": 27,
       "norm_label": "peptide_defs"
     },
     {
@@ -9329,7 +9439,7 @@
       "source_location": "L433",
       "_origin": "ast",
       "id": "src_lib_peptides_peptide_prx_slugs",
-      "community": 57,
+      "community": 23,
       "norm_label": "peptide_prx_slugs"
     },
     {
@@ -9349,7 +9459,7 @@
       "source_location": "L453",
       "_origin": "ast",
       "id": "src_lib_peptides_peptidetocatalogproduct",
-      "community": 27,
+      "community": 30,
       "norm_label": "peptidetocatalogproduct()"
     },
     {
@@ -9489,7 +9599,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_browse_api_prxcatalogpackage",
-      "community": 3,
+      "community": 2,
       "norm_label": "prxcatalogpackage"
     },
     {
@@ -9559,7 +9669,7 @@
       "source_location": "L212",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_browse_api_submitprxcheckout",
-      "community": 57,
+      "community": 3,
       "norm_label": "submitprxcheckout()"
     },
     {
@@ -9609,7 +9719,7 @@
       "source_location": "L268",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_browse_api_fetchprxencounter",
-      "community": 87,
+      "community": 3,
       "norm_label": "fetchprxencounter()"
     },
     {
@@ -9989,7 +10099,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_env_getprxapitoken",
-      "community": 8,
+      "community": 23,
       "norm_label": "getprxapitoken()"
     },
     {
@@ -10009,7 +10119,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_env_getprxtoken",
-      "community": 8,
+      "community": 23,
       "norm_label": "getprxtoken()"
     },
     {
@@ -10099,7 +10209,7 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_env_isprxsandbox",
-      "community": 23,
+      "community": 22,
       "norm_label": "isprxsandbox()"
     },
     {
@@ -10119,7 +10229,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_merge_sandbox_pdp",
-      "community": 188,
+      "community": 2,
       "norm_label": "merge-sandbox-pdp.ts"
     },
     {
@@ -10129,7 +10239,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_merge_sandbox_pdp_usablelivecopy",
-      "community": 188,
+      "community": 2,
       "norm_label": "usablelivecopy()"
     },
     {
@@ -10139,7 +10249,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_merge_sandbox_pdp_mergesandboxintopdp",
-      "community": 188,
+      "community": 2,
       "norm_label": "mergesandboxintopdp()"
     },
     {
@@ -10149,7 +10259,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_types",
-      "community": 23,
+      "community": 8,
       "norm_label": "types.ts"
     },
     {
@@ -10159,7 +10269,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_types_prxrole",
-      "community": 23,
+      "community": 8,
       "norm_label": "prxrole"
     },
     {
@@ -10179,7 +10289,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_types_prxrequestinit",
-      "community": 23,
+      "community": 8,
       "norm_label": "prxrequestinit"
     },
     {
@@ -10189,7 +10299,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_types_prxclient",
-      "community": 23,
+      "community": 8,
       "norm_label": "prxclient"
     },
     {
@@ -10199,7 +10309,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_types_prxapierror",
-      "community": 23,
+      "community": 8,
       "norm_label": "prxapierror"
     },
     {
@@ -10209,7 +10319,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_types_prxapierror_constructor",
-      "community": 23,
+      "community": 8,
       "norm_label": ".constructor()"
     },
     {
@@ -10259,7 +10369,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_home_sandbox_homefeaturedpeptide",
-      "community": 147,
+      "community": 53,
       "norm_label": "homefeaturedpeptide"
     },
     {
@@ -10299,7 +10409,7 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_home_sandbox_filterfeaturedforcategory",
-      "community": 149,
+      "community": 53,
       "norm_label": "filterfeaturedforcategory()"
     },
     {
@@ -10309,7 +10419,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_home_sandbox_filterencountersforcategory",
-      "community": 149,
+      "community": 53,
       "norm_label": "filterencountersforcategory()"
     },
     {
@@ -10339,7 +10449,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_liveproduct",
-      "community": 188,
+      "community": 2,
       "norm_label": "liveproduct"
     },
     {
@@ -10369,7 +10479,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_issandboxplaceholderprice",
-      "community": 132,
+      "community": 0,
       "norm_label": "issandboxplaceholderprice()"
     },
     {
@@ -10379,7 +10489,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_resolvedisplaymonthlyprice",
-      "community": 132,
+      "community": 53,
       "norm_label": "resolvedisplaymonthlyprice()"
     },
     {
@@ -10439,7 +10549,7 @@
       "source_location": "L205",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_uselivecatalog",
-      "community": 2,
+      "community": 53,
       "norm_label": "uselivecatalog()"
     },
     {
@@ -10449,7 +10559,7 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_useliveproduct",
-      "community": 12,
+      "community": 57,
       "norm_label": "useliveproduct()"
     },
     {
@@ -10459,7 +10569,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_pricing",
-      "community": 15,
+      "community": 57,
       "norm_label": "pricing.ts"
     },
     {
@@ -10469,7 +10579,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_lib_pricing_calculateorderpricing",
-      "community": 15,
+      "community": 57,
       "norm_label": "calculateorderpricing()"
     },
     {
@@ -10479,7 +10589,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_lib_pricing_getcataloglistprice",
-      "community": 15,
+      "community": 57,
       "norm_label": "getcataloglistprice()"
     },
     {
@@ -10489,7 +10599,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_lib_pricing_formatcurrency",
-      "community": 132,
+      "community": 15,
       "norm_label": "formatcurrency()"
     },
     {
@@ -10499,7 +10609,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_product_catalog",
-      "community": 35,
+      "community": 30,
       "norm_label": "product-catalog.ts"
     },
     {
@@ -10509,7 +10619,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_lib_product_catalog_productform",
-      "community": 84,
+      "community": 30,
       "norm_label": "productform"
     },
     {
@@ -10529,7 +10639,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_lib_product_catalog_glp1_catalog_product",
-      "community": 35,
+      "community": 30,
       "norm_label": "glp1_catalog_product"
     },
     {
@@ -10559,7 +10669,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_lib_product_catalog_getcatalogproductsbycategory",
-      "community": 35,
+      "community": 30,
       "norm_label": "getcatalogproductsbycategory()"
     },
     {
@@ -10569,7 +10679,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_lib_product_catalog_getcatalogprice",
-      "community": 6,
+      "community": 53,
       "norm_label": "getcatalogprice()"
     },
     {
@@ -10579,7 +10689,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "src_lib_product_catalog_product_paths",
-      "community": 35,
+      "community": 149,
       "norm_label": "product_paths"
     },
     {
@@ -10589,7 +10699,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "src_lib_product_catalog_category_paths",
-      "community": 35,
+      "community": 34,
       "norm_label": "category_paths"
     },
     {
@@ -10609,7 +10719,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_lib_products_product",
-      "community": 149,
+      "community": 79,
       "norm_label": "product"
     },
     {
@@ -10679,7 +10789,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "src_lib_products_getrecommendedtreatment",
-      "community": 15,
+      "community": 87,
       "norm_label": "getrecommendedtreatment()"
     },
     {
@@ -10749,7 +10859,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_services_content",
-      "community": 35,
+      "community": 34,
       "norm_label": "services-content.ts"
     },
     {
@@ -10759,7 +10869,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_lib_services_content_servicecardcontent",
-      "community": 35,
+      "community": 34,
       "norm_label": "servicecardcontent"
     },
     {
@@ -10779,7 +10889,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_lib_services_content_service_cards",
-      "community": 35,
+      "community": 34,
       "norm_label": "service_cards"
     },
     {
@@ -11029,7 +11139,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_providers_auth_provider_useauth",
-      "community": 57,
+      "community": 87,
       "norm_label": "useauth()"
     },
     {
@@ -11039,7 +11149,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider",
-      "community": 149,
+      "community": 79,
       "norm_label": "quiz-modal-provider.tsx"
     },
     {
@@ -11049,7 +11159,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider_quizmodaloptions",
-      "community": 149,
+      "community": 79,
       "norm_label": "quizmodaloptions"
     },
     {
@@ -11059,7 +11169,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider_quizmodalcontextvalue",
-      "community": 149,
+      "community": 79,
       "norm_label": "quizmodalcontextvalue"
     },
     {
@@ -11069,7 +11179,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider_quizmodalcontext",
-      "community": 149,
+      "community": 79,
       "norm_label": "quizmodalcontext"
     },
     {
@@ -11089,7 +11199,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider_usequizmodal",
-      "community": 132,
+      "community": 57,
       "norm_label": "usequizmodal()"
     },
     {
@@ -11669,7 +11779,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_account_index",
-      "community": 0,
+      "community": 87,
       "norm_label": "index.tsx"
     },
     {
@@ -11699,7 +11809,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_routes_account_index_accountpage",
-      "community": 132,
+      "community": 87,
       "norm_label": "accountpage()"
     },
     {
@@ -11749,7 +11859,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_api_prx_checkout",
-      "community": 23,
+      "community": 22,
       "norm_label": "checkout.ts"
     },
     {
@@ -11869,7 +11979,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_api_prx_intake_dynamic",
-      "community": 23,
+      "community": 22,
       "norm_label": "intake-dynamic.ts"
     },
     {
@@ -11879,7 +11989,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_routes_api_prx_intake_dynamic_dynamicintakebody",
-      "community": 23,
+      "community": 22,
       "norm_label": "dynamicintakebody"
     },
     {
@@ -11889,7 +11999,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_routes_api_prx_intake_dynamic_route",
-      "community": 1,
+      "community": 22,
       "norm_label": "route"
     },
     {
@@ -12459,7 +12569,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_server_prx_extract",
-      "community": 23,
+      "community": 22,
       "norm_label": "extract.ts"
     },
     {
@@ -12469,7 +12579,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_server_prx_extract_unwrapprxentity",
-      "community": 23,
+      "community": 22,
       "norm_label": "unwrapprxentity()"
     },
     {
@@ -12479,7 +12589,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_server_prx_extract_extractpatientchartid",
-      "community": 23,
+      "community": 22,
       "norm_label": "extractpatientchartid()"
     },
     {
@@ -12489,7 +12599,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_server_prx_extract_extractorderid",
-      "community": 23,
+      "community": 22,
       "norm_label": "extractorderid()"
     },
     {
@@ -12499,7 +12609,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_server_prx_extract_extractencounterid",
-      "community": 23,
+      "community": 22,
       "norm_label": "extractencounterid()"
     },
     {
@@ -12509,7 +12619,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_server_prx_extract_extractencounternumber",
-      "community": 23,
+      "community": 22,
       "norm_label": "extractencounternumber()"
     },
     {
@@ -12519,7 +12629,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_server_prx_extract_extractpatientnumber",
-      "community": 23,
+      "community": 22,
       "norm_label": "extractpatientnumber()"
     },
     {
@@ -12689,7 +12799,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_server_prx_respond_getidempotencykey",
-      "community": 23,
+      "community": 22,
       "norm_label": "getidempotencykey()"
     },
     {
@@ -12929,7 +13039,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_types_order",
-      "community": 3,
+      "community": 87,
       "norm_label": "order.ts"
     },
     {
@@ -12939,7 +13049,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_types_order_order_statuses",
-      "community": 3,
+      "community": 87,
       "norm_label": "order_statuses"
     },
     {
@@ -12949,7 +13059,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_types_order_orderstatus",
-      "community": 3,
+      "community": 87,
       "norm_label": "orderstatus"
     },
     {
@@ -12959,7 +13069,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_types_order_orderpricing",
-      "community": 15,
+      "community": 87,
       "norm_label": "orderpricing"
     },
     {
@@ -12969,7 +13079,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_types_order_shippingaddress",
-      "community": 3,
+      "community": 87,
       "norm_label": "shippingaddress"
     },
     {
@@ -12979,7 +13089,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_types_order_paymentmethod",
-      "community": 3,
+      "community": 87,
       "norm_label": "paymentmethod"
     },
     {
@@ -12989,7 +13099,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_types_order_checkoutformdata",
-      "community": 91,
+      "community": 87,
       "norm_label": "checkoutformdata"
     },
     {
@@ -13019,7 +13129,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "src_types_order_order_status_labels",
-      "community": 3,
+      "community": 87,
       "norm_label": "order_status_labels"
     },
     {
@@ -13049,7 +13159,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_types_quiz_goalid",
-      "community": 149,
+      "community": 79,
       "norm_label": "goalid"
     },
     {
@@ -13059,7 +13169,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_types_quiz_product_slugs",
-      "community": 53,
+      "community": 145,
       "norm_label": "product_slugs"
     },
     {
@@ -13069,7 +13179,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_types_quiz_productslug",
-      "community": 149,
+      "community": 79,
       "norm_label": "productslug"
     },
     {
@@ -15679,7 +15789,7 @@
       "source_location": "L156",
       "_origin": "ast",
       "id": "ui_tidl_design_system_3_2_typography_tokens",
-      "community": 148,
+      "community": 233,
       "norm_label": "3.2 typography tokens"
     },
     {
@@ -15689,7 +15799,7 @@
       "source_location": "L173",
       "_origin": "ast",
       "id": "ui_tidl_design_system_hierarchy",
-      "community": 148,
+      "community": 233,
       "norm_label": "hierarchy"
     },
     {
@@ -15699,7 +15809,7 @@
       "source_location": "L187",
       "_origin": "ast",
       "id": "ui_tidl_design_system_text_rhythm",
-      "community": 148,
+      "community": 233,
       "norm_label": "text rhythm"
     },
     {
@@ -15709,7 +15819,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "ui_tidl_design_system_3_3_spacing_system",
-      "community": 233,
+      "community": 148,
       "norm_label": "3.3 spacing system"
     },
     {
@@ -15719,7 +15829,7 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "ui_tidl_design_system_philosophy",
-      "community": 233,
+      "community": 148,
       "norm_label": "philosophy"
     },
     {
@@ -15729,7 +15839,7 @@
       "source_location": "L209",
       "_origin": "ast",
       "id": "ui_tidl_design_system_scales",
-      "community": 233,
+      "community": 148,
       "norm_label": "scales"
     },
     {
@@ -15739,7 +15849,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "ui_tidl_design_system_vertical_rhythm_rules",
-      "community": 233,
+      "community": 148,
       "norm_label": "vertical rhythm rules"
     },
     {
@@ -21266,6 +21376,80 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_components_category_categoryfaqsection",
+      "target": "src_components_category_categoryfaqsection_categoryfaqsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_category_categoryfaqsection",
+      "target": "src_components_category_categoryfaqsection_categoryfaqsectionprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_components_category_categoryfaqsection",
+      "target": "src_components_category_categoryfaqsection_faqicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_category_categoryfaqsection",
+      "target": "src_lib_categories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryFaqSection.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_category_categoryfaqsection",
+      "target": "src_lib_categories_categorydefinition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryPage.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "src_components_category_categorypage",
+      "target": "src_components_category_categoryfaqsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryPage.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "src_components_category_categorypage",
+      "target": "src_components_category_categoryfaqsection_categoryfaqsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryFormularySection.tsx",
       "source_location": "L62",
       "weight": 1.0,
@@ -21538,7 +21722,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_categoryformularysection",
@@ -21637,7 +21821,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_categoryformularysection_categoryformularysection",
@@ -21810,7 +21994,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_categoryhero",
@@ -21843,10 +22027,114 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_categoryhero_categoryhero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_components_category_categoryhowsection_categoryhowsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_components_category_categoryhowsection_categoryhowsectionprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_components_category_categoryhowsection_chipease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_components_category_categoryhowsection_path_copy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_components_category_categoryhowsection_pathcopy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_components_category_categoryhowsection_titleease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_lib_categories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_lib_categories_categorydefinition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_lib_categories_categoryslug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryHowSection.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_category_categoryhowsection",
+      "target": "src_lib_categories_categorytimelinestep",
       "confidence_score": 1.0
     },
     {
@@ -21855,6 +22143,28 @@
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
       "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_components_category_categorypage",
+      "target": "src_components_category_categoryhowsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryPage.tsx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_components_category_categorypage",
+      "target": "src_components_category_categoryhowsection_categoryhowsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/category/CategoryPage.tsx",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_category_motion",
@@ -21865,7 +22175,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_category_motion_catreveal",
@@ -21876,7 +22186,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_category_motion_catstagger",
@@ -21886,17 +22196,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "src_components_category_categorypage",
-      "target": "src_components_category_categorypage_categoryfaq",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L109",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_categorypage_categorypage",
@@ -21906,20 +22206,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L31",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_categorypage_categorypageprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L63",
-      "weight": 1.0,
-      "source": "src_components_category_categorypage",
-      "target": "src_components_category_categorypage_sectionhead",
       "confidence_score": 1.0
     },
     {
@@ -21927,7 +22217,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L26",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_categorywhysection",
@@ -21938,7 +22228,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L26",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "src_components_category_categorypage",
       "target": "src_components_category_categorywhysection_categorywhysection",
@@ -22258,7 +22548,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L117",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_hooks_usesiteheaderstate_usesiteheaderstate"
@@ -22269,7 +22559,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L131",
+      "source_location": "L61",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_lib_age_gate_lockpagescroll"
@@ -22280,7 +22570,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L132",
+      "source_location": "L62",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_lib_age_gate_unlockpagescroll"
@@ -22291,7 +22581,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L110",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_lib_categories_getcategory"
@@ -22302,7 +22592,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L154",
+      "source_location": "L84",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_lib_prescribe_rx_use_home_sandbox_filterencountersforcategory"
@@ -22313,7 +22603,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L150",
+      "source_location": "L80",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_lib_prescribe_rx_use_home_sandbox_filterfeaturedforcategory"
@@ -22324,7 +22614,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L112",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_lib_prescribe_rx_use_home_sandbox_usehomesandbox"
@@ -22335,7 +22625,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L123",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_lib_products_getgoalfromproduct"
@@ -22346,7 +22636,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/category/CategoryPage.tsx",
-      "source_location": "L111",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "src_components_category_categorypage_categorypage",
       "target": "src_providers_quiz_modal_provider_usequizmodal"
@@ -22560,7 +22850,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L12",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "src_components_category_categorypensection",
       "target": "src_components_category_categorypensection_categorypensection",
@@ -22570,7 +22860,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L6",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_components_category_categorypensection",
       "target": "src_components_category_categorypensection_categorypensectionprops",
@@ -22581,7 +22871,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L4",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_category_categorypensection",
       "target": "src_components_pdp_data_pen_showcase_content",
@@ -22592,7 +22882,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L4",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_category_categorypensection",
       "target": "src_components_pdp_data_pen_showcase_content_glp1_pen_showcase",
@@ -22603,7 +22893,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_category_categorypensection",
       "target": "src_lib_categories",
@@ -22614,7 +22904,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_category_categorypensection",
       "target": "src_lib_categories_categorydefinition",
@@ -22625,7 +22915,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/category/CategoryPenSection.tsx",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_category_categorypensection",
       "target": "src_lib_categories_categoryslug",
@@ -26951,7 +27241,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L48",
+      "source_location": "L60",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_pdpherosection",
       "target": "src_components_pdp_pdpdataprovider_usepdpdata"
@@ -27222,7 +27512,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L46",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpherosection",
+      "target": "src_components_pdp_pdpherosection_left_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpHeroSection.tsx",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_components_pdp_pdpherosection_pdpherosection",
@@ -27232,7 +27532,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L37",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_components_pdp_pdpherosection_pdpherosectionprops",
@@ -27252,7 +27552,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L15",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_components_pdp_pdpherosection_productneighbors",
@@ -27262,7 +27562,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L24",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpherosection",
+      "target": "src_components_pdp_pdpherosection_right_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpHeroSection.tsx",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_components_pdp_pdpherosection_starrow",
@@ -27373,7 +27683,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L16",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_productneighbors",
       "target": "src_components_pdp_pdpherosection_product_order"
@@ -27383,7 +27693,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L51",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_pdpherosection",
       "target": "src_components_pdp_pdpherosection_productneighbors",
@@ -27395,7 +27705,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L78",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_pdpherosection",
       "target": "src_lib_pricing_formatcurrency"
@@ -27406,7 +27716,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L49",
+      "source_location": "L61",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_pdpherosection",
       "target": "src_lib_product_catalog_getcatalogproduct"
@@ -34839,7 +35149,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/categories.ts",
-      "source_location": "L780",
+      "source_location": "L873",
       "weight": 1.0,
       "source": "src_lib_categories",
       "target": "src_lib_categories_getcategory",
@@ -34849,7 +35159,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/categories.ts",
-      "source_location": "L784",
+      "source_location": "L877",
       "weight": 1.0,
       "source": "src_lib_categories",
       "target": "src_lib_categories_iscategoryslug",
@@ -49218,5 +49528,5 @@
       "source_file": "src/apis aproach/API Token Types & Abilities \u2014 PrescribeRx.pdf"
     }
   ],
-  "built_at_commit": "c1a49e7d5dfe75d62613757039531f5c68fd7311"
+  "built_at_commit": "ac125f719c52b27d20e652b3bd5511aa8415d385"
 }

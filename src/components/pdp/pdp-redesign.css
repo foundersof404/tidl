@@ -39,21 +39,7 @@
 }
 
 .pdp-hero-vial-peek {
-  position: absolute;
-  left: -4%;
-  top: 22%;
-  width: min(112px, 13vw);
-  z-index: 0;
-  pointer-events: none;
-  transform: rotate(-28deg);
-  opacity: 0.9;
-  filter: drop-shadow(0 14px 22px rgba(23, 19, 16, 0.16));
-}
-
-.pdp-hero-vial-peek img {
-  display: block;
-  width: 100%;
-  height: auto;
+  display: none !important;
 }
 
 .pdp-hero-prod-shell {
@@ -114,8 +100,8 @@
 }
 
 .pdp-hero-prod-price-note {
-  margin: 0 0 14px;
-  font-size: 0.9rem;
+  margin: 14px 0 0;
+  font-size: 0.88rem;
   color: var(--pdp-muted);
 }
 
@@ -149,63 +135,19 @@
 }
 
 .pdp-hero-prod-lead {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   max-width: 34rem;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   line-height: 1.55;
-  color: var(--pdp-muted);
-}
-
-.pdp-hero-prod-does {
-  margin: 0 0 18px;
-  max-width: 34rem;
-  padding: 14px 16px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1.5px solid rgba(243, 195, 0, 0.55);
-}
-
-.pdp-hero-prod-does-label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--pdp-gold-deep);
-}
-
-.pdp-hero-prod-does p {
-  margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.5;
   color: var(--pdp-ink);
-  font-weight: 550;
 }
 
-.pdp-hero-prod-perks {
-  list-style: none;
+.pdp-hero-prod-includes {
   margin: 0 0 22px;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-
-.pdp-hero-prod-perks li {
-  display: grid;
-  gap: 2px;
-  padding: 12px 14px;
-  border-radius: 16px;
-  background: var(--pdp-white);
-  border: 1.5px solid rgba(243, 195, 0, 0.55);
-}
-
-.pdp-hero-prod-perks strong {
-  font-size: 0.92rem;
-}
-
-.pdp-hero-prod-perks span {
-  font-size: 0.84rem;
+  max-width: 32rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
   color: var(--pdp-muted);
 }
 
@@ -260,6 +202,42 @@
   background: linear-gradient(180deg, #f3c300 0%, #ffe566 38%, #ffffff 100%);
   padding: 40px 24px 48px;
   overflow: hidden;
+}
+
+.pdp-hero-prod-stage--vial {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.2fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: 8px;
+  padding: 28px 14px 32px;
+}
+
+.pdp-hero-prod-stage--vial .pdp-hero-prod-side-msg {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  transform: none;
+  max-width: none;
+}
+
+.pdp-hero-prod-stage--vial .pdp-hero-prod-side-msg--left {
+  justify-self: start;
+  text-align: left;
+}
+
+.pdp-hero-prod-stage--vial .pdp-hero-prod-side-msg--right {
+  justify-self: end;
+  text-align: right;
+}
+
+.pdp-hero-prod-stage--vial .pdp-hero-prod-side-msg p {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.pdp-hero-prod-stage--vial .pdp-hero-prod-img {
+  width: min(88%, 280px);
+  justify-self: center;
 }
 
 .pdp-hero-prod-stage--after {
@@ -569,13 +547,38 @@
   background: #ffffff;
 }
 
-.pdp-manifesto-grid {
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto 48px;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 40px;
-  align-items: center;
+.pdp-manifesto--simple {
+  padding: 56px 0 64px;
+}
+
+.pdp-manifesto-simple {
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pdp-manifesto-simple h2 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--pdp-ink);
+}
+
+.pdp-manifesto-simple .pdp-manifesto-sub {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--pdp-muted);
+}
+
+.pdp-manifesto-simple .pdp-manifesto-dream {
+  margin: 0 0 28px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--pdp-ink);
 }
 
 .pdp-manifesto-kicker {
@@ -585,6 +588,15 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--pdp-gold-deep);
+}
+
+.pdp-manifesto-grid {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto 48px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .pdp-manifesto-copy h2 {
@@ -698,14 +710,64 @@
 }
 
 .pdp-shift-slider {
-  margin: 0 auto 36px;
-  width: min(520px, 100%);
+  margin: 0;
+  width: min(420px, 100%);
+  justify-self: center;
+}
+
+.pdp-shift-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px) minmax(0, 1fr);
+  gap: 20px 28px;
+  align-items: center;
+  margin: 0 auto 40px;
+  width: min(1100px, 100%);
+}
+
+.pdp-shift-flank {
+  display: grid;
+  gap: 10px;
+}
+
+.pdp-shift-flank--before {
+  text-align: right;
+  justify-items: end;
+}
+
+.pdp-shift-flank--after {
+  text-align: left;
+  justify-items: start;
+}
+
+.pdp-shift-flank-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pdp-gold-deep);
+}
+
+.pdp-shift-flank p {
+  margin: 0;
+  max-width: 14rem;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--pdp-ink);
+  background: #ffffff;
+  border: 1.5px solid rgba(243, 195, 0, 0.65);
+  border-radius: 16px;
+}
+
+.pdp-shift-flank--before p {
+  font-weight: 600;
+  color: rgba(23, 19, 16, 0.72);
+  border-color: rgba(23, 19, 16, 0.12);
 }
 
 .pdp-shift--v2 .pdp-shift-board {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  display: none;
 }
 
 .pdp-shift--v2 .pdp-shift-panel {
@@ -848,13 +910,6 @@
 }
 
 @media (max-width: 960px) {
-  .pdp-hero-vial-peek {
-    width: min(88px, 18vw);
-    left: -8%;
-    top: 14%;
-    opacity: 0.78;
-  }
-
   .pdp-hero-prod-shell {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -863,6 +918,28 @@
   .pdp-hero-prod-stage {
     order: -1;
     min-height: 320px;
+  }
+
+  .pdp-hero-prod-stage--vial {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "vial vial"
+      "left right";
+    min-height: 0;
+    padding: 22px 14px 24px;
+  }
+
+  .pdp-hero-prod-stage--vial .pdp-hero-prod-img {
+    grid-area: vial;
+    width: min(56%, 220px);
+  }
+
+  .pdp-hero-prod-stage--vial .pdp-hero-prod-side-msg--left {
+    grid-area: left;
+  }
+
+  .pdp-hero-prod-stage--vial .pdp-hero-prod-side-msg--right {
+    grid-area: right;
   }
 
   .pdp-hero-prod-stage--after {
@@ -887,6 +964,27 @@
     font-size: 0.76rem;
   }
 
+  .pdp-shift-stage {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pdp-shift-flank--before,
+  .pdp-shift-flank--after {
+    text-align: left;
+    justify-items: stretch;
+  }
+
+  .pdp-shift-flank p {
+    max-width: none;
+    font-weight: 600;
+  }
+
+  .pdp-shift-slider {
+    width: min(520px, 100%);
+    order: -1;
+  }
+
   .pdp-manifesto-grid,
   .pdp-shift--v2 .pdp-shift-board {
     grid-template-columns: 1fr;
@@ -907,5 +1005,19 @@
     top: auto;
     bottom: 72px;
     transform: none;
+  }
+
+  .pdp-hero-prod-stage--vial {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "vial"
+      "left"
+      "right";
+  }
+
+  .pdp-hero-prod-stage--vial .pdp-hero-prod-side-msg--left,
+  .pdp-hero-prod-stage--vial .pdp-hero-prod-side-msg--right {
+    justify-self: stretch;
+    text-align: left;
   }
 }

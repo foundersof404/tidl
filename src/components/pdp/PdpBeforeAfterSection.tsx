@@ -4,23 +4,23 @@ import { usePdpData } from "./PdpDataProvider";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
 import { settle } from "./pdp-ui";
 
-const BEFORE = [
-  "Skipping plans because nothing in the closet feels like you",
-  "Avoiding photos, mirrors, and seating that feels too tight",
-  "Starting over every Monday — quitting by Thursday",
+const LEFT_MESSAGES = [
+  "Sitting out dating",
+  "Hiding from photos",
+  "Starting over every Monday",
 ] as const;
 
-const AFTER = [
-  "Saying yes without negotiating with your body first",
-  "Dressing for the day you want — not the shape you hide",
-  "A clear weekly protocol you can actually keep",
+const RIGHT_MESSAGES = [
+  "Saying yes to plans",
+  "Clothes that feel like you",
+  "A protocol you can keep",
 ] as const;
 
 type PdpBeforeAfterSectionProps = {
   onStart: (e: MouseEvent) => void;
 };
 
-/** Always-on life-shift section with patient before/after zipper slider. */
+/** Life-shift section — slider flanked by before/after messages. */
 export function PdpBeforeAfterSection({ onStart }: PdpBeforeAfterSectionProps) {
   const { heroProduct } = usePdpData();
   const reduceMotion = useReducedMotion();
@@ -35,64 +35,45 @@ export function PdpBeforeAfterSection({ onStart }: PdpBeforeAfterSectionProps) {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.65, ease: settle }}
         >
-          <span className="pdp-kicker">The difference that sells itself</span>
+          <span className="pdp-kicker">Before / After</span>
           <h2 className="pdp-shift-title">
             Before the plan.
             <span> After momentum.</span>
           </h2>
           <p className="pdp-shift-lead">
-            This isn&apos;t about a smaller number on a chart. It&apos;s about showing up in your
-            life again — with {heroProduct.name} under licensed provider care.
+            Showing up in your life again — with {heroProduct.name} under licensed provider care.
           </p>
         </motion.header>
 
-        <BeforeAfterSlider
-          className="pdp-shift-slider"
-          beforeSrc="/pdp/patient-before.png"
-          afterSrc="/pdp/AFTER.png"
-          beforeLabel="Before"
-          afterLabel="After"
-        />
+        <motion.div
+          className="pdp-shift-stage"
+          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.65, ease: settle }}
+        >
+          <aside className="pdp-shift-flank pdp-shift-flank--before">
+            <span className="pdp-shift-flank-label">Before</span>
+            {LEFT_MESSAGES.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </aside>
 
-        <div className="pdp-shift-board">
-          <motion.article
-            className="pdp-shift-panel pdp-shift-panel--before"
-            initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: settle }}
-          >
-            <div className="pdp-shift-panel-label">
-              <span>01</span>
-              Before
-            </div>
-            <h3 className="pdp-shift-panel-title">Life on pause</h3>
-            <ul className="pdp-shift-list">
-              {BEFORE.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </motion.article>
+          <BeforeAfterSlider
+            className="pdp-shift-slider"
+            beforeSrc="/pdp/patient-before.png"
+            afterSrc="/pdp/AFTER.png"
+            beforeLabel="Before"
+            afterLabel="After"
+          />
 
-          <motion.article
-            className="pdp-shift-panel pdp-shift-panel--after"
-            initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: 0.06, ease: settle }}
-          >
-            <div className="pdp-shift-panel-label">
-              <span>02</span>
-              After
-            </div>
-            <h3 className="pdp-shift-panel-title">Life in motion</h3>
-            <ul className="pdp-shift-list">
-              {AFTER.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </motion.article>
-        </div>
+          <aside className="pdp-shift-flank pdp-shift-flank--after">
+            <span className="pdp-shift-flank-label">After</span>
+            {RIGHT_MESSAGES.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </aside>
+        </motion.div>
 
         <motion.div
           className="pdp-shift-cta"
@@ -101,10 +82,7 @@ export function PdpBeforeAfterSection({ onStart }: PdpBeforeAfterSectionProps) {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.55, ease: settle }}
         >
-          <p>
-            Start with a five-minute intake. A licensed provider reviews your plan before anything
-            ships.
-          </p>
+          <p>Five-minute intake. A licensed provider reviews your plan before anything ships.</p>
           <a href="#get-started" className="pdp-shift-btn" onClick={onStart}>
             Start your free assessment
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

@@ -12,16 +12,14 @@ import { usePdpData } from "./PdpDataProvider";
 
 const PRODUCT_ORDER = CATALOG_PRODUCTS.map((product) => product.slug);
 
-const AFTER_IMAGE = "/pdp/AFTER.png";
-
-const LEFT_MESSAGES = [
-  "Done sitting out dating",
-  "Done hiding in photos",
+const WEIGHT_LOSS_LEFT = [
+  "Quieter food noise",
+  "Steady appetite control",
 ] as const;
 
-const RIGHT_MESSAGES = [
-  "Clothes that feel like you again",
-  "Walk in. Own the room.",
+const WEIGHT_LOSS_RIGHT = [
+  "Doctor-prescribed",
+  "Pen + how-to included",
 ] as const;
 
 function productNeighbors(slug: ProductSlug) {
@@ -52,12 +50,11 @@ type PdpHeroSectionProps = {
 };
 
 /**
- * Product-first PDP hero — price + what it does on the left;
- * AFTER portrait with side messages filling empty space on the right.
+ * Product-first PDP hero — peptide vial is the hero visual (not lifestyle photos).
  */
 export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
   const reduceMotion = useReducedMotion();
-  const { slug, heroProduct, heroImage, goal } = usePdpData();
+  const { slug, heroProduct, heroImage, goal, outcomePhrases, includedPhrases } = usePdpData();
   const catalog = getCatalogProduct(slug);
   const name = catalog?.shortName ?? heroProduct.name;
   const { prev, next } = productNeighbors(slug);
@@ -66,12 +63,11 @@ export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
     heroProduct.specs.find((s) => /what it does/i.test(s.label))?.detail ??
     heroProduct.summary;
 
+  const leftPhrases = isWeightLoss ? WEIGHT_LOSS_LEFT : outcomePhrases.slice(0, 2);
+  const rightPhrases = isWeightLoss ? WEIGHT_LOSS_RIGHT : includedPhrases.slice(0, 2);
+
   return (
     <section className="pdp-hero pdp-hero-prod" id="hero" ref={heroRef} data-pdp-header-theme="light">
-      <div className="pdp-hero-vial-peek" aria-hidden="true">
-        <img src={heroImage} alt="" />
-      </div>
-
       <div className="pdp-hero-prod-shell">
         <motion.div
           className="pdp-hero-prod-copy"
@@ -90,7 +86,6 @@ export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
             {formatCurrency(heroProduct.startingPrice)}
             <span>/mo</span>
           </p>
-          <p className="pdp-hero-prod-price-note">{heroProduct.priceNote}</p>
 
           <div className="pdp-hero-prod-rating">
             <strong>{heroProduct.rating}</strong>
@@ -98,19 +93,11 @@ export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
             <span>{heroProduct.reviewCount} reviews</span>
           </div>
 
-          <div className="pdp-hero-prod-does">
-            <span className="pdp-hero-prod-does-label">What it does</span>
-            <p>{whatItDoes}</p>
-          </div>
+          <p className="pdp-hero-prod-lead">{whatItDoes}</p>
 
-          <ul className="pdp-hero-prod-perks">
-            {heroProduct.perks.map((perk) => (
-              <li key={perk.label}>
-                <strong>{perk.label}</strong>
-                <span>{perk.detail}</span>
-              </li>
-            ))}
-          </ul>
+          <p className="pdp-hero-prod-includes">
+            {heroProduct.perks.map((perk) => perk.label).join(" · ")}
+          </p>
 
           <div className="pdp-hero-prod-actions">
             <button type="button" className="pdp-hero-prod-cta" onClick={onStart}>
@@ -123,58 +110,37 @@ export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
               ›
             </Link>
           </div>
+
+          <p className="pdp-hero-prod-price-note">{heroProduct.priceNote}</p>
         </motion.div>
 
         <motion.div
-          className={`pdp-hero-prod-stage${isWeightLoss ? " pdp-hero-prod-stage--after" : ""}`}
+          className="pdp-hero-prod-stage pdp-hero-prod-stage--vial"
           initial={reduceMotion ? false : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
         >
-          {isWeightLoss ? (
-            <>
-              <img
-                className="pdp-hero-prod-after-photo"
-                src={AFTER_IMAGE}
-                alt="After starting a TIDL plan"
-                loading="eager"
-                fetchPriority="high"
-              />
+          <div className="pdp-hero-prod-glow" aria-hidden="true" />
 
-              <div className="pdp-hero-prod-side-msg pdp-hero-prod-side-msg--left">
-                <span className="pdp-hero-prod-side-label">Before this</span>
-                {LEFT_MESSAGES.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
-              </div>
+          <div className="pdp-hero-prod-side-msg pdp-hero-prod-side-msg--left">
+            {leftPhrases.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
 
-              <div className="pdp-hero-prod-side-msg pdp-hero-prod-side-msg--right">
-                <span className="pdp-hero-prod-side-label">After TIDL</span>
-                {RIGHT_MESSAGES.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
-              </div>
+          <img
+            className="pdp-hero-prod-img"
+            src={heroImage}
+            alt={`${name} by TIDL`}
+            loading="eager"
+            fetchPriority="high"
+          />
 
-              <div className="pdp-hero-prod-after-foil">
-                <img src={heroImage} alt="" />
-                <span>
-                  {formatCurrency(heroProduct.startingPrice)}
-                  <em>/mo</em>
-                </span>
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="pdp-hero-prod-glow" aria-hidden="true" />
-              <img
-                className="pdp-hero-prod-img"
-                src={heroImage}
-                alt={`${name} by TIDL`}
-                loading="eager"
-                fetchPriority="high"
-              />
-            </>
-          )}
+          <div className="pdp-hero-prod-side-msg pdp-hero-prod-side-msg--right">
+            {rightPhrases.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
         </motion.div>
       </div>
 

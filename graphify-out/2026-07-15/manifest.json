@@ -95,8 +95,8 @@
     "semantic_hash": ""
   },
   "src/components/category/CategoryPage.tsx": {
-    "mtime": 1784068247.2035933,
-    "ast_hash": "0d81ae94f995e670e1786eff87c761bf",
+    "mtime": 1784069009.6524088,
+    "ast_hash": "751ded0859d89516faa577e7ede817ae",
     "semantic_hash": ""
   },
   "src/components/category/CategoryPenProgram.tsx": {
@@ -105,7 +105,7 @@
     "semantic_hash": ""
   },
   "src/components/category/CategoryProductCard.tsx": {
-    "mtime": 1784068253.95298,
+    "mtime": 1784068954.0720124,
     "ast_hash": "abb0c1a7185ac0154d69c1189094c54a",
     "semantic_hash": ""
   },
@@ -135,8 +135,8 @@
     "semantic_hash": ""
   },
   "src/components/home/HomePage.tsx": {
-    "mtime": 1784067558.707942,
-    "ast_hash": "5731c0323cd105833843ac8c1e6753db",
+    "mtime": 1784069078.9853127,
+    "ast_hash": "0275495632c5be1d4d6896c9b641683c",
     "semantic_hash": ""
   },
   "src/components/home/JourneySection.tsx": {
@@ -230,13 +230,13 @@
     "semantic_hash": ""
   },
   "src/components/pdp/PdpBeforeAfterSection.tsx": {
-    "mtime": 1784065300.6311202,
-    "ast_hash": "5452c63d8f5346d48772f5590c8a0e89",
+    "mtime": 1784069285.7502632,
+    "ast_hash": "bd9449c9099f4129c7efff73bf53a671",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpCtaBand.tsx": {
-    "mtime": 1784066059.8210287,
-    "ast_hash": "7255a30a01caece2ce8a089601fbfd12",
+    "mtime": 1784068954.0844264,
+    "ast_hash": "6caf1ea1c81861f51d5d51c520d059f0",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpDataProvider.tsx": {
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "src/components/pdp/PdpHeroSection.tsx": {
-    "mtime": 1784068921.2028575,
-    "ast_hash": "fc97e48b76c965fb1d2f37d38f2359f6",
+    "mtime": 1784069285.0255642,
+    "ast_hash": "f726e2ebf6ddc494e99bf58ebb392c37",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpIncludedSection.tsx": {
@@ -285,7 +285,7 @@
     "semantic_hash": ""
   },
   "src/components/pdp/PdpTransformationSection.tsx": {
-    "mtime": 1784068771.2336857,
+    "mtime": 1784068954.0896733,
     "ast_hash": "40c8997c10586b1345452ddb1d3e9b3e",
     "semantic_hash": ""
   },
@@ -300,7 +300,7 @@
     "semantic_hash": ""
   },
   "src/components/pdp/ProductPdpPage.tsx": {
-    "mtime": 1784068775.51891,
+    "mtime": 1784068954.0926728,
     "ast_hash": "bf4022d8ddacf386dafde3fe520ada4a",
     "semantic_hash": ""
   },
@@ -310,7 +310,7 @@
     "semantic_hash": ""
   },
   "src/components/pdp/data/glp1-pdp-content.ts": {
-    "mtime": 1784067070.417787,
+    "mtime": 1784068954.0956738,
     "ast_hash": "57a232d6613689a5b14d799c90c8016a",
     "semantic_hash": ""
   },
@@ -320,7 +320,7 @@
     "semantic_hash": ""
   },
   "src/components/pdp/data/pdp-data-registry.ts": {
-    "mtime": 1784065446.460212,
+    "mtime": 1784068954.0976741,
     "ast_hash": "9fdde7760159200fb82ef55acdff6164",
     "semantic_hash": ""
   },
@@ -615,8 +615,8 @@
     "semantic_hash": ""
   },
   "src/lib/categories.ts": {
-    "mtime": 1784067558.7208977,
-    "ast_hash": "89e9de0b7e6ed4e6b2e7d2e644f92a35",
+    "mtime": 1784068953.5411649,
+    "ast_hash": "ace9fb8b036587ceafe48f973b5c7bb3",
     "semantic_hash": ""
   },
   "src/lib/category-bundles.ts": {
@@ -660,17 +660,17 @@
     "semantic_hash": ""
   },
   "src/lib/pdp-marketing.ts": {
-    "mtime": 1784068754.7055817,
-    "ast_hash": "cef18baf2cb52ce69ada75ca0bbc6b86",
+    "mtime": 1784069298.2707136,
+    "ast_hash": "875d444fb4fe1ebc59e4960aab3e0fa3",
     "semantic_hash": ""
   },
   "src/lib/peptide-images.ts": {
-    "mtime": 1784067140.3288841,
+    "mtime": 1784068954.1034577,
     "ast_hash": "3b508f51a55d47bdb88bb349b0b66dc6",
     "semantic_hash": ""
   },
   "src/lib/peptides.ts": {
-    "mtime": 1784067168.741144,
+    "mtime": 1784068954.1054566,
     "ast_hash": "4847125209cdaba01409f194a344c101",
     "semantic_hash": ""
   },
@@ -680,12 +680,12 @@
     "semantic_hash": ""
   },
   "src/lib/product-catalog.ts": {
-    "mtime": 1784067177.027726,
+    "mtime": 1784068954.1164556,
     "ast_hash": "f0a60f333c1781360a70228fdb894dcd",
     "semantic_hash": ""
   },
   "src/lib/products.ts": {
-    "mtime": 1784067181.428126,
+    "mtime": 1784068954.164269,
     "ast_hash": "2da66666de8ce8ec3459d6f5fd8c78ce",
     "semantic_hash": ""
   },
@@ -755,7 +755,7 @@
     "semantic_hash": ""
   },
   "src/lib/prescribe-rx/merge-sandbox-pdp.ts": {
-    "mtime": 1784067165.9567583,
+    "mtime": 1784068954.1084561,
     "ast_hash": "5f802e12c01b85e5ef267f83e0d20ee9",
     "semantic_hash": ""
   },
@@ -1630,7 +1630,7 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1784067456.586804,
+    "mtime": 1784068954.0608654,
     "ast_hash": "f4c7f15969f35cb2e24b7ee2a4f20b6e",
     "semantic_hash": ""
   },
@@ -1660,7 +1660,7 @@
     "semantic_hash": ""
   },
   "src/components/category/CategoryFormularySection.tsx": {
-    "mtime": 1784068224.5576432,
+    "mtime": 1784068954.064586,
     "ast_hash": "c7b51bbd6da15d3f398182be25c40cf6",
     "semantic_hash": ""
   },
@@ -1700,8 +1700,8 @@
     "semantic_hash": ""
   },
   "src/components/category/CategoryPenSection.tsx": {
-    "mtime": 1784067558.7023587,
-    "ast_hash": "46b2fc4d16bb5ec14dcb81d980f0f6b8",
+    "mtime": 1784068953.5361893,
+    "ast_hash": "736b4fe7e30d28e358175eabcc921168",
     "semantic_hash": ""
   },
   "src/components/category/CategoryWhySection.tsx": {
@@ -1730,12 +1730,12 @@
     "semantic_hash": ""
   },
   "src/components/pdp/BeforeAfterSlider.tsx": {
-    "mtime": 1784065431.9234278,
+    "mtime": 1784068955.4234393,
     "ast_hash": "9c5dfc95b9e31865a2c128ec5ab0bab7",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpMotivationMarquee.tsx": {
-    "mtime": 1784068885.6993873,
+    "mtime": 1784068955.4254394,
     "ast_hash": "b782e77e4472e31d8c32d24aa9ce900f",
     "semantic_hash": ""
   },
@@ -1910,23 +1910,38 @@
     "semantic_hash": ""
   },
   "public/pdp/hero-atmosphere.png": {
-    "mtime": 1784065996.6321702,
+    "mtime": 1784068955.0110443,
     "ast_hash": "d84f95b2072c306cf082e7c4447041e6",
     "semantic_hash": ""
   },
   "public/pdp/patient-after.png": {
-    "mtime": 1784065112.5825682,
+    "mtime": 1784068955.1921318,
     "ast_hash": "642b37cee81af148d9dac006e7237efc",
     "semantic_hash": ""
   },
   "public/pdp/patient-aspire.png": {
-    "mtime": 1784065230.229082,
+    "mtime": 1784068955.3093252,
     "ast_hash": "e7fd4c597b0f7c1523b0fcfd70cc70f3",
     "semantic_hash": ""
   },
   "public/pdp/patient-before.png": {
-    "mtime": 1784065133.8537219,
+    "mtime": 1784068955.404596,
     "ast_hash": "388d85df84daa97aefde327ecfbae970",
+    "semantic_hash": ""
+  },
+  "src/components/category/CategoryFaqSection.tsx": {
+    "mtime": 1784068953.5286016,
+    "ast_hash": "d5d57708ccaca87cfb605c77221f65ea",
+    "semantic_hash": ""
+  },
+  "src/components/category/CategoryHowSection.tsx": {
+    "mtime": 1784068953.5326989,
+    "ast_hash": "c006126b59f10941025f832f23de224e",
+    "semantic_hash": ""
+  },
+  "public/pdp/AFTER.png": {
+    "mtime": 1784069167.9999263,
+    "ast_hash": "25950364c5cfafda90a0db59333ae696",
     "semantic_hash": ""
   }
 }

@@ -14,18 +14,17 @@ const GOAL_MARKETING: Record<
 > = {
   "weight-loss": {
     emotionalSub:
-      "You've tried the diets, the apps, the willpower. It was never about willpower. It's about the right medicine, prescribed for your body — so you can finally recognize yourself again. Start today. Feel the shift.",
+      "It was never about willpower. It's the right medicine, prescribed for your body.",
     painPoints: [
       "You're done being defined by the scale",
       "You're done sitting out dating",
       "You're done feeling rejected before you walk in",
       "You're done starting over every Monday",
     ],
-    dream:
-      "Imagine catching your reflection and actually smiling. Buying the outfit you want. Walking into a room without scanning for the nearest exit. Feeling like her — light, confident, unstoppable.",
+    dream: "Catch your reflection and smile. Feel like her again — light, confident, unstoppable.",
     motivationHeadline: "This is your turning point.",
     motivationSub:
-      "Thousands started exactly where you are. One quiz. One licensed provider. One plan built for your body — medicine, pen, and how-to included. Not another diet you'll quit.",
+      "One quiz. One licensed provider. One plan — medicine, pen, and how-to included.",
   },
   "metabolic-health": {
     emotionalSub:

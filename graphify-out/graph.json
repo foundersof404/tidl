@@ -1159,7 +1159,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "package_dependencies_class_variance_authority",
-      "community": 24,
+      "community": 238,
       "norm_label": "class-variance-authority"
     },
     {
@@ -1169,7 +1169,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "class_variance_authority",
-      "community": 24,
+      "community": 238,
       "norm_label": "class-variance-authority"
     },
     {
@@ -1219,7 +1219,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "package_dependencies_date_fns",
-      "community": 238,
+      "community": 24,
       "norm_label": "date-fns"
     },
     {
@@ -1229,7 +1229,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "date_fns",
-      "community": 238,
+      "community": 24,
       "norm_label": "date-fns"
     },
     {
@@ -15789,7 +15789,7 @@
       "source_location": "L156",
       "_origin": "ast",
       "id": "ui_tidl_design_system_3_2_typography_tokens",
-      "community": 233,
+      "community": 148,
       "norm_label": "3.2 typography tokens"
     },
     {
@@ -15799,7 +15799,7 @@
       "source_location": "L173",
       "_origin": "ast",
       "id": "ui_tidl_design_system_hierarchy",
-      "community": 233,
+      "community": 148,
       "norm_label": "hierarchy"
     },
     {
@@ -15809,7 +15809,7 @@
       "source_location": "L187",
       "_origin": "ast",
       "id": "ui_tidl_design_system_text_rhythm",
-      "community": 233,
+      "community": 148,
       "norm_label": "text rhythm"
     },
     {
@@ -15819,7 +15819,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "ui_tidl_design_system_3_3_spacing_system",
-      "community": 148,
+      "community": 233,
       "norm_label": "3.3 spacing system"
     },
     {
@@ -15829,7 +15829,7 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "ui_tidl_design_system_philosophy",
-      "community": 148,
+      "community": 233,
       "norm_label": "philosophy"
     },
     {
@@ -15839,7 +15839,7 @@
       "source_location": "L209",
       "_origin": "ast",
       "id": "ui_tidl_design_system_scales",
-      "community": 148,
+      "community": 233,
       "norm_label": "scales"
     },
     {
@@ -15849,7 +15849,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "ui_tidl_design_system_vertical_rhythm_rules",
-      "community": 148,
+      "community": 233,
       "norm_label": "vertical rhythm rules"
     },
     {
@@ -27705,7 +27705,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L90",
+      "source_location": "L89",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_pdpherosection",
       "target": "src_lib_pricing_formatcurrency"
@@ -49528,5 +49528,5 @@
       "source_file": "src/apis aproach/API Token Types & Abilities \u2014 PrescribeRx.pdf"
     }
   ],
-  "built_at_commit": "ac125f719c52b27d20e652b3bd5511aa8415d385"
+  "built_at_commit": "7c159983d852839783cb8e59c8e0d406eeafaa3e"
 }

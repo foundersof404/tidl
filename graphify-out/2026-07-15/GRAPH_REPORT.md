@@ -1,16 +1,16 @@
 # Graph Report - tidl_webiste  (2026-07-15)
 
 ## Corpus Check
-- 227 files · ~1,869,797 words
+- 229 files · ~1,952,130 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1787 nodes · 2953 edges · 247 communities (121 shown, 126 thin omitted)
+- 1798 nodes · 2972 edges · 248 communities (122 shown, 126 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.55)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c1a49e7d`
+- Built from commit: `ac125f71`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -244,6 +244,7 @@
 - @radix-ui/react-tabs
 - react-resizable-panels
 - recharts
+- cmdk
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 69 edges
@@ -282,23 +283,23 @@
 - **PrescribeRx API Integration Flow** — src_apis_aproach_05_pre_attached_lab_results_prescriberx_embed_sdk_pre_attached_lab_results, src_apis_aproach_06_external_transaction_prescriberx_embed_sdk_external_transaction, src_apis_aproach_api_playground_prescriberx_api_playground [INFERRED 0.90]
 - **PrescribeRx API Documentation** — src_apis_aproach_api_token_types_abilities_prescriberx, src_apis_aproach_top_5_integration_flows_prescriberx_api, src_apis_aproach_webhooks_prescriberx_api [EXTRACTED 1.00]
 
-## Communities (247 total, 126 thin omitted)
+## Communities (248 total, 126 thin omitted)
 
 ### Community 0 - "Checkout and Site Header"
-Cohesion: 0.13
-Nodes (20): CHECKOUT_STEPS, CheckoutLayout(), FunnelPageShell(), FunnelPageShellProps, FUNNEL_NAV_LINKS, SiteFooter(), SiteHeader(), SiteHeaderProps (+12 more)
+Cohesion: 0.11
+Nodes (24): CHECKOUT_STEPS, CheckoutLayout(), FAQ_DATA, FaqItem, HomePage(), FunnelPageShell(), FunnelPageShellProps, FUNNEL_NAV_LINKS (+16 more)
 
 ### Community 1 - "App Routing and Pages"
 Cohesion: 0.03
-Nodes (75): getRouter(), Route, Route, Route, Route, Route, Route, Route (+67 more)
+Nodes (74): getRouter(), Route, Route, Route, Route, Route, Route, Route (+66 more)
 
 ### Community 2 - "Checkout UI Components"
-Cohesion: 0.27
-Nodes (12): getPeptideImageMap(), resolvePeptideOnlyImage(), CATALOG_KEYWORDS, buildState(), LiveCatalogMap, LiveCatalogState, LiveProductVariant, loadLiveCatalog() (+4 more)
+Cohesion: 0.19
+Nodes (15): getPeptideImageMap(), resolvePeptideOnlyImage(), CATALOG_KEYWORDS, PrxCatalogPackage, mergeSandboxIntoPdp(), usableLiveCopy(), buildState(), LiveCatalogMap (+7 more)
 
 ### Community 3 - "Dynamic Quiz Logic"
-Cohesion: 0.05
-Nodes (72): PrxActivityCard(), STATUS_ORDER, StatusTimeline(), answerMatches(), Answers, AnswerValue, AUTO_ADVANCE, DynamicQuiz() (+64 more)
+Cohesion: 0.06
+Nodes (67): PrxActivityCard(), answerMatches(), Answers, AnswerValue, AUTO_ADVANCE, DynamicQuiz(), FIELD_TYPE, fieldIsComplete() (+59 more)
 
 ### Community 4 - "Linting and Formatting"
 Cohesion: 0.04
@@ -309,16 +310,16 @@ Cohesion: 0.05
 Nodes (39): Input, Separator, SheetContent, SheetContentProps, SheetDescription, SheetFooter(), SheetHeader(), SheetOverlay (+31 more)
 
 ### Community 6 - "Scroll and Age Verification"
-Cohesion: 0.16
-Nodes (12): catCardHover, catReveal, catSpring, catStagger, CategoryBundleSection(), CategoryBundleSectionProps, CategoryHero(), CategoryHeroProps (+4 more)
+Cohesion: 0.22
+Nodes (9): catCardHover, catReveal, catSpring, catStagger, CategoryBundleSection(), CategoryBundleSectionProps, CategoryHeroProps, CATEGORIES (+1 more)
 
 ### Community 7 - "Alert and Avatar Components"
 Cohesion: 0.06
 Nodes (23): Alert, AlertDescription, AlertTitle, alertVariants, Avatar, AvatarFallback, AvatarImage, Checkbox (+15 more)
 
 ### Community 8 - "API Client Utilities"
-Cohesion: 0.20
-Nodes (14): createPrxClient(), createRoleClient(), prxClient(), prxPatient(), prxProvider(), prxSalesOrg(), getPrxApiToken(), getPrxConfig() (+6 more)
+Cohesion: 0.18
+Nodes (16): createPrxClient(), createRoleClient(), prxClient(), prxPatient(), prxProvider(), prxSalesOrg(), getPrxConfig(), PrxApiError (+8 more)
 
 ### Community 9 - "Dialog and Badge Components"
 Cohesion: 0.12
@@ -334,7 +335,7 @@ Nodes (9): ContourMap(), LINES, HIW_STEPS, HiWCard, HiWStep, HowItWorksSection()
 
 ### Community 12 - "Product Detail Data Provider"
 Cohesion: 0.07
-Nodes (30): BeforeAfterSlider(), BeforeAfterSliderProps, IncludedItem, TimelineStep, PdpButton(), PdpButtonProps, Reveal(), settle (+22 more)
+Nodes (29): BeforeAfterSlider(), BeforeAfterSliderProps, IncludedItem, TimelineStep, PdpButton(), PdpButtonProps, Reveal(), settle (+21 more)
 
 ### Community 13 - "CTA and Content Sections"
 Cohesion: 0.11
@@ -345,8 +346,8 @@ Cohesion: 0.07
 Nodes (28): 10. Components to reuse from codebase, 11. Copy guidelines, 12. SEO and metadata (proposed), 13. Implementation checklist, 14. Out of scope for PDP v1, 15. References, 1. Page purpose, 2. Product data (current codebase) (+20 more)
 
 ### Community 15 - "Authentication Pages"
-Cohesion: 0.16
-Nodes (13): OrderSummary(), HERO_COPY, HOMEPAGE_STARTING_PRICE_LABEL, calculateOrderPricing(), getCatalogListPrice(), GENERIC_FALLBACK_PRODUCT, getGoalFromProduct(), getProductBySlug() (+5 more)
+Cohesion: 0.14
+Nodes (16): getPdpContent(), PdpCtaBand(), PdpCtaBandProps, PdpHeroSection(), Glp1PdpPage(), ProductPdpPageInner(), ProductPdpPageProps, HERO_COPY (+8 more)
 
 ### Community 16 - "Project Structure Config"
 Cohesion: 0.11
@@ -368,13 +369,17 @@ Nodes (11): Menubar, MenubarCheckboxItem, MenubarContent, MenubarItem, MenubarLa
 Cohesion: 0.12
 Nodes (13): react, react, useCarousel(), ChartConfig, ChartContainer, ChartContext, ChartContextProps, ChartLegendContent (+5 more)
 
+### Community 22 - "Category Page Animations"
+Cohesion: 0.36
+Nodes (10): isPrxSandbox(), DynamicIntakeBody, Route, extractEncounterId(), extractEncounterNumber(), extractOrderId(), extractPatientChartId(), extractPatientNumber() (+2 more)
+
 ### Community 23 - "Environment Configuration"
-Cohesion: 0.14
-Nodes (24): DEFAULT_ENCOUNTER_TYPE_SLUGS, DEFAULT_PRODUCT_TYPE_SLUGS, ENCOUNTER_TYPE_ENV_KEYS, getPrxEncounterTypeSlug(), getPrxProductTypeSlug(), getPrxWebhookSecret(), isPrxConfigured(), isPrxSandbox() (+16 more)
+Cohesion: 0.20
+Nodes (14): PEPTIDE_PRX_SLUGS, DEFAULT_ENCOUNTER_TYPE_SLUGS, DEFAULT_PRODUCT_TYPE_SLUGS, ENCOUNTER_TYPE_ENV_KEYS, getPrxApiToken(), getPrxEncounterTypeSlug(), getPrxProductTypeSlug(), getPrxToken() (+6 more)
 
 ### Community 24 - "UI Library Dependencies"
 Cohesion: 0.13
-Nodes (15): cmdk, dependencies, cmdk, @radix-ui/react-separator, @radix-ui/react-slot, @radix-ui/react-toggle, @radix-ui/react-tooltip, tailwindcss (+7 more)
+Nodes (15): class-variance-authority, dependencies, class-variance-authority, @radix-ui/react-separator, @radix-ui/react-slot, @radix-ui/react-toggle, @radix-ui/react-tooltip, tailwindcss (+7 more)
 
 ### Community 25 - "Form UI Components"
 Cohesion: 0.15
@@ -385,8 +390,8 @@ Cohesion: 0.20
 Nodes (10): NOTE: PRX will not deliver to localhost/private IPs — point the subscription, Route, getRecentWebhooks(), PrxWebhookRecord, records, recordWebhook(), PRX_SIGNATURE_HEADERS, readPrxSignatureHeader() (+2 more)
 
 ### Community 27 - "Product and Quiz State"
-Cohesion: 0.14
-Nodes (21): GLP1_PDP_CONTENT, SHARED_CARE_FAQ, SHARED_DELIVERY_FAQ, SHARED_REVIEW_STATS, SHARED_SAFETY_PILLARS, SHARED_START_FAQ, HERO_IMAGES, getPdpContent() (+13 more)
+Cohesion: 0.16
+Nodes (19): GLP1_PDP_CONTENT, SHARED_CARE_FAQ, SHARED_DELIVERY_FAQ, SHARED_REVIEW_STATS, SHARED_SAFETY_PILLARS, SHARED_START_FAQ, HERO_IMAGES, PDP_REGISTRY (+11 more)
 
 ### Community 28 - "Carousel UI Components"
 Cohesion: 0.15
@@ -397,8 +402,8 @@ Cohesion: 0.27
 Nodes (8): consumeLastCapturedError(), renderErrorPage(), fetch(), getServerEntry(), isH3SwallowedErrorBody(), normalizeCatastrophicSsrResponse(), ServerEntry, errorMiddleware
 
 ### Community 30 - "Category Page Routing"
-Cohesion: 0.39
-Nodes (6): PdpHeroSection(), PdpHeroSectionProps, PRODUCT_ORDER, productNeighbors(), CATALOG_PRODUCTS, getCatalogProduct()
+Cohesion: 0.17
+Nodes (11): withCatalogAssets(), LEFT_MESSAGES, PdpHeroSectionProps, PRODUCT_ORDER, productNeighbors(), RIGHT_MESSAGES, peptideToCatalogProduct(), CATALOG_PRODUCTS (+3 more)
 
 ### Community 31 - "Product Detail Pages"
 Cohesion: 0.08
@@ -413,12 +418,12 @@ Cohesion: 0.11
 Nodes (18): 10. FAQ — "handle the last objections", 11. Footer + sticky CTA, 1. Hero — "the confident first impression", 2. Who this is for — "self-qualification", 3. Your care path — "how it works, made simple", 4. The Pen — "the hero device moment", 5. What's included — "the full care package", 6. Pricing — "the clear ask" (+10 more)
 
 ### Community 34 - "Services Section UI"
-Cohesion: 0.16
-Nodes (9): PHRASES, ServicesClosing(), settle, buildGoalCards(), GoalCard, ServicesSection(), CATEGORIES, CATEGORY_SLUGS (+1 more)
+Cohesion: 0.15
+Nodes (10): PHRASES, ServicesClosing(), settle, buildGoalCards(), GoalCard, ServicesSection(), CATEGORY_PATHS, SERVICE_CARDS (+2 more)
 
 ### Community 35 - "Product Hero Section"
-Cohesion: 0.19
-Nodes (11): CategorySlug, CATEGORY_GOALS, CategoryRecommendation, findAnswer(), getCategoryRecommendation(), resolveAction(), CATEGORY_PATHS, GLP1_CATALOG_PRODUCT (+3 more)
+Cohesion: 0.33
+Nodes (4): CategoryPenSectionProps, GLP1_PEN_SHOWCASE, PenShowcaseContent, CategorySlug
 
 ### Community 38 - "Context Menu Components"
 Cohesion: 0.20
@@ -473,8 +478,8 @@ Cohesion: 0.15
 Nodes (12): Architecture map, FILE 1 — Route `src/routes/category/$slug.tsx`, FILE 2 — Page `src/components/category/CategoryPage.tsx`, FILE 3 — Styles `src/components/category/category.css`, FILE 4 — Category copy/data `src/lib/categories.ts`, FILE 5 — Catalog products `src/lib/product-catalog.ts`, FILE 6 — Trust signals `src/lib/trust-content.ts`, Page sections (DOM order) (+4 more)
 
 ### Community 53 - "use-home-sandbox.ts"
-Cohesion: 0.20
-Nodes (13): buildShelf(), CategoryFormularySection(), CategoryFormularySectionProps, ShelfItem, getPeptideDef(), PEPTIDE_DEFS, ALL_ENCOUNTER_SLUGS, CATEGORY_ENCOUNTER_SLUGS (+5 more)
+Cohesion: 0.14
+Nodes (22): CategoryAmbient(), buildShelf(), CategoryFormularySection(), CategoryFormularySectionProps, ShelfItem, CategoryHero(), CategoryPage(), CategoryPageProps (+14 more)
 
 ### Community 54 - "API Integration Documentation"
 Cohesion: 0.67
@@ -489,16 +494,16 @@ Cohesion: 0.30
 Nodes (10): Path, any_peptide_image(), download(), find_match(), has_image(), load_catalog(), main(), Convert near-white / corner-matched studio background to transparency.     Uses (+2 more)
 
 ### Community 57 - "Tabs UI Components"
-Cohesion: 0.12
-Nodes (15): CheckoutForm(), useIsMounted(), checkoutDefaultValues, checkoutFormSchema, CheckoutFormValues, PEPTIDE_PRX_SLUGS, submitPrxCheckout(), clearQuizState() (+7 more)
+Cohesion: 0.11
+Nodes (16): CheckoutForm(), OrderSummary(), checkoutDefaultValues, checkoutFormSchema, CheckoutFormValues, useLiveProduct(), calculateOrderPricing(), getCatalogListPrice() (+8 more)
 
 ### Community 60 - "Class Name Utility"
 Cohesion: 0.60
 Nodes (4): load_font(), main(), make_card(), Image
 
 ### Community 62 - "categories.ts"
-Cohesion: 0.18
-Nodes (12): CategoryPenProgram(), CategoryPenProgramProps, curvedPath(), pathsEqual(), CategoryEducationBlock, CategoryFaqItem, CategoryPenSpotlight, CategoryTimelineStep (+4 more)
+Cohesion: 0.28
+Nodes (7): CategoryEducationBlock, CategoryFaqItem, CategoryPenSpotlight, CARE_JOURNEY_STEPS, PEN_SPOTLIGHT, TRUST_PILLARS, TRUST_STATS
 
 ### Community 63 - "Date Utility Library"
 Cohesion: 0.08
@@ -513,24 +518,24 @@ Cohesion: 0.27
 Nodes (10): ImageMotion, DeliveryIcon(), GoalsIcon(), HealthIcon(), MinutesIcon(), PlanIcon(), ProviderIcon(), ReorderIcon() (+2 more)
 
 ### Community 79 - "Radix Hover Card Primitive"
-Cohesion: 0.14
-Nodes (13): EATING_HABITS, EatingHabits, EXERCISE_LEVELS, ExerciseLevel, GOAL_IDS, GOAL_LABELS, HEALTH_CONDITION_IDS, HealthConditionId (+5 more)
+Cohesion: 0.10
+Nodes (24): CATEGORY_GOALS, CategoryRecommendation, findAnswer(), getCategoryRecommendation(), resolveAction(), Product, QuizModalContext, QuizModalContextValue (+16 more)
 
 ### Community 84 - "Radix Radio Group Primitive"
-Cohesion: 0.18
-Nodes (10): GLP1_PEN_SHOWCASE, FaqItem, HeroProduct, PdpBeforeAfter, PenShowcaseContent, PenShowcaseFeature, PenShowcaseStat, ReviewStat (+2 more)
+Cohesion: 0.25
+Nodes (7): FaqItem, HeroProduct, PdpBeforeAfter, PenShowcaseFeature, PenShowcaseStat, ReviewStat, SafetyPillar
 
 ### Community 87 - "Radix Separator Primitive"
-Cohesion: 0.18
-Nodes (17): State, usePrxEncounterStatus(), addDays(), createOrder(), generateOrderNumber(), getLatestOrderForUser(), getOrderById(), getOrdersForUser() (+9 more)
+Cohesion: 0.13
+Nodes (28): STATUS_ORDER, StatusTimeline(), useIsMounted(), usePrxEncounterStatus(), addDays(), createOrder(), generateOrderNumber(), getLatestOrderForUser() (+20 more)
 
 ### Community 89 - "AuthPage.tsx"
-Cohesion: 0.18
-Nodes (3): AuthPage(), AuthPageProps, useTypewriterLoop()
+Cohesion: 0.15
+Nodes (6): AuthBrandPanel(), AuthBrandPanelProps, AuthMode, AuthPage(), AuthPageProps, useTypewriterLoop()
 
 ### Community 91 - "Radix Toggle Primitive"
-Cohesion: 0.27
-Nodes (11): approximateDobFromAge(), mapCheckoutToPatientAddressPayload(), mapCheckoutToPaymentPayload(), mapCheckoutToUnifiedIntakePayload(), mapQuizToConsents(), mapQuizToIntakeAnswers(), mapQuizToPatientPayload(), mapQuizToVitals() (+3 more)
+Cohesion: 0.31
+Nodes (10): approximateDobFromAge(), mapCheckoutToPatientAddressPayload(), mapCheckoutToPaymentPayload(), mapCheckoutToUnifiedIntakePayload(), mapQuizToConsents(), mapQuizToIntakeAnswers(), mapQuizToPatientPayload(), mapQuizToVitals() (+2 more)
 
 ### Community 99 - "peptide-images.ts"
 Cohesion: 0.24
@@ -553,8 +558,8 @@ Cohesion: 0.18
 Nodes (10): Client fetchers & exports, Environment, Last Edit — Sandbox Integration, New API endpoints (summary), P1 — Webhooks, P2 — Live encounter status (highest testable value), P3 — Account + real PrescribeRx data, P4 — Structured consents (+2 more)
 
 ### Community 132 - "AskTidlSection.tsx"
-Cohesion: 0.17
-Nodes (13): FAQ_DATA, FaqItem, HomePage(), PdpCtaBand(), PdpCtaBandProps, Glp1PdpPage(), ProductPdpPageInner(), ProductPdpPageProps (+5 more)
+Cohesion: 0.25
+Nodes (7): CategoryHowSection(), CategoryHowSectionProps, chipEase, PATH_COPY, PathCopy, titleEase, CategoryTimelineStep
 
 ### Community 133 - "clsx"
 Cohesion: 0.25
@@ -577,20 +582,20 @@ Cohesion: 0.50
 Nodes (3): HOW TIDL WORKS — Code + CSS, `src/components/home/how-it-works/how-it-works.css`, `src/components/home/how-it-works/HowItWorksSection.tsx`
 
 ### Community 145 - "pdp-data-registry.ts"
-Cohesion: 0.33
-Nodes (5): PDP_META, Route, isProductSlug(), ProductRoute(), Route
+Cohesion: 0.29
+Nodes (6): PDP_META, Route, isProductSlug(), ProductRoute(), Route, PRODUCT_SLUGS
 
 ### Community 147 - "CategoryWhySection.tsx"
 Cohesion: 0.22
-Nodes (8): CategoryPenSectionProps, CategoryWhySection(), CategoryWhySectionProps, formatMetric(), ProofMetric, protocolLabel(), CategoryDefinition, HomeFeaturedPeptide
+Nodes (8): CategoryFaqSection(), CategoryFaqSectionProps, CategoryWhySection(), CategoryWhySectionProps, formatMetric(), ProofMetric, protocolLabel(), CategoryDefinition
 
 ### Community 148 - "drawer.tsx"
-Cohesion: 0.15
-Nodes (13): 3.2 Typography tokens, 3.4 Layout & containers, 3.5 Border radius tokens, 3.6 Shadows, blur, depth, 3.8 Opacity & borders, 3.9 Z-index scale, 3. Design Tokens (Canonical), Breakpoints (most used) (+5 more)
+Cohesion: 0.14
+Nodes (14): 3.3 Spacing system, 3.4 Layout & containers, 3.5 Border radius tokens, 3.6 Shadows, blur, depth, 3.8 Opacity & borders, 3.9 Z-index scale, 3. Design Tokens (Canonical), Breakpoints (most used) (+6 more)
 
 ### Community 149 - "CategoryPenProgram.tsx"
-Cohesion: 0.18
-Nodes (12): CategoryAmbient(), CategoryPage(), CategoryPageProps, getCategory(), filterEncountersForCategory(), filterFeaturedForCategory(), Product, QuizModalContext (+4 more)
+Cohesion: 0.47
+Nodes (5): CategoryPenProgram(), CategoryPenProgramProps, curvedPath(), pathsEqual(), PRODUCT_PATHS
 
 ### Community 150 - "$slug.tsx"
 Cohesion: 0.67
@@ -625,8 +630,8 @@ Cohesion: 0.22
 Nodes (8): Available Domains, Available Stacks, How to Use, Output Formats, Prerequisites, Rule Categories by Priority, Search Reference, UI/UX Pro Max - Design Intelligence
 
 ### Community 188 - "merge-sandbox-pdp.ts"
-Cohesion: 0.67
-Nodes (3): mergeSandboxIntoPdp(), usableLiveCopy(), LiveProduct
+Cohesion: 0.40
+Nodes (3): CATEGORY_BUNDLES, CategoryBundle, CategoryBundleItem
 
 ### Community 194 - "Community 194"
 Cohesion: 0.40
@@ -649,8 +654,8 @@ Cohesion: 0.50
 Nodes (4): Primary Use Cases, Recommended, Skip, When to Apply
 
 ### Community 208 - "Community 208"
-Cohesion: 0.16
-Nodes (9): AuthBrandPanel(), AuthBrandPanelProps, AuthMode, JOURNEY_TICKER_ICONS, JOURNEY_TICKER_ITEMS, JourneySection(), JourneySectionProps, SITE_IMAGES (+1 more)
+Cohesion: 0.22
+Nodes (6): JOURNEY_TICKER_ICONS, JOURNEY_TICKER_ITEMS, JourneySection(), JourneySectionProps, SITE_IMAGES, SOCIAL_ICONS
 
 ### Community 225 - "code:bash (python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --d)"
 Cohesion: 0.20
@@ -677,8 +682,8 @@ Cohesion: 0.50
 Nodes (4): 1. Brand Personality, Emotional contract with the user, Personality adjectives (ranked), Why the site feels this way
 
 ### Community 233 - "3.3 Spacing system"
-Cohesion: 0.50
-Nodes (4): 3.3 Spacing system, Philosophy, Scales, Vertical rhythm rules
+Cohesion: 0.67
+Nodes (3): 3.2 Typography tokens, Hierarchy, Text rhythm
 
 ### Community 234 - "4. Color System in Context"
 Cohesion: 0.50
@@ -697,24 +702,24 @@ Cohesion: 0.67
 Nodes (3): Badge(), BadgeProps, badgeVariants
 
 ## Knowledge Gaps
-- **844 isolated node(s):** `checks`, `$schema`, `style`, `rsc`, `tsx` (+839 more)
+- **852 isolated node(s):** `checks`, `$schema`, `style`, `rsc`, `tsx` (+847 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **126 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `dependencies` connect `UI Library Dependencies` to `Linting and Formatting`, `Chart and Carousel Logic`, `Category Page Animations`, `badge.tsx`, `data.ts`, `site-assets.ts`, `schema-intake.ts`, `auth.tsx`, `quiz-sandbox.tsx`, `@radix-ui/react-collapsible`, `Route`, `Community 167`, `Drawer UI Components`, `Carousel Library`, `Animation Library`, `Form Validation Resolvers`, `OTP Input Library`, `Lottie Animation Library`, `Icon Library`, `Radix Accordion Primitive`, `Radix Aspect Ratio Primitive`, `Radix Avatar Primitive`, `Radix Context Menu Primitive`, `Radix Dialog Primitive`, `Radix Dropdown Primitive`, `Radix Label Primitive`, `Radix Navigation Primitive`, `Radix Popover Primitive`, `Radix Progress Primitive`, `Radix Scroll Area Primitive`, `Radix Select Primitive`, `Radix Slider Primitive`, `Radix Toggle Group Primitive`, `Date Picker Library`, `React DOM Library`, `React Form Library`, `React Spring Animations`, `Sonner Toast Library`, `Tailwind Merge Utility`, `React Query Library`, `React Router Library`, `TanStack Router Plugin`, `Tailwind Animation CSS`, `Vite TSConfig Paths`, `Zod Schema Validation`, `date-fns`, `framer-motion`, `playwright`, `@radix-ui/react-menubar`, `@radix-ui/react-tabs`, `react-resizable-panels`, `recharts`?**
-  _High betweenness centrality (0.254) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `UI Library Dependencies` to `Linting and Formatting`, `Chart and Carousel Logic`, `badge.tsx`, `data.ts`, `site-assets.ts`, `schema-intake.ts`, `auth.tsx`, `quiz-sandbox.tsx`, `@radix-ui/react-collapsible`, `Route`, `Community 167`, `Drawer UI Components`, `Carousel Library`, `Animation Library`, `Form Validation Resolvers`, `OTP Input Library`, `Lottie Animation Library`, `Icon Library`, `Radix Accordion Primitive`, `Radix Aspect Ratio Primitive`, `Radix Avatar Primitive`, `Radix Context Menu Primitive`, `Radix Dialog Primitive`, `Radix Dropdown Primitive`, `Radix Label Primitive`, `Radix Navigation Primitive`, `Radix Popover Primitive`, `Radix Progress Primitive`, `Radix Scroll Area Primitive`, `Radix Select Primitive`, `Radix Slider Primitive`, `Radix Toggle Group Primitive`, `Date Picker Library`, `React DOM Library`, `React Form Library`, `React Spring Animations`, `Sonner Toast Library`, `Tailwind Merge Utility`, `React Query Library`, `React Router Library`, `TanStack Router Plugin`, `Tailwind Animation CSS`, `Vite TSConfig Paths`, `Zod Schema Validation`, `date-fns`, `framer-motion`, `playwright`, `@radix-ui/react-menubar`, `@radix-ui/react-tabs`, `react-resizable-panels`, `recharts`, `cmdk`?**
+  _High betweenness centrality (0.251) - this node is a cross-community bridge._
 - **Why does `lenis` connect `Drawer UI Components` to `UI Library Dependencies`?**
-  _High betweenness centrality (0.216) - this node is a cross-community bridge._
+  _High betweenness centrality (0.214) - this node is a cross-community bridge._
 - **What connects `checks`, `$schema`, `style` to the rest of the system?**
-  _844 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _852 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Checkout and Site Header` be split into smaller, more focused modules?**
-  _Cohesion score 0.12685560053981107 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10676532769556026 - nodes in this community are weakly interconnected._
 - **Should `App Routing and Pages` be split into smaller, more focused modules?**
-  _Cohesion score 0.03432700993676603 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0345679012345679 - nodes in this community are weakly interconnected._
 - **Should `Dynamic Quiz Logic` be split into smaller, more focused modules?**
-  _Cohesion score 0.051490514905149054 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05789473684210526 - nodes in this community are weakly interconnected._
 - **Should `Linting and Formatting` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
