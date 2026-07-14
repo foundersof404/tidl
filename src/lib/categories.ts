@@ -33,6 +33,8 @@ export type CategoryFaqItem = {
 export type CategoryPenSpotlight = {
   kicker: string;
   title: string;
+  /** Emphasized second line under the title (e.g. "Just click.") */
+  titleEmphasis?: string;
   lead: string;
   image: string;
   features: readonly { num: string; title: string; body: string }[];
@@ -150,7 +152,8 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
     ],
     penSpotlight: {
       kicker: "The TIDL Pen",
-      title: "GLP-1, pre-dosed. Just click.",
+      title: "GLP-1, pre-dosed.",
+      titleEmphasis: "Just click.",
       lead:
         "Your weekly dose is set to your prescription before the pen leaves the pharmacy. A precision slider, graduated scale, and pre-filled cartridge mean you never handle vials or syringes at home.",
       image: SITE_IMAGES.pen,
@@ -167,13 +170,13 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
         },
         {
           num: "03",
-          title: "Pre-filled, tiny needle",
-          body: "One click per weekly injection. No vials or assembly.",
+          title: "Sealed and dispensed to you",
+          body: "Labeled with your name by a licensed US pharmacy.",
         },
         {
           num: "04",
-          title: "Cold-chain delivery",
-          body: "Insulated packaging keeps medication in range from pharmacy to door.",
+          title: "Cold-chain shipped",
+          body: "Temperature-safe, discreet packaging to your door.",
         },
       ],
       trustNote: "Prescription required. Individual results vary.",
@@ -417,34 +420,35 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
       },
     ],
     penSpotlight: {
-      kicker: "TIDL Pen for peptides",
-      title: "Recovery protocols, pre-dosed.",
+      kicker: "The TIDL Pen",
+      title: "Your dose leaves the pharmacy ready.",
+      titleEmphasis: "Just click.",
       lead:
-        "Select longevity peptide treatments ship in the TIDL Pen. Your dose is set before delivery so your weekly routine stays simple and consistent.",
+        "Select longevity peptide protocols ship in the TIDL Pen — prescription strength set before delivery. No vials. No reconstitution. One consistent weekly click.",
       image: SITE_IMAGES.pen,
       features: [
         {
           num: "01",
-          title: "Physician-set dose",
-          body: "Your provider determines the dose. The pen is prepared to match.",
+          title: "Dose locked at the pharmacy",
+          body: "Your provider writes the Rx. A licensed US pharmacy prepares the pen to match — you never dial at home.",
         },
         {
           num: "02",
-          title: "Simple weekly routine",
-          body: "No mixing or measuring. One consistent injection schedule.",
+          title: "Precision slider + scale",
+          body: "Clear markings from 0.1 to 1.0 ml. The mechanism matches your prescription, not a DIY kit.",
         },
         {
           num: "03",
-          title: "Travel-ready format",
-          body: "Compact pen design fits real life, including training and travel.",
+          title: "No mixing. No measuring.",
+          body: "Pre-filled cartridge. Tiny needle. One click per dose — back to training and travel.",
         },
         {
           num: "04",
-          title: "Cold-chain delivery",
-          body: "Insulated packaging protects temperature-sensitive compounds in transit.",
+          title: "Cold-chain, discreet delivery",
+          body: "Temperature-safe packaging in a plain outer box. Nothing on the label about what’s inside.",
         },
       ],
-      trustNote: "Prescription required. Not all longevity treatments use the pen.",
+      trustNote: "Prescription required. Not every longevity protocol uses the pen — your provider chooses the right format.",
     },
     faqItems: [
       {
@@ -490,7 +494,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
       "Physician-guided metabolic support for glucose balance, energy, and sustainable body composition — without gray-market guesswork.",
     extendedLead:
       "Metabolic health sits at the center of weight, energy, and long-term wellness. TIDL connects you with a licensed provider who reviews your intake and recommends treatment only when medically appropriate.",
-    heroImage: SITE_IMAGES.services.weightLoss,
+    heroImage: SITE_IMAGES.services.metabolic,
     productSlugs: ["mots-c"],
     pillars: [
       {
@@ -587,7 +591,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
       "Clinically supervised performance protocols for strength, drive, and recovery — real prescriptions, not gray-market shortcuts.",
     extendedLead:
       "Performance care at TIDL is physician-supervised. A licensed provider reviews your goals and history, then recommends treatment only when it is medically appropriate for you.",
-    heroImage: SITE_IMAGES.services.testosterone,
+    heroImage: SITE_IMAGES.services.performance,
     productSlugs: ["cjc-1295-ipamorelin", "tesamorelin"],
     pillars: [
       {
@@ -684,7 +688,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
       "Physician-guided recovery protocols for sleep, repair, and bounce-back — with the same medical standards as every TIDL treatment.",
     extendedLead:
       "Recovery is where progress sticks. TIDL recovery care starts with your intake, continues with licensed provider review, and ships only when a prescription is medically appropriate.",
-    heroImage: SITE_IMAGES.services.longevity,
+    heroImage: SITE_IMAGES.services.recovery,
     productSlugs: ["bpc-157", "tb-500", "wolverine"],
     pillars: [
       {
@@ -775,4 +779,8 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
 
 export function getCategory(slug: CategorySlug): CategoryDefinition {
   return CATEGORIES[slug];
+}
+
+export function isCategorySlug(value: string): value is CategorySlug {
+  return (CATEGORY_SLUGS as readonly string[]).includes(value);
 }

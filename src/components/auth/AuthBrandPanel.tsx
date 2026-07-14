@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
-import authBrandRunner from "@/assets/auth-brand-runner.png";
+import { SITE_IMAGES } from "@/lib/site-assets";
 
 export type AuthMode = "signin" | "signup";
 
@@ -15,7 +15,7 @@ export function AuthBrandPanel({ mode }: AuthBrandPanelProps) {
     <aside className="auth-brand" aria-label="TIDL brand">
       <motion.img
         className="auth-brand-photo"
-        src={authBrandRunner}
+        src={SITE_IMAGES.auth.brand}
         alt="Elite runner mid-stride across a mountain ridge above the clouds at sunrise"
         initial={reduce ? false : { scale: 1.06, opacity: 0.72 }}
         animate={{ scale: 1, opacity: 1 }}

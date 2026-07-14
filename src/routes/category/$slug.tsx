@@ -1,6 +1,6 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { CategoryPage, isCategorySlug } from "@/components/category/CategoryPage";
-import { getCategory } from "@/lib/categories";
+import { CategoryPage } from "@/components/category/CategoryPage";
+import { getCategory, isCategorySlug } from "@/lib/categories";
 
 export const Route = createFileRoute("/category/$slug")({
   head: ({ params }) => {

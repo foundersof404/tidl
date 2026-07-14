@@ -1,0 +1,514 @@
+/* Treatments formulary — white cinematic sales stage */
+
+.cform {
+  --cform-ink: #171310;
+  --cform-muted: rgba(23, 19, 16, 0.58);
+  --cform-line: rgba(23, 19, 16, 0.1);
+  --cform-gold: rgb(243, 195, 0);
+  --cform-gold-deep: rgb(190, 152, 0);
+  --cform-gold-soft: rgba(243, 195, 0, 0.14);
+  --cform-stage: #ffffff;
+  --cform-mist: #f7f5f1;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(58% 48% at 8% 0%, rgba(243, 195, 0, 0.1), transparent 58%),
+    radial-gradient(42% 40% at 96% 8%, rgba(23, 19, 16, 0.04), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #fbfaf7 52%, #ffffff 100%);
+  color: var(--cform-ink);
+  padding: clamp(80px, 11vw, 132px) clamp(20px, 5vw, 72px);
+}
+
+.cform::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(23, 19, 16, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 19, 16, 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 20%, transparent 78%);
+}
+
+.cform-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.cform-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--cform-gold-deep);
+}
+
+.cform-kicker-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cform-gold);
+  box-shadow: 0 0 0 5px var(--cform-gold-soft);
+}
+
+.cform-head {
+  max-width: 42rem;
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.cform-title {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.15rem, 5.2vw, 3.65rem);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  color: var(--cform-ink);
+}
+
+.cform-title span {
+  display: block;
+  margin-top: 14px;
+  max-width: 34rem;
+  font-size: clamp(1.02rem, 1.8vw, 1.18rem);
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  color: var(--cform-muted);
+}
+
+.cform-shelf {
+  display: grid;
+  gap: clamp(28px, 4vw, 40px);
+}
+
+.cform-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.4fr) minmax(0, 1fr);
+  gap: clamp(24px, 3.5vw, 44px);
+  align-items: stretch;
+  padding: clamp(20px, 2.6vw, 32px);
+  border-radius: 32px;
+  border: 1px solid rgba(23, 19, 16, 0.08);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.88)),
+    var(--cform-mist);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 28px 70px rgba(23, 19, 16, 0.06);
+  overflow: hidden;
+  transition:
+    border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cform-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, transparent, var(--cform-gold), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.cform-card:hover {
+  border-color: rgba(243, 195, 0, 0.38);
+  transform: translateY(-3px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 36px 90px rgba(23, 19, 16, 0.1),
+    0 0 0 1px rgba(243, 195, 0, 0.08);
+}
+
+.cform-card:hover::before,
+.cform-card.is-lead::before,
+.cform-card.is-popular::before {
+  opacity: 1;
+}
+
+.cform-card.is-lead,
+.cform-card.is-popular {
+  border-color: rgba(243, 195, 0, 0.28);
+  background:
+    radial-gradient(90% 80% at 0% 0%, rgba(243, 195, 0, 0.1), transparent 55%),
+    linear-gradient(165deg, #ffffff, #fbf8f0);
+}
+
+.cform-card-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(243, 195, 0, 0.18), transparent 52%),
+    radial-gradient(circle at 50% 100%, rgba(23, 19, 16, 0.05), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f3f0ea 100%);
+  border: 1px solid rgba(23, 19, 16, 0.06);
+  overflow: hidden;
+}
+
+.cform-card-media::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 14%;
+  height: 18%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(23, 19, 16, 0.14), transparent 70%);
+  pointer-events: none;
+}
+
+.cform-card-glow {
+  position: absolute;
+  inset: 12% 16% auto;
+  height: 48%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(243, 195, 0, 0.28), transparent 70%);
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.cform-card-vial {
+  position: relative;
+  z-index: 1;
+  width: min(76%, 230px);
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cform-card:hover .cform-card-vial {
+  transform: translateY(-10px) scale(1.04);
+}
+
+.cform-card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--cform-ink);
+  color: #fff8e8;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 24px rgba(23, 19, 16, 0.18);
+}
+
+.cform-card.is-popular .cform-card-badge {
+  background: linear-gradient(135deg, #171310, #2a241c);
+}
+
+.cform-card-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 6px 6px 4px 0;
+}
+
+.cform-card-index {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cform-gold-deep);
+}
+
+.cform-card-name {
+  margin: 0 0 14px;
+  font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--cform-ink);
+}
+
+.cform-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.cform-card-price em {
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cform-muted);
+}
+
+.cform-card-price b {
+  font-size: clamp(1.9rem, 3.2vw, 2.45rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--cform-ink);
+  line-height: 1;
+}
+
+.cform-card-price i {
+  font-style: normal;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cform-muted);
+}
+
+.cform-card-hook {
+  margin: 0 0 8px;
+  font-size: 1.08rem;
+  font-weight: 650;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: var(--cform-ink);
+}
+
+.cform-card-desc {
+  margin: 0 0 18px;
+  max-width: 46ch;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--cform-muted);
+}
+
+.cform-card-outcomes {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.cform-card-outcomes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.94rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--cform-ink);
+}
+
+.cform-card-outcomes svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--cform-gold-deep);
+}
+
+.cform-card-facts,
+.cform-card-facts--slim {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 0 14px;
+  padding: 0;
+  border-radius: 18px;
+  border: 1px solid rgba(23, 19, 16, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+}
+
+.cform-card-facts div {
+  min-width: 0;
+  padding: 14px 16px;
+  border-top: 1px solid rgba(23, 19, 16, 0.06);
+}
+
+.cform-card-facts div:nth-child(1),
+.cform-card-facts div:nth-child(2) {
+  border-top: 0;
+}
+
+.cform-card-facts div:nth-child(even) {
+  border-left: 1px solid rgba(23, 19, 16, 0.08);
+}
+
+.cform-card-variants {
+  margin: 0 0 18px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--cform-muted);
+}
+
+.cform-card-facts dt {
+  margin: 0 0 4px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cform-muted);
+}
+
+.cform-card-facts dd {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--cform-ink);
+  word-break: break-word;
+}
+
+.cform-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 2px;
+}
+
+.cform-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.28s ease,
+    color 0.28s ease,
+    border-color 0.28s ease,
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.cform-btn--primary {
+  background: linear-gradient(180deg, #ffe254 0%, var(--cform-gold) 100%);
+  color: #171310;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 14px 28px rgba(243, 195, 0, 0.28);
+}
+
+.cform-btn--primary:hover {
+  background: linear-gradient(180deg, #ffe97a 0%, #ffd84a 100%);
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 18px 34px rgba(243, 195, 0, 0.34);
+}
+
+.cform-btn--ghost {
+  background: transparent;
+  color: var(--cform-ink);
+  border-color: rgba(23, 19, 16, 0.14);
+}
+
+.cform-btn--ghost:hover {
+  border-color: rgba(243, 195, 0, 0.55);
+  color: var(--cform-gold-deep);
+  background: rgba(243, 195, 0, 0.06);
+}
+
+.cform-empty {
+  margin-top: clamp(20px, 3vw, 28px);
+  padding: clamp(28px, 4vw, 44px);
+  border-radius: 28px;
+  border: 1px solid rgba(23, 19, 16, 0.08);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 20px 50px rgba(23, 19, 16, 0.05);
+  max-width: 640px;
+}
+
+.cform-empty h3 {
+  margin: 0 0 10px;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+}
+
+.cform-empty p {
+  margin: 0 0 20px;
+  color: var(--cform-muted);
+  line-height: 1.55;
+}
+
+@keyframes cformGlow {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@media (max-width: 860px) {
+  .cform-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cform-card-media {
+    min-height: 260px;
+  }
+
+  .cform-card-copy {
+    padding: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .cform-card-facts,
+  .cform-card-facts--slim {
+    grid-template-columns: 1fr;
+  }
+
+  .cform-card-facts div + div {
+    border-left: 0;
+    border-top: 1px solid rgba(23, 19, 16, 0.08);
+  }
+
+  .cform-card-actions {
+    flex-direction: column;
+  }
+
+  .cform-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cform-card,
+  .cform-card-vial,
+  .cform-btn,
+  .cform-card-glow {
+    transition: none;
+    animation: none;
+  }
+
+  .cform-card:hover,
+  .cform-card:hover .cform-card-vial,
+  .cform-btn--primary:hover {
+    transform: none;
+  }
+}

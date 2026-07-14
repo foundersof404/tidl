@@ -1,5 +1,9 @@
 /** TIDL site imagery — gold-direction hf_20260705/06 shoot + shared assets */
 
+import categoryMetabolicHealth from "@/assets/category-metabolic-health.png";
+import categoryPerformance from "@/assets/category-performance.png";
+import categoryRecovery from "@/assets/category-recovery.png";
+import familiesMeasureProgress from "@/assets/families-measure-progress.png";
 import testimonialPortraitMan from "@/assets/testimonial-portrait-man.png";
 import testimonialPortraitWoman from "@/assets/testimonial-portrait-woman.png";
 import tidlPenWithLabel from "@/assets/TIDL_Pen-Rendering_WITH-LABEL.png";
@@ -33,6 +37,9 @@ export const SITE_IMAGES = {
     weightLoss: img("6a4a948975e49a6ca9c6b6e5_hf_20260705_172618_ea8e3be2-4637-4096-83cc-5ec995f07e09.png"),
     testosterone: img("6a4a95a92a6dee9e17ed919e_hf_20260705_173015_06ec6b8c-b985-4bab-80b1-41afe144db92.png"),
     longevity: img("6a4bd7ba829cdf371074ee74_hf_20260706_160923_8f107d2e-39e5-41c3-8290-18fd580d714a.png"),
+    metabolic: categoryMetabolicHealth,
+    performance: categoryPerformance,
+    recovery: categoryRecovery,
   },
   /**
    * Labeled TIDL Pen product cutout.
@@ -49,6 +56,10 @@ export const SITE_IMAGES = {
   families: {
     bg: img("6a4bdcc786041c1c67e4f84a_hf_20260706_164258_2d8f8b0b-75a0-491a-bc5b-ce98730f9f41.png"),
     cardShadow: img("6a484775bf274d9b9ec3f7bb_shadow%20(17).png"),
+    progress: familiesMeasureProgress,
+  },
+  auth: {
+    brand: familiesMeasureProgress,
   },
   journey: {
     circle: img("6a484775bf274d9b9ec3f79b_Circle.svg"),

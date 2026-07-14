@@ -20,30 +20,41 @@ export function useSiteHeaderState(options: UseSiteHeaderStateOptions = {}) {
   const [theme, setTheme] = useState<SiteHeaderTheme>(defaultTheme);
 
   useEffect(() => {
-    const onScroll = () => {
+    let pinnedRaf = 0;
+    let themeRaf = 0;
+    let lastPinned = false;
+    let lastTheme: SiteHeaderTheme = defaultTheme;
+    let lastThemeY = -1;
+
+    const measurePinned = () => {
+      pinnedRaf = 0;
       const headerWrap = document.querySelector(".site-header-wrap");
-      setPinned(headerWrap ? headerWrap.getBoundingClientRect().top <= 0 : window.scrollY > 0);
+      const next = headerWrap
+        ? headerWrap.getBoundingClientRect().top <= 0
+        : window.scrollY > 0;
+      if (next !== lastPinned) {
+        lastPinned = next;
+        setPinned(next);
+      }
     };
 
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
+    const measureTheme = () => {
+      themeRaf = 0;
+      const y = window.scrollY;
+      // Skip tiny Lenis sub-pixel updates that don't change section coverage.
+      if (Math.abs(y - lastThemeY) < 8 && lastThemeY >= 0) return;
+      lastThemeY = y;
 
-  useEffect(() => {
-    const sections = document.querySelectorAll<HTMLElement>(THEME_SELECTOR);
-
-    const pickTheme = () => {
+      const sections = document.querySelectorAll<HTMLElement>(THEME_SELECTOR);
       if (!sections.length) {
-        setTheme(defaultTheme);
+        if (lastTheme !== defaultTheme) {
+          lastTheme = defaultTheme;
+          setTheme(defaultTheme);
+        }
         return;
       }
 
-      const headerLine = pinned ? 64 : 120;
+      const headerLine = lastPinned ? 64 : 120;
       let best: { el: HTMLElement; score: number } | null = null;
 
       sections.forEach((el) => {
@@ -62,17 +73,28 @@ export function useSiteHeaderState(options: UseSiteHeaderStateOptions = {}) {
 
       if (!best) return;
       const next = readSectionTheme(best.el);
-      if (next) setTheme(next);
+      if (next && next !== lastTheme) {
+        lastTheme = next;
+        setTheme(next);
+      }
     };
 
-    pickTheme();
-    window.addEventListener("scroll", pickTheme, { passive: true });
-    window.addEventListener("resize", pickTheme);
-    return () => {
-      window.removeEventListener("scroll", pickTheme);
-      window.removeEventListener("resize", pickTheme);
+    const onScroll = () => {
+      if (!pinnedRaf) pinnedRaf = requestAnimationFrame(measurePinned);
+      if (!themeRaf) themeRaf = requestAnimationFrame(measureTheme);
     };
-  }, [pinned, defaultTheme]);
+
+    measurePinned();
+    measureTheme();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (pinnedRaf) cancelAnimationFrame(pinnedRaf);
+      if (themeRaf) cancelAnimationFrame(themeRaf);
+    };
+  }, [defaultTheme]);
 
   const transparent = !pinned;
 

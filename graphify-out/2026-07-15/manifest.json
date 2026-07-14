@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "src/components/category/CategoryAmbient.tsx": {
-    "mtime": 1784066255.3960886,
-    "ast_hash": "eade0fafcecc2035c192ccb2ed4fe1c4",
+    "mtime": 1783685838.1470673,
+    "ast_hash": "2fade3189086662faf0a6f1d37db0ab7",
     "semantic_hash": ""
   },
   "src/components/category/CategoryBundle.tsx": {
@@ -90,13 +90,13 @@
     "semantic_hash": ""
   },
   "src/components/category/CategoryHero.tsx": {
-    "mtime": 1784066314.9020643,
-    "ast_hash": "655495c1efb10d85fcf10fde8d500b0b",
+    "mtime": 1784063577.4323714,
+    "ast_hash": "eef5c71cac121b03ab4f547506d3aa2f",
     "semantic_hash": ""
   },
   "src/components/category/CategoryPage.tsx": {
-    "mtime": 1784066336.7015858,
-    "ast_hash": "6d0d60a4b775aa134894dbec8e84a785",
+    "mtime": 1784063170.3686888,
+    "ast_hash": "e18b2bf9debd441c11dbbfe8c8ddcce2",
     "semantic_hash": ""
   },
   "src/components/category/CategoryPenProgram.tsx": {
@@ -580,8 +580,8 @@
     "semantic_hash": ""
   },
   "src/hooks/use-lenis-scroll.ts": {
-    "mtime": 1784066151.7644477,
-    "ast_hash": "89c71116a6ca76f38909485911c5fa35",
+    "mtime": 1783788017.6840491,
+    "ast_hash": "b1da717204eec21523f00faaa249cc80",
     "semantic_hash": ""
   },
   "src/hooks/use-mobile.tsx": {
@@ -595,8 +595,8 @@
     "semantic_hash": ""
   },
   "src/hooks/useSiteHeaderState.ts": {
-    "mtime": 1784066146.8483353,
-    "ast_hash": "e72da370e9e3069d8820821490f9733d",
+    "mtime": 1783620338.8846278,
+    "ast_hash": "ccd23d487900394780f5c53c8a2ebad1",
     "semantic_hash": ""
   },
   "src/lib/age-gate.ts": {
@@ -615,8 +615,8 @@
     "semantic_hash": ""
   },
   "src/lib/categories.ts": {
-    "mtime": 1784065207.311654,
-    "ast_hash": "60506c5320976c62816c28c04b037419",
+    "mtime": 1784060264.2031667,
+    "ast_hash": "3d513717e04746efa657a8f3d5229bd5",
     "semantic_hash": ""
   },
   "src/lib/category-bundles.ts": {
@@ -1660,8 +1660,8 @@
     "semantic_hash": ""
   },
   "src/components/category/CategoryFormularySection.tsx": {
-    "mtime": 1784064753.0181983,
-    "ast_hash": "b690b4bb4c79d984549ce745d4dff9b6",
+    "mtime": 1784063725.9413254,
+    "ast_hash": "ce398aaf71536e4c840b2b586db4e1bb",
     "semantic_hash": ""
   },
   "ui/TIDL-Design-System.md": {
@@ -1697,16 +1697,6 @@
   "src/assets/families-measure-progress.png": {
     "mtime": 1784058783.7217453,
     "ast_hash": "ba7d2c66192716d676eda462cd5ed9b7",
-    "semantic_hash": ""
-  },
-  "src/components/category/CategoryPenSection.tsx": {
-    "mtime": 1784066337.088708,
-    "ast_hash": "46b2fc4d16bb5ec14dcb81d980f0f6b8",
-    "semantic_hash": ""
-  },
-  "src/components/category/CategoryWhySection.tsx": {
-    "mtime": 1784066619.8226528,
-    "ast_hash": "f4aa882a6a9d6e6ecd19f1046445c1a0",
     "semantic_hash": ""
   }
 }

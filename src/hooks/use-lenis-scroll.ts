@@ -19,14 +19,22 @@ export function useLenisScroll() {
       infinite: false,
     });
 
-    lenis.on("scroll", ScrollTrigger.update);
+    let stRaf = 0;
+    lenis.on("scroll", () => {
+      if (stRaf) return;
+      stRaf = requestAnimationFrame(() => {
+        ScrollTrigger.update();
+        stRaf = 0;
+      });
+    });
 
     const onTick = (time: number) => {
       lenis.raf(time * 1000);
     };
 
     gsap.ticker.add(onTick);
-    gsap.ticker.lagSmoothing(0);
+    // Allow GSAP to skip frames under load instead of fighting the main thread.
+    gsap.ticker.lagSmoothing(500);
 
     return () => {
       gsap.ticker.remove(onTick);

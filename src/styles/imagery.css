@@ -86,6 +86,7 @@
 }
 
 .families-card-img,
+.families-card-photo,
 .circle-info-img,
 .families-bg {
   filter: saturate(0.94) contrast(1.03);

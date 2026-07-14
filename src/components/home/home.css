@@ -252,26 +252,16 @@
   height: 100%;
   z-index: 1;
   transform: translate(-50%, -50%) rotate(22deg);
-  filter: blur(26px);
-  opacity: .6;
+  opacity: .42;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 4%, rgba(243,195,0,.5) 32%, rgba(255,217,80,.9) 50%, rgba(190,152,0,.45) 68%, transparent 96%);
-  animation: tdlp5Blade 6s ease-in-out infinite;
+  /* Soft gradient stands in for animated blur — avoids per-frame filter repaints */
+  background: linear-gradient(180deg, transparent 4%, rgba(243,195,0,.28) 32%, rgba(255,217,80,.55) 50%, rgba(190,152,0,.28) 68%, transparent 96%);
 }
 .tdlp5-blade.core {
   left: 47.5%;
   width: 8px;
-  filter: blur(5px);
-  opacity: .85;
-}
-@keyframes tdlp5Blade {
-  0%, 100% { opacity: .38; }
-  50% { opacity: .55; }
-}
-.tdlp5-blade.core { animation: tdlp5BladeCore 6s ease-in-out infinite; }
-@keyframes tdlp5BladeCore {
-  0%, 100% { opacity: .6; }
-  50% { opacity: .9; }
+  opacity: .7;
+  background: linear-gradient(180deg, transparent 4%, rgba(243,195,0,.45) 32%, rgba(255,217,80,.75) 50%, rgba(190,152,0,.4) 68%, transparent 96%);
 }
 .tdlp5-aura {
   position: absolute;
@@ -288,13 +278,8 @@
   height: 26px;
   transform: translateX(-72%);
   z-index: 1;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 68%);
-  filter: blur(4px);
-  animation: tdlp5Sh 6s ease-in-out infinite;
-}
-@keyframes tdlp5Sh {
-  0%, 100% { transform: translateX(-72%) scaleX(1); opacity: .85; }
-  50% { transform: translateX(-72%) scaleX(.82); opacity: .5; }
+  background: radial-gradient(ellipse at center, rgba(0,0,0,.72) 0%, rgba(0,0,0,0) 68%);
+  opacity: .75;
 }
 .tdlp5-imgwrap {
   position: relative;
@@ -303,19 +288,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: transform;
 }
 .tdlp5-levit {
   position: relative;
-  animation: tdlp5Levit 6s ease-in-out infinite;
-  will-change: transform;
+  animation: tdlp5Levit 7s ease-in-out infinite;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 @keyframes tdlp5Levit {
-  0%, 100% { transform: translateY(-8px); }
-  50% { transform: translateY(8px); }
+  0%, 100% { transform: translate3d(0, -6px, 0); }
+  50% { transform: translate3d(0, 6px, 0); }
 }
 .tdlp5-img {
   width: 100%;
@@ -323,7 +306,6 @@
   display: block;
   background: none;
   background-color: transparent;
-  filter: contrast(1.12) brightness(0.96) saturate(1.06);
 }
 .tdlp5-col {
   display: flex;
@@ -4071,6 +4053,25 @@ html::-webkit-scrollbar-track {
   padding-top: 0 !important;
 }
 
+.families .families-card--photo {
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  height: 400px;
+  background-image: none;
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.families .families-card-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
 /* ===== Testimonials ΓÇö dual-row marquee ===== */
 
 .tst-sec {
@@ -5248,6 +5249,10 @@ html::-webkit-scrollbar-track {
   .families .families-card._02,
   .families .families-card._03 {
     border-radius: 16px;
+  }
+
+  .families .families-card--photo {
+    height: min(320px, 72vw);
   }
 
   .families .families-bg {

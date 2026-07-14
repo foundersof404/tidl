@@ -8,26 +8,33 @@ import {
 } from "@/lib/prescribe-rx/use-live-catalog";
 import { getPeptideDef } from "@/lib/peptides";
 import { getProductBySlug } from "@/lib/products";
+import type { CategorySlug } from "@/lib/categories";
 import { PRODUCT_SLUGS, type ProductSlug } from "@/types/quiz";
 
-/** All marketed products on the homepage sandbox strip (11 — not the full catalog). */
+/** All marketed products available from the sandbox catalog (11 — not the full catalog). */
 export const HOME_FEATURED_SLUGS: readonly ProductSlug[] = PRODUCT_SLUGS;
 
 /**
- * Care pathways we surface on the landing page.
- * Includes TRT / HRT / ED assessment routes present in the sandbox tenant.
+ * Care pathways we surface from the sandbox tenant, keyed by category page.
  */
-const HOME_ENCOUNTER_SLUGS = new Set([
-  "glp-1-screening",
-  "glp-1-re-assessment",
-  "peptide-assessment",
-  "peptide-reassessment",
-  "male-trt-consult",
-  "male-trt-reassessment",
-  "female-hrt",
-  "female-hrt-reassessment",
-  "mens-sexual-health-ed-assessment",
-]);
+export const CATEGORY_ENCOUNTER_SLUGS: Record<CategorySlug, readonly string[]> = {
+  "weight-loss": ["glp-1-screening", "glp-1-re-assessment"],
+  "metabolic-health": ["peptide-assessment", "peptide-reassessment"],
+  testosterone: [
+    "male-trt-consult",
+    "male-trt-reassessment",
+    "mens-sexual-health-ed-assessment",
+    "female-hrt",
+    "female-hrt-reassessment",
+  ],
+  longevity: ["peptide-assessment", "peptide-reassessment"],
+  performance: ["peptide-assessment", "peptide-reassessment"],
+  recovery: ["peptide-assessment", "peptide-reassessment"],
+};
+
+const ALL_ENCOUNTER_SLUGS = new Set(
+  Object.values(CATEGORY_ENCOUNTER_SLUGS).flatMap((slugs) => [...slugs]),
+);
 
 let encounterCache: PrxEncounterTypeSummary[] | null = null;
 let encounterInflight: Promise<PrxEncounterTypeSummary[]> | null = null;
@@ -38,7 +45,7 @@ async function loadHomeEncounters(): Promise<PrxEncounterTypeSummary[]> {
     encounterInflight = fetchPrxEncounterTypes()
       .then((list) => {
         const rows = Array.isArray(list?.data) ? list.data : [];
-        encounterCache = rows.filter((e) => HOME_ENCOUNTER_SLUGS.has(e.slug));
+        encounterCache = rows.filter((e) => ALL_ENCOUNTER_SLUGS.has(e.slug));
         return encounterCache;
       })
       .catch(() => {
@@ -87,7 +94,7 @@ function goalLabel(goal: string): string {
 }
 
 /**
- * Landing-page sandbox fetch — same idea as the dynamic quiz:
+ * Sandbox fetch shared by homepage hero pricing and category formulary pages:
  * pull live catalog + encounter types, then map the marketed set.
  */
 export function useHomeSandbox(): HomeSandboxData {
@@ -154,4 +161,22 @@ export function useHomeSandbox(): HomeSandboxData {
     catalogCount: catalogTotal,
     packageCount: packages.length,
   };
+}
+
+/** Featured peptides that belong on a specific category page. */
+export function filterFeaturedForCategory(
+  featured: HomeFeaturedPeptide[],
+  productSlugs: readonly ProductSlug[],
+): HomeFeaturedPeptide[] {
+  const allow = new Set(productSlugs);
+  return featured.filter((item) => allow.has(item.slug));
+}
+
+/** Encounter pathways relevant to a specific category page. */
+export function filterEncountersForCategory(
+  encounters: PrxEncounterTypeSummary[],
+  categorySlug: CategorySlug,
+): PrxEncounterTypeSummary[] {
+  const allow = new Set(CATEGORY_ENCOUNTER_SLUGS[categorySlug] ?? []);
+  return encounters.filter((enc) => allow.has(enc.slug));
 }

@@ -7,7 +7,6 @@ import { useSiteHeaderState } from '@/hooks/useSiteHeaderState';
 import './home.css';
 import { CtaSection } from './cta/CtaSection';
 import { ServicesSection } from './ServicesSection';
-import { SandboxPeptidesSection } from './SandboxPeptidesSection';
 import { StoriesSection } from './StoriesSection';
 import { JourneySection } from './JourneySection';
 import { AskTidlSection, type AskTidlSectionHandle } from './AskTidlSection';
@@ -107,7 +106,6 @@ export default function HomePage() {
   const homeNavLinks = [
     { href: '#services', label: 'Treatments' },
     { href: '#tdlp5', label: 'The Pen' },
-    { href: '#sandbox-peptides', label: 'Peptides' },
     { href: '#journey', label: 'About' },
     { href: '#stories', label: 'Reviews' },
     { href: '#askTidl', label: 'Ask TIDL' },
@@ -519,8 +517,6 @@ export default function HomePage() {
                       </div>
         ) : null}
 
-        <SandboxPeptidesSection />
-
         <JourneySection onGetStarted={openQuiz} />
 
         <StoriesSection />
@@ -573,9 +569,13 @@ export default function HomePage() {
                   <div className="families-card _02">
                     <div className="families-card-text-02 heading-03">Shipped from a US pharmacy. Plain packaging.</div>
                   </div>
-                  <div className="families-card _03">
-                    <img src="https://cdn.prod.website-files.com/6a484773bf274d9b9ec3f5b9/6a484775bf274d9b9ec3f6e0_barchirt.svg" loading="lazy" alt="" className="families-card-bar-03"/>
-                    <div className="families-card-text-03 heading-05">Progress you can measure, week after week</div>
+                  <div className="families-card _03 families-card--photo">
+                    <img
+                      src={SITE_IMAGES.families.progress}
+                      alt=""
+                      className="families-card-photo"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
