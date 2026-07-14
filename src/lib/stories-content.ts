@@ -1,7 +1,7 @@
 /** Homepage testimonials section copy. */
 
 export const STORIES_SECTION = {
-  title: "Firsthand Proof",
+  title: "Patient reviews",
 } as const;
 
 export const TESTIMONIAL_NOTES = [

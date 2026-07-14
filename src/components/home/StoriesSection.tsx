@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { TESTIMONIALS, type Testimonial } from "@/lib/testimonials";
+import { HOME_STORIES, type Testimonial } from "@/lib/testimonials";
 import { STORIES_SECTION, TESTIMONIAL_NOTES } from "@/lib/stories-content";
 
 const settle = [0.22, 1, 0.36, 1] as const;
@@ -205,6 +205,19 @@ function ReviewCard({ story }: { story: Testimonial }) {
       <span className="tst-marquee-card-ring" aria-hidden="true" />
       <span className="tst-marquee-card-ring tst-marquee-card-ring--trace" aria-hidden="true" />
 
+      {story.portraitImage ? (
+        <div className="tst-marquee-media" aria-hidden="true">
+          <img
+            src={story.portraitImage}
+            alt=""
+            className={`tst-marquee-portrait tst-marquee-portrait--hero${
+              story.figure === "man" ? " tst-marquee-portrait--man" : ""
+            }`}
+            loading="lazy"
+          />
+        </div>
+      ) : null}
+
       <blockquote className="tst-marquee-quote">&ldquo;{story.quote}&rdquo;</blockquote>
 
       <footer className="tst-marquee-footer">
@@ -228,6 +241,7 @@ function ReviewCard({ story }: { story: Testimonial }) {
           </span>
         </div>
       </footer>
+      {story.result ? <p className="tst-marquee-result">{story.result}</p> : null}
     </article>
   );
 }
@@ -261,7 +275,7 @@ function MarqueeRow({
 }
 
 export function StoriesSection({
-  items = TESTIMONIALS,
+  items = HOME_STORIES,
   id = "stories",
   title = STORIES_SECTION.title,
 }: {

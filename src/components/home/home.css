@@ -2537,8 +2537,9 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 196px;
-  padding: 22px 22px 18px;
+  height: auto;
+  min-height: 280px;
+  padding: 0 0 16px;
   border-radius: 20px;
   border: 1px solid rgba(243, 195, 0, 0.26);
   background: #ffffff;
@@ -2547,6 +2548,46 @@
     0 10px 28px -24px rgba(23, 19, 16, 0.14);
   overflow: hidden;
   transition: box-shadow 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+}
+
+.tst-marquee-media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  margin: 0 0 14px;
+  padding: 12px 18px 0;
+  background: linear-gradient(145deg, #f3eee4, #e8dfd2);
+  overflow: hidden;
+}
+
+.tst-marquee-portrait {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 22px -12px rgba(23, 19, 16, 0.5);
+  background: #ddd;
+}
+
+.tst-marquee-portrait--hero {
+  position: static;
+}
+
+.tst-marquee-portrait--man {
+  width: 64px;
+  height: 64px;
+}
+
+.tst-marquee-result {
+  margin: 8px 18px 0;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: rgba(23, 19, 16, 0.55);
 }
 
 .tst-marquee-card-ring {
@@ -2635,14 +2676,14 @@
 }
 
 .tst-marquee-quote {
-  margin: 0;
+  margin: 0 18px 12px;
   flex: 1;
   min-height: 0;
   padding: 0;
   border: none;
   border-left: none !important;
   font-size: 0.92rem;
-  line-height: 1.62;
+  line-height: 1.55;
   font-style: normal;
   color: rgba(23, 19, 16, 0.76);
   display: -webkit-box;
@@ -2655,8 +2696,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 12px;
-  margin-top: auto;
+  margin: auto 18px 0;
+  gap: 10px;
   padding-top: 0;
 }
 
@@ -2796,8 +2837,13 @@
   }
 
   .tst-marquee-card {
-    height: 188px;
-    padding: 16px 18px 14px;
+    height: auto;
+    min-height: 260px;
+    padding: 0 0 14px;
+  }
+
+  .tst-marquee-media {
+    height: 100px;
   }
 
   .tst-marquee-card-ring {
@@ -2805,7 +2851,7 @@
   }
 
   .tst-marquee-quote {
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     font-size: 0.88rem;
   }
 }

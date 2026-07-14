@@ -8,7 +8,6 @@ import './home.css';
 import { CtaSection } from './cta/CtaSection';
 import { ServicesSection } from './ServicesSection';
 import { BrowseDirectorySection } from './BrowseDirectorySection';
-import { SandboxPeptidesSection } from './SandboxPeptidesSection';
 import { StoriesSection } from './StoriesSection';
 import { JourneySection } from './JourneySection';
 import { AskTidlSection, type AskTidlSectionHandle } from './AskTidlSection';
@@ -107,12 +106,11 @@ export default function HomePage() {
 
   const homeNavLinks = [
     { href: '#services', label: 'Treatments' },
-    { href: '#browse', label: 'Categories' },
-    { href: '#sandbox-peptides', label: 'Peptides' },
     { href: '#tdlp5', label: 'The Pen' },
-    { href: '#askTidl', label: 'Ask TIDL' },
+    { href: '#browse', label: 'Categories' },
     { href: '#journey', label: 'About' },
-    { href: '#stories', label: 'Stories' },
+    { href: '#stories', label: 'Reviews' },
+    { href: '#askTidl', label: 'Ask TIDL' },
     { href: '#faq', label: 'FAQ' },
     { to: '/products/glp-1-weight-loss', label: 'GLP-1 Program' },
   ];
@@ -377,10 +375,7 @@ export default function HomePage() {
 
         <ServicesSection />
 
-        <BrowseDirectorySection />
-
-        <SandboxPeptidesSection />
-
+        {/* Pen hero — Overview: pen is the differentiator, right after goal selection */}
         {/* ===== TIDL Pen Section ===== */}
         <section className="tdlp5-sec" id="tdlp5" data-site-header-theme="dark">
           <div className="tdlp5-head">
@@ -495,9 +490,13 @@ export default function HomePage() {
                       </div>
         ) : null}
 
-        <AskTidlSection ref={askTidlRef} />
+        <BrowseDirectorySection />
 
         <JourneySection onGetStarted={openQuiz} />
+
+        <StoriesSection />
+
+        <AskTidlSection ref={askTidlRef} />
 
         {/* ===== Families Section ===== */}
         <section className="families container-full" id="families" data-site-header-theme="dark">
@@ -561,8 +560,6 @@ export default function HomePage() {
             loading="lazy"
           />
         </section>
-
-        <StoriesSection />
 
         {/* ===== FAQ Section ===== */}
         <section className="tdlfaq-sec" id="faq" data-site-header-theme="light">
