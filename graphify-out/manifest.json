@@ -230,8 +230,8 @@
     "semantic_hash": ""
   },
   "src/components/pdp/PdpBeforeAfterSection.tsx": {
-    "mtime": 1784069285.7502632,
-    "ast_hash": "bd9449c9099f4129c7efff73bf53a671",
+    "mtime": 1784070337.344838,
+    "ast_hash": "fabd6237f1f6f640890a56d8c8c01415",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpCtaBand.tsx": {
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "src/components/pdp/PdpHeroSection.tsx": {
-    "mtime": 1784069955.080781,
-    "ast_hash": "f01a4131bb0ce52622bbd57d4e3acfdb",
+    "mtime": 1784073847.642694,
+    "ast_hash": "64342b291f77cfc19389497cee03a0cf",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpIncludedSection.tsx": {
@@ -285,8 +285,8 @@
     "semantic_hash": ""
   },
   "src/components/pdp/PdpTransformationSection.tsx": {
-    "mtime": 1784068954.0896733,
-    "ast_hash": "40c8997c10586b1345452ddb1d3e9b3e",
+    "mtime": 1784070229.6105783,
+    "ast_hash": "78f5c229e4d83909998ed68e9744ae65",
     "semantic_hash": ""
   },
   "src/components/pdp/PdpVerticalTimeline.tsx": {
@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "src/components/pdp/ProductPdpPage.tsx": {
-    "mtime": 1784068954.0926728,
-    "ast_hash": "bf4022d8ddacf386dafde3fe520ada4a",
+    "mtime": 1784073890.1642025,
+    "ast_hash": "3420f7a997d0c391784e927106c68e61",
     "semantic_hash": ""
   },
   "src/components/pdp/usePdpHeaderState.ts": {
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "src/components/pdp/data/glp1-pdp-content.ts": {
-    "mtime": 1784068954.0956738,
-    "ast_hash": "57a232d6613689a5b14d799c90c8016a",
+    "mtime": 1784073908.8127823,
+    "ast_hash": "307e63a10906ca0939641942e7c0130d",
     "semantic_hash": ""
   },
   "src/components/pdp/data/glp1-pdp-data.ts": {
@@ -660,8 +660,8 @@
     "semantic_hash": ""
   },
   "src/lib/pdp-marketing.ts": {
-    "mtime": 1784069298.2707136,
-    "ast_hash": "875d444fb4fe1ebc59e4960aab3e0fa3",
+    "mtime": 1784070228.5816247,
+    "ast_hash": "8329ece99c34ce4306cc8bc55e8773c3",
     "semantic_hash": ""
   },
   "src/lib/peptide-images.ts": {
@@ -1942,6 +1942,16 @@
   "public/pdp/AFTER.png": {
     "mtime": 1784069167.9999263,
     "ast_hash": "25950364c5cfafda90a0db59333ae696",
+    "semantic_hash": ""
+  },
+  "src/components/pdp/PdpMinimalSections.tsx": {
+    "mtime": 1784073908.24696,
+    "ast_hash": "2164204317029494abbfc93544d2a131",
+    "semantic_hash": ""
+  },
+  "public/pdp/page.md": {
+    "mtime": 1784073403.2435982,
+    "ast_hash": "1a411d81c069d3c8bea128d7f43865e4",
     "semantic_hash": ""
   }
 }

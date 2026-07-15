@@ -1,7 +1,7 @@
 # Graph Report - tidl_webiste  (2026-07-15)
 
 ## Corpus Check
-- 229 files · ~1,952,130 words
+- 229 files · ~1,952,140 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ac125f71`
+- Built from commit: `7c159983`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -379,7 +379,7 @@ Nodes (14): PEPTIDE_PRX_SLUGS, DEFAULT_ENCOUNTER_TYPE_SLUGS, DEFAULT_PRODUCT_TYP
 
 ### Community 24 - "UI Library Dependencies"
 Cohesion: 0.13
-Nodes (15): class-variance-authority, dependencies, class-variance-authority, @radix-ui/react-separator, @radix-ui/react-slot, @radix-ui/react-toggle, @radix-ui/react-tooltip, tailwindcss (+7 more)
+Nodes (15): date-fns, dependencies, date-fns, @radix-ui/react-separator, @radix-ui/react-slot, @radix-ui/react-toggle, @radix-ui/react-tooltip, tailwindcss (+7 more)
 
 ### Community 25 - "Form UI Components"
 Cohesion: 0.15
@@ -590,8 +590,8 @@ Cohesion: 0.22
 Nodes (8): CategoryFaqSection(), CategoryFaqSectionProps, CategoryWhySection(), CategoryWhySectionProps, formatMetric(), ProofMetric, protocolLabel(), CategoryDefinition
 
 ### Community 148 - "drawer.tsx"
-Cohesion: 0.14
-Nodes (14): 3.3 Spacing system, 3.4 Layout & containers, 3.5 Border radius tokens, 3.6 Shadows, blur, depth, 3.8 Opacity & borders, 3.9 Z-index scale, 3. Design Tokens (Canonical), Breakpoints (most used) (+6 more)
+Cohesion: 0.15
+Nodes (13): 3.2 Typography tokens, 3.4 Layout & containers, 3.5 Border radius tokens, 3.6 Shadows, blur, depth, 3.8 Opacity & borders, 3.9 Z-index scale, 3. Design Tokens (Canonical), Breakpoints (most used) (+5 more)
 
 ### Community 149 - "CategoryPenProgram.tsx"
 Cohesion: 0.47
@@ -682,8 +682,8 @@ Cohesion: 0.50
 Nodes (4): 1. Brand Personality, Emotional contract with the user, Personality adjectives (ranked), Why the site feels this way
 
 ### Community 233 - "3.3 Spacing system"
-Cohesion: 0.67
-Nodes (3): 3.2 Typography tokens, Hierarchy, Text rhythm
+Cohesion: 0.50
+Nodes (4): 3.3 Spacing system, Philosophy, Scales, Vertical rhythm rules
 
 ### Community 234 - "4. Color System in Context"
 Cohesion: 0.50

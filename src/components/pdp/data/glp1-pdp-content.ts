@@ -52,7 +52,7 @@ export const SHARED_CARE_FAQ = [
     id: 10,
     cat: "care",
     q: "Can I pause or cancel?",
-    a: "Yes. You're in control of your plan. Talk to your provider first if you're mid-treatment, since some medications shouldn't stop abruptly.",
+    a: "Yes. You're in control. Talk to your provider first if you're mid-treatment, since some medications shouldn't stop abruptly.",
   },
 ] as const;
 
@@ -102,11 +102,11 @@ export const GLP1_PDP_CONTENT: PdpPageContent = {
     rating: 4.9,
     reviewCount: "280+",
     startingPrice: 299,
-    priceNote: "Includes provider review, prescription, pen & discreet delivery",
+    priceNote: "Pay once for this treatment package. Includes provider review when approved.",
     perks: [
-      { label: "Doctor prescription", detail: "Licensed provider in your state" },
-      { label: "TIDL Pen included", detail: "Clear how-to with every shipment" },
-      { label: "Discreet delivery", detail: "Plain packaging · cold-chain when needed" },
+      { label: "Doctor-prescribed GLP-1 for weight loss", detail: "Licensed provider in your state" },
+      { label: "Quieter food noise, lasting appetite control", detail: "GLP-1/GIP pathway support" },
+      { label: "Weekly protocol · TIDL Pen included", detail: "Clear how-to with every shipment" },
     ],
     specs: [
       { label: "What it does", detail: "Mimics GIP + GLP-1 hormones to reduce appetite, improve fullness, and support significant weight loss." },

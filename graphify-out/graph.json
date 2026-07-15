@@ -1179,7 +1179,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "package_dependencies_clsx",
-      "community": 152,
+      "community": 24,
       "norm_label": "clsx"
     },
     {
@@ -1189,7 +1189,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "clsx",
-      "community": 152,
+      "community": 24,
       "norm_label": "clsx"
     },
     {
@@ -1219,7 +1219,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "package_dependencies_date_fns",
-      "community": 24,
+      "community": 99,
       "norm_label": "date-fns"
     },
     {
@@ -1229,7 +1229,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "date_fns",
-      "community": 24,
+      "community": 99,
       "norm_label": "date-fns"
     },
     {
@@ -2639,7 +2639,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categoryfaqsection",
-      "community": 147,
+      "community": 53,
       "norm_label": "categoryfaqsection.tsx"
     },
     {
@@ -2649,7 +2649,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_components_category_categoryfaqsection_categoryfaqsectionprops",
-      "community": 147,
+      "community": 53,
       "norm_label": "categoryfaqsectionprops"
     },
     {
@@ -2659,7 +2659,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_category_categoryfaqsection_faqicon",
-      "community": 147,
+      "community": 53,
       "norm_label": "faqicon()"
     },
     {
@@ -2669,7 +2669,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_components_category_categoryfaqsection_categoryfaqsection",
-      "community": 147,
+      "community": 53,
       "norm_label": "categoryfaqsection()"
     },
     {
@@ -2739,7 +2739,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categoryhero",
-      "community": 6,
+      "community": 53,
       "norm_label": "categoryhero.tsx"
     },
     {
@@ -2749,7 +2749,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_category_categoryhero_categoryheroprops",
-      "community": 6,
+      "community": 53,
       "norm_label": "categoryheroprops"
     },
     {
@@ -2759,7 +2759,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_category_categoryhero_scrolltoformulary",
-      "community": 6,
+      "community": 53,
       "norm_label": "scrolltoformulary()"
     },
     {
@@ -2779,7 +2779,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categoryhowsection",
-      "community": 132,
+      "community": 62,
       "norm_label": "categoryhowsection.tsx"
     },
     {
@@ -2789,7 +2789,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_category_categoryhowsection_categoryhowsectionprops",
-      "community": 132,
+      "community": 62,
       "norm_label": "categoryhowsectionprops"
     },
     {
@@ -2799,7 +2799,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_category_categoryhowsection_pathcopy",
-      "community": 132,
+      "community": 62,
       "norm_label": "pathcopy"
     },
     {
@@ -2809,7 +2809,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_components_category_categoryhowsection_path_copy",
-      "community": 132,
+      "community": 62,
       "norm_label": "path_copy"
     },
     {
@@ -2819,7 +2819,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_components_category_categoryhowsection_titleease",
-      "community": 132,
+      "community": 62,
       "norm_label": "titleease"
     },
     {
@@ -2829,7 +2829,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_components_category_categoryhowsection_chipease",
-      "community": 132,
+      "community": 62,
       "norm_label": "chipease"
     },
     {
@@ -2839,7 +2839,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "src_components_category_categoryhowsection_categoryhowsection",
-      "community": 132,
+      "community": 62,
       "norm_label": "categoryhowsection()"
     },
     {
@@ -2879,7 +2879,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram",
-      "community": 149,
+      "community": 6,
       "norm_label": "categorypenprogram.tsx"
     },
     {
@@ -2889,7 +2889,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram_categorypenprogramprops",
-      "community": 149,
+      "community": 6,
       "norm_label": "categorypenprogramprops"
     },
     {
@@ -2899,7 +2899,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram_curvedpath",
-      "community": 149,
+      "community": 6,
       "norm_label": "curvedpath()"
     },
     {
@@ -2909,7 +2909,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram_pathsequal",
-      "community": 149,
+      "community": 6,
       "norm_label": "pathsequal()"
     },
     {
@@ -2919,7 +2919,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_components_category_categorypenprogram_categorypenprogram",
-      "community": 149,
+      "community": 6,
       "norm_label": "categorypenprogram()"
     },
     {
@@ -2929,7 +2929,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categorypensection",
-      "community": 35,
+      "community": 84,
       "norm_label": "categorypensection.tsx"
     },
     {
@@ -2939,7 +2939,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_category_categorypensection_categorypensectionprops",
-      "community": 35,
+      "community": 84,
       "norm_label": "categorypensectionprops"
     },
     {
@@ -2949,7 +2949,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_components_category_categorypensection_categorypensection",
-      "community": 35,
+      "community": 84,
       "norm_label": "categorypensection()"
     },
     {
@@ -2959,7 +2959,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categoryproductcard",
-      "community": 100,
+      "community": 6,
       "norm_label": "categoryproductcard.tsx"
     },
     {
@@ -2969,7 +2969,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_components_category_categoryproductcard_categoryproductcardprops",
-      "community": 100,
+      "community": 6,
       "norm_label": "categoryproductcardprops"
     },
     {
@@ -2979,7 +2979,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_components_category_categoryproductcard_productpdplink",
-      "community": 100,
+      "community": 6,
       "norm_label": "productpdplink()"
     },
     {
@@ -2989,7 +2989,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_components_category_categoryproductcard_eyeicon",
-      "community": 100,
+      "community": 6,
       "norm_label": "eyeicon()"
     },
     {
@@ -2999,7 +2999,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_components_category_categoryproductcard_arrowicon",
-      "community": 100,
+      "community": 6,
       "norm_label": "arrowicon()"
     },
     {
@@ -3009,7 +3009,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "src_components_category_categoryproductcard_categoryproductcard",
-      "community": 100,
+      "community": 6,
       "norm_label": "categoryproductcard()"
     },
     {
@@ -3019,7 +3019,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_category_categorywhysection",
-      "community": 147,
+      "community": 53,
       "norm_label": "categorywhysection.tsx"
     },
     {
@@ -3029,7 +3029,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_category_categorywhysection_categorywhysectionprops",
-      "community": 147,
+      "community": 53,
       "norm_label": "categorywhysectionprops"
     },
     {
@@ -3039,7 +3039,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_category_categorywhysection_proofmetric",
-      "community": 147,
+      "community": 53,
       "norm_label": "proofmetric"
     },
     {
@@ -3049,7 +3049,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_components_category_categorywhysection_protocollabel",
-      "community": 147,
+      "community": 53,
       "norm_label": "protocollabel()"
     },
     {
@@ -3059,7 +3059,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_category_categorywhysection_formatmetric",
-      "community": 147,
+      "community": 53,
       "norm_label": "formatmetric()"
     },
     {
@@ -3069,7 +3069,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_components_category_categorywhysection_categorywhysection",
-      "community": 147,
+      "community": 53,
       "norm_label": "categorywhysection()"
     },
     {
@@ -3129,7 +3129,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutform",
-      "community": 57,
+      "community": 43,
       "norm_label": "checkoutform.tsx"
     },
     {
@@ -3139,7 +3139,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutform_readfileasdataurl",
-      "community": 57,
+      "community": 43,
       "norm_label": "readfileasdataurl()"
     },
     {
@@ -3149,7 +3149,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutform_locationicon",
-      "community": 57,
+      "community": 43,
       "norm_label": "locationicon()"
     },
     {
@@ -3159,7 +3159,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutform_cardicon",
-      "community": 57,
+      "community": 43,
       "norm_label": "cardicon()"
     },
     {
@@ -3169,7 +3169,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutform_clipboardicon",
-      "community": 57,
+      "community": 43,
       "norm_label": "clipboardicon()"
     },
     {
@@ -3179,7 +3179,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutform_idicon",
-      "community": 57,
+      "community": 43,
       "norm_label": "idicon()"
     },
     {
@@ -3189,7 +3189,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutform_locksmallicon",
-      "community": 57,
+      "community": 43,
       "norm_label": "locksmallicon()"
     },
     {
@@ -3209,7 +3209,7 @@
       "source_location": "L490",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutform_field",
-      "community": 57,
+      "community": 43,
       "norm_label": "field()"
     },
     {
@@ -3249,7 +3249,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_components_checkout_checkoutlayout_checkoutlayout",
-      "community": 0,
+      "community": 35,
       "norm_label": "checkoutlayout()"
     },
     {
@@ -3409,7 +3409,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_home_homepage",
-      "community": 0,
+      "community": 165,
       "norm_label": "homepage.tsx"
     },
     {
@@ -3419,7 +3419,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_components_home_homepage_faqitem",
-      "community": 0,
+      "community": 165,
       "norm_label": "faqitem"
     },
     {
@@ -3429,7 +3429,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_components_home_homepage_faq_data",
-      "community": 0,
+      "community": 165,
       "norm_label": "faq_data"
     },
     {
@@ -3439,7 +3439,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "src_components_home_homepage_faqicon",
-      "community": 0,
+      "community": 165,
       "norm_label": "faqicon()"
     },
     {
@@ -3449,7 +3449,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "src_components_home_homepage_homepage",
-      "community": 0,
+      "community": 35,
       "norm_label": "homepage()"
     },
     {
@@ -3629,7 +3629,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_home_storiessection",
-      "community": 17,
+      "community": 2,
       "norm_label": "storiessection.tsx"
     },
     {
@@ -3639,7 +3639,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_home_storiessection_settle",
-      "community": 17,
+      "community": 2,
       "norm_label": "settle"
     },
     {
@@ -3649,7 +3649,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_home_storiessection_buildmarqueerows",
-      "community": 17,
+      "community": 2,
       "norm_label": "buildmarqueerows()"
     },
     {
@@ -3659,7 +3659,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_components_home_storiessection_buildloopitems",
-      "community": 17,
+      "community": 2,
       "norm_label": "buildloopitems()"
     },
     {
@@ -3669,7 +3669,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_components_home_storiessection_starrating",
-      "community": 17,
+      "community": 2,
       "norm_label": "starrating()"
     },
     {
@@ -3679,7 +3679,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "src_components_home_storiessection_sectiontitle",
-      "community": 17,
+      "community": 2,
       "norm_label": "sectiontitle()"
     },
     {
@@ -3689,7 +3689,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "src_components_home_storiessection_animatednote",
-      "community": 17,
+      "community": 2,
       "norm_label": "animatednote()"
     },
     {
@@ -3699,7 +3699,7 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "src_components_home_storiessection_reviewcard",
-      "community": 17,
+      "community": 2,
       "norm_label": "reviewcard()"
     },
     {
@@ -3709,7 +3709,7 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "src_components_home_storiessection_marqueerow",
-      "community": 17,
+      "community": 2,
       "norm_label": "marqueerow()"
     },
     {
@@ -3719,7 +3719,7 @@
       "source_location": "L229",
       "_origin": "ast",
       "id": "src_components_home_storiessection_storiessection",
-      "community": 17,
+      "community": 2,
       "norm_label": "storiessection()"
     },
     {
@@ -4269,7 +4269,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_layout_funnelpageshell_funnelpageshell",
-      "community": 0,
+      "community": 35,
       "norm_label": "funnelpageshell()"
     },
     {
@@ -4553,24 +4553,24 @@
       "norm_label": "pdpbeforeaftersection.tsx"
     },
     {
-      "label": "BEFORE",
+      "label": "LEFT_MESSAGES",
       "file_type": "code",
       "source_file": "src/components/pdp/PdpBeforeAfterSection.tsx",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "src_components_pdp_pdpbeforeaftersection_before",
+      "id": "src_components_pdp_pdpbeforeaftersection_left_messages",
       "community": 12,
-      "norm_label": "before"
+      "norm_label": "left_messages"
     },
     {
-      "label": "AFTER",
+      "label": "RIGHT_MESSAGES",
       "file_type": "code",
       "source_file": "src/components/pdp/PdpBeforeAfterSection.tsx",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "src_components_pdp_pdpbeforeaftersection_after",
+      "id": "src_components_pdp_pdpbeforeaftersection_right_messages",
       "community": 12,
-      "norm_label": "after"
+      "norm_label": "right_messages"
     },
     {
       "label": "PdpBeforeAfterSectionProps",
@@ -4599,7 +4599,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_pdp_pdpctaband",
-      "community": 15,
+      "community": 91,
       "norm_label": "pdpctaband.tsx"
     },
     {
@@ -4609,7 +4609,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_components_pdp_pdpctaband_pdpctabandprops",
-      "community": 15,
+      "community": 91,
       "norm_label": "pdpctabandprops"
     },
     {
@@ -4619,7 +4619,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_pdp_pdpctaband_pdpctaband",
-      "community": 15,
+      "community": 91,
       "norm_label": "pdpctaband()"
     },
     {
@@ -4709,74 +4709,24 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_pdp_pdpherosection",
-      "community": 30,
+      "community": 15,
       "norm_label": "pdpherosection.tsx"
-    },
-    {
-      "label": "PRODUCT_ORDER",
-      "file_type": "code",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "src_components_pdp_pdpherosection_product_order",
-      "community": 30,
-      "norm_label": "product_order"
-    },
-    {
-      "label": "LEFT_MESSAGES",
-      "file_type": "code",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "src_components_pdp_pdpherosection_left_messages",
-      "community": 30,
-      "norm_label": "left_messages"
-    },
-    {
-      "label": "RIGHT_MESSAGES",
-      "file_type": "code",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "src_components_pdp_pdpherosection_right_messages",
-      "community": 30,
-      "norm_label": "right_messages"
-    },
-    {
-      "label": "productNeighbors()",
-      "file_type": "code",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "src_components_pdp_pdpherosection_productneighbors",
-      "community": 30,
-      "norm_label": "productneighbors()"
-    },
-    {
-      "label": "StarRow()",
-      "file_type": "code",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "src_components_pdp_pdpherosection_starrow",
-      "community": 30,
-      "norm_label": "starrow()"
     },
     {
       "label": "PdpHeroSectionProps",
       "file_type": "code",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L49",
+      "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_pdp_pdpherosection_pdpherosectionprops",
-      "community": 30,
+      "community": 15,
       "norm_label": "pdpherosectionprops"
     },
     {
       "label": "PdpHeroSection()",
       "file_type": "code",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L58",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_pdp_pdpherosection_pdpherosection",
       "community": 15,
@@ -4821,6 +4771,96 @@
       "id": "src_components_pdp_pdpincludedsection_pdpincludedsection",
       "community": 12,
       "norm_label": "pdpincludedsection()"
+    },
+    {
+      "label": "PdpMinimalSections.tsx",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections",
+      "community": 15,
+      "norm_label": "pdpminimalsections.tsx"
+    },
+    {
+      "label": "StartProps",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections_startprops",
+      "community": 15,
+      "norm_label": "startprops"
+    },
+    {
+      "label": "HOW_STEPS",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections_how_steps",
+      "community": 15,
+      "norm_label": "how_steps"
+    },
+    {
+      "label": "SUPPORT_ITEMS",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections_support_items",
+      "community": 15,
+      "norm_label": "support_items"
+    },
+    {
+      "label": "PdpFeatureCards()",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections_pdpfeaturecards",
+      "community": 15,
+      "norm_label": "pdpfeaturecards()"
+    },
+    {
+      "label": "PdpHowItWorks()",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections_pdphowitworks",
+      "community": 15,
+      "norm_label": "pdphowitworks()"
+    },
+    {
+      "label": "PdpSupportSection()",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L152",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections_pdpsupportsection",
+      "community": 15,
+      "norm_label": "pdpsupportsection()"
+    },
+    {
+      "label": "PdpTreatmentGrid()",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L213",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
+      "community": 15,
+      "norm_label": "pdptreatmentgrid()"
+    },
+    {
+      "label": "PdpSafetyStrip()",
+      "file_type": "code",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L266",
+      "_origin": "ast",
+      "id": "src_components_pdp_pdpminimalsections_pdpsafetystrip",
+      "community": 12,
+      "norm_label": "pdpsafetystrip()"
     },
     {
       "label": "PdpMotivationMarquee.tsx",
@@ -5106,7 +5146,7 @@
       "label": "ProductPdpPageProps",
       "file_type": "code",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L31",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage_productpdppageprops",
       "community": 15,
@@ -5116,17 +5156,17 @@
       "label": "ProductPdpPageInner()",
       "file_type": "code",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L35",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage_productpdppageinner",
-      "community": 15,
+      "community": 35,
       "norm_label": "productpdppageinner()"
     },
     {
       "label": "ProductPdpPage()",
       "file_type": "code",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L207",
+      "source_location": "L165",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage_productpdppage",
       "community": 15,
@@ -5136,7 +5176,7 @@
       "label": "Glp1PdpPage()",
       "file_type": "code",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L211",
+      "source_location": "L169",
       "_origin": "ast",
       "id": "src_components_pdp_productpdppage_glp1pdppage",
       "community": 15,
@@ -5259,7 +5299,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_pdp_data_pdp_data_registry_withcatalogassets",
-      "community": 30,
+      "community": 27,
       "norm_label": "withcatalogassets()"
     },
     {
@@ -5269,7 +5309,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_components_pdp_data_pdp_data_registry_getpdpcontent",
-      "community": 15,
+      "community": 27,
       "norm_label": "getpdpcontent()"
     },
     {
@@ -5279,7 +5319,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_components_pdp_data_pdp_data_registry_pdp_meta",
-      "community": 145,
+      "community": 1,
       "norm_label": "pdp_meta"
     },
     {
@@ -5289,7 +5329,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_pdp_data_pen_showcase_content",
-      "community": 35,
+      "community": 84,
       "norm_label": "pen-showcase-content.ts"
     },
     {
@@ -5299,7 +5339,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_components_pdp_data_pen_showcase_content_glp1_pen_showcase",
-      "community": 35,
+      "community": 84,
       "norm_label": "glp1_pen_showcase"
     },
     {
@@ -5399,7 +5439,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_components_pdp_data_types_penshowcasecontent",
-      "community": 35,
+      "community": 84,
       "norm_label": "penshowcasecontent"
     },
     {
@@ -5669,7 +5709,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_quiz_dynamic_dynamicquizmodal",
-      "community": 0,
+      "community": 35,
       "norm_label": "dynamicquizmodal.tsx"
     },
     {
@@ -5679,7 +5719,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_quiz_dynamic_dynamicquizmodal_dynamicquizmodal",
-      "community": 0,
+      "community": 35,
       "norm_label": "dynamicquizmodal()"
     },
     {
@@ -8419,7 +8459,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_use_is_mounted",
-      "community": 87,
+      "community": 57,
       "norm_label": "use-is-mounted.ts"
     },
     {
@@ -8429,7 +8469,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_hooks_use_is_mounted_useismounted",
-      "community": 87,
+      "community": 57,
       "norm_label": "useismounted()"
     },
     {
@@ -8479,7 +8519,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_use_prx_encounter_status",
-      "community": 3,
+      "community": 57,
       "norm_label": "use-prx-encounter-status.ts"
     },
     {
@@ -8489,7 +8529,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_hooks_use_prx_encounter_status_state",
-      "community": 3,
+      "community": 57,
       "norm_label": "state"
     },
     {
@@ -8499,7 +8539,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_hooks_use_prx_encounter_status_useprxencounterstatus",
-      "community": 87,
+      "community": 57,
       "norm_label": "useprxencounterstatus()"
     },
     {
@@ -8559,7 +8599,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_age_gate",
-      "community": 0,
+      "community": 35,
       "norm_label": "age-gate.ts"
     },
     {
@@ -8569,7 +8609,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_lib_age_gate_agegatestate",
-      "community": 0,
+      "community": 35,
       "norm_label": "agegatestate"
     },
     {
@@ -8599,7 +8639,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_lib_age_gate_lockpagescroll",
-      "community": 0,
+      "community": 35,
       "norm_label": "lockpagescroll()"
     },
     {
@@ -8609,7 +8649,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_lib_age_gate_unlockpagescroll",
-      "community": 0,
+      "community": 35,
       "norm_label": "unlockpagescroll()"
     },
     {
@@ -8759,7 +8799,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_lib_categories_category_slugs",
-      "community": 6,
+      "community": 34,
       "norm_label": "category_slugs"
     },
     {
@@ -8769,7 +8809,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_lib_categories_categoryslug",
-      "community": 35,
+      "community": 34,
       "norm_label": "categoryslug"
     },
     {
@@ -8789,7 +8829,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_lib_categories_categorytimelinestep",
-      "community": 132,
+      "community": 62,
       "norm_label": "categorytimelinestep"
     },
     {
@@ -8819,7 +8859,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_lib_categories_categorydefinition",
-      "community": 147,
+      "community": 53,
       "norm_label": "categorydefinition"
     },
     {
@@ -8829,7 +8869,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_lib_categories_categories",
-      "community": 6,
+      "community": 34,
       "norm_label": "categories"
     },
     {
@@ -8849,7 +8889,7 @@
       "source_location": "L877",
       "_origin": "ast",
       "id": "src_lib_categories_iscategoryslug",
-      "community": 150,
+      "community": 62,
       "norm_label": "iscategoryslug()"
     },
     {
@@ -8859,7 +8899,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_category_bundles",
-      "community": 188,
+      "community": 6,
       "norm_label": "category-bundles.ts"
     },
     {
@@ -8869,7 +8909,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_lib_category_bundles_categorybundleitem",
-      "community": 188,
+      "community": 6,
       "norm_label": "categorybundleitem"
     },
     {
@@ -8879,7 +8919,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_lib_category_bundles_categorybundle",
-      "community": 188,
+      "community": 6,
       "norm_label": "categorybundle"
     },
     {
@@ -8889,7 +8929,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_lib_category_bundles_category_bundles",
-      "community": 188,
+      "community": 6,
       "norm_label": "category_bundles"
     },
     {
@@ -8899,7 +8939,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "src_lib_category_bundles_getcategorybundle",
-      "community": 188,
+      "community": 6,
       "norm_label": "getcategorybundle()"
     },
     {
@@ -8909,7 +8949,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_category_recommendations",
-      "community": 79,
+      "community": 30,
       "norm_label": "category-recommendations.ts"
     },
     {
@@ -8919,7 +8959,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_categoryrecommendation",
-      "community": 79,
+      "community": 30,
       "norm_label": "categoryrecommendation"
     },
     {
@@ -8929,7 +8969,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_category_goals",
-      "community": 79,
+      "community": 30,
       "norm_label": "category_goals"
     },
     {
@@ -8939,7 +8979,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_findanswer",
-      "community": 79,
+      "community": 30,
       "norm_label": "findanswer()"
     },
     {
@@ -8949,7 +8989,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_resolveaction",
-      "community": 79,
+      "community": 30,
       "norm_label": "resolveaction()"
     },
     {
@@ -8959,7 +8999,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "src_lib_category_recommendations_getcategoryrecommendation",
-      "community": 79,
+      "community": 30,
       "norm_label": "getcategoryrecommendation()"
     },
     {
@@ -8989,7 +9029,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_checkout_schema",
-      "community": 57,
+      "community": 43,
       "norm_label": "checkout-schema.ts"
     },
     {
@@ -8999,7 +9039,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_lib_checkout_schema_checkoutformschema",
-      "community": 57,
+      "community": 43,
       "norm_label": "checkoutformschema"
     },
     {
@@ -9009,7 +9049,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_lib_checkout_schema_checkoutformvalues",
-      "community": 57,
+      "community": 43,
       "norm_label": "checkoutformvalues"
     },
     {
@@ -9019,7 +9059,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_lib_checkout_schema_checkoutdefaultvalues",
-      "community": 57,
+      "community": 43,
       "norm_label": "checkoutdefaultvalues"
     },
     {
@@ -9079,7 +9119,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_homepage_content",
-      "community": 15,
+      "community": 165,
       "norm_label": "homepage-content.ts"
     },
     {
@@ -9089,7 +9129,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_lib_homepage_content_homepage_starting_price_label",
-      "community": 15,
+      "community": 165,
       "norm_label": "homepage_starting_price_label"
     },
     {
@@ -9099,7 +9139,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_lib_homepage_content_hero_copy",
-      "community": 15,
+      "community": 165,
       "norm_label": "hero_copy"
     },
     {
@@ -9216,7 +9256,7 @@
       "label": "buildGoalMarketing()",
       "file_type": "code",
       "source_file": "src/lib/pdp-marketing.ts",
-      "source_location": "L106",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "src_lib_pdp_marketing_buildgoalmarketing",
       "community": 27,
@@ -9226,7 +9266,7 @@
       "label": "buildGlp1Marketing()",
       "file_type": "code",
       "source_file": "src/lib/pdp-marketing.ts",
-      "source_location": "L140",
+      "source_location": "L139",
       "_origin": "ast",
       "id": "src_lib_pdp_marketing_buildglp1marketing",
       "community": 27,
@@ -9239,7 +9279,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_peptide_images",
-      "community": 99,
+      "community": 2,
       "norm_label": "peptide-images.ts"
     },
     {
@@ -9249,7 +9289,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_lib_peptide_images_peptideimageentry",
-      "community": 99,
+      "community": 2,
       "norm_label": "peptideimageentry"
     },
     {
@@ -9259,7 +9299,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_lib_peptide_images_peptidehandbox",
-      "community": 99,
+      "community": 2,
       "norm_label": "peptidehandbox"
     },
     {
@@ -9269,7 +9309,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_lib_peptide_images_map",
-      "community": 99,
+      "community": 2,
       "norm_label": "map"
     },
     {
@@ -9279,7 +9319,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_lib_peptide_images_product_type",
-      "community": 99,
+      "community": 2,
       "norm_label": "product_type"
     },
     {
@@ -9289,7 +9329,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "src_lib_peptide_images_parsestrength",
-      "community": 99,
+      "community": 2,
       "norm_label": "parsestrength()"
     },
     {
@@ -9299,7 +9339,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_lib_peptide_images_parseconcentration",
-      "community": 99,
+      "community": 2,
       "norm_label": "parseconcentration()"
     },
     {
@@ -9309,7 +9349,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "src_lib_peptide_images_parsevolume",
-      "community": 99,
+      "community": 2,
       "norm_label": "parsevolume()"
     },
     {
@@ -9319,7 +9359,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "src_lib_peptide_images_parseform",
-      "community": 99,
+      "community": 2,
       "norm_label": "parseform()"
     },
     {
@@ -9329,7 +9369,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "src_lib_peptide_images_withassetversion",
-      "community": 99,
+      "community": 2,
       "norm_label": "withassetversion()"
     },
     {
@@ -9339,7 +9379,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "src_lib_peptide_images_getpeptideimage",
-      "community": 99,
+      "community": 2,
       "norm_label": "getpeptideimage()"
     },
     {
@@ -9369,7 +9409,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "src_lib_peptide_images_getpeptidehandbox",
-      "community": 99,
+      "community": 2,
       "norm_label": "getpeptidehandbox()"
     },
     {
@@ -9419,7 +9459,7 @@
       "source_location": "L411",
       "_origin": "ast",
       "id": "src_lib_peptides_catalog_keywords",
-      "community": 2,
+      "community": 27,
       "norm_label": "catalog_keywords"
     },
     {
@@ -9439,7 +9479,7 @@
       "source_location": "L433",
       "_origin": "ast",
       "id": "src_lib_peptides_peptide_prx_slugs",
-      "community": 23,
+      "community": 43,
       "norm_label": "peptide_prx_slugs"
     },
     {
@@ -9449,7 +9489,7 @@
       "source_location": "L438",
       "_origin": "ast",
       "id": "src_lib_peptides_peptidetoproduct",
-      "community": 27,
+      "community": 30,
       "norm_label": "peptidetoproduct()"
     },
     {
@@ -9459,7 +9499,7 @@
       "source_location": "L453",
       "_origin": "ast",
       "id": "src_lib_peptides_peptidetocatalogproduct",
-      "community": 30,
+      "community": 34,
       "norm_label": "peptidetocatalogproduct()"
     },
     {
@@ -9919,7 +9959,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_encounter_schema_prxencountertypesummary",
-      "community": 3,
+      "community": 53,
       "norm_label": "prxencountertypesummary"
     },
     {
@@ -10049,7 +10089,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_encounter_status_prxstatustoorderstatus",
-      "community": 87,
+      "community": 57,
       "norm_label": "prxstatustoorderstatus()"
     },
     {
@@ -10109,7 +10149,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_env_getprxconfig",
-      "community": 8,
+      "community": 23,
       "norm_label": "getprxconfig()"
     },
     {
@@ -10209,7 +10249,7 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_env_isprxsandbox",
-      "community": 22,
+      "community": 23,
       "norm_label": "isprxsandbox()"
     },
     {
@@ -10479,7 +10519,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_issandboxplaceholderprice",
-      "community": 0,
+      "community": 15,
       "norm_label": "issandboxplaceholderprice()"
     },
     {
@@ -10489,7 +10529,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_resolvedisplaymonthlyprice",
-      "community": 53,
+      "community": 15,
       "norm_label": "resolvedisplaymonthlyprice()"
     },
     {
@@ -10549,7 +10589,7 @@
       "source_location": "L205",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_uselivecatalog",
-      "community": 53,
+      "community": 2,
       "norm_label": "uselivecatalog()"
     },
     {
@@ -10559,7 +10599,7 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "src_lib_prescribe_rx_use_live_catalog_useliveproduct",
-      "community": 57,
+      "community": 12,
       "norm_label": "useliveproduct()"
     },
     {
@@ -10599,7 +10639,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_lib_pricing_formatcurrency",
-      "community": 15,
+      "community": 57,
       "norm_label": "formatcurrency()"
     },
     {
@@ -10609,7 +10649,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_product_catalog",
-      "community": 30,
+      "community": 34,
       "norm_label": "product-catalog.ts"
     },
     {
@@ -10619,7 +10659,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_lib_product_catalog_productform",
-      "community": 30,
+      "community": 84,
       "norm_label": "productform"
     },
     {
@@ -10629,7 +10669,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_lib_product_catalog_catalogproduct",
-      "community": 100,
+      "community": 6,
       "norm_label": "catalogproduct"
     },
     {
@@ -10639,7 +10679,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_lib_product_catalog_glp1_catalog_product",
-      "community": 30,
+      "community": 34,
       "norm_label": "glp1_catalog_product"
     },
     {
@@ -10649,7 +10689,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_lib_product_catalog_catalog_products",
-      "community": 30,
+      "community": 15,
       "norm_label": "catalog_products"
     },
     {
@@ -10659,7 +10699,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_lib_product_catalog_getcatalogproduct",
-      "community": 30,
+      "community": 15,
       "norm_label": "getcatalogproduct()"
     },
     {
@@ -10669,7 +10709,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_lib_product_catalog_getcatalogproductsbycategory",
-      "community": 30,
+      "community": 34,
       "norm_label": "getcatalogproductsbycategory()"
     },
     {
@@ -10689,7 +10729,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "src_lib_product_catalog_product_paths",
-      "community": 149,
+      "community": 6,
       "norm_label": "product_paths"
     },
     {
@@ -10709,7 +10749,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_products",
-      "community": 15,
+      "community": 30,
       "norm_label": "products.ts"
     },
     {
@@ -10719,7 +10759,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_lib_products_product",
-      "community": 79,
+      "community": 30,
       "norm_label": "product"
     },
     {
@@ -10729,7 +10769,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_lib_products_glp1_product",
-      "community": 15,
+      "community": 30,
       "norm_label": "glp1_product"
     },
     {
@@ -10739,7 +10779,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_lib_products_products",
-      "community": 15,
+      "community": 165,
       "norm_label": "products"
     },
     {
@@ -10749,7 +10789,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_lib_products_goal_fallback",
-      "community": 15,
+      "community": 30,
       "norm_label": "goal_fallback"
     },
     {
@@ -10759,7 +10799,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_lib_products_generic_fallback_product",
-      "community": 15,
+      "community": 30,
       "norm_label": "generic_fallback_product"
     },
     {
@@ -10779,7 +10819,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_lib_products_getgoalfromproduct",
-      "community": 15,
+      "community": 53,
       "norm_label": "getgoalfromproduct()"
     },
     {
@@ -10789,7 +10829,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "src_lib_products_getrecommendedtreatment",
-      "community": 87,
+      "community": 57,
       "norm_label": "getrecommendedtreatment()"
     },
     {
@@ -10799,7 +10839,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_quiz_storage",
-      "community": 57,
+      "community": 79,
       "norm_label": "quiz-storage.ts"
     },
     {
@@ -10819,7 +10859,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_lib_quiz_storage_writequizstate",
-      "community": 57,
+      "community": 79,
       "norm_label": "writequizstate()"
     },
     {
@@ -10829,7 +10869,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_lib_quiz_storage_clearquizstate",
-      "community": 57,
+      "community": 79,
       "norm_label": "clearquizstate()"
     },
     {
@@ -10839,7 +10879,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_lib_quiz_storage_getinitialquizdata",
-      "community": 57,
+      "community": 79,
       "norm_label": "getinitialquizdata()"
     },
     {
@@ -10939,7 +10979,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_stories_content",
-      "community": 17,
+      "community": 2,
       "norm_label": "stories-content.ts"
     },
     {
@@ -10949,7 +10989,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_lib_stories_content_stories_section",
-      "community": 17,
+      "community": 2,
       "norm_label": "stories_section"
     },
     {
@@ -10959,7 +10999,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_lib_stories_content_testimonial_notes",
-      "community": 17,
+      "community": 2,
       "norm_label": "testimonial_notes"
     },
     {
@@ -11019,7 +11059,7 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "src_lib_testimonials_home_stories",
-      "community": 17,
+      "community": 2,
       "norm_label": "home_stories"
     },
     {
@@ -11139,7 +11179,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "src_providers_auth_provider_useauth",
-      "community": 87,
+      "community": 57,
       "norm_label": "useauth()"
     },
     {
@@ -11149,7 +11189,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider",
-      "community": 79,
+      "community": 30,
       "norm_label": "quiz-modal-provider.tsx"
     },
     {
@@ -11159,7 +11199,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider_quizmodaloptions",
-      "community": 79,
+      "community": 30,
       "norm_label": "quizmodaloptions"
     },
     {
@@ -11169,7 +11209,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider_quizmodalcontextvalue",
-      "community": 79,
+      "community": 30,
       "norm_label": "quizmodalcontextvalue"
     },
     {
@@ -11179,7 +11219,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider_quizmodalcontext",
-      "community": 79,
+      "community": 30,
       "norm_label": "quizmodalcontext"
     },
     {
@@ -11199,7 +11239,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_providers_quiz_modal_provider_usequizmodal",
-      "community": 57,
+      "community": 35,
       "norm_label": "usequizmodal()"
     },
     {
@@ -11779,7 +11819,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_account_index",
-      "community": 87,
+      "community": 57,
       "norm_label": "index.tsx"
     },
     {
@@ -11799,7 +11839,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_routes_account_index_accountpageshell",
-      "community": 0,
+      "community": 35,
       "norm_label": "accountpageshell()"
     },
     {
@@ -11809,7 +11849,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_routes_account_index_accountpage",
-      "community": 87,
+      "community": 57,
       "norm_label": "accountpage()"
     },
     {
@@ -11969,7 +12009,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_routes_api_prx_health_route",
-      "community": 1,
+      "community": 8,
       "norm_label": "route"
     },
     {
@@ -11999,7 +12039,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_routes_api_prx_intake_dynamic_route",
-      "community": 22,
+      "community": 1,
       "norm_label": "route"
     },
     {
@@ -12189,7 +12229,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_auth",
-      "community": 1,
+      "community": 89,
       "norm_label": "auth.tsx"
     },
     {
@@ -12199,7 +12239,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_routes_auth_authsearchschema",
-      "community": 1,
+      "community": 89,
       "norm_label": "authsearchschema"
     },
     {
@@ -12209,7 +12249,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_routes_auth_route",
-      "community": 1,
+      "community": 89,
       "norm_label": "route"
     },
     {
@@ -12219,7 +12259,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_routes_auth_authroute",
-      "community": 1,
+      "community": 89,
       "norm_label": "authroute()"
     },
     {
@@ -12229,7 +12269,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_category_slug",
-      "community": 150,
+      "community": 62,
       "norm_label": "$slug.tsx"
     },
     {
@@ -12239,7 +12279,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_routes_category_slug_route",
-      "community": 150,
+      "community": 62,
       "norm_label": "route"
     },
     {
@@ -12249,7 +12289,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_routes_category_slug_categoryroute",
-      "community": 150,
+      "community": 62,
       "norm_label": "categoryroute()"
     },
     {
@@ -12289,7 +12329,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_confirmation",
-      "community": 87,
+      "community": 57,
       "norm_label": "confirmation.tsx"
     },
     {
@@ -12299,7 +12339,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_routes_confirmation_confirmationsearchschema",
-      "community": 87,
+      "community": 57,
       "norm_label": "confirmationsearchschema"
     },
     {
@@ -12319,7 +12359,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_routes_confirmation_confirmationpage",
-      "community": 87,
+      "community": 57,
       "norm_label": "confirmationpage()"
     },
     {
@@ -12379,7 +12419,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_products_slug",
-      "community": 145,
+      "community": 79,
       "norm_label": "$slug.tsx"
     },
     {
@@ -12389,7 +12429,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_routes_products_slug_isproductslug",
-      "community": 145,
+      "community": 79,
       "norm_label": "isproductslug()"
     },
     {
@@ -12399,7 +12439,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_routes_products_slug_route",
-      "community": 145,
+      "community": 79,
       "norm_label": "route"
     },
     {
@@ -12409,7 +12449,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_routes_products_slug_productroute",
-      "community": 145,
+      "community": 79,
       "norm_label": "productroute()"
     },
     {
@@ -12419,7 +12459,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_routes_products_glp_1_weight_loss",
-      "community": 145,
+      "community": 1,
       "norm_label": "glp-1-weight-loss.tsx"
     },
     {
@@ -12429,7 +12469,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_routes_products_glp_1_weight_loss_route",
-      "community": 145,
+      "community": 1,
       "norm_label": "route"
     },
     {
@@ -12639,7 +12679,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_server_prx_mappers",
-      "community": 91,
+      "community": 87,
       "norm_label": "mappers.ts"
     },
     {
@@ -12649,7 +12689,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_server_prx_mappers_prxcheckoutbody",
-      "community": 91,
+      "community": 87,
       "norm_label": "prxcheckoutbody"
     },
     {
@@ -12659,7 +12699,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_server_prx_mappers_unifiedintakeoptions",
-      "community": 91,
+      "community": 87,
       "norm_label": "unifiedintakeoptions"
     },
     {
@@ -12669,7 +12709,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_server_prx_mappers_mapquiztopatientpayload",
-      "community": 91,
+      "community": 87,
       "norm_label": "mapquiztopatientpayload()"
     },
     {
@@ -12679,7 +12719,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_server_prx_mappers_mapcheckouttopatientaddresspayload",
-      "community": 91,
+      "community": 87,
       "norm_label": "mapcheckouttopatientaddresspayload()"
     },
     {
@@ -12689,7 +12729,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_server_prx_mappers_mapcheckouttounifiedintakepayload",
-      "community": 91,
+      "community": 87,
       "norm_label": "mapcheckouttounifiedintakepayload()"
     },
     {
@@ -12699,7 +12739,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "src_server_prx_mappers_mapquiztovitals",
-      "community": 91,
+      "community": 87,
       "norm_label": "mapquiztovitals()"
     },
     {
@@ -12709,7 +12749,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "src_server_prx_mappers_mapquiztointakeanswers",
-      "community": 91,
+      "community": 87,
       "norm_label": "mapquiztointakeanswers()"
     },
     {
@@ -12719,7 +12759,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "src_server_prx_mappers_mapcheckouttopaymentpayload",
-      "community": 91,
+      "community": 87,
       "norm_label": "mapcheckouttopaymentpayload()"
     },
     {
@@ -12729,7 +12769,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "src_server_prx_mappers_mapquiztoconsents",
-      "community": 91,
+      "community": 87,
       "norm_label": "mapquiztoconsents()"
     },
     {
@@ -12739,7 +12779,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "src_server_prx_mappers_approximatedobfromage",
-      "community": 91,
+      "community": 87,
       "norm_label": "approximatedobfromage()"
     },
     {
@@ -13159,7 +13199,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_types_quiz_goalid",
-      "community": 79,
+      "community": 30,
       "norm_label": "goalid"
     },
     {
@@ -13169,7 +13209,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_types_quiz_product_slugs",
-      "community": 145,
+      "community": 79,
       "norm_label": "product_slugs"
     },
     {
@@ -13179,7 +13219,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_types_quiz_productslug",
-      "community": 79,
+      "community": 30,
       "norm_label": "productslug"
     },
     {
@@ -13299,7 +13339,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "src_types_quiz_quizstoredstate",
-      "community": 57,
+      "community": 79,
       "norm_label": "quizstoredstate"
     },
     {
@@ -13309,7 +13349,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "src_types_quiz_default_quiz_data",
-      "community": 57,
+      "community": 79,
       "norm_label": "default_quiz_data"
     },
     {
@@ -14681,6 +14721,16 @@
       "id": "message_to_thomas",
       "community": 140,
       "norm_label": "message-to-thomas.md"
+    },
+    {
+      "label": "page.md",
+      "file_type": "document",
+      "source_file": "public/pdp/page.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_pdp_page",
+      "community": 100,
+      "norm_label": "page.md"
     },
     {
       "label": "sandbox-full-connection.md",
@@ -26283,7 +26333,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_layout_sitefooter",
@@ -26316,7 +26366,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_layout_sitefooter_sitefooter",
@@ -26483,7 +26533,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_layout_siteheader",
@@ -26571,7 +26621,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_layout_siteheader_siteheader",
@@ -26874,20 +26924,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpBeforeAfterSection.tsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpbeforeaftersection",
-      "target": "src_components_pdp_pdpbeforeaftersection_after",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpBeforeAfterSection.tsx",
       "source_location": "L7",
       "weight": 1.0,
       "source": "src_components_pdp_pdpbeforeaftersection",
-      "target": "src_components_pdp_pdpbeforeaftersection_before",
+      "target": "src_components_pdp_pdpbeforeaftersection_left_messages",
       "confidence_score": 1.0
     },
     {
@@ -26908,6 +26948,16 @@
       "weight": 1.0,
       "source": "src_components_pdp_pdpbeforeaftersection",
       "target": "src_components_pdp_pdpbeforeaftersection_pdpbeforeaftersectionprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpBeforeAfterSection.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpbeforeaftersection",
+      "target": "src_components_pdp_pdpbeforeaftersection_right_messages",
       "confidence_score": 1.0
     },
     {
@@ -26933,17 +26983,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpbeforeaftersection",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -26953,17 +26992,6 @@
       "weight": 1.0,
       "source": "src_components_pdp_pdpbeforeaftersection_pdpbeforeaftersection",
       "target": "src_components_pdp_pdpdataprovider_usepdpdata"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpbeforeaftersection_pdpbeforeaftersection",
-      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -26983,28 +27011,6 @@
       "weight": 1.0,
       "source": "src_components_pdp_pdpctaband",
       "target": "src_components_pdp_pdpctaband_pdpctabandprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpctaband",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpctaband_pdpctaband",
       "confidence_score": 1.0
     },
     {
@@ -27075,7 +27081,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L11",
+      "source_location": "L4",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_components_pdp_pdpdataprovider",
@@ -27089,6 +27095,17 @@
       "source_location": "L4",
       "weight": 1.0,
       "source": "src_components_pdp_pdpincludedsection",
+      "target": "src_components_pdp_pdpdataprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
       "target": "src_components_pdp_pdpdataprovider",
       "confidence_score": 1.0
     },
@@ -27185,7 +27202,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_pdpdataprovider",
@@ -27196,7 +27213,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_pdpdataprovider_pdpdataprovider",
@@ -27229,7 +27246,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L11",
+      "source_location": "L4",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_components_pdp_pdpdataprovider_usepdpdata",
@@ -27241,7 +27258,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L60",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_pdpherosection",
       "target": "src_components_pdp_pdpdataprovider_usepdpdata"
@@ -27266,6 +27283,50 @@
       "source_location": "L75",
       "weight": 1.0,
       "source": "src_components_pdp_pdpincludedsection_pdpincludedsection",
+      "target": "src_components_pdp_pdpdataprovider_usepdpdata"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpdataprovider_usepdpdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdpfeaturecards",
+      "target": "src_components_pdp_pdpdataprovider_usepdpdata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L267",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdpsafetystrip",
+      "target": "src_components_pdp_pdpdataprovider_usepdpdata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
       "target": "src_components_pdp_pdpdataprovider_usepdpdata"
     },
     {
@@ -27512,17 +27573,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_components_pdp_pdpherosection_left_messages",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L58",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_components_pdp_pdpherosection_pdpherosection",
@@ -27532,50 +27583,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L49",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_components_pdp_pdpherosection_pdpherosectionprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_components_pdp_pdpherosection_product_order",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_components_pdp_pdpherosection_productneighbors",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_components_pdp_pdpherosection_right_messages",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_components_pdp_pdpherosection_starrow",
       "confidence_score": 1.0
     },
     {
@@ -27583,7 +27594,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L9",
+      "source_location": "L3",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_lib_pricing",
@@ -27594,7 +27605,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L9",
+      "source_location": "L3",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_lib_pricing_formatcurrency",
@@ -27605,7 +27616,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L4",
+      "source_location": "L2",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_lib_product_catalog",
@@ -27616,54 +27627,10 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_lib_product_catalog_catalog_products",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L4",
+      "source_location": "L2",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection",
       "target": "src_lib_product_catalog_getcatalogproduct",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_lib_product_catalog_product_paths",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_types_quiz",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection",
-      "target": "src_types_quiz_productslug",
       "confidence_score": 1.0
     },
     {
@@ -27671,41 +27638,19 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L15",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_pdpherosection",
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection_productneighbors",
-      "target": "src_components_pdp_pdpherosection_product_order"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L63",
-      "weight": 1.0,
-      "source": "src_components_pdp_pdpherosection_pdpherosection",
-      "target": "src_components_pdp_pdpherosection_productneighbors",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L89",
+      "source_location": "L87",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_pdpherosection",
       "target": "src_lib_pricing_formatcurrency"
@@ -27716,7 +27661,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/PdpHeroSection.tsx",
-      "source_location": "L61",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "src_components_pdp_pdpherosection_pdpherosection",
       "target": "src_lib_product_catalog_getcatalogproduct"
@@ -27726,7 +27671,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L15",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_pdpherosection_pdpherosection",
@@ -27821,11 +27766,256 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdp_ui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdp_ui_reveal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpminimalsections_how_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpminimalsections_pdpfeaturecards",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpminimalsections_pdphowitworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpminimalsections_pdpsafetystrip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpminimalsections_pdpsupportsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpminimalsections_startprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_components_pdp_pdpminimalsections_support_items",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_prescribe_rx_use_live_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_prescribe_rx_use_live_catalog_resolvedisplaymonthlyprice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_prescribe_rx_use_live_catalog_uselivecatalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_pricing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_pricing_formatcurrency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_product_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_product_catalog_catalog_products",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_product_catalog_getcatalogproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_product_catalog_product_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_products",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections",
+      "target": "src_lib_products_getproductbyslug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L24",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpincludedsection",
+      "target": "src_components_pdp_pdpminimalsections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdpfeaturecards",
+      "target": "src_lib_product_catalog_getcatalogproduct"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/ProductPdpPage.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_components_pdp_productpdppage",
+      "target": "src_components_pdp_pdpminimalsections_pdpfeaturecards",
       "confidence_score": 1.0
     },
     {
@@ -27833,10 +28023,98 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L24",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpincludedsection_pdpincludedsection",
+      "target": "src_components_pdp_pdpminimalsections_pdphowitworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/ProductPdpPage.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_components_pdp_productpdppage",
+      "target": "src_components_pdp_pdpminimalsections_pdpsupportsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
+      "target": "src_lib_prescribe_rx_use_live_catalog_resolvedisplaymonthlyprice"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
+      "target": "src_lib_prescribe_rx_use_live_catalog_uselivecatalog"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
+      "target": "src_lib_pricing_formatcurrency"
+    },
+    {
+      "relation": "references",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
+      "target": "src_lib_product_catalog_catalog_products"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/pdp/PdpMinimalSections.tsx",
+      "source_location": "L218",
+      "weight": 1.0,
+      "source": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
+      "target": "src_lib_products_getproductbyslug"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/ProductPdpPage.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_components_pdp_productpdppage",
+      "target": "src_components_pdp_pdpminimalsections_pdptreatmentgrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/pdp/ProductPdpPage.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_components_pdp_productpdppage",
+      "target": "src_components_pdp_pdpminimalsections_pdpsafetystrip",
       "confidence_score": 1.0
     },
     {
@@ -27856,28 +28134,6 @@
       "source_location": "L13",
       "weight": 1.0,
       "source": "src_components_pdp_pdpmotivationmarquee",
-      "target": "src_components_pdp_pdpmotivationmarquee_pdpmotivationmarquee",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpmotivationmarquee",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_pdpmotivationmarquee_pdpmotivationmarquee",
       "confidence_score": 1.0
     },
@@ -27920,28 +28176,6 @@
       "source_location": "L47",
       "weight": 1.0,
       "source": "src_components_pdp_pdpoutcomesection",
-      "target": "src_components_pdp_pdpoutcomesection_pdpoutcomesection",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpoutcomesection",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_pdpoutcomesection_pdpoutcomesection",
       "confidence_score": 1.0
     },
@@ -28018,17 +28252,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpreviewssection",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -28037,17 +28260,6 @@
       "weight": 1.0,
       "source": "src_components_pdp_pdpreviewssection_pdpreviewssection",
       "target": "src_components_pdp_pdpreviewssection_isoutcomemetric",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpreviewssection_pdpreviewssection",
       "confidence_score": 1.0
     },
     {
@@ -28101,28 +28313,6 @@
       "weight": 1.0,
       "source": "src_components_pdp_pdpsafetysection",
       "target": "src_components_pdp_pdpsafetysection_safetycard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpsafetysection",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpsafetysection_pdpsafetysection",
       "confidence_score": 1.0
     },
     {
@@ -28278,28 +28468,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdptransformationsection",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdptransformationsection_pdptransformationsection",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PdpVerticalTimeline.tsx",
       "source_location": "L6",
       "weight": 1.0,
@@ -28372,28 +28540,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpverticaltimeline",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdpverticaltimeline_pdpverticaltimeline",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/PenShowcaseSection.tsx",
@@ -28408,7 +28554,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_data_pdp_data_registry",
@@ -28419,7 +28565,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_data_pdp_data_registry_getpdpcontent",
@@ -28430,7 +28576,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L26",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_pdp_ui",
@@ -28441,28 +28587,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L26",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_pdp_ui_pdpbutton",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L26",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_components_pdp_pdp_ui_reveal",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L211",
+      "source_location": "L169",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_productpdppage_glp1pdppage",
@@ -28472,7 +28607,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L207",
+      "source_location": "L165",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_productpdppage_productpdppage",
@@ -28482,7 +28617,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L35",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_productpdppage_productpdppageinner",
@@ -28492,7 +28627,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L31",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_components_pdp_productpdppage_productpdppageprops",
@@ -28503,7 +28638,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_hooks_usesiteheaderstate",
@@ -28514,7 +28649,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_hooks_usesiteheaderstate_usesiteheaderstate",
@@ -28525,7 +28660,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_lib_age_gate",
@@ -28536,7 +28671,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_lib_age_gate_lockpagescroll",
@@ -28547,7 +28682,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_lib_age_gate_unlockpagescroll",
@@ -28558,7 +28693,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_lib_prescribe_rx_merge_sandbox_pdp",
@@ -28569,7 +28704,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_lib_prescribe_rx_merge_sandbox_pdp_mergesandboxintopdp",
@@ -28580,7 +28715,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_lib_prescribe_rx_use_live_catalog",
@@ -28591,7 +28726,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_lib_prescribe_rx_use_live_catalog_resolvedisplaymonthlyprice",
@@ -28602,32 +28737,10 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_lib_prescribe_rx_use_live_catalog_uselivecatalog",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_lib_pricing",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage",
-      "target": "src_lib_pricing_formatcurrency",
       "confidence_score": 1.0
     },
     {
@@ -28679,7 +28792,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_types_quiz",
@@ -28690,7 +28803,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage",
       "target": "src_types_quiz_productslug",
@@ -28724,7 +28837,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L36",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_components_pdp_data_pdp_data_registry_getpdpcontent"
@@ -28735,7 +28848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L58",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_hooks_usesiteheaderstate_usesiteheaderstate"
@@ -28746,7 +28859,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L70",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_lib_age_gate_lockpagescroll"
@@ -28757,7 +28870,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L71",
+      "source_location": "L78",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_lib_age_gate_unlockpagescroll"
@@ -28768,7 +28881,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L42",
+      "source_location": "L38",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_lib_prescribe_rx_merge_sandbox_pdp_mergesandboxintopdp"
@@ -28779,7 +28892,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L47",
+      "source_location": "L43",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_lib_prescribe_rx_use_live_catalog_resolvedisplaymonthlyprice"
@@ -28790,7 +28903,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L38",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_lib_prescribe_rx_use_live_catalog_uselivecatalog"
@@ -28801,18 +28914,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L153",
-      "weight": 1.0,
-      "source": "src_components_pdp_productpdppage_productpdppageinner",
-      "target": "src_lib_pricing_formatcurrency"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L37",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_lib_products_getproductbyslug"
@@ -28823,7 +28925,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/pdp/ProductPdpPage.tsx",
-      "source_location": "L53",
+      "source_location": "L60",
       "weight": 1.0,
       "source": "src_components_pdp_productpdppage_productpdppageinner",
       "target": "src_providers_quiz_modal_provider_usequizmodal"
@@ -36298,7 +36400,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/pdp-marketing.ts",
-      "source_location": "L140",
+      "source_location": "L139",
       "weight": 1.0,
       "source": "src_lib_pdp_marketing",
       "target": "src_lib_pdp_marketing_buildglp1marketing",
@@ -36308,7 +36410,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/pdp-marketing.ts",
-      "source_location": "L106",
+      "source_location": "L105",
       "weight": 1.0,
       "source": "src_lib_pdp_marketing",
       "target": "src_lib_pdp_marketing_buildgoalmarketing",
@@ -36362,7 +36464,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/pdp-marketing.ts",
-      "source_location": "L141",
+      "source_location": "L140",
       "weight": 1.0,
       "source": "src_lib_pdp_marketing_buildglp1marketing",
       "target": "src_lib_pdp_marketing_buildgoalmarketing",
@@ -49528,5 +49630,5 @@
       "source_file": "src/apis aproach/API Token Types & Abilities \u2014 PrescribeRx.pdf"
     }
   ],
-  "built_at_commit": "7c159983d852839783cb8e59c8e0d406eeafaa3e"
+  "built_at_commit": "9ad13a681cf373305f365e678ef0f418ecae1b81"
 }

@@ -1,150 +1,136 @@
-import type { MouseEvent } from "react";
-import { Link } from "@tanstack/react-router";
-import { motion, useReducedMotion } from "framer-motion";
-import {
-  CATALOG_PRODUCTS,
-  PRODUCT_PATHS,
-  getCatalogProduct,
-} from "@/lib/product-catalog";
+import { useState, type MouseEvent } from "react";
+import { getCatalogProduct } from "@/lib/product-catalog";
 import { formatCurrency } from "@/lib/pricing";
-import type { ProductSlug } from "@/types/quiz";
 import { usePdpData } from "./PdpDataProvider";
-
-const PRODUCT_ORDER = CATALOG_PRODUCTS.map((product) => product.slug);
-
-const WEIGHT_LOSS_LEFT = [
-  "Quieter food noise",
-  "Steady appetite control",
-] as const;
-
-const WEIGHT_LOSS_RIGHT = [
-  "Doctor-prescribed",
-  "Pen + how-to included",
-] as const;
-
-function productNeighbors(slug: ProductSlug) {
-  const index = PRODUCT_ORDER.indexOf(slug);
-  const total = PRODUCT_ORDER.length;
-  return {
-    prev: PRODUCT_ORDER[(index - 1 + total) % total],
-    next: PRODUCT_ORDER[(index + 1) % total],
-  };
-}
-
-function StarRow({ rating }: { rating: number }) {
-  const full = Math.round(rating);
-  return (
-    <span className="pdp-hero-stars" aria-hidden="true">
-      {Array.from({ length: 5 }, (_, i) => (
-        <span key={i} className={i < full ? "is-on" : ""}>
-          ★
-        </span>
-      ))}
-    </span>
-  );
-}
 
 type PdpHeroSectionProps = {
   heroRef: React.RefObject<HTMLElement | null>;
   onStart: (e: MouseEvent) => void;
 };
 
-/**
- * Product-first PDP hero — peptide vial is the hero visual (not lifestyle photos).
- */
+/** Minimal Hims-style buy box — media left, short copy + CTAs right. */
 export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
-  const reduceMotion = useReducedMotion();
-  const { slug, heroProduct, heroImage, goal, outcomePhrases, includedPhrases } = usePdpData();
+  const { slug, heroProduct, heroImage, penImage } = usePdpData();
   const catalog = getCatalogProduct(slug);
   const name = catalog?.shortName ?? heroProduct.name;
-  const { prev, next } = productNeighbors(slug);
-  const isWeightLoss = goal === "weight-loss";
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+  const [galleryIndex, setGalleryIndex] = useState(0);
+
   const whatItDoes =
     heroProduct.specs.find((s) => /what it does/i.test(s.label))?.detail ??
     heroProduct.summary;
+  const howTo =
+    heroProduct.specs.find((s) => /how to use|weekly protocol/i.test(s.label))?.detail ??
+    "Follow your provider’s protocol. Your shipment includes clear how-to instructions.";
 
-  const leftPhrases = isWeightLoss ? WEIGHT_LOSS_LEFT : outcomePhrases.slice(0, 2);
-  const rightPhrases = isWeightLoss ? WEIGHT_LOSS_RIGHT : includedPhrases.slice(0, 2);
+  const bullets =
+    heroProduct.perks.length >= 3
+      ? heroProduct.perks.slice(0, 3).map((p) => p.label)
+      : [
+          heroProduct.descriptor,
+          "Licensed provider review before anything ships",
+          "Pay once for this treatment — no monthly plan",
+        ];
+
+  const gallery = [
+    { src: heroImage, alt: `${name} product` },
+    { src: penImage || heroImage, alt: `${name} with TIDL Pen` },
+    { src: "/pdp/patient-aspire.png", alt: "Care that fits real life" },
+  ];
+
+  const accordions = [
+    { id: "meet", title: `Meet ${name}`, body: heroProduct.summary },
+    { id: "ingredients", title: "About the ingredients", body: whatItDoes },
+    { id: "how", title: "How to take", body: howTo },
+  ];
 
   return (
-    <section className="pdp-hero pdp-hero-prod" id="hero" ref={heroRef} data-pdp-header-theme="light">
-      <div className="pdp-hero-prod-shell">
-        <motion.div
-          className="pdp-hero-prod-copy"
-          initial={reduceMotion ? false : { opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <p className="pdp-hero-prod-kicker">{heroProduct.descriptor}</p>
+    <section className="hm-hero" id="hero" ref={heroRef} data-pdp-header-theme="light">
+      <div className="hm-hero-shell">
+        <div className="hm-hero-media">
+          <div className="hm-hero-stage">
+            <img
+              className="hm-hero-img"
+              src={gallery[galleryIndex]?.src}
+              alt={gallery[galleryIndex]?.alt}
+              loading="eager"
+              fetchPriority="high"
+            />
+          </div>
+          <div className="hm-hero-thumbs" role="tablist" aria-label="Product images">
+            {gallery.map((item, i) => (
+              <button
+                key={item.src + i}
+                type="button"
+                role="tab"
+                aria-selected={galleryIndex === i}
+                className={`hm-hero-thumb${galleryIndex === i ? " is-active" : ""}`}
+                onClick={() => setGalleryIndex(i)}
+              >
+                <img src={item.src} alt="" />
+              </button>
+            ))}
+          </div>
+        </div>
 
-          <h1 className="pdp-hero-prod-title">
-            <span className="pdp-hero-prod-brand">TIDL</span>
-            {name}
-          </h1>
+        <div className="hm-hero-buy">
+          <span className="hm-badge">HSA &amp; FSA eligible</span>
+          <h1 className="hm-hero-title">{name}</h1>
 
-          <p className="pdp-hero-prod-price">
+          <ul className="hm-hero-bullets">
+            {bullets.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+
+          <p className="hm-hero-price">
             {formatCurrency(heroProduct.startingPrice)}
-            <span>/mo</span>
+            <span>one package</span>
           </p>
+          <p className="hm-hero-price-note">{heroProduct.priceNote}</p>
 
-          <div className="pdp-hero-prod-rating">
-            <strong>{heroProduct.rating}</strong>
-            <StarRow rating={heroProduct.rating} />
-            <span>{heroProduct.reviewCount} reviews</span>
-          </div>
-
-          <p className="pdp-hero-prod-lead">{whatItDoes}</p>
-
-          <p className="pdp-hero-prod-includes">
-            {heroProduct.perks.map((perk) => perk.label).join(" · ")}
-          </p>
-
-          <div className="pdp-hero-prod-actions">
-            <button type="button" className="pdp-hero-prod-cta" onClick={onStart}>
-              {heroProduct.ctaLabel}
+          <div className="hm-hero-actions">
+            <button type="button" className="hm-btn hm-btn-primary" onClick={onStart}>
+              Get started
             </button>
-            <Link to={PRODUCT_PATHS[prev]} className="pdp-hero-prod-nav" aria-label="Previous product">
-              ‹
-            </Link>
-            <Link to={PRODUCT_PATHS[next]} className="pdp-hero-prod-nav" aria-label="Next product">
-              ›
-            </Link>
+            <button type="button" className="hm-btn hm-btn-secondary" onClick={onStart}>
+              See if I&apos;m eligible
+            </button>
           </div>
 
-          <p className="pdp-hero-prod-price-note">{heroProduct.priceNote}</p>
-        </motion.div>
+          <a className="hm-safety-link" href="#safety">
+            Important safety information
+          </a>
 
-        <motion.div
-          className="pdp-hero-prod-stage pdp-hero-prod-stage--vial"
-          initial={reduceMotion ? false : { opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className="pdp-hero-prod-glow" aria-hidden="true" />
-
-          <div className="pdp-hero-prod-side-msg pdp-hero-prod-side-msg--left">
-            {leftPhrases.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
+          <div className="hm-accordions">
+            {accordions.map((item) => {
+              const open = openAccordion === item.id;
+              return (
+                <div key={item.id} className={`hm-acc${open ? " is-open" : ""}`}>
+                  <button
+                    type="button"
+                    className="hm-acc-trigger"
+                    aria-expanded={open}
+                    onClick={() => setOpenAccordion(open ? null : item.id)}
+                  >
+                    <span>{item.title}</span>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                      <path
+                        d="M4.5 6.75L9 11.25L13.5 6.75"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  {open ? <div className="hm-acc-panel">{item.body}</div> : null}
+                </div>
+              );
+            })}
           </div>
-
-          <img
-            className="pdp-hero-prod-img"
-            src={heroImage}
-            alt={`${name} by TIDL`}
-            loading="eager"
-            fetchPriority="high"
-          />
-
-          <div className="pdp-hero-prod-side-msg pdp-hero-prod-side-msg--right">
-            {rightPhrases.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-          </div>
-        </motion.div>
+        </div>
       </div>
-
-      <p className="pdp-hero-prod-trust">{heroProduct.trustNote}</p>
     </section>
   );
 }

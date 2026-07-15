@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState, type MouseEvent } from "react
 import { Link } from "@tanstack/react-router";
 import { useQuizModal } from "@/providers/quiz-modal-provider";
 import { getProductBySlug } from "@/lib/products";
-import { formatCurrency } from "@/lib/pricing";
 import { lockPageScroll, unlockPageScroll } from "@/lib/age-gate";
 import type { ProductSlug } from "@/types/quiz";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -13,17 +12,15 @@ import { mergeSandboxIntoPdp } from "@/lib/prescribe-rx/merge-sandbox-pdp";
 import { getPdpContent } from "./data/pdp-data-registry";
 import { PdpDataProvider } from "./PdpDataProvider";
 import { PdpHeroSection } from "./PdpHeroSection";
-import { PdpMotivationMarquee } from "./PdpMotivationMarquee";
-import { PdpTransformationSection } from "./PdpTransformationSection";
-import { PdpVerticalTimeline } from "./PdpVerticalTimeline";
-import { PdpReviewsSection } from "./PdpReviewsSection";
-import { PdpSafetySection } from "./PdpSafetySection";
-import { PdpCtaBand } from "./PdpCtaBand";
+import {
+  PdpFeatureCards,
+  PdpHowItWorks,
+  PdpSupportSection,
+  PdpTreatmentGrid,
+  PdpSafetyStrip,
+} from "./PdpMinimalSections";
 import { PdpFaqSection } from "./PdpFaqSection";
-import { PdpOutcomeSection } from "./PdpOutcomeSection";
-import { PdpIncludedSection } from "./PdpIncludedSection";
-import { PdpBeforeAfterSection } from "./PdpBeforeAfterSection";
-import { PdpButton, Reveal } from "./pdp-ui";
+import { PdpButton } from "./pdp-ui";
 import "../home/home.css";
 import "./pdp.css";
 import "./pdp-redesign.css";
@@ -38,7 +35,6 @@ function ProductPdpPageInner({ slug }: ProductPdpPageProps) {
   const { map: liveCatalog } = useLiveCatalog();
   const live = liveCatalog[slug];
 
-  // Overlay vial image (+ useful long description when present). Keep curated name/price/copy.
   const pdp = mergeSandboxIntoPdp(basePdp, live);
 
   const product = {
@@ -47,7 +43,18 @@ function ProductPdpPageInner({ slug }: ProductPdpPageProps) {
     monthlyPrice: resolveDisplayMonthlyPrice(baseProduct.monthlyPrice, live?.price),
     image: pdp.heroImage,
     description: pdp.heroProduct.summary,
-    dosage: baseProduct.dosage,
+  };
+
+  // Keep buy-box price in sync with live sandbox when available.
+  const syncedPdp = {
+    ...pdp,
+    heroProduct: {
+      ...pdp.heroProduct,
+      startingPrice: product.monthlyPrice,
+      priceNote:
+        "Pay once for this treatment package. Includes provider review, prescription, and discreet delivery when approved.",
+      ctaLabel: "Get started",
+    },
   };
 
   const { openModal } = useQuizModal();
@@ -60,9 +67,9 @@ function ProductPdpPageInner({ slug }: ProductPdpPageProps) {
   const openQuiz = useCallback(
     (e?: MouseEvent) => {
       e?.preventDefault();
-      openModal({ product: slug, goal: pdp.goal });
+      openModal({ product: slug, goal: syncedPdp.goal });
     },
-    [openModal, pdp.goal, slug],
+    [openModal, syncedPdp.goal, slug],
   );
 
   useEffect(() => {
@@ -86,18 +93,16 @@ function ProductPdpPageInner({ slug }: ProductPdpPageProps) {
 
   const navLinks = [
     { href: "#hero", label: "Product" },
-    { href: "#transform", label: "Your story" },
-    { href: "#life-shift", label: "Before / After" },
-    { href: "#journey", label: "Your path" },
-    { href: "#included", label: "What's included" },
-    { href: "#pricing", label: "Pricing" },
-    { href: "#reviews", label: "Reviews" },
+    { href: "#features", label: "Overview" },
+    { href: "#how", label: "How it works" },
+    { href: "#included", label: "Included" },
+    { href: "#treatments", label: "Treatments" },
     { href: "#faq", label: "FAQ" },
   ];
 
   return (
-    <PdpDataProvider data={pdp}>
-      <div className="pdp-page">
+    <PdpDataProvider data={syncedPdp}>
+      <div className="pdp-page hm-page">
         <div className="pdp-hero-stage site-chrome-stage">
           <div className="tdl-bar" id="tdlBar">
             <div className="tdl-bar-inner">
@@ -114,11 +119,7 @@ function ProductPdpPageInner({ slug }: ProductPdpPageProps) {
           <div className="pdp-hero-surface">
             <SiteHeader
               navLinks={navLinks}
-              menuItems={[
-                { href: "#outcome", label: "Who it's for" },
-                ...navLinks,
-                { href: "#pricing", label: "Pricing" },
-              ]}
+              menuItems={navLinks}
               menuOpen={mobileNavOpen}
               pinned={headerPinned}
               transparent={headerTransparent}
@@ -131,54 +132,11 @@ function ProductPdpPageInner({ slug }: ProductPdpPageProps) {
           </div>
         </div>
 
-        <PdpMotivationMarquee />
-
-        <PdpTransformationSection onStart={openQuiz} />
-
-        <PdpBeforeAfterSection onStart={openQuiz} />
-
-        <PdpOutcomeSection />
-
-        <PdpVerticalTimeline />
-
-        <PdpIncludedSection />
-
-        <section className="pdp-section pdp-pricing-v2" id="pricing" data-pdp-header-theme="light">
-          <div className="pdp-section-shell">
-            <div className="pdp-section-inner">
-              <Reveal>
-                <div className="pdp-pricing">
-                  <span className="pdp-kicker">Simple pricing</span>
-                  <h2 className="pdp-pricing-title">{product.name}</h2>
-                  <p className="pdp-price">{formatCurrency(product.monthlyPrice)}<span>/month</span></p>
-                  <p className="pdp-price-sub">{product.description}</p>
-                  <p className="pdp-price-dosage">{product.dosage}</p>
-                  <p className="pdp-price-sub">
-                    Includes provider review, prescription, TIDL Pen + how-to, and discreet delivery. Pricing may vary based on your treatment plan.
-                  </p>
-                  <div className="pdp-price-includes">
-                    <span>Doctor review</span>
-                    <span>Prescription</span>
-                    <span>TIDL Pen + how-to</span>
-                    <span>Personalized plan</span>
-                    <span>Ongoing care</span>
-                  </div>
-                  <PdpButton label="Choose this plan" onClick={openQuiz} />
-                  <p className="pdp-note" style={{ marginTop: 18, marginBottom: 0 }}>
-                    HSA and FSA cards accepted at checkout.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
-        <PdpSafetySection />
-
-        <PdpReviewsSection />
-
-        <PdpCtaBand onStart={openQuiz} />
-
+        <PdpFeatureCards onStart={openQuiz} />
+        <PdpHowItWorks onStart={openQuiz} />
+        <PdpSupportSection onStart={openQuiz} />
+        <PdpTreatmentGrid />
+        <PdpSafetyStrip />
         <PdpFaqSection />
 
         <div className="pdp-footer-zone" data-pdp-header-theme="dark">
@@ -190,13 +148,13 @@ function ProductPdpPageInner({ slug }: ProductPdpPageProps) {
           aria-hidden={!stickyVisible}
         >
           {stickyVisible ? (
-          <div className="pdp-sticky-inner">
-            <div className="pdp-sticky-copy">
-              <strong>Ready to start?</strong>
-              <span>5-minute intake · Doctor-reviewed · Discreet delivery</span>
+            <div className="pdp-sticky-inner">
+              <div className="pdp-sticky-copy">
+                <strong>{product.name}</strong>
+                <span>One package · Provider review · Discreet delivery</span>
+              </div>
+              <PdpButton className="pdp-sticky-btn" label="Get started" onClick={openQuiz} />
             </div>
-            <PdpButton className="pdp-sticky-btn" label="Get started" onClick={openQuiz} />
-          </div>
           ) : null}
         </div>
       </div>
