@@ -50,7 +50,7 @@ export function CategoryHero({
   return (
     <section
       className={`cat-hero cat-hero--sales cat-hero--calm cat-hero--${slug}`}
-      data-site-header-theme={slug === "performance" || slug === "testosterone" ? "dark" : "light"}
+      data-site-header-theme="light"
     >
       <motion.div
         className="cat-hero-inner"

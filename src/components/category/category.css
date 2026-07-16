@@ -3322,8 +3322,8 @@
 
 .cat-hero--testosterone,
 .cat-hero--performance {
-  color: #ffffff;
-  background: #171310;
+  color: #171310;
+  background: #ffffff;
 }
 
 .cat-hero--testosterone .cat-editorial-title,
@@ -3334,7 +3334,7 @@
 .cat-hero--performance .cat-editorial-lead,
 .cat-hero--performance .cat-hero-truth,
 .cat-hero--performance .cat-kicker {
-  color: #ffffff;
+  color: #171310;
 }
 
 .cat-hero--testosterone .cat-hero-visual {
@@ -3488,6 +3488,8 @@
   align-items: center;
   color: #ffffff;
   background: #171310;
+  margin: clamp(14px, 2.5vw, 32px);
+  border-radius: clamp(38px, 6vw, 78px);
 }
 
 .cat-experience-testosterone-stack {
@@ -3614,6 +3616,11 @@
 }
 
 @media (max-width: 800px) {
+  .cat-experience--testosterone {
+    margin: 8px;
+    border-radius: 32px;
+  }
+
   .cat-experience--weight,
   .cat-experience--testosterone {
     grid-template-columns: 1fr;
