@@ -3,7 +3,7 @@
 .cform {
   --cform-ink: #171310;
   --cform-muted: rgba(23, 19, 16, 0.64);
-  --cform-line: rgba(23, 19, 16, 0.1);
+  --cform-line: rgba(113, 104, 92, 0.1);
   --cform-gold: #f3c300;
   --cform-gold-deep: #d4a800;
   --cform-gold-soft: rgba(243, 195, 0, 0.18);
@@ -16,7 +16,7 @@
   color: var(--cform-ink);
   font-family: var(--font-body, "Helvetica Neue", Helvetica, Arial, sans-serif);
   padding: clamp(64px, 9vw, 112px) clamp(20px, 5vw, 72px);
-  border-top: 1px solid rgba(23, 19, 16, 0.06);
+  border-top: 1px solid rgba(113, 104, 92, 0.06);
 }
 
 .cform--calm {
@@ -99,7 +99,7 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  border: 1px solid rgba(23, 19, 16, 0.1);
+  border: 1px solid rgba(113, 104, 92, 0.1);
   border-radius: 14px;
   background: #ffffff;
   overflow: hidden;
@@ -138,7 +138,7 @@
   aspect-ratio: 1 / 1;
   max-height: 160px;
   background: #f7f5f2;
-  border-bottom: 1px solid rgba(23, 19, 16, 0.06);
+  border-bottom: 1px solid rgba(113, 104, 92, 0.06);
   overflow: hidden;
 }
 
@@ -152,7 +152,7 @@
   width: 36%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: rgba(23, 19, 16, 0.06);
+  background: rgba(113, 104, 92, 0.06);
 }
 
 .cform-tile-copy {
@@ -283,7 +283,7 @@
   margin-top: clamp(20px, 3vw, 28px);
   padding: clamp(28px, 4vw, 44px);
   border-radius: 28px;
-  border: 1px solid rgba(23, 19, 16, 0.08);
+  border: 1px solid rgba(113, 104, 92, 0.08);
   background: rgba(255, 255, 255, 0.8);
   max-width: 640px;
 }
@@ -317,7 +317,7 @@
   border: 0;
   margin: 0;
   padding: 0;
-  background: rgba(23, 19, 16, 0.58);
+  background: rgba(113, 104, 92, 0.58);
   backdrop-filter: blur(8px);
   cursor: pointer;
 }
@@ -334,7 +334,7 @@
   color: var(--cform-ink);
   border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: clamp(24px, 4vw, 40px);
-  box-shadow: 0 30px 90px rgba(23, 19, 16, 0.28);
+  box-shadow: 0 30px 90px rgba(113, 104, 92, 0.28);
   overflow: auto;
   animation: cform-modal-in 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -381,7 +381,7 @@
   width: 40px;
   height: 40px;
   flex-shrink: 0;
-  border: 1px solid rgba(23, 19, 16, 0.12);
+  border: 1px solid rgba(113, 104, 92, 0.12);
   border-radius: 999px;
   background: #fff;
   color: var(--cform-ink);
@@ -399,7 +399,7 @@
   padding: 18px;
   border-radius: 14px;
   background: #f7f5f2;
-  border: 1px solid rgba(23, 19, 16, 0.06);
+  border: 1px solid rgba(113, 104, 92, 0.06);
 }
 
 .cform-drawer-media img {
@@ -442,7 +442,7 @@
   gap: 0;
   margin: 0 0 22px;
   padding: 0;
-  border: 1px solid rgba(23, 19, 16, 0.08);
+  border: 1px solid rgba(113, 104, 92, 0.08);
   border-radius: 14px;
   overflow: hidden;
 }
@@ -452,7 +452,7 @@
   grid-template-columns: 118px 1fr;
   gap: 10px;
   padding: 10px 14px;
-  border-top: 1px solid rgba(23, 19, 16, 0.06);
+  border-top: 1px solid rgba(113, 104, 92, 0.06);
 }
 
 .cform-drawer-fact:first-child {

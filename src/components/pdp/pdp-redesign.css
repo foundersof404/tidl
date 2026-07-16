@@ -31,9 +31,9 @@
   display: none !important;
 }
 
-/* Keep espresso stage + curved white shoulders (same as category / legacy PDP) */
+/* Keep smoked-beige stage + curved white shoulders (same as category / legacy PDP) */
 .hm-page .pdp-hero-stage {
-  background: #171310 !important;
+  background: #71685c !important;
 }
 
 .hm-page .pdp-hero-surface {
@@ -543,7 +543,7 @@
   border-radius: 999px;
   display: grid;
   place-items: center;
-  background: #0b0a08;
+  background: #5f574d;
   border: 2px solid #f3c300;
   color: #f3c300;
   font-size: 0.82rem;
@@ -551,7 +551,7 @@
   letter-spacing: 0.06em;
   box-shadow:
     0 0 0 7px rgba(243, 195, 0, 0.12),
-    0 10px 24px rgba(23, 19, 16, 0.18);
+    0 10px 24px rgba(113, 104, 92, 0.18);
   cursor: default;
   transition: box-shadow 0.25s ease;
 }
@@ -559,7 +559,7 @@
 .hm-how-tl-step:hover .hm-how-tl-node {
   box-shadow:
     0 0 0 10px rgba(243, 195, 0, 0.2),
-    0 14px 28px rgba(23, 19, 16, 0.2);
+    0 14px 28px rgba(113, 104, 92, 0.2);
 }
 
 .hm-how-tl-media {
@@ -567,9 +567,9 @@
   aspect-ratio: 1;
   border-radius: 26px;
   overflow: hidden;
-  border: 1px solid rgba(23, 19, 16, 0.08);
+  border: 1px solid rgba(113, 104, 92, 0.08);
   background: #f7f7f5;
-  box-shadow: 0 16px 34px rgba(23, 19, 16, 0.1);
+  box-shadow: 0 16px 34px rgba(113, 104, 92, 0.1);
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
@@ -577,7 +577,7 @@
 .hm-how-tl-step:hover .hm-how-tl-media {
   box-shadow:
     0 0 0 4px rgba(243, 195, 0, 0.2),
-    0 22px 40px rgba(23, 19, 16, 0.14);
+    0 22px 40px rgba(113, 104, 92, 0.14);
 }
 
 .hm-how-tl-media--product,
@@ -603,7 +603,7 @@
 .hm-how-tl-media--kit img {
   object-fit: contain;
   padding: 14%;
-  filter: drop-shadow(0 12px 22px rgba(23, 19, 16, 0.16));
+  filter: drop-shadow(0 12px 22px rgba(113, 104, 92, 0.16));
 }
 
 .hm-how-tl-copy {
@@ -1236,12 +1236,12 @@
   border-radius: 40px;
   background:
     radial-gradient(ellipse 70% 80% at 110% 20%, rgba(243, 195, 0, 0.14), transparent 55%),
-    linear-gradient(145deg, #14110e 0%, #0b0a08 48%, #171310 100%);
+    linear-gradient(145deg, #6a6155 0%, #5f574d 48%, #71685c 100%);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 30px 70px rgba(23, 19, 16, 0.18);
+    0 30px 70px rgba(113, 104, 92, 0.18);
 }
 
 .hm-cta-band-glow {
@@ -1378,7 +1378,7 @@
   box-shadow:
     0 0 0 8px rgba(243, 195, 0, 0.08),
     0 22px 44px rgba(0, 0, 0, 0.35);
-  background: #1c1814;
+  background: #7d7366;
 }
 
 .hm-cta-band-media::after {

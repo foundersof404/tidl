@@ -300,7 +300,7 @@ export default function HomePage() {
       </div>
 
       <div className="page-wrapper">
-        <div className="main-wrapper">
+        <div className="main-wrapper home-hero-stage">
             <div className="hero-wrapper-01" data-site-header-theme="dark">
               <SiteHeader
                 navLinks={homeNavLinks}
@@ -377,11 +377,10 @@ export default function HomePage() {
           <img
             className="service-v1-bg"
             data-w-id="3072fecc-9b21-d07c-8a0f-122ed0f21148"
-            src={SITE_IMAGES.hero.main}
-            alt="service bg"
-            sizes="(max-width: 3024px) 100vw, 3024px"
-            loading="lazy"
-            srcSet={SITE_IMAGES.hero.srcSet}
+            src="/hero_main%20section_landing.webp"
+            alt="TIDL personalized health and wellness"
+            loading="eager"
+            fetchPriority="high"
           />
           <img
             src={SITE_IMAGES.hero.overlay}

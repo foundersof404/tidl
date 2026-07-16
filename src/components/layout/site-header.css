@@ -67,12 +67,12 @@
 .site-header.is-scrolled.is-light {
   background: rgba(255, 255, 255, 0.94);
   border-bottom-color: rgba(23, 19, 16, 0.06);
-  box-shadow: 0 8px 24px rgba(23, 19, 16, 0.04);
+  box-shadow: 0 8px 24px rgba(113, 104, 92, 0.04);
   backdrop-filter: blur(14px);
 }
 
 .site-header.is-scrolled.is-dark {
-  background: rgba(23, 19, 16, 0.94);
+  background: rgba(113, 104, 92, 0.94);
   border-bottom-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(14px);
@@ -253,7 +253,7 @@
   border: none;
   margin: 0;
   padding: 0;
-  background: rgba(23, 19, 16, 0.28);
+  background: rgba(113, 104, 92, 0.28);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.28s ease;
@@ -279,7 +279,7 @@
     24px;
   background: #ffffff;
   border-radius: 24px 0 0 24px;
-  box-shadow: -16px 0 48px rgba(23, 19, 16, 0.12);
+  box-shadow: -16px 0 48px rgba(113, 104, 92, 0.12);
   transform: translateX(100%);
   transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
   overflow-y: auto;
@@ -331,7 +331,7 @@
   color: #171310;
   font-size: 1rem;
   font-weight: 500;
-  border-bottom: 1px solid rgba(23, 19, 16, 0.06);
+  border-bottom: 1px solid rgba(113, 104, 92, 0.06);
 }
 
 .site-header-drawer-link:last-child {
@@ -344,7 +344,7 @@
 }
 
 .site-chrome-stage {
-  background: #171310;
+  background: #71685c;
 }
 
 @media (min-width: 768px) {

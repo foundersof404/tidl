@@ -35,7 +35,7 @@
 
 /* Black band behind rounded hero shoulders */
 .pdp-hero-stage {
-  background: #171310;
+  background: #71685c;
 }
 
 .pdp-hero-stage .tdl-bar {
@@ -91,10 +91,10 @@
   max-width: 1180px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(23, 19, 16, 0.06);
+  border: 1px solid rgba(113, 104, 92, 0.06);
   border-radius: var(--pdp-radius-lg);
   padding: 40px 24px;
-  box-shadow: 0 28px 80px -48px rgba(23, 19, 16, 0.28);
+  box-shadow: 0 28px 80px -48px rgba(113, 104, 92, 0.28);
 }
 
 .pdp-section-shell--dark {
@@ -175,7 +175,7 @@
 .pdp-btn-secondary {
   color: var(--pdp-ink);
   background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(23, 19, 16, 0.12);
+  border: 1px solid rgba(113, 104, 92, 0.12);
   backdrop-filter: blur(8px);
 }
 
@@ -339,13 +339,13 @@
   padding: 0 24px;
   border: none;
   border-radius: 999px;
-  background: var(--pdp-ink);
+  background: #71685c;
   color: #ffffff;
   font-size: 0.98rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 14px 34px -18px rgba(23, 19, 16, 0.55);
+  box-shadow: 0 14px 34px -18px rgba(113, 104, 92, 0.55);
 }
 
 .pdp-hero-editorial-cta:hover {
@@ -403,7 +403,7 @@
   position: absolute;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 18px 40px -20px rgba(23, 19, 16, 0.18);
+  box-shadow: 0 18px 40px -20px rgba(113, 104, 92, 0.18);
   z-index: 1;
   pointer-events: none;
 }
@@ -528,7 +528,7 @@
   height: auto;
   max-height: min(76vh, 640px);
   object-fit: contain;
-  filter: drop-shadow(0 28px 48px rgba(23, 19, 16, 0.2));
+  filter: drop-shadow(0 28px 48px rgba(113, 104, 92, 0.2));
 }
 
 /* Oral “pill” packs stay large; peptide vials match the pen’s compact scale (~50%). */
@@ -575,8 +575,8 @@
   padding: 10px 14px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(23, 19, 16, 0.06);
-  box-shadow: 0 16px 36px -22px rgba(23, 19, 16, 0.28);
+  border: 1px solid rgba(113, 104, 92, 0.06);
+  box-shadow: 0 16px 36px -22px rgba(113, 104, 92, 0.28);
   pointer-events: auto;
 }
 
@@ -664,7 +664,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(23, 19, 16, 0.1);
+  border: 1px solid rgba(113, 104, 92, 0.1);
   color: var(--pdp-ink);
   text-decoration: none;
   background: rgba(255, 255, 255, 0.72);
@@ -685,11 +685,11 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  border-top: 1px solid rgba(23, 19, 16, 0.08);
+  border-top: 1px solid rgba(113, 104, 92, 0.08);
 }
 
 .pdp-hero-accordion-item {
-  border-bottom: 1px solid rgba(23, 19, 16, 0.08);
+  border-bottom: 1px solid rgba(113, 104, 92, 0.08);
 }
 
 .pdp-hero-accordion-trigger {
@@ -766,7 +766,7 @@
 .pdp-outcome-full-list {
   display: grid;
   gap: 0;
-  border-top: 1px solid rgba(23, 19, 16, 0.12);
+  border-top: 1px solid rgba(113, 104, 92, 0.12);
 }
 
 .pdp-outcome-full-row {
@@ -803,7 +803,7 @@
   right: 0;
   bottom: 0;
   height: 1px;
-  background: rgba(23, 19, 16, 0.1);
+  background: rgba(113, 104, 92, 0.1);
   transform-origin: left center;
 }
 
@@ -819,7 +819,7 @@
   display: flex;
   gap: 16px;
   padding: 22px;
-  border: 1px solid rgba(23, 19, 16, 0.07);
+  border: 1px solid rgba(113, 104, 92, 0.07);
   border-radius: var(--pdp-radius-md);
   background: rgba(255, 255, 255, 0.78);
 }
@@ -873,7 +873,7 @@
   width: 2px;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: rgba(23, 19, 16, 0.1);
+  background: rgba(113, 104, 92, 0.1);
   transform-origin: top center;
   z-index: 0;
 }
@@ -922,7 +922,7 @@
 
 .pdp-vtimeline-step.is-visible .pdp-vtimeline-marker {
   border-color: #171310;
-  background: linear-gradient(145deg, #171310, #2a231c);
+  background: linear-gradient(145deg, #71685c, #8d8172);
   color: #ffffff;
   box-shadow:
     0 0 0 6px rgba(255, 255, 255, 0.95),
@@ -992,7 +992,7 @@
   --inc-ink: #171310;
   --inc-muted: rgba(23, 19, 16, 0.58);
   --inc-gold: rgb(243, 195, 0);
-  --inc-line: rgba(23, 19, 16, 0.1);
+  --inc-line: rgba(113, 104, 92, 0.1);
   position: relative;
   padding: 72px 0 40px;
   background:
@@ -1115,7 +1115,7 @@
 }
 
 .pdp-inc-orbit-track {
-  stroke: rgba(23, 19, 16, 0.08);
+  stroke: rgba(113, 104, 92, 0.08);
   stroke-width: 1.25;
 }
 
@@ -1189,7 +1189,7 @@
   pointer-events: none;
   opacity: 0;
   transform: rotate(-8deg);
-  filter: drop-shadow(0 28px 40px rgba(23, 19, 16, 0.22));
+  filter: drop-shadow(0 28px 40px rgba(113, 104, 92, 0.22));
 }
 
 .pdp-inc-pen-glow {
@@ -1260,7 +1260,7 @@
   height: 9px;
   border-radius: 50%;
   transform: translate(50%, -50%) scale(0.5);
-  background: rgba(23, 19, 16, 0.15);
+  background: rgba(113, 104, 92, 0.15);
   opacity: 0;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.35s ease, opacity 0.35s ease;
 }
@@ -1346,7 +1346,7 @@
   position: relative;
   flex: 1;
   height: 2px;
-  background: rgba(23, 19, 16, 0.1);
+  background: rgba(113, 104, 92, 0.1);
   overflow: hidden;
   border-radius: 999px;
 }
@@ -1387,7 +1387,7 @@
 .pdp-inc-mcard {
   position: relative;
   padding: 22px 22px 24px;
-  border: 1px solid rgba(23, 19, 16, 0.1);
+  border: 1px solid rgba(113, 104, 92, 0.1);
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(8px);
   overflow: hidden;
@@ -1430,7 +1430,7 @@
 }
 
 .pdp-inc-mcard.is-accent {
-  background: #171310;
+  background: #71685c;
   border-color: #171310;
   color: #fff;
 }
@@ -1550,8 +1550,8 @@
   overflow: hidden;
   border-radius: var(--pdp-radius-md);
   background: #fff;
-  border: 1px solid rgba(23, 19, 16, 0.07);
-  box-shadow: 0 18px 40px -28px rgba(23, 19, 16, 0.25);
+  border: 1px solid rgba(113, 104, 92, 0.07);
+  box-shadow: 0 18px 40px -28px rgba(113, 104, 92, 0.25);
 }
 
 .pdp-included-thumb {
@@ -1587,10 +1587,10 @@
 .pdp-pricing {
   text-align: center;
   background: #ffffff;
-  border: 1px solid rgba(23, 19, 16, 0.08);
+  border: 1px solid rgba(113, 104, 92, 0.08);
   border-radius: var(--pdp-radius-lg);
   padding: 42px 28px;
-  box-shadow: 0 24px 60px -36px rgba(23, 19, 16, 0.35);
+  box-shadow: 0 24px 60px -36px rgba(113, 104, 92, 0.35);
 }
 
 .pdp-price {
@@ -1713,8 +1713,8 @@
   padding: 26px 24px;
   background: #ffffff;
   border-radius: var(--pdp-radius-sm);
-  border: 1px solid rgba(23, 19, 16, 0.07);
-  box-shadow: 0 18px 44px -28px rgba(23, 19, 16, 0.2);
+  border: 1px solid rgba(113, 104, 92, 0.07);
+  box-shadow: 0 18px 44px -28px rgba(113, 104, 92, 0.2);
 }
 
 .pdp-safety-card-num {
@@ -1759,9 +1759,9 @@
   margin: 0 auto;
   padding: 34px 24px 42px;
   border-radius: var(--pdp-radius-lg);
-  border: 1px solid rgba(23, 19, 16, 0.06);
+  border: 1px solid rgba(113, 104, 92, 0.06);
   background: linear-gradient(180deg, #fafafa 0%, #f2f1ee 100%);
-  box-shadow: 0 24px 60px -32px rgba(23, 19, 16, 0.16);
+  box-shadow: 0 24px 60px -32px rgba(113, 104, 92, 0.16);
 }
 
 .pdp-safety-full-visual-glow {
@@ -1780,7 +1780,7 @@
   height: auto;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 18px 28px rgba(23, 19, 16, 0.12));
+  filter: drop-shadow(0 18px 28px rgba(113, 104, 92, 0.12));
 }
 
 .pdp-safety-pen-float {
@@ -1802,7 +1802,7 @@
 
 .pdp-section--reviews {
   padding: 0;
-  background: #0b0a08;
+  background: #5f574d;
   overflow: clip;
 }
 
@@ -2324,7 +2324,7 @@
 .pdp-shift-panel {
   padding: clamp(24px, 4vw, 36px);
   border-radius: 28px;
-  border: 1px solid rgba(23, 19, 16, 0.08);
+  border: 1px solid rgba(113, 104, 92, 0.08);
 }
 
 .pdp-shift-panel--before {
@@ -2332,7 +2332,7 @@
 }
 
 .pdp-shift-panel--after {
-  background: #171310;
+  background: #71685c;
   color: #fff;
   border-color: #171310;
 }
@@ -2388,7 +2388,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(23, 19, 16, 0.22);
+  background: rgba(113, 104, 92, 0.22);
 }
 
 .pdp-shift-panel--after .pdp-shift-list li {
@@ -2427,7 +2427,7 @@
   gap: 10px;
   padding: 14px 22px;
   border-radius: 999px;
-  background: #171310;
+  background: #71685c;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -2487,13 +2487,13 @@
 .pdp-footer-zone {
   width: 100%;
   margin-top: 0;
-  background: rgb(14, 14, 14);
+  background: #71685c;
   border-radius: var(--pdp-radius-xl) var(--pdp-radius-xl) 0 0;
   overflow: hidden;
 }
 
 .pdp-footer-zone .footer-wrapper {
-  background-color: rgb(14, 14, 14);
+  background-color: #71685c;
 }
 
 .pdp-footer-zone .footer.container-full {
@@ -2508,7 +2508,7 @@
   margin: 0;
   padding: 0;
   background: #ffffff;
-  border-bottom: 1px solid rgba(23, 19, 16, 0.08);
+  border-bottom: 1px solid rgba(113, 104, 92, 0.08);
 }
 
 .pdp-cta-band {
@@ -2550,7 +2550,7 @@
 .pdp-faq {
   padding: clamp(72px, 9vw, 108px) 5%;
   background: #ffffff;
-  border-bottom: 1px solid rgba(23, 19, 16, 0.08);
+  border-bottom: 1px solid rgba(113, 104, 92, 0.08);
 }
 
 .pdp-faq-inner {
@@ -2585,7 +2585,7 @@
   min-height: 44px;
   padding: 0 22px;
   border-radius: 999px;
-  background: var(--pdp-ink);
+  background: #71685c;
   color: #ffffff;
   font-size: 0.92rem;
   font-weight: 500;
@@ -2601,11 +2601,11 @@
 }
 
 .pdp-faq-list {
-  border-top: 1px solid rgba(23, 19, 16, 0.12);
+  border-top: 1px solid rgba(113, 104, 92, 0.12);
 }
 
 .pdp-faq-item {
-  border-bottom: 1px solid rgba(23, 19, 16, 0.12);
+  border-bottom: 1px solid rgba(113, 104, 92, 0.12);
 }
 
 .pdp-faq-q {
@@ -2691,7 +2691,7 @@
   gap: 16px;
   padding: 14px 16px;
   border-radius: 22px;
-  background: rgba(23, 19, 16, 0.92);
+  background: rgba(113, 104, 92, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
   box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.45);
@@ -3103,9 +3103,9 @@
     width: calc(50% - 28px);
     padding: 10px 12px;
     background: #ffffff;
-    border: 1px solid rgba(23, 19, 16, 0.07);
+    border: 1px solid rgba(113, 104, 92, 0.07);
     border-radius: 14px;
-    box-shadow: 0 4px 18px -6px rgba(23, 19, 16, 0.10);
+    box-shadow: 0 4px 18px -6px rgba(113, 104, 92, 0.10);
   }
 
   .pdp-vtimeline-step--left .pdp-vtimeline-body {
@@ -3151,7 +3151,7 @@
   .pdp-vtimeline-step.is-visible .pdp-vtimeline-body {
     border-color: rgba(243, 195, 0, 0.45);
     box-shadow:
-      0 4px 18px -6px rgba(23, 19, 16, 0.10),
+      0 4px 18px -6px rgba(113, 104, 92, 0.10),
       0 0 0 2px rgba(243, 195, 0, 0.18);
   }
 }
@@ -3338,8 +3338,8 @@
     padding: 18px 18px 18px 19px;
     border-radius: 18px;
     background: #ffffff;
-    border: 1px solid rgba(23, 19, 16, 0.08);
-    box-shadow: 0 14px 30px -22px rgba(23, 19, 16, 0.45);
+    border: 1px solid rgba(113, 104, 92, 0.08);
+    box-shadow: 0 14px 30px -22px rgba(113, 104, 92, 0.45);
     overflow: hidden;
     will-change: transform, opacity;
   }
@@ -3427,7 +3427,7 @@
     width: 100%;
     height: auto;
     transform: rotate(9deg);
-    filter: drop-shadow(0 12px 20px rgba(23, 19, 16, 0.28));
+    filter: drop-shadow(0 12px 20px rgba(113, 104, 92, 0.28));
   }
 }
 
@@ -3436,7 +3436,7 @@
    ============================================================ */
 .pdp-transform {
   position: relative;
-  background: radial-gradient(120% 120% at 50% 0%, #211a14 0%, #171310 55%, #120f0c 100%);
+  background: radial-gradient(120% 120% at 50% 0%, #85796a 0%, #71685c 55%, #675e52 100%);
   color: #f4ece1;
   padding: clamp(64px, 9vw, 128px) clamp(20px, 5vw, 80px);
   display: flex;
@@ -3569,7 +3569,7 @@
   object-fit: contain;
   object-position: center;
   display: block;
-  background: #171310;
+  background: #71685c;
 }
 
 .pdp-transform-ba-tag {
@@ -3586,7 +3586,7 @@
 
 .pdp-transform-ba-tag--before {
   left: 14px;
-  background: rgba(23, 19, 16, 0.6);
+  background: rgba(113, 104, 92, 0.6);
   color: #e7dccb;
 }
 
@@ -3602,7 +3602,7 @@
   bottom: 14px;
   font-size: 0.78rem;
   color: #fff;
-  background: rgba(23, 19, 16, 0.55);
+  background: rgba(113, 104, 92, 0.55);
   padding: 5px 12px;
   border-radius: 999px;
   backdrop-filter: blur(6px);
@@ -3655,7 +3655,7 @@
 
 .pdp-sandbox-panel {
   margin-top: clamp(28px, 4vw, 48px);
-  border: 1px solid rgba(23, 19, 16, 0.1);
+  border: 1px solid rgba(113, 104, 92, 0.1);
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.72);
   padding: clamp(20px, 3vw, 32px);
@@ -3673,7 +3673,7 @@
   flex-direction: column;
   gap: 4px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(23, 19, 16, 0.08);
+  border-bottom: 1px solid rgba(113, 104, 92, 0.08);
 }
 
 .pdp-sandbox-row dt {
@@ -3713,7 +3713,7 @@
   flex-direction: column;
   gap: 4px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(23, 19, 16, 0.08);
+  border-bottom: 1px solid rgba(113, 104, 92, 0.08);
 }
 
 .pdp-sandbox-variants strong {
