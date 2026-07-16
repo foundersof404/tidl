@@ -525,7 +525,7 @@ export default function HomePage() {
             <div className="families-content">
               <div className="families-head">
                 <h2 className="families-title heading-01">The strongest version of you is a quiz away.</h2>
-                <p className="paragraph-2">Doctor-prescribed GLP-1, TRT, and peptide care. One five-minute quiz — no waiting rooms, no guesswork.</p>
+                <p className="paragraph-2">Doctor-prescribed GLP-1, TRT, and peptide care. One five-minute quiz. No waiting rooms, no guesswork.</p>
                 <div className="families-btns">
                   <a href="#" onClick={openQuiz} className="button-01 button-03 w-inline-block">
                     <div className="button-outside-01">

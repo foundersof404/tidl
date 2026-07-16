@@ -1,8 +1,5 @@
-import { Link } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  CATEGORIES,
-  CATEGORY_SLUGS,
   type CategoryDefinition,
   type CategorySlug,
 } from "@/lib/categories";
@@ -61,23 +58,6 @@ export function CategoryHero({
         animate="show"
         variants={catStagger}
       >
-        <motion.nav className="cat-filter-nav cat-filter-nav--calm" aria-label="Care categories" variants={reveal}>
-          {CATEGORY_SLUGS.map((item) => {
-            const active = item === slug;
-            return (
-              <Link
-                key={item}
-                to="/category/$slug"
-                params={{ slug: item }}
-                className={`cat-filter-link${active ? " cat-filter-link--active" : ""}`}
-                aria-current={active ? "page" : undefined}
-              >
-                {CATEGORIES[item].navLabel}
-              </Link>
-            );
-          })}
-        </motion.nav>
-
         <motion.p className="cat-kicker" variants={reveal}>
           <span className="cat-kicker-dot" aria-hidden="true" />
           {category.kicker}

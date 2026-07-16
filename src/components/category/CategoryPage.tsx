@@ -107,9 +107,9 @@ export function CategoryPage({ slug }: CategoryPageProps) {
       <div className="cat-hero-stage site-chrome-stage">
         <div className="tdl-bar" id="tdlBar">
           <div className="tdl-bar-inner">
-            <span className="tdl-msg">Personalized care. US pharmacy. TIDL Pen dosing.</span>
+            <span className="tdl-msg">TIDL is now a telehealth platform. Care that delivers results.</span>
             <Link to="/" className="tdl-link">
-              Home
+              Learn more
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
@@ -150,13 +150,13 @@ export function CategoryPage({ slug }: CategoryPageProps) {
         </div>
       </div>
 
-      {/* Category-specific emotional recognition — unique composition per goal */}
+      {/* Category-specific emotional recognition, unique composition per goal */}
       <CategoryExperienceSection slug={slug} />
 
       {/* Trust */}
       <CategoryTrustSection category={category} />
 
-      {/* Product formulary — all sandbox products for this category */}
+      {/* Product formulary, all sandbox products for this category */}
       <CategoryFormularySection category={category} />
 
       {/* 4. After-life emotional close */}

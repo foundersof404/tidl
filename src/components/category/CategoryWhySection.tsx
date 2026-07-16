@@ -221,7 +221,7 @@ export function CategoryWhySection({
             <span>Real oversight.</span>
           </h2>
           <p className="cat-whyx-lead" data-whyx="lead">
-            Licensed providers. US pharmacies. Live catalog on the wire — for every{" "}
+            Licensed providers. US pharmacies. Live catalog on the wire, for every{" "}
             {category.navLabel.toLowerCase()} protocol on this page.
           </p>
         </header>

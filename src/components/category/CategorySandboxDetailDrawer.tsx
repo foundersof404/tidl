@@ -45,10 +45,7 @@ function ProductPdpLink({
   );
 }
 
-/**
- * Detail drawer for sandbox-only SKUs (and optional deep facts for marketed matches).
- * Marketed products still prefer the full PDP via the primary CTA when a slug exists.
- */
+/** Centered product-details modal. Marketed products can continue to their full PDP. */
 export function CategorySandboxDetailDrawer({
   item,
   onClose,
@@ -170,19 +167,21 @@ export function CategorySandboxDetailDrawer({
           <Fact label="Catalog ID" value={item.id} />
         </dl>
 
+        {item.marketedSlug ? (
+          <ProductPdpLink
+            slug={item.marketedSlug}
+            className="cform-more-link"
+          >
+            <span className="cform-more-dot" aria-hidden="true" />
+            <span>More information</span>
+            <ArrowUpRight size={16} strokeWidth={2.2} aria-hidden="true" />
+          </ProductPdpLink>
+        ) : null}
+
         <div className="cform-drawer-actions">
-          {item.marketedSlug ? (
-            <ProductPdpLink
-              slug={item.marketedSlug}
-              className="cform-btn cform-btn--primary"
-            >
-              View full product page
-              <ArrowUpRight size={16} strokeWidth={2.2} aria-hidden="true" />
-            </ProductPdpLink>
-          ) : null}
           <button
             type="button"
-            className={`cform-btn ${item.marketedSlug ? "cform-btn--ghost" : "cform-btn--primary"}`}
+            className="cform-btn cform-btn--primary"
             onClick={() => onStartIntake(item.marketedSlug)}
           >
             Start intake

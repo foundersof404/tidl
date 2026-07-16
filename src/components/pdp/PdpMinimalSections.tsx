@@ -121,42 +121,35 @@ function TimelineStep({
 
 /** Alternating timeline — image above / under the line, scroll + hover motion. */
 export function PdpHowItWorks(_props: StartProps) {
-  const { goal, heroImage, penImage } = usePdpData();
   const reduceMotion = useReducedMotion();
-  const isWeightLoss = goal === "weight-loss";
-  const productImg = heroImage || "/peptides/glp-1-weight-loss.png";
-  const kitImg = isWeightLoss ? "/pdp/how-kit.png" : penImage || productImg;
-  const beginImg = isWeightLoss ? "/pdp/AFTER.png" : productImg;
 
   const steps: HowStep[] = [
     {
       n: "01",
       verb: "Assess",
-      whisper: "Tell us what you want to change — five honest minutes.",
-      image: productImg,
-      tone: "product",
+      whisper: "Tell us what you want to change. Five honest minutes.",
+      image: "/pdp/how/assess.png",
+      tone: "photo",
     },
     {
       n: "02",
       verb: "Prescribe",
       whisper: "A licensed provider reviews you. Only if it’s right.",
-      image: kitImg,
-      tone: "kit",
+      image: "/pdp/how/prescribe.png",
+      tone: "photo",
     },
     {
       n: "03",
       verb: "Ship",
       whisper: "Pen + medication, discreet, with clear how-to.",
-      image: productImg,
-      tone: "product",
+      image: "/pdp/how/ship.png",
+      tone: "photo",
     },
     {
       n: "04",
       verb: "Begin",
-      whisper: isWeightLoss
-        ? "Walk back into your life — lighter, present, yours."
-        : "Start your protocol with clear guidance — and keep going.",
-      image: beginImg,
+      whisper: "Start your protocol with clear guidance and keep going.",
+      image: "/pdp/how/begin.png",
       tone: "photo",
     },
   ];

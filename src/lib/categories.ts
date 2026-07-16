@@ -49,7 +49,7 @@ export type CategoryDefinition = {
   headline: string;
   lead: string;
   extendedLead: string;
-  /** Emotional close — how life feels after starting TIDL care */
+  /** Emotional close: how life feels after starting TIDL care */
   afterHeadline: string;
   afterLead: string;
   heroImage: string;
@@ -73,14 +73,14 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
     navLabel: "Weight loss",
     title: "Weight Loss",
     kicker: "Clinical weight care",
-    headline: "You want weight that stays off — without the noise.",
+    headline: "You want weight that stays off, without the noise.",
     lead:
-      "We hear it: quieter food noise, steady progress, and a plan that fits real life. Personalized care, a US pharmacy, and the TIDL Pen — so dosing never becomes another chore.",
+      "We hear it: quieter food noise, steady progress, and a plan that fits real life. Personalized care, a US pharmacy, and the TIDL Pen, so dosing never becomes another chore.",
     extendedLead:
       "GLP-1 medications work with your body's natural signals to reduce appetite and support sustainable weight loss. At TIDL, every plan is physician-guided: a licensed provider reviews your full health history, prescribes only when appropriate, and ships your dose pre-set in the TIDL Pen so you never mix or measure at home.",
     afterHeadline: "After TIDL, the scale is not the only thing that moves.",
     afterLead:
-      "Clothes fit differently. Meals feel calmer. Your dose arrives pharmacy-set in the TIDL Pen — so progress feels like life getting easier, not another project to manage.",
+      "Clothes fit differently. Meals feel calmer. Your dose arrives pharmacy-set in the TIDL Pen, so progress feels like life getting easier, not another project to manage.",
     heroImage: SITE_IMAGES.services.weightLoss,
     productSlugs: ["glp-1-weight-loss", "retatrutide"],
     pillars: [
@@ -228,12 +228,12 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
     kicker: "Hormonal performance",
     headline: "You want your energy, drive, and focus back.",
     lead:
-      "Low T is not “just getting older.” We start with how you feel, then labs — personalized care from a licensed provider, filled by a US pharmacy.",
+      "Low T is not “just getting older.” We start with how you feel, then labs, personalized care from a licensed provider, filled by a US pharmacy.",
     extendedLead:
       "Low testosterone can affect energy, mood, strength, and focus. TIDL testosterone therapy starts with your symptoms and lab work, reviewed by a licensed provider who builds a protocol around how you actually feel, not a one-size-fits-all chart.",
     afterHeadline: "After TIDL, mornings feel like yours again.",
     afterLead:
-      "Strength returns. Focus steadies. Care stays private — provider-guided, pharmacy-dispensed, and built around your labs and your life.",
+      "Strength returns. Focus steadies. Care stays private, provider-guided, pharmacy-dispensed, and built around your labs and your life.",
     heroImage: SITE_IMAGES.services.testosterone,
     productSlugs: [],
     pillars: [
@@ -348,14 +348,14 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
     navLabel: "Longevity",
     title: "Longevity",
     kicker: "Recovery and longevity",
-    headline: "You want more good years — not more guesswork.",
+    headline: "You want more good years, not more guesswork.",
     lead:
-      "Sharp mornings. Deeper recovery. Care that respects what actually matters long-term: personalized protocols, a US pharmacy, and formats that stay simple — including the TIDL Pen when it fits.",
+      "Sharp mornings. Deeper recovery. Care that respects what actually matters long-term: personalized protocols, a US pharmacy, and formats that stay simple, including the TIDL Pen when it fits.",
     extendedLead:
       "Longevity care at TIDL is physician-supervised, not supplement-store guesswork. Whether you need recovery support after training or metabolic protocols for long-term health, a licensed provider reviews your goals and prescribes only when appropriate.",
     afterHeadline: "After TIDL, aging feels more like steering than drifting.",
     afterLead:
-      "Energy holds. Recovery sticks. Your protocol ships from a licensed US pharmacy — reviewed by a provider who stays with you as goals evolve.",
+      "Energy holds. Recovery sticks. Your protocol ships from a licensed US pharmacy, reviewed by a provider who stays with you as goals evolve.",
     heroImage: SITE_IMAGES.services.longevity,
     productSlugs: ["nad-plus", "ghk-cu", "sermorelin"],
     pillars: [
@@ -436,13 +436,13 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
       title: "Your dose leaves the pharmacy ready.",
       titleEmphasis: "Just click.",
       lead:
-        "Select longevity peptide protocols ship in the TIDL Pen — prescription strength set before delivery. No vials. No reconstitution. One consistent weekly click.",
+        "Select longevity peptide protocols ship in the TIDL Pen, with prescription strength set before delivery. No vials. No reconstitution. One consistent weekly click.",
       image: SITE_IMAGES.pen,
       features: [
         {
           num: "01",
           title: "Dose locked at the pharmacy",
-          body: "Your provider writes the Rx. A licensed US pharmacy prepares the pen to match — you never dial at home.",
+          body: "Your provider writes the Rx. A licensed US pharmacy prepares the pen to match, so you never dial at home.",
         },
         {
           num: "02",
@@ -452,7 +452,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
         {
           num: "03",
           title: "No mixing. No measuring.",
-          body: "Pre-filled cartridge. Tiny needle. One click per dose — back to training and travel.",
+          body: "Pre-filled cartridge. Tiny needle. One click per dose, then back to training and travel.",
         },
         {
           num: "04",
@@ -460,7 +460,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
           body: "Temperature-safe packaging in a plain outer box. Nothing on the label about what’s inside.",
         },
       ],
-      trustNote: "Prescription required. Not every longevity protocol uses the pen — your provider chooses the right format.",
+      trustNote: "Prescription required. Not every longevity protocol uses the pen. Your provider chooses the right format.",
     },
     faqItems: [
       {
@@ -501,12 +501,12 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
     navLabel: "Metabolic",
     title: "Metabolic Health",
     kicker: "Metabolic care",
-    headline: "You want steady energy — not another crash cycle.",
+    headline: "You want steady energy, not another crash cycle.",
     lead:
       "Metabolic balance is personal. We match care to your goals with licensed review, US pharmacy fulfillment, and a simple dosing experience when your protocol uses the TIDL Pen.",
     extendedLead:
       "Metabolic health sits at the center of weight, energy, and long-term wellness. TIDL connects you with a licensed provider who reviews your intake and recommends treatment only when medically appropriate.",
-    afterHeadline: "After TIDL, energy feels more even — and more yours.",
+    afterHeadline: "After TIDL, energy feels more even and more yours.",
     afterLead:
       "Fewer afternoon crashes. Clearer follow-through. A provider-led plan that ships discreetly and stays adjustable as your body responds.",
     heroImage: SITE_IMAGES.services.metabolic,
@@ -577,7 +577,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
       title: "Metabolic protocols, pre-dosed.",
       titleEmphasis: "Just click.",
       lead:
-        "When your provider selects a pen-eligible metabolic protocol, your dose is pharmacy-set before delivery — no vials, no kitchen-table mixing.",
+        "When your provider selects a pen-eligible metabolic protocol, your dose is pharmacy-set before delivery. No vials, no kitchen-table mixing.",
       image: SITE_IMAGES.pen,
       features: [
         {
@@ -593,7 +593,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
         {
           num: "03",
           title: "Simple weekly routine",
-          body: "Pre-filled cartridge. One consistent click — built for metabolic adherence.",
+          body: "Pre-filled cartridge. One consistent click, built for metabolic adherence.",
         },
         {
           num: "04",
@@ -634,18 +634,18 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
     kicker: "Performance care",
     headline: "You train hard. You want recovery that keeps up.",
     lead:
-      "Strength and drive matter — so does doing it the right way. Personalized, physician-guided protocols from a US pharmacy, with the TIDL Pen when your plan calls for it.",
+      "Strength and drive matter. So does doing it the right way. Personalized, physician-guided protocols from a US pharmacy, with the TIDL Pen when your plan calls for it.",
     extendedLead:
       "Performance care at TIDL is physician-supervised. A licensed provider reviews your goals and history, then recommends treatment only when it is medically appropriate for you.",
     afterHeadline: "After TIDL, training blocks feel cleaner.",
     afterLead:
-      "Sessions recover faster. Sleep supports the work. Your protocol is legitimate — licensed review, US pharmacy, no gray-market shortcuts.",
+      "Sessions recover faster. Sleep supports the work. Your protocol is legitimate: licensed review, US pharmacy, no gray-market shortcuts.",
     heroImage: SITE_IMAGES.services.performance,
     productSlugs: ["cjc-1295-ipamorelin", "tesamorelin"],
     pillars: [
       {
         title: "Legitimate medical path",
-        body: "Licensed providers and US pharmacies — never gray-market product.",
+        body: "Licensed providers and US pharmacies, never gray-market product.",
       },
       {
         title: "Goal-matched protocols",
@@ -660,7 +660,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
     educationBlocks: [
       {
         title: "What this hub covers",
-        body: "Strength, drive, and recovery protocols under physician supervision — designed for people who want results without compromising safety.",
+        body: "Strength, drive, and recovery protocols under physician supervision, designed for people who want results without compromising safety.",
       },
       {
         title: "Why medical review matters",
@@ -708,7 +708,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
       title: "Performance protocols, pharmacy-set.",
       titleEmphasis: "Just click.",
       lead:
-        "Select performance peptide protocols ship in the TIDL Pen when medically appropriate — dose set before delivery, built for training schedules.",
+        "Select performance peptide protocols ship in the TIDL Pen when medically appropriate, with the dose set before delivery and built for training schedules.",
       image: SITE_IMAGES.pen,
       features: [
         {
@@ -719,7 +719,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
         {
           num: "02",
           title: "Graduated dose scale",
-          body: "Clear markings from 0.1 to 1.0 ml — no guesswork between sessions.",
+          body: "Clear markings from 0.1 to 1.0 ml. No guesswork between sessions.",
         },
         {
           num: "03",
@@ -732,7 +732,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
           body: "Plain packaging from licensed pharmacies with cold-chain when required.",
         },
       ],
-      trustNote: "Prescription required. Not every performance protocol uses the pen — your provider chooses the format.",
+      trustNote: "Prescription required. Not every performance protocol uses the pen. Your provider chooses the format.",
     },
     faqItems: [
       {
@@ -765,12 +765,12 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
     kicker: "Recovery care",
     headline: "You want sleep and repair that actually stick.",
     lead:
-      "Bounce-back is the goal — not another stimulant shortcut. Personalized recovery care, filled by a US pharmacy, with dosing that stays simple when you use the TIDL Pen.",
+      "Bounce-back is the goal, not another stimulant shortcut. Personalized recovery care, filled by a US pharmacy, with dosing that stays simple when you use the TIDL Pen.",
     extendedLead:
       "Recovery is where progress sticks. TIDL recovery care starts with your intake, continues with licensed provider review, and ships only when a prescription is medically appropriate.",
     afterHeadline: "After TIDL, tomorrow’s session starts sooner.",
     afterLead:
-      "Joints feel quieter. Sleep deepens. Repair becomes part of the week — provider-guided, discreetly delivered, built around how you actually train.",
+      "Joints feel quieter. Sleep deepens. Repair becomes part of the week, provider-guided, discreetly delivered, and built around how you actually train.",
     heroImage: SITE_IMAGES.services.recovery,
     productSlugs: ["bpc-157", "tb-500", "wolverine"],
     pillars: [
@@ -839,7 +839,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
       title: "Recovery doses, ready to click.",
       titleEmphasis: "Just click.",
       lead:
-        "When your recovery protocol ships in the TIDL Pen, your dose is set at the pharmacy — one consistent click between training blocks.",
+        "When your recovery protocol ships in the TIDL Pen, your dose is set at the pharmacy for one consistent click between training blocks.",
       image: SITE_IMAGES.pen,
       features: [
         {
@@ -850,7 +850,7 @@ export const CATEGORIES: Record<CategorySlug, CategoryDefinition> = {
         {
           num: "02",
           title: "Precision dose scale",
-          body: "Graduated markings from 0.1 to 1.0 ml — built for repeatable recovery routines.",
+          body: "Graduated markings from 0.1 to 1.0 ml, built for repeatable recovery routines.",
         },
         {
           num: "03",

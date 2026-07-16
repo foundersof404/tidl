@@ -5478,3 +5478,18 @@ html::-webkit-scrollbar-track {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* Soft-edged emotional CTA stage */
+.families.container-full {
+  width: auto;
+  margin: clamp(18px, 3vw, 42px) clamp(10px, 2.2vw, 32px);
+  border-radius: clamp(34px, 5vw, 68px);
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .families.container-full {
+    margin-inline: 8px;
+    border-radius: 28px;
+  }
+}

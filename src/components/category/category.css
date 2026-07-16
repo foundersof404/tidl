@@ -3056,13 +3056,14 @@
   }
 }
 
-/* ── Calm category UX (emotional open → trust → formulary → after) ── */
+/* Calm category UX: emotional open, trust, formulary, after */
 
 .cat-page--calm .cat-hero-surface {
   background:
     radial-gradient(ellipse 55% 45% at 88% 8%, rgba(243, 195, 0, 0.14), transparent 62%),
     linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-  border-radius: 0;
+  margin-inline: 0;
+  border-radius: 44px 44px 0 0;
 }
 
 .cat-filter-nav--calm {
@@ -3122,13 +3123,17 @@
 }
 
 .cat-trust {
-  padding: clamp(56px, 8vw, 96px) max(20px, 5%);
+  padding: clamp(64px, 9vw, 118px) max(20px, 5%);
   background: #ffffff;
   border-top: 1px solid rgba(23, 19, 16, 0.06);
 }
 
 .cat-trust-inner {
-  max-width: 1080px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(300px, 1.14fr);
+  align-items: center;
+  gap: clamp(40px, 8vw, 112px);
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -3164,27 +3169,54 @@
 }
 
 .cat-trust-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(28px, 4vw, 48px);
-  margin-top: clamp(36px, 5vw, 56px);
-  padding-top: clamp(28px, 4vw, 40px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin-top: clamp(28px, 4vw, 40px);
+  padding-top: 24px;
   border-top: 1px solid rgba(23, 19, 16, 0.08);
 }
 
+.cat-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.cat-trust-item > span {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--cat-gold);
+}
+
 .cat-trust-item h3 {
-  margin: 0 0 10px;
-  font-size: 1.12rem;
+  margin: 0;
+  font-size: 0.95rem;
   font-weight: 750;
   letter-spacing: -0.02em;
   color: var(--cat-ink);
 }
 
-.cat-trust-item p {
+.cat-trust-media {
+  position: relative;
   margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: rgba(23, 19, 16, 0.58);
+  height: clamp(360px, 48vw, 620px);
+  overflow: hidden;
+  border-radius: 999px 999px 42px 42px;
+  background: #171310;
+}
+
+.cat-trust-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cat-trust-media:hover img {
+  transform: scale(1.035);
 }
 
 .cat-after {
@@ -3217,9 +3249,22 @@
 }
 
 @media (max-width: 800px) {
-  .cat-trust-grid {
+  .cat-page--calm .cat-hero-surface {
+    margin-inline: 0;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .cat-trust-inner {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 34px;
+  }
+
+  .cat-trust-grid {
+    gap: 12px 18px;
+  }
+
+  .cat-trust-media {
+    height: min(120vw, 520px);
   }
 
   .cat-trust-title,

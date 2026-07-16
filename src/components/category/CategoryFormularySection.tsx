@@ -19,7 +19,7 @@ type CategoryFormularySectionProps = {
   category: CategoryDefinition;
 };
 
-/** Typed PDP route — GLP-1 has a dedicated path; all others use /products/$slug. */
+/** Typed PDP route. GLP-1 has a dedicated path; all others use /products/$slug. */
 function ProductPdpLink({
   slug,
   className,
@@ -57,7 +57,7 @@ function tilePrice(item: CategoryCatalogItem): number | null {
 }
 
 /**
- * Dense e-com formulary — every active sandbox SKU mapped to this category.
+ * Dense e-com formulary with every active sandbox SKU mapped to this category.
  * Marketed products keep PDP links; sandbox-only SKUs open a detail drawer.
  */
 export function CategoryFormularySection({ category }: CategoryFormularySectionProps) {
@@ -101,7 +101,7 @@ export function CategoryFormularySection({ category }: CategoryFormularySectionP
                 ? "Loading live sandbox catalog…"
                 : products.length > 0
                   ? `${products.length} package${products.length === 1 ? "" : "s"} from the sandbox catalog${catalogTotal > 0 ? ` (${catalogTotal} total SKUs)` : ""}. Tap a tile for details.`
-                  : "Start intake — a licensed provider will match your pathway."}
+                  : "Start intake. A licensed provider will match your pathway."}
             </span>
           </h2>
         </header>
@@ -181,7 +181,7 @@ export function CategoryFormularySection({ category }: CategoryFormularySectionP
                 ? "Pulling live sandbox packages…"
                 : category.slug === "testosterone"
                   ? "Licensed review of labs and symptoms before any prescription. Begin intake now."
-                  : `Start the assessment — we’ll match you to the right ${category.navLabel.toLowerCase()} protocol.`}
+                  : `Start the assessment. We’ll match you to the right ${category.navLabel.toLowerCase()} protocol.`}
             </p>
             {!loading ? (
               <button
