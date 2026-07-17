@@ -398,7 +398,7 @@ export default function HomePage() {
       <div className="page-wrapper">
         <div className="main-wrapper">
 
-        <ServicesSection />
+        <ServicesSection onStartIntake={openQuiz} />
 
         {/* Pen hero — Overview: pen is the differentiator, right after goal selection */}
         {/* ===== TIDL Pen Section ===== */}

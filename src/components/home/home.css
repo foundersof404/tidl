@@ -5489,7 +5489,8 @@ html::-webkit-scrollbar-track {
   text-underline-offset: 3px;
 }
 
-/* Soft-edged emotional CTA stage */
+/* Soft-edged feature and emotional CTA stages */
+.tdlp5-sec,
 .families.container-full {
   width: auto;
   margin: clamp(18px, 3vw, 42px) clamp(10px, 2.2vw, 32px);
@@ -5498,6 +5499,7 @@ html::-webkit-scrollbar-track {
 }
 
 @media (max-width: 640px) {
+  .tdlp5-sec,
   .families.container-full {
     margin-inline: 8px;
     border-radius: 28px;
