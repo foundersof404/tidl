@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState, type MouseEvent, type RefObject } from "react";
 import { Link } from "@tanstack/react-router";
-import outcomesHero from "@/assets/outcomes-hero.jpg";
-import { CATEGORIES, CATEGORY_SLUGS, type CategorySlug } from "@/lib/categories";
+import outcomesHero from "@/assets/ChatGPT Image Jul 17, 2026, 04_07_48 AM.png";
+import aiEditorialHero from "@/assets/tidl-ai-hero.png";
+import penPeptideHero from "@/assets/tidl-pen-peptide-hero.png";
+import { CATEGORY_SLUGS, type CategorySlug } from "@/lib/categories";
+import { resolvePeptideOnlyImage } from "@/lib/peptide-images";
 import { SERVICES_INTRO } from "@/lib/services-content";
 import "./goals-outcomes.css";
 
@@ -37,6 +40,15 @@ const GOAL_COPY: Record<CategorySlug, { title: string; body: string }> = {
     title: "Recovery",
     body: "Recover faster, reduce inflammation, and support long-term wellness.",
   },
+};
+
+const GOAL_PEPTIDES: Record<CategorySlug, string> = {
+  "weight-loss": "glp-1-weight-loss",
+  "metabolic-health": "mots-c",
+  testosterone: "sermorelin",
+  longevity: "nad-plus",
+  performance: "cjc-1295-ipamorelin",
+  recovery: "wolverine",
 };
 
 const ASSURANCE = [
@@ -162,7 +174,7 @@ function buildGoals(): GoalCard[] {
     slug,
     title: GOAL_COPY[slug].title,
     body: GOAL_COPY[slug].body,
-    image: CATEGORIES[slug].heroImage,
+    image: resolvePeptideOnlyImage(GOAL_PEPTIDES[slug]),
   }));
 }
 
@@ -211,6 +223,44 @@ function ArrowRight() {
 type ServicesSectionProps = {
   onStartIntake?: (e?: MouseEvent) => void;
 };
+
+function TreatmentDisclosure() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <aside className="goals-outcomes__disclosure" aria-label="Important treatment information">
+      <p className="goals-outcomes__disclosure-summary">
+        TIDL connects adults 18+ with licensed medical providers. Completing an assessment does not
+        guarantee a prescription; treatment is prescribed only when medically appropriate.
+      </p>
+      <button
+        type="button"
+        className="goals-outcomes__disclosure-toggle"
+        aria-expanded={open}
+        aria-controls="goals-treatment-disclosure"
+        onClick={() => setOpen((current) => !current)}
+      >
+        <span>{open ? "Read less" : "Read more"}</span>
+        <span className="goals-outcomes__disclosure-toggle-icon" aria-hidden="true" />
+      </button>
+      <div
+        id="goals-treatment-disclosure"
+        className={`goals-outcomes__disclosure-content${
+          open ? " goals-outcomes__disclosure-content--open" : ""
+        }`}
+        aria-hidden={!open}
+      >
+        <p>
+          Medical intake answers, vitals, and prescriptions are processed through PrescribeRx, the
+          clinical platform behind TIDL care. If treatment is approved, it is fulfilled by a
+          licensed US pharmacy. Product availability, eligibility, pricing, and delivery timing may
+          vary by treatment and state. Your provider will review benefits, risks, alternatives, and
+          follow-up needs before prescribing.
+        </p>
+      </div>
+    </aside>
+  );
+}
 
 export function ServicesSection({ onStartIntake }: ServicesSectionProps) {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
@@ -276,7 +326,7 @@ export function ServicesSection({ onStartIntake }: ServicesSectionProps) {
       <div
         ref={goalsRef}
         className={`goals-outcomes__goals${goalsLive ? " goals-outcomes__goals--live" : ""}`}
-        data-site-header-theme="light"
+        data-site-header-theme="dark"
       >
         <div className="goals-outcomes__inner">
           <header className="goals-outcomes__head">
@@ -329,7 +379,6 @@ export function ServicesSection({ onStartIntake }: ServicesSectionProps) {
         </div>
 
         <div className="goals-outcomes__scroller-wrap">
-          <div className="goals-outcomes__scroller-fade" aria-hidden="true" />
           <div className="goals-outcomes__scroller" ref={scrollerRef}>
             {goals.map((goal, index) => (
               <Link
@@ -338,16 +387,14 @@ export function ServicesSection({ onStartIntake }: ServicesSectionProps) {
                 params={{ slug: goal.slug }}
                 className="goals-outcomes__card"
               >
-                <span className="goals-outcomes__card-index">
+                <span className="goals-outcomes__card-badge">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="goals-outcomes__card-media">
                   <img src={goal.image} alt="" loading="lazy" decoding="async" />
-                  <span className="goals-outcomes__card-ring" aria-hidden="true" />
                 </div>
                 <div className="goals-outcomes__card-body">
                   <h3 className="goals-outcomes__card-title">{goal.title}</h3>
-                  <p className="goals-outcomes__card-text">{goal.body}</p>
                 </div>
                 <span className="goals-outcomes__card-arrow" aria-hidden="true">
                   <ArrowRight />
@@ -358,7 +405,47 @@ export function ServicesSection({ onStartIntake }: ServicesSectionProps) {
           </div>
         </div>
 
+        <div className="goals-outcomes__feature-pair">
+          <div className="goals-outcomes__pathway-product goals-outcomes__pathway-product--ai">
+            <img
+              src={aiEditorialHero}
+              alt="A thoughtful person considering health questions with TIDL Intelligence"
+              width={1024}
+              height={1024}
+              className="goals-outcomes__pathway-product-image"
+              loading="lazy"
+              decoding="async"
+            />
+            <a
+              className="goals-outcomes__pathway-product-cta"
+              href="#askTidl"
+            >
+              Ask TIDL AI
+            </a>
+          </div>
+          <div className="goals-outcomes__pathway-product">
+            <img
+              src={penPeptideHero}
+              alt="TIDL Pen and peptide vial with 24/7 care team access"
+              width={1024}
+              height={1024}
+              className="goals-outcomes__pathway-product-image"
+              loading="lazy"
+              decoding="async"
+            />
+            <button
+              type="button"
+              className="goals-outcomes__pathway-product-cta"
+              onClick={onStartIntake}
+            >
+              Start your assessment
+            </button>
+          </div>
+        </div>
+
         <PathwayMap live={pathwayLive} pathwayRef={pathwayRef} />
+
+        <TreatmentDisclosure />
       </div>
 
       {/* Built around better outcomes */}
@@ -418,9 +505,9 @@ export function ServicesSection({ onStartIntake }: ServicesSectionProps) {
 
             <img
               src={outcomesHero}
-              alt="A calm confident woman representing lasting wellness outcomes"
-              width={1024}
-              height={1280}
+              alt="A smiling man viewing his personalized health progress on his phone"
+              width={1277}
+              height={1232}
               className="goals-outcomes__hero-img"
               draggable={false}
             />
