@@ -10,13 +10,11 @@ import { StoriesSection } from './StoriesSection';
 import { JourneySection } from './JourneySection';
 import { AskTidlSection, type AskTidlSectionHandle } from './AskTidlSection';
 import { CareMosaicSection } from './CareMosaicSection';
-import { PenCalloutStage } from './PenCalloutStage';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { SITE_IMAGES } from '@/lib/site-assets';
 import { HERO_COPY } from '@/lib/homepage-content';
 import { useHomeSandbox } from '@/lib/prescribe-rx/use-home-sandbox';
 import { formatCurrency } from '@/lib/pricing';
-import { GLP1_PEN_SHOWCASE } from '@/components/pdp/data/pen-showcase-content';
 import './home-pulse.css';
 
 const HOME_PULSE = [
@@ -113,7 +111,6 @@ export default function HomePage() {
   const homeNavLinks = [
     { href: '#services', label: 'Treatments' },
     { href: '#feel', label: 'Feel' },
-    { href: '#tdlp5', label: 'The Pen' },
     { href: '#journey', label: 'About' },
     { href: '#stories', label: 'Reviews' },
     { href: '#askTidl', label: 'Ask TIDL' },
@@ -139,8 +136,6 @@ export default function HomePage() {
   }, [mobileNavOpen]);
 
   const [pulseVisible, setPulseVisible] = useState(false);
-  const [penVisible, setPenVisible] = useState(false);
-  const [isPenVideoOpen, setIsPenVideoOpen] = useState(false);
 
   // Initialize Webflow animations
   useEffect(() => {
@@ -189,7 +184,6 @@ export default function HomePage() {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
   const pulseStageRef = useRef<HTMLDivElement>(null);
-  const penGridRef = useRef<HTMLDivElement>(null);
   const askTidlRef = useRef<AskTidlSectionHandle>(null);
 
   useEffect(() => {
@@ -226,38 +220,6 @@ export default function HomePage() {
       window.clearTimeout(fallback);
     };
   }, []);
-
-  useEffect(() => {
-    const grid = penGridRef.current;
-    if (!grid) return;
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          setPenVisible(true);
-          io.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    io.observe(grid);
-    return () => io.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isPenVideoOpen) return;
-    lockPageScroll();
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsPenVideoOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => {
-      unlockPageScroll();
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [isPenVideoOpen]);
 
   const openAskTidl = useCallback(() => {
     setMobileNavOpen(false);
@@ -431,131 +393,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* The Pen — light stage (how-to + callouts), under Feel */}
-        <section
-          className="tdlp5-sec tdlp5-sec--light"
-          id="tdlp5"
-          data-site-header-theme="light"
-          aria-label="The TIDL Pen"
-        >
-          <div className="tdlp5-head">
-            <div className="tdlp5-kick">{GLP1_PEN_SHOWCASE.kicker}</div>
-            <h2 className="tdlp5-h2">
-              {GLP1_PEN_SHOWCASE.headlineLine1}
-              <br />
-              <em>{GLP1_PEN_SHOWCASE.headlineEmphasis}</em>
-            </h2>
-          </div>
-
-          <PenCalloutStage
-            ref={penGridRef}
-            visible={penVisible}
-            videoEmbedUrl={GLP1_PEN_SHOWCASE.videoEmbedUrl}
-            onPlayVideo={() => setIsPenVideoOpen(true)}
-          />
-
-          <div className="tdlp5-grain" />
-        </section>
-
-        {isPenVideoOpen && GLP1_PEN_SHOWCASE.videoEmbedUrl ? (
-          <div
-            className="tdlp5-video-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-label={GLP1_PEN_SHOWCASE.videoTitle}
-            onClick={() => setIsPenVideoOpen(false)}
-          >
-            <div className="tdlp5-video-dialog" onClick={(e) => e.stopPropagation()}>
-              <button
-                type="button"
-                className="tdlp5-video-close"
-                onClick={() => setIsPenVideoOpen(false)}
-                aria-label="Close video"
-              >
-                ×
-              </button>
-              <iframe
-                src={GLP1_PEN_SHOWCASE.videoEmbedUrl}
-                title={GLP1_PEN_SHOWCASE.videoTitle}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        ) : null}
-
         <JourneySection onGetStarted={openQuiz} />
 
         <StoriesSection />
 
         <AskTidlSection ref={askTidlRef} />
-
-        {/* ===== Families Section ===== */}
-        <section className="families container-full" id="families" data-site-header-theme="dark">
-          <div className="container-fluid">
-            <div className="families-content">
-              <div className="families-head">
-                <h2 className="families-title heading-01">The strongest version of you is a quiz away.</h2>
-                <p className="paragraph-2">Doctor-prescribed GLP-1, TRT, and peptide care. One five-minute quiz. No waiting rooms, no guesswork.</p>
-                <div className="families-btns">
-                  <a href="#" onClick={openQuiz} className="button-01 button-03 w-inline-block">
-                    <div className="button-outside-01">
-                      <div className="button-inside">
-                        <div className="button-text-01">Start My Quiz</div>
-                        <div className="button-text-01">Start My Quiz</div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="families-cards">
-                <div className="families-card">
-                  <div className="families-card-head">
-                    <div className="families-card-title heading-02 _01">The pen that changed the game</div>
-                    <div className="families-card-text p1-regular _01">Pre-dosed and ready to use. No mixing, no measuring, no guesswork. Just click and go.</div>
-                  </div>
-                  <div className="families-card-btns">
-                    <a href="#" onClick={openQuiz} className="button-01 button-03 w-inline-block">
-                      <div className="button-outside-01">
-                        <div className="button-inside">
-                          <div className="button-text-01">Start My Quiz</div>
-                          <div className="button-text-01">Start My Quiz</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <img
-                    src={SITE_IMAGES.families.cardShadow}
-                    loading="lazy"
-                    sizes="(max-width: 522px) 100vw, 522px"
-                    alt=""
-                    className="families-card-img"
-                  />
-                </div>
-                <div className="families-card-another">
-                  <div className="families-card _02">
-                    <div className="families-card-text-02 heading-03">Shipped from a US pharmacy. Plain packaging.</div>
-                  </div>
-                  <div className="families-card _03 families-card--photo">
-                    <img
-                      src={SITE_IMAGES.families.progress}
-                      alt=""
-                      className="families-card-photo"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <img
-            className="families-bg"
-            src={SITE_IMAGES.families.bg}
-            alt="families bg"
-            sizes="(max-width: 1728px) 100vw, 1728px"
-            loading="lazy"
-          />
-        </section>
 
         {/* ===== FAQ Section ===== */}
         <section className="tdlfaq-sec" id="faq" data-site-header-theme="light">
