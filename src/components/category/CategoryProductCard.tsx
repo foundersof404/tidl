@@ -98,12 +98,10 @@ export function CategoryProductCard({
       style={{ rotateX, rotateY, transformPerspective: 1200 }}
     >
       <div className="cat-product-card-glow" aria-hidden="true" />
-      <span className={`cat-form-badge cat-form-badge--${product.form}`}>
-        {product.form === "pen"
-          ? "TIDL Pen"
-          : product.form === "vial"
-            ? "Peptide vial"
-            : "Prescription protocol"}
+      <span className={`cat-form-badge cat-form-badge--${product.form === "pen" ? "vial" : product.form}`}>
+        {product.form === "pill"
+          ? "Prescription protocol"
+          : "Peptide vial"}
       </span>
 
       <div className="cat-product-actions-float" aria-label="Quick actions">

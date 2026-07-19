@@ -96,7 +96,8 @@
 .home-hero-stage .hero-wrapper-01 {
   position: relative;
   overflow: hidden;
-  border-radius: clamp(28px, 4vw, 52px) clamp(28px, 4vw, 52px) 0 0;
+  /* Soft top + bottom edges (beige stage shows through the curves) */
+  border-radius: clamp(28px, 4vw, 52px);
 }
 
 .hero-wrapper-01 .site-header-wrap {
@@ -198,6 +199,68 @@
   --cream: #ffffff;
   --sans: var(--font-body);
 }
+
+/* Homepage pen — white stage (category/PDP keep dark .tdlp5-sec) */
+.tdlp5-sec--light {
+  background: #ffffff;
+  color: #171310;
+  --cream: #171310;
+}
+
+.tdlp5-sec--light .tdlp5-kick {
+  color: #8a8174;
+}
+
+.tdlp5-sec--light .tdlp5-h2 {
+  color: #171310;
+}
+
+.tdlp5-sec--light .tdlp5-h2 em {
+  color: rgb(243, 195, 0);
+}
+
+.tdlp5-sec--light .tdlp5-flab {
+  color: #171310;
+}
+
+.tdlp5-sec--light .tdlp5-fsub {
+  color: rgba(23, 19, 16, 0.58);
+}
+
+.tdlp5-sec--light .tdlp5-more-link {
+  color: #171310;
+}
+
+.tdlp5-sec--light .tdlp5-more-line {
+  background: #171310;
+}
+
+.tdlp5-sec--light .tdlp5-play {
+  border-color: rgba(23, 19, 16, 0.18);
+  background: rgba(255, 255, 255, 0.92);
+  color: #171310;
+  box-shadow: 0 10px 28px rgba(23, 19, 16, 0.1);
+}
+
+.tdlp5-sec--light .tdlp5-play:hover {
+  border-color: rgb(243, 195, 0);
+  color: #171310;
+}
+
+.tdlp5-sec--light .tdlp5-shadow {
+  opacity: 0.35;
+  filter: blur(18px);
+}
+
+.tdlp5-sec--light .tdlp5-grain {
+  opacity: 0.03;
+}
+
+.tdlp5-sec--light .tdlp5-blade,
+.tdlp5-sec--light .tdlp5-blade.core,
+.tdlp5-sec--light .tdlp5-aura {
+  opacity: 0.35;
+}
 .tdlp5-sec * {
   box-sizing: border-box;
   margin: 0;
@@ -239,6 +302,124 @@
 .tdlp5-h2 em {
   font-style: normal;
   color: var(--amber);
+}
+.tdlp5-lead {
+  margin: 18px auto 0;
+  max-width: 34rem;
+  color: rgb(255 250 240 / 0.78);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-weight: 500;
+  line-height: 1.45;
+}
+.tdlp5-mosaic {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 22px);
+  max-width: 1280px;
+  margin: clamp(48px, 7vw, 72px) auto 0;
+  align-items: start;
+}
+.tdlp5-mosaic__item {
+  margin: 0;
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tdlp5-on .tdlp5-mosaic__item {
+  opacity: 1;
+  transform: none;
+}
+.tdlp5-mosaic__item:nth-child(2) {
+  margin-top: clamp(36px, 6vw, 72px);
+}
+.tdlp5-mosaic__frame {
+  position: relative;
+  overflow: hidden;
+  background: rgb(255 255 255 / 0.06);
+  border-radius: 999px 999px 36px 36px;
+  aspect-ratio: 3 / 4;
+}
+.tdlp5-mosaic__item:nth-child(2) .tdlp5-mosaic__frame {
+  border-radius: 36px;
+}
+.tdlp5-mosaic__item:nth-child(3) .tdlp5-mosaic__frame {
+  border-radius: 999px;
+}
+.tdlp5-mosaic__item--product .tdlp5-mosaic__frame {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 28%, rgb(243 195 0 / 0.22), transparent 55%),
+    rgb(255 255 255 / 0.08);
+}
+.tdlp5-mosaic__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tdlp5-mosaic__item--product .tdlp5-mosaic__frame img {
+  width: 58%;
+  height: auto;
+  max-height: 78%;
+  object-fit: contain;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tdlp5-mosaic__item:hover .tdlp5-mosaic__frame img {
+    transform: scale(1.04);
+  }
+  .tdlp5-mosaic__item--product:hover .tdlp5-mosaic__frame img {
+    transform: scale(1.06) translateY(-6px);
+  }
+}
+.tdlp5-mosaic__play {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 2;
+  transform: translateX(-50%);
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #f3c300;
+  color: #171310;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tdlp5-mosaic__item figcaption {
+  display: grid;
+  gap: 6px;
+  padding: 16px 6px 0;
+}
+.tdlp5-mosaic__item figcaption strong {
+  font-family: var(--font-display, "Helvetica Neue", Helvetica, Arial, sans-serif);
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fffaf0;
+}
+.tdlp5-mosaic__item figcaption span {
+  color: rgb(255 250 240 / 0.72);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+@media (max-width: 860px) {
+  .tdlp5-mosaic {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+  .tdlp5-mosaic__item:nth-child(2) {
+    margin-top: 0;
+  }
 }
 .tdlp5-grid,
 .tdlp5-diagram {

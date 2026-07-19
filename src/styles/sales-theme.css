@@ -1,0 +1,102 @@
+/**
+ * Shared sales-surface tokens — category experience is the source of truth.
+ * Used by category, homepage, and PDP so they read as one site.
+ */
+
+:root {
+  --cat-ink: #171310;
+  --cat-smoked-beige: #71685c;
+  --cat-ivory: #ffffff;
+  --cat-gold: #f3c300;
+  --cat-gold-dim: #d4a800;
+  --cat-glass: rgba(255, 255, 255, 0.86);
+  --cat-radius-xl: 40px;
+  --cat-radius-lg: 36px;
+  --cat-radius-md: 28px;
+  --cat-radius-capsule: 999px 999px 32px 32px;
+  --cat-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --cat-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --cat-shout-size: clamp(2.5rem, 7vw, 6.6rem);
+  --cat-shout-weight: 800;
+  --cat-shout-tracking: -0.065em;
+  --cat-shout-leading: 0.94;
+  --cat-trust-size: clamp(2.6rem, 6.4vw, 5.4rem);
+  --cat-kicker-size: 0.76rem;
+  --cat-kicker-tracking: 0.2em;
+}
+
+.tidl-sales {
+  background: var(--cat-ivory);
+  color: var(--cat-ink);
+  font-family: var(--cat-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tidl-sales,
+.tidl-sales * {
+  font-family: var(--cat-sans);
+}
+
+.tidl-sales h1,
+.tidl-sales h2,
+.tidl-sales h3 {
+  font-family: var(--cat-display);
+}
+
+/* Band helpers — white or smoked beige; text is black or white by surface */
+.tidl-band--ivory {
+  background: var(--cat-ivory);
+  color: var(--cat-ink);
+}
+
+.tidl-band--smoke {
+  background: var(--cat-smoked-beige);
+  color: #ffffff;
+}
+
+.tidl-shout {
+  margin: 0;
+  font-family: var(--cat-display);
+  font-size: var(--cat-shout-size);
+  font-weight: var(--cat-shout-weight);
+  letter-spacing: var(--cat-shout-tracking);
+  line-height: var(--cat-shout-leading);
+}
+
+.tidl-trust-title {
+  margin: 0;
+  font-family: var(--cat-display);
+  font-size: var(--cat-trust-size);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.tidl-kicker {
+  margin: 0;
+  font-size: var(--cat-kicker-size);
+  font-weight: 800;
+  letter-spacing: var(--cat-kicker-tracking);
+  text-transform: uppercase;
+}
+
+.tidl-picture {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: var(--cat-ivory);
+  border-radius: var(--cat-radius-capsule);
+  will-change: transform;
+}
+
+.tidl-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tidl-picture:hover img {
+  transform: scale(1.05);
+}

@@ -67,10 +67,6 @@ function resolvePdpSlug(item: CategoryCatalogItem, category: CategorySlug): Prod
   const lower = item.name.toLowerCase();
 
   for (const slug of candidates) {
-    if (slug === "glp-1-weight-loss") {
-      if (/\btirzepatide\b|\bsemaglutide\b|\bglp-?1\b/i.test(lower)) return slug;
-      continue;
-    }
     const tokens = slug.split("-").filter((token) => token.length > 2 && token !== "plus");
     if (
       tokens.every((token) => lower.includes(token)) ||
@@ -80,7 +76,7 @@ function resolvePdpSlug(item: CategoryCatalogItem, category: CategorySlug): Prod
     }
   }
 
-  return candidates[0] ?? "glp-1-weight-loss";
+  return candidates[0] ?? "retatrutide";
 }
 
 /**
@@ -126,7 +122,7 @@ export function CategoryFormularySection({ category }: CategoryFormularySectionP
               {loading
                 ? "Loading live sandbox catalog…"
                 : products.length > 0
-                  ? `${products.length} package${products.length === 1 ? "" : "s"} from the sandbox catalog${catalogTotal > 0 ? ` (${catalogTotal} total SKUs)` : ""}. Tap Details for the full product page.`
+                  ? `${products.length} peptide package${products.length === 1 ? "" : "s"} from the sandbox catalog${catalogTotal > 0 ? ` (${catalogTotal} total SKUs)` : ""}. Tap Details for the full product page.`
                   : "Start intake. A licensed provider will match your pathway."}
             </span>
           </h2>

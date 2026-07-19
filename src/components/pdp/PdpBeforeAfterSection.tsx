@@ -8,28 +8,14 @@ type PdpBeforeAfterSectionProps = {
   onStart: (e: MouseEvent) => void;
 };
 
-const LEFT_STATS = [
-  { label: "Week 0", value: "Starting point" },
-  { label: "Food noise", value: "Constant" },
-  { label: "Energy", value: "Drained by noon" },
-  { label: "Clothes", value: "Hiding in them" },
-] as const;
-
-const RIGHT_STATS = [
-  { label: "14 weeks", value: "−18 lbs*" },
-  { label: "Cravings", value: "Quieter" },
-  { label: "Energy", value: "Steady again" },
-  { label: "Confidence", value: "Showing up" },
-] as const;
-
 const TECH_STRIP = [
   { k: "Active", v: "Tirzepatide GLP-1/GIP" },
   { k: "Rhythm", v: "Weekly protocol" },
   { k: "Care", v: "Provider-guided" },
-  { k: "Kit", v: "TIDL Pen included" },
+  { k: "Form", v: "Peptide protocol" },
 ] as const;
 
-/** Life-shift — slider with flanking results + technical strip below. Weight-loss only. */
+/** Life-shift — title + slider only; tech strip underneath. Weight-loss only. */
 export function PdpBeforeAfterSection({ onStart }: PdpBeforeAfterSectionProps) {
   const { goal } = usePdpData();
   const reduceMotion = useReducedMotion();
@@ -50,22 +36,12 @@ export function PdpBeforeAfterSection({ onStart }: PdpBeforeAfterSectionProps) {
         </motion.header>
 
         <motion.div
-          className="pdp-shift-stage pdp-shift-stage--flanked"
+          className="pdp-shift-stage pdp-shift-stage--solo"
           initial={reduceMotion ? false : { opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55, ease: settle }}
         >
-          <aside className="pdp-shift-flank pdp-shift-flank--before" aria-label="Before results">
-            <p className="pdp-shift-flank-kicker">Before</p>
-            {LEFT_STATS.map((row) => (
-              <div key={row.label} className="pdp-shift-stat">
-                <span className="pdp-shift-stat-label">{row.label}</span>
-                <strong className="pdp-shift-stat-value">{row.value}</strong>
-              </div>
-            ))}
-          </aside>
-
           <div className="pdp-shift-stage-core">
             <BeforeAfterSlider
               className="pdp-shift-slider"
@@ -75,16 +51,6 @@ export function PdpBeforeAfterSection({ onStart }: PdpBeforeAfterSectionProps) {
               showHint={false}
             />
           </div>
-
-          <aside className="pdp-shift-flank pdp-shift-flank--after" aria-label="After results">
-            <p className="pdp-shift-flank-kicker">After</p>
-            {RIGHT_STATS.map((row) => (
-              <div key={row.label} className="pdp-shift-stat">
-                <span className="pdp-shift-stat-label">{row.label}</span>
-                <strong className="pdp-shift-stat-value">{row.value}</strong>
-              </div>
-            ))}
-          </aside>
         </motion.div>
 
         <div className="pdp-shift-tech" aria-label="Treatment details">

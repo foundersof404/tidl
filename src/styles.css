@@ -3,6 +3,7 @@
 @import "tw-animate-css";
 @import "./styles/typography.css";
 @import "./styles/imagery.css";
+@import "./styles/sales-theme.css";
 @import "./components/layout/site-header.css";
 
 @custom-variant dark (&:is(.dark *));

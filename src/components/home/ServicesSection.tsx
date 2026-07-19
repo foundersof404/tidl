@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import { Link } from "@tanstack/react-router";
 import { CATEGORY_SLUGS, type CategorySlug } from "@/lib/categories";
-import { SERVICES_INTRO } from "@/lib/services-content";
 import "./goals-outcomes.css";
 
 type GoalCard = {
@@ -14,27 +13,27 @@ type GoalCard = {
 const GOAL_COPY: Record<CategorySlug, { title: string; body: string }> = {
   "weight-loss": {
     title: "Weight Loss",
-    body: "Clinically guided GLP-1 treatments to help you lose weight and keep it off.",
+    body: "Quieter food noise. Steadier progress.",
   },
   "metabolic-health": {
     title: "Metabolic",
-    body: "Support your metabolism, energy, and overall health.",
+    body: "Energy that lasts past 3PM.",
   },
   testosterone: {
     title: "Testosterone",
-    body: "Optimize performance, strength, and vitality at every stage.",
+    body: "Drive, strength, mornings back.",
   },
   longevity: {
     title: "Longevity",
-    body: "Proactive care to help you live longer, stronger, and healthier.",
+    body: "More life in your years.",
   },
   performance: {
     title: "Performance",
-    body: "Enhance endurance, focus, and everyday performance.",
+    body: "Work. Recover. Keep pace.",
   },
   recovery: {
     title: "Recovery",
-    body: "Recover faster, reduce inflammation, and support long-term wellness.",
+    body: "Repair is part of the work.",
   },
 };
 
@@ -143,7 +142,15 @@ export function ServicesSection() {
   const scrollBy = (dir: 1 | -1) => {
     const el = scrollerRef.current;
     if (!el) return;
-    el.scrollBy({ left: el.clientWidth * 0.7 * dir, behavior: "smooth" });
+    const card = el.querySelector<HTMLElement>(".goals-outcomes__card");
+    if (!card) return;
+    const styles = getComputedStyle(el);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap || "0") || 0;
+    const step = card.offsetWidth + gap;
+    if (step <= 0) return;
+    const max = el.scrollWidth - el.clientWidth;
+    const next = Math.round(el.scrollLeft / step) * step + step * dir;
+    el.scrollTo({ left: Math.max(0, Math.min(max, next)), behavior: "smooth" });
   };
 
   return (
@@ -153,37 +160,41 @@ export function ServicesSection() {
         className="goals-outcomes__goals"
         data-site-header-theme="light"
       >
-        <div className="goals-outcomes__inner">
-          <header className="goals-outcomes__head">
-            <h2 className="goals-outcomes__title">Pick your goal.</h2>
-            <p className="goals-outcomes__support">{SERVICES_INTRO.support}</p>
-          </header>
-        </div>
+        <div className="goals-outcomes__inner goals-outcomes__inner--valve">
+          <div className="goals-outcomes__valve">
+            <h2 className="goals-outcomes__title goals-outcomes__title--plaque">
+              <span>Pick</span>
+              <span>your</span>
+              <span>goal.</span>
+            </h2>
 
-        <div className="goals-outcomes__scroller-wrap">
-          <div className="goals-outcomes__scroller" ref={scrollerRef}>
-            {goals.map((goal, index) => (
-              <Link
-                key={goal.slug}
-                to="/category/$slug"
-                params={{ slug: goal.slug }}
-                className="goals-outcomes__card"
-              >
-                <div className="goals-outcomes__card-media">
-                  <img src={goal.image} alt="" loading="lazy" decoding="async" />
-                </div>
-                <span className="goals-outcomes__card-badge">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div className="goals-outcomes__card-body">
-                  <h3 className="goals-outcomes__card-title">{goal.title}</h3>
-                </div>
-                <span className="goals-outcomes__card-arrow" aria-hidden="true">
-                  <ArrowRight />
-                </span>
-              </Link>
-            ))}
-            <div className="goals-outcomes__scroller-end" aria-hidden="true" />
+            <div className="goals-outcomes__scroller-wrap goals-outcomes__scroller-wrap--from-title">
+              <div className="goals-outcomes__scroller" ref={scrollerRef}>
+                {goals.map((goal, index) => (
+                  <Link
+                    key={goal.slug}
+                    to="/category/$slug"
+                    params={{ slug: goal.slug }}
+                    className="goals-outcomes__card"
+                    style={{ "--goal-i": index } as CSSProperties}
+                  >
+                    <div className="goals-outcomes__card-media">
+                      <img src={goal.image} alt="" loading="lazy" decoding="async" />
+                    </div>
+                    <span className="goals-outcomes__card-badge">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div className="goals-outcomes__card-body">
+                      <h3 className="goals-outcomes__card-title">{goal.title}</h3>
+                    </div>
+                    <span className="goals-outcomes__card-arrow" aria-hidden="true">
+                      <ArrowRight />
+                    </span>
+                  </Link>
+                ))}
+                <div className="goals-outcomes__scroller-end" aria-hidden="true" />
+              </div>
+            </div>
           </div>
         </div>
 

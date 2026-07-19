@@ -16,8 +16,8 @@ const TRUST_LINE = [
     title: "US-based pharmacy",
   },
   {
-    id: "pen",
-    title: "The TIDL Pen",
+    id: "peptide",
+    title: "Peptide protocols",
   },
 ] as const;
 

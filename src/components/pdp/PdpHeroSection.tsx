@@ -1,6 +1,7 @@
 import { useState, type MouseEvent } from "react";
 import { getCatalogProduct } from "@/lib/product-catalog";
 import { formatCurrency } from "@/lib/pricing";
+import { resolvePeptideOnlyImage } from "@/lib/peptide-images";
 import { usePdpData } from "./PdpDataProvider";
 
 type PdpHeroSectionProps = {
@@ -21,12 +22,28 @@ function StarRow({ rating }: { rating: number }) {
   );
 }
 
-/** Product buy-box — vial first, one clear CTA, price + trust. */
+function buildGallery(slug: string, heroImage: string, name: string) {
+  const peptideShot = resolvePeptideOnlyImage(slug);
+  const altShot = `/peptides/${slug}.png`;
+  const sources = [heroImage, peptideShot, altShot].filter(Boolean);
+  const unique = [...new Set(sources)].slice(0, 2);
+  if (unique.length < 2) {
+    unique.push(unique[0] ?? heroImage);
+  }
+  return unique.map((src, i) => ({
+    src,
+    alt: i === 0 ? `${name} product` : `${name} peptide vial`,
+  }));
+}
+
+/** Product buy-box — peptide gallery + smoked beige stage. */
 export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
-  const { slug, heroProduct, heroImage, penImage, marketing, goal } = usePdpData();
+  const { slug, heroProduct, heroImage, marketing, goal } = usePdpData();
   const catalog = getCatalogProduct(slug);
   const name = catalog?.shortName ?? heroProduct.name;
+  const gallery = buildGallery(slug, heroImage, name);
   const [galleryIndex, setGalleryIndex] = useState(0);
+  const active = gallery[galleryIndex] ?? gallery[0];
 
   const headline =
     goal === "weight-loss"
@@ -35,21 +52,14 @@ export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
 
   const support =
     goal === "weight-loss"
-      ? "Doctor-prescribed GLP-1. Pre-dosed TIDL Pen. Delivered to your door."
-      : (marketing?.emotionalSub ?? "Licensed provider review · US pharmacy · TIDL Pen.");
-
-  const gallery = [
-    { src: heroImage, alt: `${name} product`, kind: "product" as const },
-    { src: penImage || heroImage, alt: `${name} with TIDL Pen`, kind: "product" as const },
-  ];
-
-  const active = gallery[galleryIndex] ?? gallery[0];
+      ? "Doctor-prescribed peptide care. Licensed review. Delivered to your door."
+      : (marketing?.emotionalSub ?? "Licensed provider review · US pharmacy · Peptide protocol.");
 
   return (
     <section className="hm-hero" id="hero" ref={heroRef} data-pdp-header-theme="light">
       <div className="hm-hero-shell">
         <div className="hm-hero-media">
-          <div className={`hm-hero-stage${active.kind === "product" ? " is-product" : ""}`}>
+          <div className="hm-hero-stage is-product">
             <img
               className="hm-hero-img"
               src={active.src}
@@ -85,12 +95,10 @@ export function PdpHeroSection({ heroRef, onStart }: PdpHeroSectionProps) {
             <span>{heroProduct.reviewCount} reviews</span>
           </div>
 
-          <p className="hm-hero-price">
-            {formatCurrency(heroProduct.startingPrice)}
-          </p>
+          <p className="hm-hero-price">{formatCurrency(heroProduct.startingPrice)}</p>
           <p className="hm-hero-price-note">
-            {heroProduct.priceNote ||
-              "Package price · Provider review · Prescription · TIDL Pen · Discreet delivery"}
+            {heroProduct.priceNote?.replace(/\s*·\s*TIDL Pen/gi, "") ||
+              "Package price · Provider review · Prescription · Discreet delivery"}
           </p>
 
           <div className="hm-hero-actions">

@@ -100,7 +100,9 @@ export function CategoryPage({ slug }: CategoryPageProps) {
     return Math.min(...prices);
   }, [catalogItems]);
 
-  const faqItems = category.faqItems.slice(0, 4);
+  const faqItems = category.faqItems
+    .filter((item) => !/\bpen\b/i.test(item.q) && !/\bpen\b/i.test(item.a))
+    .slice(0, 4);
 
   return (
     <div className={`cat-page cat-page--sales cat-page--calm cat-page--${slug}`}>

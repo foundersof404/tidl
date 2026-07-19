@@ -43,7 +43,9 @@ export function getCatalogProduct(slug: ProductSlug): CatalogProduct | undefined
 }
 
 export function getCatalogProductsByCategory(categorySlug: CategorySlug): CatalogProduct[] {
-  return CATALOG_PRODUCTS.filter((p) => p.categorySlug === categorySlug);
+  return CATALOG_PRODUCTS.filter(
+    (p) => p.categorySlug === categorySlug && p.form !== "pen",
+  );
 }
 
 export function getCatalogPrice(slug: ProductSlug): number {

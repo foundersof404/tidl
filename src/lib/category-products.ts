@@ -8,15 +8,9 @@ import { PRODUCT_SLUGS, type ProductSlug } from "@/types/quiz";
  * Kept for PDP links and hero “featured” paths; the formulary now lists the full sandbox catalog.
  */
 export function getProductSlugsForCategory(category: CategorySlug): ProductSlug[] {
-  const fromPeptides = PEPTIDE_DEFS.filter((p) => p.category === category).map(
+  return PEPTIDE_DEFS.filter((p) => p.category === category).map(
     (p) => p.slug as ProductSlug,
   );
-
-  if (category === "weight-loss") {
-    return ["glp-1-weight-loss", ...fromPeptides];
-  }
-
-  return fromPeptides;
 }
 
 /** Goal label used when a category maps to a quiz goal. */
@@ -186,11 +180,15 @@ export function matchMarketedSlugFromCatalogName(name: string): ProductSlug | nu
 }
 
 export function inferFormHint(name: string): string {
-  if (/\bpen\b/i.test(name)) return "Pen";
   if (/\blyophil/i.test(name)) return "Lyophilized vial";
   if (/\bkit\b/i.test(name)) return "Kit";
   if (/\bmg\b|\bmcg\b|\bml\b|\biu\b/i.test(name)) return "Vial / strength";
-  return "Catalog SKU";
+  return "Peptide";
+}
+
+/** True when a sandbox SKU is a pen device (not a peptide vial / kit). */
+export function isPenCatalogProduct(name: string): boolean {
+  return /\bpen\b/i.test(name);
 }
 
 /** Pull a compact strength token from the catalog name when present. */
@@ -250,19 +248,19 @@ export function toCategoryCatalogItem(product: PrxCatalogProduct): CategoryCatal
   };
 }
 
-/** All active sandbox products for a site category, sorted by name. */
+/** All active sandbox peptide products for a site category (pens excluded), sorted by name. */
 export function getCatalogItemsForCategory(
   products: readonly PrxCatalogProduct[],
   category: CategorySlug,
 ): CategoryCatalogItem[] {
   return products
-    .filter((p) => p.isActive)
+    .filter((p) => p.isActive && !isPenCatalogProduct(p.name))
     .map(toCategoryCatalogItem)
     .filter((item) => item.category === category)
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-/** Counts per site category (active products only). */
+/** Counts per site category (active peptide products only — pens excluded). */
 export function countCatalogByCategory(
   products: readonly PrxCatalogProduct[],
 ): Record<CategorySlug, number> {
@@ -275,7 +273,7 @@ export function countCatalogByCategory(
     recovery: 0,
   };
   for (const product of products) {
-    if (!product.isActive) continue;
+    if (!product.isActive || isPenCatalogProduct(product.name)) continue;
     counts[mapSandboxProductToCategory(product.name)] += 1;
   }
   return counts;

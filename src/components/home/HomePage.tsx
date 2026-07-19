@@ -13,10 +13,17 @@ import { CareMosaicSection } from './CareMosaicSection';
 import { PenCalloutStage } from './PenCalloutStage';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { SITE_IMAGES } from '@/lib/site-assets';
-import { GLP1_PEN_SHOWCASE } from '@/components/pdp/data/pen-showcase-content';
 import { HERO_COPY } from '@/lib/homepage-content';
 import { useHomeSandbox } from '@/lib/prescribe-rx/use-home-sandbox';
 import { formatCurrency } from '@/lib/pricing';
+import { GLP1_PEN_SHOWCASE } from '@/components/pdp/data/pen-showcase-content';
+import './home-pulse.css';
+
+const HOME_PULSE = [
+  { src: "/feel/mornings.png" },
+  { src: "/feel/confidence.png" },
+  { src: "/feel/soft-landings.png" },
+] as const;
 
 interface FaqItem {
   id: number;
@@ -105,6 +112,7 @@ export default function HomePage() {
 
   const homeNavLinks = [
     { href: '#services', label: 'Treatments' },
+    { href: '#feel', label: 'Feel' },
     { href: '#tdlp5', label: 'The Pen' },
     { href: '#journey', label: 'About' },
     { href: '#stories', label: 'Reviews' },
@@ -130,6 +138,7 @@ export default function HomePage() {
     return () => unlockPageScroll();
   }, [mobileNavOpen]);
 
+  const [pulseVisible, setPulseVisible] = useState(false);
   const [penVisible, setPenVisible] = useState(false);
   const [isPenVideoOpen, setIsPenVideoOpen] = useState(false);
 
@@ -179,13 +188,48 @@ export default function HomePage() {
   const [faqTab, setFaqTab] = useState('all');
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
+  const pulseStageRef = useRef<HTMLDivElement>(null);
   const penGridRef = useRef<HTMLDivElement>(null);
   const askTidlRef = useRef<AskTidlSectionHandle>(null);
 
-  // TIDL Pen IntersectionObserver
   useEffect(() => {
-    const gridEl = penGridRef.current;
-    if (!gridEl) return;
+    const stage = pulseStageRef.current;
+    if (!stage) return;
+
+    let revealed = false;
+    const reveal = () => {
+      if (revealed) return;
+      revealed = true;
+      setPulseVisible(true);
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          reveal();
+          io.disconnect();
+        }
+      },
+      { threshold: 0.06, rootMargin: "40px 0px -5% 0px" },
+    );
+
+    io.observe(stage);
+
+    const rect = stage.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.95 && rect.bottom > 64) {
+      reveal();
+    }
+
+    const fallback = window.setTimeout(reveal, 1800);
+    return () => {
+      io.disconnect();
+      window.clearTimeout(fallback);
+    };
+  }, []);
+
+  useEffect(() => {
+    const grid = penGridRef.current;
+    if (!grid) return;
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -195,20 +239,24 @@ export default function HomePage() {
           io.unobserve(entry.target);
         });
       },
-      { threshold: 0.12 },
+      { threshold: 0.15 },
     );
 
-    io.observe(gridEl);
+    io.observe(grid);
     return () => io.disconnect();
   }, []);
 
   useEffect(() => {
     if (!isPenVideoOpen) return;
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setIsPenVideoOpen(false);
+    lockPageScroll();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsPenVideoOpen(false);
     };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      unlockPageScroll();
+      window.removeEventListener("keydown", onKey);
+    };
   }, [isPenVideoOpen]);
 
   const openAskTidl = useCallback(() => {
@@ -348,12 +396,55 @@ export default function HomePage() {
 
         <ServicesSection />
 
-        {/* Pen hero — Overview: pen is the differentiator, right after goal selection */}
-        {/* ===== TIDL Pen Section ===== */}
-        <section className="tdlp5-sec" id="tdlp5" data-site-header-theme="dark">
+        {/* Feel — testosterone-style tall pills, fully curvy section */}
+        <section
+          className={`home-pulse${pulseVisible ? " home-pulse--on" : ""}`}
+          id="feel"
+          data-site-header-theme="dark"
+          aria-label="How care is supposed to feel"
+        >
+          <div className="home-pulse__copy">
+            <p>This part is yours</p>
+            <h2>
+              You already know
+              <br />
+              what you want
+              <br />
+              back.
+            </h2>
+            <span>
+              Not a new identity. The quieter version of you that shows up when the noise drops —
+              and stays.
+            </span>
+          </div>
+
+          <div className="home-pulse__stack" ref={pulseStageRef}>
+            {HOME_PULSE.map((shot, index) => (
+              <figure
+                key={shot.src}
+                className="home-pulse__picture"
+                style={{ transitionDelay: pulseVisible ? `${0.06 + index * 0.1}s` : undefined }}
+              >
+                <img src={shot.src} alt="" loading="lazy" decoding="async" />
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        {/* The Pen — light stage (how-to + callouts), under Feel */}
+        <section
+          className="tdlp5-sec tdlp5-sec--light"
+          id="tdlp5"
+          data-site-header-theme="light"
+          aria-label="The TIDL Pen"
+        >
           <div className="tdlp5-head">
-            <div className="tdlp5-kick">The TIDL Pen</div>
-            <h2 className="tdlp5-h2">GLP-1, pre-dosed.<br /><em>Just click.</em></h2>
+            <div className="tdlp5-kick">{GLP1_PEN_SHOWCASE.kicker}</div>
+            <h2 className="tdlp5-h2">
+              {GLP1_PEN_SHOWCASE.headlineLine1}
+              <br />
+              <em>{GLP1_PEN_SHOWCASE.headlineEmphasis}</em>
+            </h2>
           </div>
 
           <PenCalloutStage
@@ -363,18 +454,7 @@ export default function HomePage() {
             onPlayVideo={() => setIsPenVideoOpen(true)}
           />
 
-          <div className="tdlp5-cta">
-            <a href="#" onClick={openQuiz} className="button-01 button-03 w-inline-block">
-              <div className="button-outside-01">
-                <div className="button-inside">
-                  <div className="button-text-01">See If You Qualify</div>
-                  <div className="button-text-01">See If You Qualify</div>
-            </div>
-            </div>
-            </a>
-          </div>
-
-          <div className="tdlp5-grain"></div>
+          <div className="tdlp5-grain" />
         </section>
 
         {isPenVideoOpen && GLP1_PEN_SHOWCASE.videoEmbedUrl ? (
@@ -382,27 +462,26 @@ export default function HomePage() {
             className="tdlp5-video-modal"
             role="dialog"
             aria-modal="true"
-            aria-label={GLP1_PEN_SHOWCASE.videoTitle ?? 'How to use the TIDL Pen video'}
+            aria-label={GLP1_PEN_SHOWCASE.videoTitle}
             onClick={() => setIsPenVideoOpen(false)}
           >
             <div className="tdlp5-video-dialog" onClick={(e) => e.stopPropagation()}>
               <button
                 type="button"
                 className="tdlp5-video-close"
-                aria-label="Close video"
                 onClick={() => setIsPenVideoOpen(false)}
+                aria-label="Close video"
               >
                 ×
               </button>
               <iframe
                 src={GLP1_PEN_SHOWCASE.videoEmbedUrl}
-                title={GLP1_PEN_SHOWCASE.videoTitle ?? 'How to use the TIDL Pen'}
-                        loading="lazy"
+                title={GLP1_PEN_SHOWCASE.videoTitle}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                      />
-                        </div>
-                      </div>
+              />
+            </div>
+          </div>
         ) : null}
 
         <JourneySection onGetStarted={openQuiz} />
